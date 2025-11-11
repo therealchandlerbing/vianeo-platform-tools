@@ -48,14 +48,15 @@ This is a complete evaluation toolkit that takes you from initial startup applic
 ## The Complete 8-Step Workflow
 
 ```
-Step 0: Canvas Extraction (20-30 min)
-  → Structured business model with character limits enforced
+Step 0: Executive Brief Extraction (20-30 min)
+  → B1-B7 structure (150-300 char limits) + Maturity Stage (TRL 1-9)
 
-Step 1: Application Forms [OPTIONAL] (15 min)
-  → Standardized format for program management
+Step 1: Application Forms [OPTIONAL] (15-20 min)
+  → 360 SIS (social impact) or CNEN (research) format with DOCX output
 
 Step 2: 40-Question Diagnostic (30-45 min)
-  → Team, Technology, Management, Commercial scores
+  → Team (9Q), Technology (11Q), Management (12Q), Commercial (8Q)
+  → Two documents: Assessment Results + Score Summary
 
 Step 3: 29-Question Market Maturity (45-60 min)
   → Five dimensional scores: Legitimacy, Desirability, Acceptability, Feasibility, Viability
@@ -87,8 +88,9 @@ Step 8: Network Visualization (60-90 min)
 **Steps:** 0 → 2 → 4 → 5
 
 **Output:**
-- Business model canvas
-- Dimensional scores (no visuals)
+- Executive Brief (B1-B7 with maturity stage)
+- 40Q diagnostic scores (2 documents)
+- Dimensional scores (Team/Tech/Mgmt/Commercial)
 - Key gaps identified
 - Go/No-Go recommendation
 
@@ -101,8 +103,9 @@ Step 8: Network Visualization (60-90 min)
 **Steps:** 0 → 2 → 3 → 4 → 5 → 6 → 7
 
 **Output:**
-- Complete diagnostics
-- All five dimensional scores
+- Executive Brief + Application form (if needed)
+- Complete diagnostics (40Q with 2 docs)
+- All five dimensional scores (29Q assessment)
 - Needs matrix HTML visualization
 - Ecosystem mapping
 - Investment recommendation with conditions
@@ -333,11 +336,24 @@ vianeo-platform-tools/
 
 ### Character Limits Enforced
 
-All canvas fields have strict character limits to ensure clarity:
-- Problem Statement: 250 chars
-- Field of Application: 60 chars
+**Executive Brief (Step 0) - Strict Limits:**
+- B1 One-Line Description: 150 chars
+- B2 Problem Statement: 300 chars
+- B3 Proposed Solution: 300 chars
+- B4 Target Market/Users: 300 chars
+- B5 Business Model/Revenue: 300 chars
+- B6 Traction/Validation: 300 chars
+- B7 Team/Resources: 200 chars
+- Supplementary Notes: 250 chars each
+
+**Application Forms (Step 1):**
+- Project Summary: 500 chars (2-3 sentences)
+- All other sections: 750 chars (3-5 sentences)
+
+**Needs & Ecosystem (Steps 5-8):**
 - Needs Statements: 60 chars each
 - Player Names: 60 chars each
+- Ecosystem Notes: 250 chars
 
 ### Evidence Requirements
 

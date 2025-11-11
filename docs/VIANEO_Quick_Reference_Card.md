@@ -7,9 +7,9 @@
 ## The 8-Step Workflow
 
 ```
-Step 0: Canvas Extraction (20-30 min) → Structured business model
-Step 1: Application Forms [OPTIONAL] (15 min) → Program tracking
-Step 2: 40-Question Diagnostic (30-45 min) → Team/Tech/Mgmt/Commercial
+Step 0: Executive Brief (20-30 min) → B1-B7 structure + maturity stage
+Step 1: Application Forms [OPTIONAL] (15-20 min) → 360 SIS or CNEN format
+Step 2: 40-Question Diagnostic (30-45 min) → Team/Tech/Mgmt/Commercial (2 docs)
 Step 3: 29-Question Market Maturity (45-60 min) → 5 Dimensional scores
 Step 4: Legitimacy Deep Dive (20-30 min) → Problem validation
 Step 5: Desirability Analysis (30-40 min) → Segments, needs, personas
@@ -27,16 +27,26 @@ Step 8: Network Visualization (60-90 min) → Interactive HTML map
 
 ## Critical Character Limits
 
+### Step 0: Executive Brief (B1-B7)
+
 | Field | Max Characters |
 |-------|----------------|
-| Problem Statement | 250 |
-| Field of Application | 60 |
+| **B1:** One-Line Description | 150 |
+| **B2:** Problem Statement | 300 |
+| **B3:** Proposed Solution | 300 |
+| **B4:** Target Market/Users | 300 |
+| **B5:** Business Model/Revenue | 300 |
+| **B6:** Traction/Validation | 300 |
+| **B7:** Team/Resources | 200 |
+| **Supplementary Notes** (each) | 250 |
+
+### Step 5-8: Needs & Ecosystem
+
+| Field | Max Characters |
+|-------|----------------|
 | Needs Statements | 60 each |
 | Player/Segment Names | 60 each |
 | Ecosystem Notes | 250 |
-| Resources | 250 |
-| Revenue Model | 250 |
-| Differentiators | 250 |
 
 ---
 
@@ -165,16 +175,27 @@ Step 8: Network Visualization (60-90 min) → Interactive HTML map
 ## Quality Gates (Before Each Next Step)
 
 **Step 0 → Step 1/2:**
-- [ ] All character limits met
-- [ ] Problem is solution-neutral
-- [ ] Users ≠ Buyers noted
-- [ ] Evidence gaps documented
+- [ ] All character limits met (B1: 150, B2-B6: 300, B7: 200)
+- [ ] Problem (B2) is solution-neutral (no tech/product mentions)
+- [ ] Traction (B6) fully quantified with numbers
+- [ ] Users ≠ Buyers noted in B4 (or stated as same)
+- [ ] Evidence gaps documented for all sections
+- [ ] Maturity stage matches evidence
+- [ ] Both MD and DOCX files generated
+
+**Step 1 → Step 2** (if using application forms):
+- [ ] All sentence limits respected (2-3 or 3-5)
+- [ ] All tables filled with actual data
+- [ ] Character/sentence counts verified
+- [ ] Both MD and DOCX generated
 
 **Step 2 → Step 3:**
-- [ ] All 40 questions scored
+- [ ] All 40 questions scored or marked (INSUFFICIENT DATA/N/A/etc.)
 - [ ] Evidence cited for scores ≥3
-- [ ] Red flags identified
-- [ ] Dimensions calculated
+- [ ] Red flags identified (18 patterns checked)
+- [ ] Dimensions calculated (Team, Tech, Mgmt, Commercial)
+- [ ] Both documents generated (Results + Summary)
+- [ ] "Questions to Ask Founders" list complete
 
 **Step 3 → Step 4:**
 - [ ] All 29 questions scored
@@ -220,9 +241,10 @@ Step 8: Network Visualization (60-90 min) → Interactive HTML map
 ## Quick AI Commands
 
 ```
-"Execute VIANEO Step 0 canvas extraction"
-"Run 40-question diagnostic with evidence"
-"Complete 29-question market maturity"
+"Execute VIANEO Step 0 Executive Brief extraction"
+"Generate 360 SIS application from Executive Brief"
+"Run 40-question diagnostic with both output documents"
+"Complete 29-question market maturity assessment"
 "Generate needs matrix HTML"
 "Map ecosystem with acceptability ratings"
 "Create network visualization"

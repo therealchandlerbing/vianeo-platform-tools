@@ -306,42 +306,97 @@ Use the individual step prompts in the `prompts/` directory, working sequentiall
 
 ## Step-by-Step Guide
 
-### STEP 0: Canvas Extraction (20-30 min)
+### STEP 0: Executive Brief Extraction (20-30 min)
 
-**Purpose:** Transform unstructured materials into standardized VIANEO canvas format
+**Purpose:** Transform unstructured materials into standardized Executive Brief format with strict character limits
 
-**Prompt Location:** `prompts/step_0_canvas_extraction.md`
+**Prompt Location:** `prompts/step_0_executive_brief_extraction.md`
+
+**Template Location:** `templates/Executive_Brief_Template.md`
+
+**Structure - Executive Brief (B1-B7):**
+- **B1:** Project Name + One-Line Description (MAX 150 chars)
+- **B2:** Problem Statement (MAX 300 chars) - Solution-neutral
+- **B3:** Proposed Solution (MAX 300 chars) - Approach and innovation
+- **B4:** Target Market and Users (MAX 300 chars) - TAM/SAM, user vs. buyer
+- **B5:** Business Model and Revenue (MAX 300 chars) - Revenue model, pricing, unit economics
+- **B6:** Traction and Validation (MAX 300 chars) - Quantified evidence only
+- **B7:** Team and Resources (MAX 200 chars) - Founders, gaps, advisors
+
+**Maturity Stage Classification:**
+- Idea (TRL 1-2)
+- Prototype (TRL 3-4)
+- Pilot (TRL 5-6)
+- Early Commercialization (TRL 7-8)
+- Growth (TRL 9)
+
+**Supplementary Notes (MAX 250 chars each):**
+- Market Context
+- Strategic Importance
+- Technology Platform Potential
+- Key Dependencies and Risks
+- Evidence Quality Assessment
 
 **Outputs:**
-- VIANEO Business Model Canvas (all fields ≤ character limits)
-- Executive Brief (1-2 pages)
-- Evidence gap identification
+- Executive Brief (Markdown + DOCX)
+- Maturity stage classification with TRL rating
+- Evidence tracking for all major claims
+- Red flags identified
 
 **Quality Checks:**
-- [ ] Problem statement is solution-neutral
-- [ ] All character limits respected
-- [ ] Users and buyers clearly differentiated
-- [ ] Evidence gaps explicitly noted
+- [ ] All character limits strictly enforced (B1: 150, B2-B6: 300, B7: 200)
+- [ ] Problem statement (B2) is solution-neutral (no tech/product mentions)
+- [ ] Traction (B6) is fully quantified with numbers
+- [ ] Users and buyers (B4) clearly distinguished or noted as same
+- [ ] Evidence tracking complete for all sections
+- [ ] Maturity stage matches evidence
 
 **Next Step:** Proceed to Step 1 (if using application forms) or Step 2
 
 ---
 
-### STEP 1: Application Forms [OPTIONAL] (15 min)
+### STEP 1: Application Forms [OPTIONAL] (15-20 min)
 
-**Purpose:** Populate standardized program application formats
+**Purpose:** Transform Executive Brief into program-specific standardized application formats
 
-**Prompt Location:** `prompts/step_1_application_form.md`
+**Prompt Location:** `prompts/step_1_application_forms.md`
+
+**Template Locations:**
+- `templates/360SIS_Application_Template.md` (Social impact ventures)
+- `templates/CNEN_Application_Template.md` (Research institutions)
+
+**Two Standard Formats:**
+
+**Format 1: 360 SIS Application**
+- **Use for:** Social enterprises, impact investing, SDG-focused programs
+- **Structure:** 7 sections with Theory of Change framework
+- **Maturity Stages:** Discovery → Validation → Preparation → Growth → Scaling → Maturity
+- **Sentence Limits:** Project Summary 2-3, all others 3-5 sentences
+- **Special Features:** Impact metrics, Theory of Change table, stage justification
+
+**Format 2: CNEN Application**
+- **Use for:** Research institutions, tech transfer, academic spin-outs
+- **Structure:** 5 sections with TRL emphasis
+- **TRL Focus:** Technology Readiness Level 1-9 with justification
+- **Sentence Limits:** Executive Summary 2-3, all others 3-5 sentences
+- **Special Features:** Scientific impact, IP status, institutional support
+
+**Key Requirements:**
+- All content maps from Executive Brief (Step 0)
+- Character limits: Summary 500, others 750 chars
+- Sentence limits strictly enforced (2-3 or 3-5)
+- All tables completed with actual data
+- DOCX output for professional submission
 
 **When to Use:**
-- Managing multiple startups in a cohort
-- Tracking in database or CRM
-- Standardized reporting requirements
+- Managing cohorts in accelerator/incubator programs
+- Submitting to specific program requirements
+- Institutional applications (research, grants)
 
 **When to Skip:**
-- Ad-hoc evaluations
-- No program management needed
-- Direct to assessment
+- Ad-hoc evaluations without formal program
+- Moving directly to diagnostic assessment
+- No standardized application format required
 
 **Next Step:** Proceed to Step 2
 
@@ -349,34 +404,64 @@ Use the individual step prompts in the `prompts/` directory, working sequentiall
 
 ### STEP 2: 40-Question Diagnostic (30-45 min)
 
-**Purpose:** Rapid assessment across Team, Technology, Management, and Commercial dimensions
+**Purpose:** Comprehensive assessment across Team, Technology, Management, and Commercial dimensions with two-document output
 
 **Prompt Location:** `prompts/step_2_diagnostic_40q.md`
 
+**Template Locations:**
+- `templates/40Q_Assessment_Results_Template.md` (Comprehensive document)
+- `templates/40Q_Score_Summary_Template.md` (Executive brief)
+
 **Scoring Scale:**
-- **5** = Complete validation with external evidence
-- **4** = Strong capability with some validation
-- **3** = Adequate/basic capability, internal validation only
-- **2** = Significant gaps, aware but not addressed
-- **1** = Critical gap, no evidence or work done
+- **5** = Complete - External validation, documented evidence, multiple sources
+- **4** = Strong - Some external validation, clear capability, preliminary evidence
+- **3** = Adequate - Internal validation only, reasonable assumptions, basic capability
+- **2** = Weak - Significant gaps identified, aware but not addressed, concerning
+- **1** = Critical Gap - No evidence, major deficiency, not addressed, red flag
+
+**Special Response Types:**
+- **INSUFFICIENT DATA** - Application lacks information to score
+- **CONTEXTUAL NOTE** - Score needs important qualification
+- **YES/NO** - Binary question where score doesn't apply
+- **N/A** - Question not relevant to this specific venture
 
 **Dimensions:**
-- **Team** (9 questions): Completeness, experience, commitment
-- **Technology** (8 questions): Innovation, feasibility, IP, scalability
-- **Management** (12 questions): Strategy, planning, execution
-- **Commercial** (8 questions): Customer validation, market size, business model
+- **Team** (T1-T9): 9 questions - Technical completeness, experience, domain expertise, commitment
+- **Technology** (Tech1-Tech11): 11 questions - Innovation, feasibility, IP, scalability, security, QA
+- **Management** (M1-M12): 12 questions - Strategy, financial planning, operations, governance
+- **Commercial** (C1-C8): 8 questions - Customer validation, market size, business model, revenue validation
 
-**Outputs:**
-- 40 individual scores with evidence citations
-- 4 dimensional averages
-- Key strengths and critical gaps per dimension
-- Red flag identification
+**Two-Document Output:**
+
+**Document 1: Assessment Results (Comprehensive)**
+- All 40 questions with scores and evidence
+- Dimensional analyses with red flags
+- Top strengths (scores 4-5)
+- Critical gaps (scores 1)
+- Major weaknesses (scores 2)
+- Questions to Ask Founders (INSUFFICIENT DATA items)
+- 5-paragraph narrative assessment
+- Recommendation for next steps
+
+**Document 2: Score Summary (Executive Brief)**
+- Executive summary (2-3 paragraphs)
+- Dimensional scores table
+- Top 5 strengths
+- Top 5 gaps/concerns
+- Red flags summary
+- Strategic recommendations (immediate + medium-term)
+- Stage appropriateness assessment
+- Final recommendation with justification
 
 **Quality Checks:**
-- [ ] All 40 questions scored
-- [ ] Evidence cited for scores ≥3
-- [ ] Red flags identified and explained
-- [ ] Dimension averages calculated correctly
+- [ ] All 40 questions scored or marked with special response
+- [ ] Evidence/gap provided for each score
+- [ ] All dimension averages calculated correctly
+- [ ] Red flags identified (18 specific red flag patterns)
+- [ ] "Questions to Ask Founders" list complete
+- [ ] Both documents generated (Results + Summary)
+- [ ] Recommendation is specific and justified
+- [ ] Stage appropriateness evaluated
 
 **Next Step:** Proceed to Step 3
 

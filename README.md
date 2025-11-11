@@ -1,64 +1,172 @@
 # Vianeo Platform Tools
 
-A comprehensive business model assessment framework using the Vianeo Market Maturity Assessment methodology. This repository provides everything needed to conduct evidence-based assessments of business ventures across five dimensions: Legitimacy, Desirability, Acceptability, Feasibility, and Viability.
+**Complete 8-Step Business Model Evaluation System**
 
-## Overview
+A comprehensive, AI-assisted framework for systematic startup assessment using the VIANEO methodology. Transform raw applications into evidence-based evaluations across five dimensions with professional visual outputs.
 
-The Vianeo Market Maturity Assessment is a 29-question framework for evaluating business ventures objectively using external validation and evidence. It helps founders, investors, advisors, and accelerators make informed decisions about business viability.
+---
 
-### Key Features
+## What This System Does
 
-- **29-Question Framework**: Comprehensive assessment across 5 dimensions
-- **Evidence-Based**: Scores based on external validation, not assumptions
-- **Claude-Optimized**: System prompt designed for AI-assisted assessment
-- **Complete Documentation**: Guides, references, checklists, and examples
-- **Ready-to-Use Templates**: Start assessing immediately
-- **Proven Methodology**: Based on Vianeo's business model evaluation framework
+This is a complete evaluation toolkit that takes you from initial startup application to committee-ready assessment package in **90 minutes to 6 hours** (depending on depth needed).
+
+**You Get:**
+- ✅ Structured business model canvas extraction
+- ✅ 40-question diagnostic across Team/Technology/Management/Commercial
+- ✅ 29-question market maturity assessment with dimensional scores
+- ✅ Deep-dive legitimacy and desirability analysis
+- ✅ Interactive HTML visualizations (needs matrix, network map)
+- ✅ Complete committee report with recommendations
+- ✅ Professional presentation deck ready for investors/boards
+
+---
+
+## Who This Is For
+
+**🎯 Accelerators & Incubators**
+- Screen applications efficiently (90 min per startup)
+- Compare cohorts objectively
+- Track progress through milestones
+
+**💰 Investors**
+- Conduct systematic due diligence
+- Standardize deal flow evaluation
+- Identify risks before investment
+
+**🤝 Advisors & Mentors**
+- Provide structured feedback to founders
+- Identify critical gaps requiring attention
+- Track validation progress over time
+
+**🚀 Founders**
+- Self-assess business readiness
+- Identify evidence gaps before fundraising
+- Prioritize validation activities
+
+---
+
+## The Complete 8-Step Workflow
+
+```
+Step 0: Canvas Extraction (20-30 min)
+  → Structured business model with character limits enforced
+
+Step 1: Application Forms [OPTIONAL] (15 min)
+  → Standardized format for program management
+
+Step 2: 40-Question Diagnostic (30-45 min)
+  → Team, Technology, Management, Commercial scores
+
+Step 3: 29-Question Market Maturity (45-60 min)
+  → Five dimensional scores: Legitimacy, Desirability, Acceptability, Feasibility, Viability
+
+Step 4: Legitimacy Deep Dive (20-30 min)
+  → Problem validation and domain fit analysis
+
+Step 5: Desirability Analysis (30-40 min)
+  → User segments, needs extraction, persona development
+
+Step 6: Needs Qualification Matrix (45 min)
+  → Interactive HTML heatmap showing priority targets
+
+Step 7: Ecosystem Mapping (30-45 min)
+  → Stakeholder analysis with acceptability ratings
+
+Step 8: Network Visualization (60-90 min)
+  → Interactive HTML value network map
+```
+
+---
+
+## Three Execution Paths
+
+### 🏃 Fast Track (90 minutes)
+
+**Best For:** Initial screening, processing 10+ applications
+
+**Steps:** 0 → 2 → 4 → 5
+
+**Output:**
+- Business model canvas
+- Dimensional scores (no visuals)
+- Key gaps identified
+- Go/No-Go recommendation
+
+---
+
+### 🚶 Standard (3-4 hours)
+
+**Best For:** Committee-ready evaluation of top 5 finalists
+
+**Steps:** 0 → 2 → 3 → 4 → 5 → 6 → 7
+
+**Output:**
+- Complete diagnostics
+- All five dimensional scores
+- Needs matrix HTML visualization
+- Ecosystem mapping
+- Investment recommendation with conditions
+
+---
+
+### 🎯 Complete (5-6 hours)
+
+**Best For:** Executive presentations, Series A+ due diligence
+
+**Steps:** All 0-8
+
+**Output:**
+- Everything from Standard
+- Interactive network visualization
+- Professional committee report
+- Board-ready presentation deck
 
 ---
 
 ## Quick Start
 
-### For First-Time Users
+### Option 1: Use Complete System (Recommended)
 
-1. **Read the Quick Start Card** (5 minutes)
+1. **Read the Complete Evaluation Skill Guide** (15 min)
+   ```
+   docs/VIANEO_Complete_Evaluation_Skill.md
+   ```
+   Understand the complete 8-step process
+
+2. **Print the Quick Reference Card**
+   ```
+   docs/VIANEO_Quick_Reference_Card.md
+   ```
+   Keep visible for thresholds, scoring scales, quality gates
+
+3. **Choose Your Execution Path**
+   - Fast Track: 90 min screening
+   - Standard: 3-4 hour evaluation
+   - Complete: 5-6 hour package
+
+4. **Execute Step-by-Step**
+   Use prompts in `/prompts/` directory for each step
+
+---
+
+### Option 2: Market Maturity Assessment Only (Step 3)
+
+If you only need the 29-question dimensional assessment:
+
+1. **Read Quick Start Card** (5 min)
    ```
    docs/VIANEO_Quick_Start_Card.md
    ```
-   Print this and keep it visible during assessment.
 
-2. **Review the System Overview** (10 minutes)
+2. **Use the System Prompt**
    ```
-   docs/VIANEO_System_Overview.md
+   docs/VIANEO_Market_Maturity_System_Prompt.md
    ```
-   Understand how all the pieces fit together.
 
-3. **Follow the Workflow Guide** (60-90 minutes)
+3. **Follow the Workflow**
    ```
    docs/VIANEO_Assessment_Workflow_Guide.md
    ```
-   Step-by-step process for conducting assessments.
-
-4. **Use the Template**
-   ```
-   templates/Assessment_Template.md
-   ```
-   Fill in as you assess your business.
-
-### For Claude-Assisted Assessment
-
-Use Claude to help conduct assessments by providing the system prompt:
-
-```
-I need help conducting a Vianeo Market Maturity Assessment.
-
-Please use the system prompt in docs/VIANEO_Market_Maturity_System_Prompt.md
-to evaluate this business using the 29-question framework.
-
-Return a table with columns: Question #, Score, Justification, Evidence Reference
-
-[Attach or paste your business materials here]
-```
 
 ---
 
@@ -66,51 +174,153 @@ Return a table with columns: Question #, Score, Justification, Evidence Referenc
 
 ```
 vianeo-platform-tools/
-├── docs/                           # Core documentation
-│   ├── VIANEO_Quick_Start_Card.md           # One-page reference (print this!)
-│   ├── VIANEO_System_Overview.md            # System architecture and usage
-│   ├── VIANEO_Market_Maturity_System_Prompt.md  # PRIMARY: Claude prompt ⭐
-│   ├── VIANEO_Assessment_Workflow_Guide.md  # Complete step-by-step process
-│   ├── VIANEO_29Question_Quick_Reference.md # Detailed question guidance
-│   └── VIANEO_Evidence_Checklist.md         # Evidence requirements per question
-├── templates/                      # Assessment templates
-│   └── Assessment_Template.md               # Blank assessment template
-├── examples/                       # Example assessments
-│   ├── Example_Assessment_Early_Stage.md    # Score ~2.0 example
-│   └── Example_Assessment_Promising_Stage.md # Score ~4.0 example
-└── README.md                       # This file
+├── docs/                                    # Core documentation
+│   ├── VIANEO_Complete_Evaluation_Skill.md      # ⭐ MASTER GUIDE - Start here
+│   ├── VIANEO_Quick_Reference_Card.md          # Print this! All essentials
+│   ├── VIANEO_System_Overview.md               # How components fit together
+│   ├── VIANEO_Market_Maturity_System_Prompt.md # Step 3: Primary prompt
+│   ├── VIANEO_Assessment_Workflow_Guide.md     # Step 3: Detailed process
+│   ├── VIANEO_29Question_Quick_Reference.md    # Step 3: Question details
+│   └── VIANEO_Evidence_Checklist.md            # Step 3: Evidence requirements
+│
+├── prompts/                                 # Step-by-step prompts
+│   ├── step_0_canvas_extraction.md              # Extract business model canvas
+│   ├── step_1_application_form.md               # Optional: Program applications
+│   ├── step_2_diagnostic_40q.md                 # 40-question diagnostic
+│   ├── step_3_market_maturity_link.md           # Link to Step 3 docs
+│   ├── step_4_legitimacy_worksheet.md           # Problem validation (TODO)
+│   ├── step_5_desirability_personas.md          # Needs & personas (TODO)
+│   ├── step_6_needs_matrix_html.md              # HTML matrix generator (TODO)
+│   ├── step_7_ecosystem_mapping.md              # Stakeholder analysis (TODO)
+│   └── step_8_network_visualization.md          # HTML network map (TODO)
+│
+├── visualizations/                          # HTML templates
+│   ├── needs_matrix_template.html               # Priority heatmap (TODO)
+│   └── network_map_template.html                # Value network (TODO)
+│
+├── worksheets/                              # Analysis worksheets
+│   ├── Legitimacy_Analysis_Template.md          # Problem validation (TODO)
+│   └── Ecosystem_Mapping_Template.md            # Stakeholder table (TODO)
+│
+├── templates/                               # Blank templates
+│   ├── Assessment_Template.md                   # Step 3 assessment
+│   └── Committee_Report_Template.md             # Final report (TODO)
+│
+├── examples/                                # Complete examples
+│   ├── Example_Assessment_Early_Stage.md        # Score ~1.9 (Step 3)
+│   └── Example_Assessment_Promising_Stage.md    # Score ~4.1 (Step 3)
+│
+└── README.md                                # This file
 ```
 
 ---
 
-## The Framework
+## The Five VIANEO Dimensions
 
-### Five Dimensions
+### 1. Legitimacy (15% Weight, Threshold ≥ 3.0)
 
-| Dimension | Weight | Threshold | Questions | Focus |
-|-----------|--------|-----------|-----------|-------|
-| **Legitimacy** | 15% | 3.0 | 2 | Is the problem real and significant? |
-| **Desirability** | 25% | 3.5 | 12 | Do customers want this solution? |
-| **Acceptability** | 20% | 3.0 | 6 | Will the ecosystem support it? |
-| **Feasibility** | 20% | 3.0 | 5 | Can the team deliver it? |
-| **Viability** | 20% | 3.0 | 4 | Is the business model sustainable? |
+**Focus:** Is the problem real and significant?
 
-**Overall Threshold**: 3.2
+**Critical Questions:**
+- Is the problem validated by external stakeholders?
+- Is the field of application appropriate?
+- Does the team have unique insight?
 
-### Scoring Scale (1-5)
+**Evidence Required:**
+- Multiple stakeholders confirming problem
+- Data quantifying problem magnitude
+- Domain expertise or personal connection
+
+---
+
+### 2. Desirability (25% Weight, Threshold ≥ 3.5)
+
+**Focus:** Do customers actually want this solution?
+
+**Critical Questions:**
+- Have 5+ users per segment been interviewed?
+- Are user needs distinct and validated?
+- Is there evidence of problem-solution fit?
+- How does it compare to alternatives?
+
+**Evidence Required:**
+- Customer discovery interviews (5-20+ per segment)
+- User testing with prototypes
+- Competitive analysis with direct testing
+- Validated willingness to pay
+
+---
+
+### 3. Acceptability (20% Weight, Threshold ≥ 3.0)
+
+**Focus:** Will the ecosystem support this?
+
+**Critical Questions:**
+- Are all key stakeholders mapped?
+- What are their acceptability ratings?
+- Are critical partners willing to collaborate?
+- Are barriers identified and addressable?
+
+**Evidence Required:**
+- Ecosystem map with 5-20+ players
+- Acceptability ratings (favorable/neutral/unfavorable)
+- Mitigation strategies for resistance
+- Partnership discussions initiated
+
+---
+
+### 4. Feasibility (20% Weight, Threshold ≥ 3.0)
+
+**Focus:** Can the team actually deliver this?
+
+**Critical Questions:**
+- Does team have necessary skills?
+- Is technology proven or feasible?
+- Are resources secured or accessible?
+- Is there a realistic plan?
+
+**Evidence Required:**
+- Team completeness assessment
+- Technical proof-of-concept or prototype
+- Resource plan with funding
+- Development timeline with milestones
+
+---
+
+### 5. Viability (20% Weight, Threshold ≥ 3.0)
+
+**Focus:** Is the business model sustainable?
+
+**Critical Questions:**
+- Is revenue model clearly defined?
+- Has pricing been tested with customers?
+- Is there a path to profitability?
+- Are unit economics favorable?
+
+**Evidence Required:**
+- Business model canvas complete
+- Pricing tested with 5+ customers
+- Financial projections with validated assumptions
+- Unit economics (LTV:CAC ratio)
+
+---
+
+## Scoring Scales
+
+### Evidence-Based Scale (All Steps)
 
 | Score | Meaning | Evidence Required |
 |-------|---------|------------------|
-| **5** | Exceptional | 15-20+ external validations, multiple sources |
-| **4** | Strong | 10-15 external validations, clear evidence |
-| **3** | Adequate | 5-10 external validations (minimum threshold) |
-| **2** | Weak | 1-4 validations, mostly assumptions |
-| **1** | Insufficient | No external validation, pure assumption |
+| **5** | **Exceptional** | 15-20+ external validations, multiple sources, documented |
+| **4** | **Strong** | 10-15 external validations, clear evidence |
+| **3** | **Adequate** | 5-10 external validations (minimum threshold) |
+| **2** | **Weak** | 1-4 validations, mostly assumptions |
+| **1** | **Insufficient** | No external validation, pure assumption |
 
-### Overall Categories
+### Overall Score Categories
 
-| Score | Category | Recommendation |
-|-------|----------|----------------|
+| Score Range | Category | Recommendation |
+|-------------|----------|----------------|
 | 4.5-5.0 | **Strong** | Proceed with implementation |
 | 3.5-4.4 | **Promising** | Proceed, strengthen gaps |
 | 3.0-3.4 | **Developing** | Conditional proceed, address gaps |
@@ -119,370 +329,227 @@ vianeo-platform-tools/
 
 ---
 
-## Core Principles
+## Key Features
 
-### 1. Evidence Over Assumptions
-- Score what **exists**, not what's **planned**
-- External validation (interviews, testing) required for Score 3+
-- Internal beliefs or assumptions receive low scores
+### Character Limits Enforced
 
-### 2. Specificity Over Generality
-- Cite exact sources and documents
-- Use specific numbers (interviews, tests, customers)
-- Avoid vague language ("good progress", "working on it")
+All canvas fields have strict character limits to ensure clarity:
+- Problem Statement: 250 chars
+- Field of Application: 60 chars
+- Needs Statements: 60 chars each
+- Player Names: 60 chars each
 
-### 3. Honesty Over Optimism
-- Lower scores are not failures - they show where to focus
-- Acknowledge gaps transparently
-- Distinguish validated facts from aspirational goals
+### Evidence Requirements
 
-### 4. Action Over Judgment
-- Every Score 1 must specify exactly what's needed
-- Focus on how to improve, not just what's wrong
-- Use results to drive specific next steps
+Every score ≥3 requires:
+- Specific external validation cited
+- Source documented
+- Numbers provided (X interviews, Y customers)
 
----
+Every score of 1 requires:
+- Exactly what evidence is needed specified
+- No vague "needs validation"
 
-## Document Guide
+### Visual Outputs
 
-### 🎯 Start Here
+**Needs Qualification Matrix** (Step 6):
+- Interactive HTML heatmap
+- Priority zones color-coded (Critical/High/Medium/Low)
+- Importance vs. Satisfaction across segments
 
-**[Quick Start Card](docs/VIANEO_Quick_Start_Card.md)**
-- Print and keep visible during assessment
-- One-page reference with all essentials
-- Scoring scale, thresholds, formulas
-- Evidence requirements summary
+**Network Visualization** (Step 8):
+- Interactive HTML value network
+- 5-column layout (Enablers → Product → Channels → Buyers → Users)
+- Color-coded by acceptability
+- Priority targets highlighted
 
-### 📋 Core System
+### Quality Control
 
-**[System Prompt](docs/VIANEO_Market_Maturity_System_Prompt.md)** ⭐ **MOST IMPORTANT**
-- Primary prompt for Claude-assisted assessment
-- Complete instructions and scoring guidance
-- All 29 questions with detailed criteria
-- Output format specifications
-
-**[Workflow Guide](docs/VIANEO_Assessment_Workflow_Guide.md)**
-- Complete step-by-step process
-- Pre-assessment preparation
-- Quality control procedures
-- Common scenarios and solutions
-
-**[System Overview](docs/VIANEO_System_Overview.md)**
-- How all documents fit together
-- Recommended workflows
-- Quality standards
-- Maintenance and updates
-
-### 🔍 Detailed References
-
-**[29 Question Quick Reference](docs/VIANEO_29Question_Quick_Reference.md)**
-- All questions organized by dimension
-- Detailed scoring guidance per question
-- Evidence requirements
+Built-in quality gates between steps:
+- Character limit verification
+- Evidence citation checks
+- Consistency validation
 - Red flag identification
 
-**[Evidence Checklist](docs/VIANEO_Evidence_Checklist.md)**
-- Specific evidence requirements for each question
-- What to look for in documentation
-- Evidence quality guidelines
-- Pre-submission checklist
-
-### 📝 Templates & Examples
-
-**[Assessment Template](templates/Assessment_Template.md)**
-- Blank template for conducting assessments
-- All sections included
-- Ready to fill in
-
-**[Early Stage Example](examples/Example_Assessment_Early_Stage.md)**
-- Example assessment of early-stage startup
-- Overall score: 1.9 (Non-viable - needs validation)
-- Shows common early-stage patterns
-
-**[Promising Stage Example](examples/Example_Assessment_Promising_Stage.md)**
-- Example assessment of validated startup
-- Overall score: 4.1 (Promising)
-- Shows what strong validation looks like
-
 ---
 
-## Common Use Cases
-
-### For Founders
-
-**Self-Assessment**:
-1. Gather all business documentation
-2. Follow Workflow Guide to complete assessment
-3. Identify critical gaps
-4. Create action plan to address gaps
-5. Reassess after validation work
-
-**Benefits**:
-- Objective view of business readiness
-- Identify blind spots before investors do
-- Prioritize validation work
-- Track progress over time
-
-### For Investors
-
-**Due Diligence**:
-1. Request standardized materials from founders
-2. Complete independent assessment
-3. Verify external evidence
-4. Identify deal-breakers
-5. Use as basis for investment decision
-
-**Benefits**:
-- Standardized evaluation framework
-- Evidence-based decision making
-- Identify red flags early
-- Compare ventures objectively
-
-### For Advisors/Mentors
-
-**Startup Evaluation**:
-1. Request materials in advance
-2. Complete assessment independently
-3. Schedule review meeting
-4. Collaborate on action plan
-5. Set follow-up assessment date
-
-**Benefits**:
-- Structured feedback framework
-- Clear, actionable guidance
-- Track progress between sessions
-- Focus mentoring time effectively
-
-### For Accelerators/Incubators
-
-**Selection & Progress Tracking**:
-1. Require assessment for all applicants
-2. Multiple evaluators assess independently
-3. Compare scores for consistency
-4. Use for selection decisions
-5. Reassess at program milestones
-
-**Benefits**:
-- Fair, consistent selection process
-- Baseline for progress tracking
-- Identify program interventions needed
-- Measure program impact
-
----
-
-## Critical Questions
-
-Some questions are particularly critical and **cannot be Score 1** for a viable business:
-
-**Q7: Customer Discovery**
-- Must have 5+ interviews per segment (minimum Score 3)
-- No customer interviews = cannot validate anything else
-
-**Q13: Problem Validation**
-- Problem must be validated by multiple people (minimum Score 3)
-- If problem doesn't exist, solution is irrelevant
-
-**Q19: Revenue Model Testing**
-- Revenue model must be tested with customers (minimum Score 2)
-- Untested pricing = business model is pure assumption
-
-**Q22: Customer Testing per Segment**
-- Must test with customers per segment (minimum Score 2)
-- No segment validation = no product-market fit
-
----
-
-## Red Flag Patterns
+## Critical Red Flags
 
 ### 🚨 Pattern 1: No Customer Validation
 - Q7 = 1 (no interviews)
 - Q13 = 1 (problem not validated)
 - Q22 = 1 (not tested with customers)
 
-**Action**: STOP building immediately. START customer discovery interviews.
+**Action:** STOP building. START customer discovery immediately.
 
 ### 🚨 Pattern 2: Ecosystem Blindness
 - Q3 = 1 (no ecosystem map)
 - Q17 = 1 (no resistance identified)
-- Q20 = 1 (can't map market)
+- Multiple unfavorable critical players
 
-**Action**: Map ecosystem before investing more. May face unexpected resistance.
+**Action:** Map ecosystem before investing more. May face unexpected resistance.
 
 ### 🚨 Pattern 3: Business Model Untested
 - Q14 = 1 (revenue undefined)
 - Q19 = 1 (not tested with customers)
 - Q27 = 1 (can't articulate value)
 
-**Action**: Define and test revenue model immediately. Great product ≠ sustainable business.
+**Action:** Define and test revenue model immediately. Great product ≠ sustainable business.
 
 ### 🚨 Pattern 4: Resource Constraints
 - Q1 = 1 (lacking resources)
 - Q16 = 1 (no committed team)
-- Q26 = 1 (can't develop offer)
+- Team all part-time
 
-**Action**: Address resource gaps before proceeding. Execution impossible without fundamentals.
-
----
-
-## Reassessment Schedule
-
-| Overall Score | Reassess Every | Reason |
-|---------------|----------------|--------|
-| < 2.0 | 2-4 weeks | Rapid validation needed |
-| 2.0-2.9 | 4 weeks | Building evidence |
-| 3.0-3.4 | 4-6 weeks | Addressing gaps |
-| 3.5-4.4 | 2-3 months | Monitoring progress |
-| 4.5+ | Quarterly | Maintaining excellence |
-
-**Also reassess immediately after**:
-- Major business model pivot
-- Significant funding round
-- New market entry
-- Major competitive development
-- Regulatory environment change
-- Key partnership formation or loss
+**Action:** Secure resources before proceeding. Execution impossible without fundamentals.
 
 ---
 
-## Tips for Effective Assessment
+## Usage Examples
 
-### Do's ✅
+### For Accelerators
 
-- **Do** score based on documented evidence
-- **Do** cite specific sources (documents, interviews, reports)
-- **Do** use numbers when available (X interviews, Y customers)
-- **Do** require external validation for scores 3+
-- **Do** specify exactly what's needed for Score 1s
-- **Do** check consistency across related questions
-- **Do** focus on actionable improvements
+**Cohort Screening:**
+1. Use Fast Track (90 min per startup) for all 50 applications
+2. Select top 10 based on dimensional scores
+3. Use Standard (4 hours) for top 10
+4. Select final 5 based on complete evaluation
+5. Use Complete (6 hours) for final 5 for demo day packages
 
-### Don'ts ❌
-
-- **Don't** score based on plans or intentions
-- **Don't** use vague justifications ("team believes", "good progress")
-- **Don't** inflate scores to look better
-- **Don't** accept internal opinions as evidence
-- **Don't** skip the evidence checklist
-- **Don't** rush - take time for thorough assessment
-- **Don't** ignore red flag patterns
+**Result:** Systematic, evidence-based cohort selection with professional outputs
 
 ---
 
-## Quality Standards
+### For Investors
 
-### Excellent Assessment
+**Deal Flow Processing:**
+1. Request standardized materials from founders
+2. Use Standard path (4 hours) for preliminary evaluation
+3. Identify red flags and deal-breakers
+4. Request additional evidence for gaps
+5. Use Complete path (6 hours) for investment committee
+6. Visual outputs support IC presentation
 
-- ✅ All 29 questions scored with specific evidence
-- ✅ Every Score 4-5 cites external validation
-- ✅ Every Score 1 specifies exact evidence needed
-- ✅ Justifications are clear and concise (one sentence)
-- ✅ Dimension scores calculated correctly
-- ✅ Action recommendations are specific and prioritized
-- ✅ Follow-up schedule established
-
-### Before Submitting
-
-Verify this checklist:
-
-- [ ] All 29 questions scored
-- [ ] Every Score 4-5 has specific external evidence cited
-- [ ] Every Score 1 specifies what evidence is needed
-- [ ] Justifications are one sentence, specific, factual
-- [ ] All dimension calculations correct
-- [ ] Overall weighted score calculated
-- [ ] All thresholds checked
-- [ ] Top 3-5 strengths identified
-- [ ] Top 3-5 critical gaps identified
-- [ ] Action plan prioritized
-- [ ] Next assessment date set
-- [ ] Consistency checks completed
+**Result:** Consistent evaluation framework, reduced bias, clear investment criteria
 
 ---
 
-## Frequently Asked Questions
+### For Founders
 
-### Q: What materials do I need for an assessment?
+**Self-Assessment:**
+1. Gather all business materials
+2. Use Standard path for honest self-evaluation
+3. Identify critical gaps requiring validation
+4. Create 30-60-90 day validation plan
+5. Reassess after validation work
+6. Use before fundraising to identify weaknesses investors will find
 
-**Essential**:
-- Business plan or pitch deck
-- Customer research documentation
-- Financial projections
-- Team information
-
-**Helpful**:
-- Competitive analysis
-- User testing results
-- Market research reports
-- Partnership agreements
-
-### Q: How long does an assessment take?
-
-- **Quick scan**: 10 minutes (initial impression)
-- **Full assessment**: 45-90 minutes (depends on materials)
-- **With Claude**: 20-30 minutes (AI-assisted)
-
-### Q: Can I assess my own business?
-
-Yes, but be rigorous:
-- Score what exists, not what's planned
-- Require same evidence standards as external evaluator
-- Consider having someone else assess independently
-- Compare self-assessment with external assessment
-
-### Q: What if I don't have evidence for a question?
-
-- Score it as **1**
-- Specify exactly what evidence is needed
-- Create plan to gather that evidence
-- Reassess after evidence collected
-
-### Q: How accurate is the assessment?
-
-Accuracy depends on:
-- Quality of evidence provided
-- Honesty in scoring
-- Consistency in evaluation
-- Multiple evaluators (recommended) increase accuracy
-
-### Q: What's a "good" score?
-
-- **3.2+** = Viable business, can proceed
-- **3.5+** = Promising, ready for investment consideration
-- **4.0+** = Strong, well-validated
-- **2.0-3.2** = Needs more validation before proceeding
-- **<2.0** = Requires significant validation work
+**Result:** Proactive gap identification, stronger fundraising position
 
 ---
 
-## Contributing
+## Time Investment
 
-This is a business assessment framework. To suggest improvements:
+### Per Project
 
-1. Use the framework extensively
-2. Document specific issues or enhancements
-3. Provide evidence for suggested changes
-4. Submit pull requests with clear rationale
+- **Fast Track:** 90 minutes (screening)
+- **Standard:** 3-4 hours (committee evaluation)
+- **Complete:** 5-6 hours (executive package)
+
+### Per Cohort (10 Startups)
+
+- **Initial screening:** 15 hours (Fast Track all)
+- **Deep dive top 5:** 15-20 hours (Standard)
+- **Final packages top 3:** 15-18 hours (Complete)
+- **Total:** 45-53 hours for complete cohort
+
+### ROI
+
+**Instead of:**
+- Subjective gut decisions
+- Inconsistent evaluation criteria
+- Missing critical risks
+- Endless committee debates
+
+**You get:**
+- Evidence-based decisions
+- Standardized criteria
+- Red flags identified early
+- Clear, defensible recommendations
 
 ---
 
-## Version History
+## Getting Started
 
-- **v1.0** (2025-01-15): Initial release
-  - Complete 29-question framework
-  - Full documentation suite
-  - Claude-optimized system prompt
-  - Templates and examples
+**Step 1:** Read the master guide
+```
+docs/VIANEO_Complete_Evaluation_Skill.md
+```
+
+**Step 2:** Print the quick reference
+```
+docs/VIANEO_Quick_Reference_Card.md
+```
+
+**Step 3:** Choose your execution path
+- Fast Track: Quick screening
+- Standard: Committee ready
+- Complete: Executive presentation
+
+**Step 4:** Execute step-by-step
+Use prompts in `/prompts/` directory
+
+**Step 5:** Generate outputs
+- Canvas, diagnostics, scores
+- HTML visualizations
+- Committee report
 
 ---
 
-## Support
+## AI-Assisted Execution
 
-For questions or issues:
+This system is optimized for AI assistance (Claude recommended):
 
-1. Review the documentation thoroughly
-2. Check the examples for similar scenarios
-3. Consult the FAQ above
-4. Open an issue in the repository
+```
+"Execute VIANEO Step 0 canvas extraction on this application"
+
+"Run the 40-question diagnostic with evidence citations"
+
+"Complete the 29-question market maturity assessment"
+
+"Generate needs qualification matrix HTML"
+
+"Create interactive network visualization"
+
+"Compile complete committee report"
+```
+
+Each step has a detailed prompt in `/prompts/` for consistent execution.
+
+---
+
+## Support & Documentation
+
+**Complete Guides:**
+- Master System Guide: `docs/VIANEO_Complete_Evaluation_Skill.md`
+- Quick Reference: `docs/VIANEO_Quick_Reference_Card.md`
+- System Overview: `docs/VIANEO_System_Overview.md`
+
+**Step-Specific:**
+- Market Maturity (Step 3): `docs/VIANEO_Market_Maturity_System_Prompt.md`
+- All Other Steps: `prompts/step_[0-8]_*.md`
+
+**Examples:**
+- Early Stage: `examples/Example_Assessment_Early_Stage.md`
+- Promising Stage: `examples/Example_Assessment_Promising_Stage.md`
+
+---
+
+## Version & Attribution
+
+**Version:** 2.0 (Complete 8-Step System)
+**Framework:** VIANEO Business Model Evaluation Methodology
+**Last Updated:** 2025-01-15
 
 ---
 
@@ -492,22 +559,22 @@ This assessment framework is provided for business evaluation purposes. Use it t
 
 ---
 
-## Acknowledgments
+## Contributing
 
-Based on the Vianeo Business Model Evaluation methodology and the Five Proofs of Value framework.
+To suggest improvements:
+1. Use the framework extensively
+2. Document specific issues or enhancements
+3. Provide evidence for suggested changes
+4. Submit pull requests with clear rationale
 
 ---
 
-**Ready to start?**
+**Ready to conduct your first complete evaluation?**
 
-1. Print the [Quick Start Card](docs/VIANEO_Quick_Start_Card.md)
-2. Read the [System Overview](docs/VIANEO_System_Overview.md)
-3. Follow the [Workflow Guide](docs/VIANEO_Assessment_Workflow_Guide.md)
-4. Use the [Assessment Template](templates/Assessment_Template.md)
+1. Start with `docs/VIANEO_Complete_Evaluation_Skill.md`
+2. Print `docs/VIANEO_Quick_Reference_Card.md`
+3. Choose your execution path (Fast/Standard/Complete)
+4. Execute step-by-step using prompts in `/prompts/`
+5. Generate professional outputs with HTML visualizations
 
-Or get Claude to help:
-```
-Use docs/VIANEO_Market_Maturity_System_Prompt.md to assess this business.
-```
-
-**Good luck with your assessment!**
+**Transform startup applications into evidence-based investment decisions.**

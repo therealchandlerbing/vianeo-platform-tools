@@ -10,7 +10,7 @@
 Step 0: Executive Brief (20-30 min) → B1-B7 structure + maturity stage
 Step 1: Application Forms [OPTIONAL] (15-20 min) → 360 SIS or CNEN format
 Step 2: 40-Question Diagnostic (30-45 min) → Team/Tech/Mgmt/Commercial (2 docs)
-Step 3: 29-Question Market Maturity (45-60 min) → 5 Dimensional scores
+Step 3: 29-Question Market Maturity (45-60 min) → 5 Dimensional scores (3 outputs)
 Step 4: Legitimacy Deep Dive (20-30 min) → Problem validation
 Step 5: Desirability Analysis (30-40 min) → Segments, needs, personas
 Step 6: Needs Matrix (45 min) → HTML priority heatmap
@@ -62,15 +62,17 @@ Step 8: Network Visualization (60-90 min) → Interactive HTML map
 | 2 | Weak - significant gaps, aware but not addressed |
 | 1 | Critical gap - no evidence, major deficiency |
 
-### Step 3 (Market Maturity): 1-5 Scale
+### Step 3 (Market Maturity): 1-5 Evidence-Based Scale
 
-| Score | Meaning |
-|-------|---------|
-| 5 | Absolutely - strong external validation |
-| 4 | Almost - good evidence |
-| 3 | Likely - basic validation |
-| 2 | Maybe not - weak evidence |
-| 1 | Don't know - no evidence |
+| Score | Meaning | Evidence Required |
+|-------|---------|-------------------|
+| 5 | Exceptional | 15-20+ external validations, documented |
+| 4 | Strong | 10-15 external validations, clear evidence |
+| 3 | Adequate | 5-10 external validations (L3 evidence) |
+| 2 | Weak | 1-4 validations, mostly assumptions |
+| 1 | Insufficient | No external validation, pure assumption |
+
+**Critical Rule:** Only L3 (external validated) evidence supports scores ≥3
 
 ---
 
@@ -118,31 +120,31 @@ Step 8: Network Visualization (60-90 min) → Interactive HTML map
 
 ---
 
-## Red Flags to Watch
+## Red Flags to Watch (Step 3)
 
-### Pattern 1: No Customer Validation
-- Zero customer interviews (Step 3: Q7 = 1)
-- Problem not validated (Step 3: Q13 = 1)
-- Solution not tested (Step 3: Q22 = 1)
-→ **STOP building, START interviewing**
+### 🚨 Pattern 1: No Customer Validation
+- Zero customer interviews (Q7 = 1)
+- Needs not validated (Q4 = 1)
+- Value prop not tested (Q22 = 1)
+→ **STOP building, START customer discovery immediately**
 
-### Pattern 2: Ecosystem Blindness
-- No ecosystem map (Step 3: Q3 = 1)
-- No resistance identified (Step 7: unfavorable critical players)
-- Market structure unknown (Step 3: Q20 = 1)
-→ **Map ecosystem before proceeding**
+### 🚨 Pattern 2: Ecosystem Blindness
+- No ecosystem map (Q3 = 1)
+- No resistances identified (Q17 = 1)
+- Multiple unfavorable critical players (Step 7)
+→ **Map ecosystem before investing. Unexpected resistance likely.**
 
-### Pattern 3: Business Model Untested
-- Revenue undefined (Step 3: Q14 = 1)
-- Pricing not tested (Step 3: Q19 = 1)
-- No value capture (Step 3: Q27 = 1)
-→ **Test revenue model immediately**
+### 🚨 Pattern 3: Business Model Untested
+- Revenue model undefined (Q14 = 1)
+- Pricing not tested (Q19 = 1)
+- Can't articulate value (Q27 = 1)
+→ **Define and test revenue model. Great product ≠ sustainable business.**
 
-### Pattern 4: Resource Constraints
-- Resources lacking (Step 2: T9 ≤ 2, Step 3: Q1 = 1)
-- No committed team (Step 2: T9 = 1)
-- Can't develop (Step 3: Q26 = 1)
-→ **Secure resources before proceeding**
+### 🚨 Pattern 4: Resource Constraints
+- Resources lacking (Q1 = 1)
+- No committed team (Q16 = 1)
+- Team all part-time
+→ **Secure resources before proceeding. Cannot execute without fundamentals.**
 
 ---
 
@@ -198,10 +200,16 @@ Step 8: Network Visualization (60-90 min) → Interactive HTML map
 - [ ] "Questions to Ask Founders" list complete
 
 **Step 3 → Step 4:**
-- [ ] All 29 questions scored
-- [ ] Dimensions mapped correctly
-- [ ] Weighted score calculated
-- [ ] Thresholds checked
+- [ ] All 29 questions scored 1-5 with evidence
+- [ ] All scores ≥3 have L3 evidence cited (E###)
+- [ ] All scores of 1 specify exactly what evidence is needed
+- [ ] Dimensional scores calculated correctly (L, D, A, F, V)
+- [ ] Overall weighted score: (L×0.15)+(D×0.25)+(A×0.20)+(F×0.20)+(V×0.20)
+- [ ] All 6 thresholds checked (5 dimensions + overall ≥3.2)
+- [ ] Red flag patterns identified (4 critical patterns)
+- [ ] Three outputs generated (Markdown + 2 DOCX)
+- [ ] Evidence Log updated with new Evidence IDs
+- [ ] Hypotheses Log updated with validation status
 
 **Step 5 → Step 6:**
 - [ ] 3-10 segments defined

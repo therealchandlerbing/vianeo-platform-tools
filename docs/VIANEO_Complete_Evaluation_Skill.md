@@ -469,47 +469,234 @@ Use the individual step prompts in the `prompts/` directory, working sequentiall
 
 ### STEP 3: Market Maturity Assessment (45-60 min)
 
-**Purpose:** Evaluate readiness across all five VIANEO dimensions
+**Purpose:** Comprehensive 29-question assessment across all five VIANEO dimensions with three professional outputs
 
-**Prompt Location:** `prompts/step_3_market_maturity_29q.md` (or use `docs/VIANEO_Market_Maturity_System_Prompt.md`)
+**Prompt Location:** `prompts/step_3_market_maturity_29q.md`
 
-**Scoring Scale:**
-- **5** = Absolutely (strong external validation)
-- **4** = Almost (good evidence)
-- **3** = Likely (basic validation)
-- **2** = Maybe not (weak evidence)
-- **1** = Don't know (no evidence)
+**Template Locations:**
+- `templates/Step3_MarketMaturity_Markdown_Template.md` (Full report with 18 sections)
+- `templates/Step3_Assessment_Results_Template.md` (DOCX table format reference)
+- `templates/Step3_Dimension_Analysis_Template.md` (DOCX narrative format reference)
 
-**Question Mapping:**
-- **Legitimacy** (2 questions): Q8, Q13
-- **Desirability** (12 questions): Q1-4, Q9-10, Q14-16, Q21-22, Q27
-- **Acceptability** (6 questions): Q5-7, Q17-19
-- **Feasibility** (5 questions): Q11-12, Q24-25, Q28
-- **Viability** (4 questions): Q20, Q23, Q26, Q29
+**Three Required Outputs:**
 
-**Outputs:**
-- 29 individual scores with evidence basis
-- 5 dimensional scores
-- Overall weighted score
-- Pass/Fail against thresholds
-- Narrative commentary
+1. **Markdown Full Report** (18 sections, comprehensive)
+   - Project metadata and executive summary
+   - Complete 29-question assessment table
+   - Overall weighted score calculation
+   - Dimensional analysis (5 detailed sections)
+   - Critical red flags and key strengths
+   - Critical gaps with validation plans
+   - Recommended actions by priority
+   - Risk assessment
+   - Comparative benchmarking
+   - Questions for founders/team
+   - Methodology and confidence notes
+   - Conclusion and next steps
 
-**Thresholds:**
-- Legitimacy: ≥3.0
-- Desirability: ≥3.5 (highest)
-- Acceptability: ≥3.0
-- Feasibility: ≥3.0
-- Viability: ≥3.0
+2. **Assessment Results DOCX** (2-3 pages, table format)
+   - Professional table with all 29 questions
+   - Scores, justifications, evidence citations
+   - Dimensional scores calculated
+   - Threshold status (pass/fail)
+   - Color-coded for committee presentation
+   - Evidence quality summary
+
+3. **Dimension Analysis DOCX** (4-6 pages, narrative)
+   - Detailed breakdown of each dimension
+   - Strengths and gaps analysis
+   - Required actions with timelines
+   - Risk assessment per dimension
+   - Cross-dimensional synthesis
+   - Prioritized action plan
+   - GO/PIVOT/STOP recommendation
+
+**The 29 Questions by Dimension:**
+
+**LEGITIMACY** (15% weight, Threshold ≥3.0) - 2 questions:
+- Q1: Have sufficient resources (human, material, financial)
+- Q8: Have verified with stakeholders that the problem is real
+
+**DESIRABILITY** (25% weight, Threshold ≥3.5) ← HIGHEST BAR - 12 questions:
+- Q2: Know who the users are and what profiles they have
+- Q4: Verified user needs through interviews, surveys, observations
+- Q5: Defined specific user segments with distinct needs
+- Q6: Know the different needs (jobs, pains, gains) for each segment
+- Q7: Verified through interviews with at least 5 people per profile
+- Q9: Know if user needs are high or low importance
+- Q11: Assessed how well current solutions satisfy each need
+- Q12: Identified gaps between importance and satisfaction
+- Q21: Know how value proposition compares to alternatives
+- Q22: Tested value proposition with 5+ users per segment
+- Q25: Know the positioning (how to be perceived vs. alternatives)
+- Q28: Validated which features/capabilities matter most to each segment
+
+**ACCEPTABILITY** (20% weight, Threshold ≥3.0) - 6 questions:
+- Q3: Have mapped the ecosystem of actors (players) in value network
+- Q15: Identified which actors are favorable, neutral, or unfavorable
+- Q17: Identified potential resistances or barriers from ecosystem
+- Q18: Have strategies to overcome resistance or barriers
+- Q23: Identified partnerships needed and initiated discussions
+- Q24: Know regulatory, policy, or legal requirements and have compliance plan
+
+**FEASIBILITY** (20% weight, Threshold ≥3.0) - 5 questions:
+- Q16: Have a committed team with complementary skills to execute
+- Q20: Know resources needed (team, tech, budget, time) and have access plan
+- Q26: Have a realistic roadmap with milestones and timeline
+- Q29: Have technical proof-of-concept or prototype demonstrating feasibility
+- Q10: Identified and prioritized most impactful needs to address first
+
+**VIABILITY** (20% weight, Threshold ≥3.0) - 4 questions:
+- Q14: Have defined a clear revenue model (how we make money)
+- Q19: Tested pricing with 5+ customers per segment and validated willingness to pay
+- Q13: Have a plan for how to reach users (channels) and activate them
+- Q27: Can clearly articulate our unique value proposition in one sentence
+
+**Scoring Scale (Evidence-Based):**
+- **5** = Exceptional: 15-20+ external validations, multiple sources, documented
+- **4** = Strong: 10-15 external validations, clear evidence
+- **3** = Adequate: 5-10 external validations (minimum threshold)
+- **2** = Weak: 1-4 validations, mostly assumptions
+- **1** = Insufficient: No external validation, pure assumption
+
+**Critical Rule:** Only L3 (external validated) evidence supports scores ≥3. L1 (internal) and L2 (team corroboration) evidence limited to scores ≤2.
+
+**Calculation of Overall Weighted Score:**
+
+Formula: Overall = (Legitimacy × 0.15) + (Desirability × 0.25) + (Acceptability × 0.20) + (Feasibility × 0.20) + (Viability × 0.20)
+
+**Dimensional Thresholds:**
+- Legitimacy: ≥3.0 (15% weight)
+- Desirability: ≥3.5 (25% weight) ← HIGHEST BAR
+- Acceptability: ≥3.0 (20% weight)
+- Feasibility: ≥3.0 (20% weight)
+- Viability: ≥3.0 (20% weight)
 - **Overall: ≥3.2**
 
-**Quality Checks:**
-- [ ] All 29 questions scored
-- [ ] Confidence level noted per question
-- [ ] Dimensional scores calculated correctly
-- [ ] Overall weighted score uses correct formula
-- [ ] All thresholds checked
+**Overall Score Categories:**
+- **4.5-5.0** = Strong: Proceed with implementation
+- **3.5-4.4** = Promising: Proceed, strengthen gaps
+- **3.0-3.4** = Developing: Conditional proceed, address gaps
+- **2.0-2.9** = Problematic: Reassess assumptions, pivot likely
+- **<2.0** = Non-viable: Consider pivot or validation sprint
 
-**Next Step:** Proceed to Step 4
+**Critical Red Flag Patterns:**
+
+🚨 **Pattern 1: No Customer Validation**
+- Q7 = 1 (no interviews)
+- Q4 = 1 (needs not validated)
+- Q22 = 1 (not tested with customers)
+- **Action:** STOP building. START customer discovery.
+
+🚨 **Pattern 2: Ecosystem Blindness**
+- Q3 = 1 (no ecosystem map)
+- Q17 = 1 (no resistance identified)
+- Multiple unfavorable critical players
+- **Action:** Map ecosystem before investing. Unexpected resistance likely.
+
+🚨 **Pattern 3: Business Model Untested**
+- Q14 = 1 (revenue undefined)
+- Q19 = 1 (not tested with customers)
+- Q27 = 1 (can't articulate value)
+- **Action:** Define and test revenue model. Great product ≠ sustainable business.
+
+🚨 **Pattern 4: Resource Constraints**
+- Q1 = 1 (lacking resources)
+- Q16 = 1 (no committed team)
+- Team all part-time
+- **Action:** Secure resources before proceeding. Cannot execute without fundamentals.
+
+**Integration with VIANEO Framework:**
+
+**Links to Evidence Log:**
+- All scores ≥3 must cite specific Evidence IDs (E###)
+- Interview IDs (INT-###) link to evidence entries
+- Evidence reliability (L1/L2/L3) determines maximum score
+
+**Links to Hypotheses Log:**
+- Each low score indicates hypothesis requiring validation
+- Confidence levels map to scores (Low=1-2, Medium=3, High=4-5)
+- Validation methods specified for each gap
+
+**Feeds Gate A Decision:**
+- Assessment outputs become Appendix C in Gate A Decision Brief
+- Threshold failures trigger specific pivot considerations
+- Action plans inform resource requirements
+
+**Execution Process:**
+
+**Phase 1: Preparation (10 min)**
+- Review Step 0 (Canvas), Step 2 (40Q Diagnostic)
+- Gather Evidence Log and Hypotheses Log
+- Confirm all source materials available
+
+**Phase 2: Scoring (30-40 min)**
+- Score all 29 questions with evidence citations
+- Calculate dimensional scores
+- Calculate overall weighted score
+- Check all thresholds
+
+**Phase 3: Analysis (20-30 min)**
+- Write dimensional assessments
+- Identify red flags and strengths
+- Prioritize gaps by impact
+- Develop action plans
+
+**Phase 4: Documentation (20-30 min)**
+- Generate Markdown full report (18 sections)
+- Create Assessment Results DOCX (table format)
+- Create Dimension Analysis DOCX (narrative format)
+
+**Phase 5: Review (10 min)**
+- Verify all calculations correct
+- Ensure all evidence cited
+- Check quality checklist
+- Confirm recommendation justified
+
+**Total Time:** 45-60 minutes (can extend to 90 minutes for very complex cases)
+
+**Quality Checks:**
+- [ ] All 29 questions scored 1-5 with evidence
+- [ ] All scores ≥3 have L3 evidence cited (E###)
+- [ ] All scores of 1 specify exactly what evidence is needed
+- [ ] Dimensional scores calculated correctly
+- [ ] Overall weighted score uses correct formula: (L×0.15)+(D×0.25)+(A×0.20)+(F×0.20)+(V×0.20)
+- [ ] All 6 thresholds checked (5 dimensions + overall)
+- [ ] Red flag patterns identified (4 critical patterns)
+- [ ] Three output documents generated (Markdown + 2 DOCX)
+- [ ] Evidence quality score calculated: (L3 count / Total evidence) × 100
+- [ ] GO/PIVOT/STOP recommendation with justification
+- [ ] Evidence Log updated with all new Evidence IDs
+- [ ] Hypotheses Log updated with validation status
+
+**Character Limits:**
+- Needs statements: 60 chars max
+- Player names: 60 chars max
+- Ecosystem notes: 250 chars max
+- Evidence excerpts: Verbatim quotes, reasonable length
+
+**File Naming Conventions:**
+- `[ProjectName]_Step3_MarketMaturity_Full_[YYYYMMDD].md`
+- `[ProjectName]_Step3_AssessmentResults_[YYYYMMDD].docx`
+- `[ProjectName]_Step3_DimensionAnalysis_[YYYYMMDD].docx`
+
+**Documentation References:**
+- Complete instructions: `docs/VIANEO_Market_Maturity_System_Prompt.md`
+- Quick reference: `docs/VIANEO_29Question_Quick_Reference.md`
+- Evidence checklist: `docs/VIANEO_Evidence_Checklist.md`
+- Workflow guide: `docs/VIANEO_Assessment_Workflow_Guide.md`
+
+**Tips for Accurate Scoring:**
+
+1. **Default skeptical:** Without L3 evidence, score ≤2
+2. **Cite sources:** Every score ≥3 needs Evidence IDs
+3. **Be specific on gaps:** For scores of 1, say exactly what's needed (not "needs validation")
+4. **Watch for patterns:** Red flags emerge from multiple low scores in related areas
+5. **Desirability is critical:** Highest threshold (3.5) because without demand, nothing else matters
+6. **Weight matters:** Desirability failures hurt more than Legitimacy failures
+7. **Evidence quality:** Only count L3 (external validated) for threshold purposes
+
+**Next Step:** Proceed to Step 4 (Legitimacy Deep Dive)
 
 ---
 

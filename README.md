@@ -60,6 +60,7 @@ Step 2: 40-Question Diagnostic (30-45 min)
 
 Step 3: 29-Question Market Maturity (45-60 min)
   → Five dimensional scores: Legitimacy, Desirability, Acceptability, Feasibility, Viability
+  → Three professional outputs: Markdown report + 2 DOCX documents
 
 Step 4: Legitimacy Deep Dive (20-30 min)
   → Problem validation and domain fit analysis
@@ -105,7 +106,7 @@ Step 8: Network Visualization (60-90 min)
 **Output:**
 - Executive Brief + Application form (if needed)
 - Complete diagnostics (40Q with 2 docs)
-- All five dimensional scores (29Q assessment)
+- All five dimensional scores (29Q with 3 docs: Markdown + Assessment Results DOCX + Dimension Analysis DOCX)
 - Needs matrix HTML visualization
 - Ecosystem mapping
 - Investment recommendation with conditions
@@ -190,7 +191,7 @@ vianeo-platform-tools/
 │   ├── step_0_canvas_extraction.md              # Extract business model canvas
 │   ├── step_1_application_form.md               # Optional: Program applications
 │   ├── step_2_diagnostic_40q.md                 # 40-question diagnostic
-│   ├── step_3_market_maturity_link.md           # Link to Step 3 docs
+│   ├── step_3_market_maturity_29q.md            # 29-question market maturity (complete)
 │   ├── step_4_legitimacy_worksheet.md           # Problem validation (TODO)
 │   ├── step_5_desirability_personas.md          # Needs & personas (TODO)
 │   ├── step_6_needs_matrix_html.md              # HTML matrix generator (TODO)
@@ -206,8 +207,14 @@ vianeo-platform-tools/
 │   └── Ecosystem_Mapping_Template.md            # Stakeholder table (TODO)
 │
 ├── templates/                               # Blank templates
-│   ├── Assessment_Template.md                   # Step 3 assessment
-│   └── Committee_Report_Template.md             # Final report (TODO)
+│   ├── Step3_MarketMaturity_Markdown_Template.md    # Step 3: Full report (18 sections)
+│   ├── Step3_Assessment_Results_Template.md         # Step 3: DOCX table format
+│   ├── Step3_Dimension_Analysis_Template.md         # Step 3: DOCX narrative format
+│   ├── Evidence_Log_Template.md                     # Evidence tracking with E### IDs
+│   ├── Hypotheses_Log_Template.md                   # Hypothesis validation tracking
+│   ├── Gate_A_Decision_Brief_Template.md            # Go/pivot/stop decision framework
+│   ├── Interview_Guide_Template.md                  # Discovery interview protocol
+│   └── Committee_Report_Template.md                 # Final report (TODO)
 │
 ├── examples/                                # Complete examples
 │   ├── Example_Assessment_Early_Stage.md        # Score ~1.9 (Step 3)

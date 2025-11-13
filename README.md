@@ -66,8 +66,9 @@ Step 4: Legitimacy Deep Dive (20-30 min)
   → Problem definition, application domain, team & approach, available resources
   → Two professional outputs: Markdown worksheet + DOCX formatted version
 
-Step 5: Desirability Analysis (30-40 min)
-  → User segments, needs extraction, persona development
+Step 5: Desirability - Needs/Requesters Analysis (30-40 min)
+  → Requesters (6-10 roles), Needs (10: Tasks/Pains/Expectations), Existing Solutions
+  → FOUR professional outputs: Markdown analysis + 3 DOCX (Core Analysis, Strategic Analysis, Interview Guide)
 
 Step 6: Needs Qualification Matrix (45 min)
   → Interactive HTML heatmap showing priority targets
@@ -194,7 +195,7 @@ vianeo-platform-tools/
 │   ├── step_2_diagnostic_40q.md                 # 40-question diagnostic
 │   ├── step_3_market_maturity_29q.md            # 29-question market maturity (complete)
 │   ├── step_4_legitimacy_worksheet.md           # Legitimacy deep dive (complete)
-│   ├── step_5_desirability_personas.md          # Needs & personas (TODO)
+│   ├── step_5_needs_requesters.md               # Needs/Requesters analysis (complete)
 │   ├── step_6_needs_matrix_html.md              # HTML matrix generator (TODO)
 │   ├── step_7_ecosystem_mapping.md              # Stakeholder analysis (TODO)
 │   └── step_8_network_visualization.md          # HTML network map (TODO)
@@ -213,6 +214,10 @@ vianeo-platform-tools/
 │   ├── Step3_Dimension_Analysis_Template.md         # Step 3: DOCX narrative format
 │   ├── Step4_Legitimacy_Markdown_Template.md        # Step 4: Legitimacy worksheet
 │   ├── Step4_Legitimacy_DOCX_Template.md            # Step 4: DOCX format reference
+│   ├── Step5_NeedsRequesters_Markdown_Template.md   # Step 5: Complete analysis (12 sections)
+│   ├── Step5_NeedsRequesters_DOCX_Part1_Template.md # Step 5: Core Analysis DOCX format
+│   ├── Step5_NeedsRequesters_DOCX_Part2_Template.md # Step 5: Strategic Analysis DOCX format
+│   ├── Step5_NeedsRequesters_DOCX_Part3_Template.md # Step 5: Interview Guide DOCX format
 │   ├── Evidence_Log_Template.md                     # Evidence tracking with E### IDs
 │   ├── Hypotheses_Log_Template.md                   # Hypothesis validation tracking
 │   ├── Gate_A_Decision_Brief_Template.md            # Go/pivot/stop decision framework

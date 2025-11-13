@@ -81,8 +81,10 @@ Step 7: Players & Influencers Ecosystem Analysis (30-45 min)
   → TWO professional outputs: 2-page DOCX (BCG-level) + Markdown analysis
   → Optional: Python generator for automated formatting
 
-Step 8: Network Visualization (60-90 min)
-  → Interactive HTML value network map
+Step 8: Ecosystem Value Network Map (60-90 min)
+  → THREE deliverables: Data Matrix + HTML Visualization + Priority Targets Summary
+  → Identifies Priority Targets (Favorable organizations + Critical/Important needs)
+  → Color-coded visual network with 5 value chain positions
 ```
 
 ---
@@ -406,10 +408,12 @@ Every score of 1 requires:
 - Importance vs. Satisfaction across segments
 
 **Network Visualization** (Step 8):
-- Interactive HTML value network
-- 5-column layout (Enablers → Product → Channels → Buyers → Users)
-- Color-coded by acceptability
-- Priority targets highlighted
+- THREE deliverables: Data Matrix (reference) + HTML Visualization (presentation) + Priority Targets Summary (execution)
+- Identifies Priority Targets: Favorable organizations + Critical/Important needs
+- 5-column layout (Enablers → Product → Channels → Buyers → End Users)
+- Color-coded priority targets (green gradient = highest conversion probability)
+- Need badges (Critical/Important/Secondary) and acceptability dots (green/orange/red)
+- Strategic engagement plan with specific actions, timelines, and resource requirements
 
 ### Quality Control
 

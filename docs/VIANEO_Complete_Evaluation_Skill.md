@@ -1242,50 +1242,77 @@ Create 3-5 detailed personas for top segments including:
 
 ---
 
-### STEP 8: Network Visualization (60-90 min)
+### STEP 8: Ecosystem Value Network Map (60-90 min)
 
-**Purpose:** Create interactive HTML visualization of complete value network
+**Purpose:** Transform stakeholder data into strategic action by identifying Priority Targets—favorable organizations containing requesters with urgent needs
 
-**Prompt Location:** `prompts/step_8_network_visualization.md`
+**Prompt Location:** `prompts/step_8_ecosystem_value_network.md`
 
-**Template Location:** `visualizations/network_map_template.html`
+**Quick Reference:** `docs/VIANEO_Step8_Quick_Reference.md` (print this!)
 
-**Data Structure (from Step 7):**
+**Template Locations:**
+- `templates/Step8_Ecosystem_Data_Matrix_Template.md`
+- `templates/Step8_Value_Network_Visualization.html`
+- `templates/Step8_Priority_Targets_Template.md`
 
-```javascript
-{
-  company: { name, product },
-  enablers: [{ name, criticality, acceptability, needs }],
-  channels: [{ name, type, acceptability, reach }],
-  buyers: [{ name, acceptability, isPriorityTarget, needs }],
-  endUsers: [{ name, acceptability, needs }],
-  influencers: [{ name, type, acceptability, influence }]
-}
+**Core Concept:** Organizations don't have needs—people do. Success requires identifying specific requesters within favorable organizations who face urgent problems.
+
+**Three Deliverables:**
+
+1. **Ecosystem Data Matrix (Markdown → DOCX)**
+   - Structured table: All organizations across 5 value chain positions
+   - For each: Organization name, role, requester, acceptability, need level, notes
+   - Priority Targets Quick Reference section
+   - Use for: Working document, team reference, monthly updates
+
+2. **HTML Interactive Visualization**
+   - 5-column grid: Enablers → Product → Channels → Buyers → End Users
+   - Color-coded priority targets (green gradient = Favorable + Critical/Important needs)
+   - Need badges (Critical/Important/Secondary)
+   - Acceptability dots (green/orange/red)
+   - Professional legend, PDF-ready (16:9 landscape)
+   - Use for: Presentations, stakeholder communication, strategic planning
+
+3. **Priority Targets Summary (Markdown → DOCX)**
+   - Strategic engagement plan for highest-value opportunities
+   - Each target: Organization, requester, need, strategy, timeline, metrics, barriers
+   - Engagement timeline (30/60/90 days)
+   - Resource requirements
+   - Success factors and risks
+   - Use for: Sales/BD execution, resource allocation, quarterly planning
+
+**Priority Target Logic:**
+```
+Priority Target = (Acceptability = Favorable) AND (Need Level = Critical OR Important)
 ```
 
-**Visualization Features:**
-- 5-column grid layout (Enablers → Product → Channels → Buyers → Users)
-- Color-coded by acceptability (green/yellow/red)
-- Priority targets highlighted with animation
-- Hover effects for details
-- Responsive design
-- Summary statistics dashboard
+**Why Both Criteria Matter:**
+- Favorable + No urgent needs → Nice relationship, but no action driver (LOW conversion)
+- Neutral/Unfavorable + Urgent needs → Need exists, but organizational barriers (LOW conversion)
+- **Favorable + Urgent needs** → Organizational support + individual urgency (HIGH conversion) ✅
 
-**Outputs:**
-- Interactive HTML network map
-- Statistics summary (total players, favorable %, priority targets)
-- Visual representation of value flow
-- Screenshot for executive reports
+**Data Flow:**
+```
+Step 5 (Desirability) → Requesters + Needs
+    ↓
+Step 7 (Ecosystem Mapping) → Stakeholders + Acceptability ratings
+    ↓
+Step 8 (Value Network) → Complete visualization + Priority targets + Strategy
+```
 
 **Quality Checks:**
-- [ ] All players positioned correctly
-- [ ] Acceptability colors accurate
-- [ ] Priority targets highlighted
-- [ ] Statistics calculated correctly
-- [ ] Interactive elements functional
-- [ ] Professional appearance
+- [ ] All 5 value chain positions populated (minimum 2 organizations per position)
+- [ ] Organizations are specific entities (not categories like "hospitals")
+- [ ] Requesters are specific roles within organizations
+- [ ] Acceptability classifications evidence-based (cite conversations/actions)
+- [ ] Need levels validated (Critical = urgent pain NOW, budget allocated)
+- [ ] 5-15 priority targets identified (Favorable + Critical/Important)
+- [ ] HTML opens in browser, priority targets visually distinct (green gradient)
+- [ ] Priority Targets Summary has specific strategies (not generic "reach out")
+- [ ] Character limits respected: Org names (60), Roles (120), Requesters (60), Notes (250)
+- [ ] All three deliverables align perfectly (no contradictions)
 
-**Next Step:** Create final committee report
+**Next Step:** Create final committee report or begin priority target engagement
 
 ---
 
@@ -1337,10 +1364,16 @@ After each step, verify:
 - [ ] Overall acceptability calculated
 
 **Step 8:**
-- [ ] All players visualized
-- [ ] Statistics accurate
-- [ ] Interactive features work
-- [ ] Professional appearance
+- [ ] All 5 value chain positions populated (minimum 2 organizations each)
+- [ ] Organizations are specific entities (not generic categories)
+- [ ] Requesters identified for each organization
+- [ ] 5-15 priority targets identified (Favorable + Critical/Important needs)
+- [ ] HTML visualization renders correctly in browser
+- [ ] Priority targets visually distinct (green gradient background)
+- [ ] All three deliverables completed (Data Matrix + HTML + Priority Targets)
+- [ ] Character limits respected throughout
+- [ ] Evidence-based acceptability classifications
+- [ ] Priority Targets Summary has specific engagement strategies
 
 ---
 

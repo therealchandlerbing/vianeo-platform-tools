@@ -76,8 +76,10 @@ Step 6: Needs Qualification Matrix (45 min)
 Step 7: Ecosystem Mapping (30-45 min)
   → Stakeholder analysis with acceptability ratings
 
-Step 8: Network Visualization (60-90 min)
-  → Interactive HTML value network map
+Step 8: Ecosystem Value Network Map (60-90 min)
+  → THREE deliverables: Data Matrix + HTML Visualization + Priority Targets Summary
+  → Identifies Priority Targets (Favorable organizations + Critical/Important needs)
+  → Color-coded visual network with 5 value chain positions
 ```
 
 ---
@@ -198,7 +200,7 @@ vianeo-platform-tools/
 │   ├── step_5_needs_requesters.md               # Needs/Requesters analysis (complete)
 │   ├── step_6_needs_matrix_html.md              # HTML matrix generator (TODO)
 │   ├── step_7_ecosystem_mapping.md              # Stakeholder analysis (TODO)
-│   └── step_8_network_visualization.md          # HTML network map (TODO)
+│   └── step_8_ecosystem_value_network.md        # Value network map with 3 deliverables (complete)
 │
 ├── visualizations/                          # HTML templates
 │   ├── needs_matrix_template.html               # Priority heatmap (TODO)
@@ -389,10 +391,12 @@ Every score of 1 requires:
 - Importance vs. Satisfaction across segments
 
 **Network Visualization** (Step 8):
-- Interactive HTML value network
-- 5-column layout (Enablers → Product → Channels → Buyers → Users)
-- Color-coded by acceptability
-- Priority targets highlighted
+- THREE deliverables: Data Matrix (reference) + HTML Visualization (presentation) + Priority Targets Summary (execution)
+- Identifies Priority Targets: Favorable organizations + Critical/Important needs
+- 5-column layout (Enablers → Product → Channels → Buyers → End Users)
+- Color-coded priority targets (green gradient = highest conversion probability)
+- Need badges (Critical/Important/Secondary) and acceptability dots (green/orange/red)
+- Strategic engagement plan with specific actions, timelines, and resource requirements
 
 ### Quality Control
 

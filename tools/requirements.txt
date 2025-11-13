@@ -1,0 +1,9 @@
+# Players/Influencers Generator Dependencies
+# Vianeo Business Model Evaluation Framework
+# Version 2.0 | November 2025
+
+# Core dependency for DOCX generation
+python-docx>=0.8.11
+
+# Optional: For enhanced formatting capabilities
+# Pillow>=9.0.0  # If you need to add images in the future

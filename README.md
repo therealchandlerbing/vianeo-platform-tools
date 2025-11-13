@@ -73,8 +73,12 @@ Step 5: Desirability - Needs/Requesters Analysis (30-40 min)
 Step 6: Needs Qualification Matrix (45 min)
   → Interactive HTML heatmap showing priority targets
 
-Step 7: Ecosystem Mapping (30-45 min)
-  → Stakeholder analysis with acceptability ratings
+Step 7: Players & Influencers Ecosystem Analysis (30-45 min)
+  → 8-10 most critical Players (active market participants)
+  → 8-10 most critical Influencers (market shapers)
+  → Acceptability ratings (Favorable/Neutral/Unfavorable) with strategic notes
+  → TWO professional outputs: 2-page DOCX (BCG-level) + Markdown analysis
+  → Optional: Python generator for automated formatting
 
 Step 8: Network Visualization (60-90 min)
   → Interactive HTML value network map
@@ -197,8 +201,15 @@ vianeo-platform-tools/
 │   ├── step_4_legitimacy_worksheet.md           # Legitimacy deep dive (complete)
 │   ├── step_5_needs_requesters.md               # Needs/Requesters analysis (complete)
 │   ├── step_6_needs_matrix_html.md              # HTML matrix generator (TODO)
-│   ├── step_7_ecosystem_mapping.md              # Stakeholder analysis (TODO)
+│   ├── step_7_players_influencers.md            # Players/Influencers ecosystem (complete)
 │   └── step_8_network_visualization.md          # HTML network map (TODO)
+│
+├── tools/                                   # Automation scripts
+│   ├── players_influencers_generator.py         # Step 7: Python DOCX generator
+│   ├── requirements.txt                         # Python dependencies
+│   ├── example_rayla_ai.json                    # Example input for generator
+│   ├── rayla_ai_ecosystem.docx                  # Example output (generated)
+│   └── README_Tools.md                          # ⭐ Tools usage guide
 │
 ├── visualizations/                          # HTML templates
 │   ├── needs_matrix_template.html               # Priority heatmap (TODO)
@@ -218,6 +229,8 @@ vianeo-platform-tools/
 │   ├── Step5_NeedsRequesters_DOCX_Part1_Template.md # Step 5: Core Analysis DOCX format
 │   ├── Step5_NeedsRequesters_DOCX_Part2_Template.md # Step 5: Strategic Analysis DOCX format
 │   ├── Step5_NeedsRequesters_DOCX_Part3_Template.md # Step 5: Interview Guide DOCX format
+│   ├── Step7_EcosystemAnalysis_Markdown_Template.md # Step 7: Complete ecosystem analysis
+│   ├── Step7_PlayersInfluencers_DOCX_Format_Spec.md # Step 7: DOCX formatting specifications
 │   ├── Evidence_Log_Template.md                     # Evidence tracking with E### IDs
 │   ├── Hypotheses_Log_Template.md                   # Hypothesis validation tracking
 │   ├── Gate_A_Decision_Brief_Template.md            # Go/pivot/stop decision framework

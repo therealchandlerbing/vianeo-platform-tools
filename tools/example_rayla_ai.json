@@ -1,0 +1,98 @@
+{
+  "project_name": "Rayla AI",
+  "executive_context": "This analysis maps critical stakeholders in the grant writing AI market. Players are active market participants who buy, sell, or provide services. Influencers shape market dynamics through policy, standards, or advocacy. Acceptability ratings indicate alignment with Rayla AI's innovation.",
+  "players": [
+    {
+      "name": "Small-to-midsize nonprofits (<$5M budget)",
+      "acceptability": "Favorable",
+      "note": "Primary target struggling with 40+ hr proposals; no consultant budget; desperately need affordable AI solution with high pain point alignment"
+    },
+    {
+      "name": "University research administration",
+      "acceptability": "Favorable",
+      "note": "20-50 applications annually with compliance burden; institutional budgets support SaaS; strong enterprise tier opportunity"
+    },
+    {
+      "name": "Early-stage impact startups (seed to Series A)",
+      "acceptability": "Favorable",
+      "note": "First-time grant seekers lacking expertise; tech-savvy early adopters underserved by traditional consultants"
+    },
+    {
+      "name": "Nonprofit capacity-building orgs",
+      "acceptability": "Favorable",
+      "note": "Train smaller nonprofits on fundraising; natural distribution channel; mission-aligned; white-label potential"
+    },
+    {
+      "name": "Independent grant consultants",
+      "acceptability": "Neutral",
+      "note": "Current partners (2 firms) but may resist if positioned as replacement vs. efficiency tool; channel or competitor depending on messaging"
+    },
+    {
+      "name": "Private foundation program officers",
+      "acceptability": "Neutral",
+      "note": "Evaluate proposals and recommend tools; could become prescribers if convinced AI improves quality; authenticity concerns"
+    },
+    {
+      "name": "Instrumentl (grant discovery)",
+      "acceptability": "Unfavorable",
+      "note": "Direct competitor at $3K-$7K/year with established position; discovery-focused but could add AI writing to compete"
+    },
+    {
+      "name": "ChatGPT/Claude (generic AI)",
+      "acceptability": "Unfavorable",
+      "note": "Indirect competitor for DIY grant writing; free/low-cost threatens pricing but lacks grant specialization; massive distribution advantage"
+    },
+    {
+      "name": "Traditional grant consultants",
+      "acceptability": "Unfavorable",
+      "note": "$150-$300/hour providers threatened by AI efficiency; may influence clients against adoption; relationship-based advantage"
+    }
+  ],
+  "influencers": [
+    {
+      "name": "National Science Foundation (NSF)",
+      "acceptability": "Neutral",
+      "note": "Major federal funder with strict requirements; sets research proposal standards; unclear stance on AI content; could mandate or ban"
+    },
+    {
+      "name": "National Institutes of Health (NIH)",
+      "acceptability": "Neutral",
+      "note": "Largest research funder; increased compliance scrutiny; position on AI assistance undefined; potential supporter or barrier"
+    },
+    {
+      "name": "Grants.gov (federal portal)",
+      "acceptability": "Neutral",
+      "note": "Mandatory submission platform; integration essential for workflow; technical standards could enable or block AI features"
+    },
+    {
+      "name": "Grant Professionals Association",
+      "acceptability": "Unfavorable",
+      "note": "Professional association concerned about AI displacing members; influences ethics standards; threat vs. tool positioning critical"
+    },
+    {
+      "name": "Federal grant policy (OMB, White House)",
+      "acceptability": "Neutral",
+      "note": "Set oversight policies for federal grantmaking; 2025 focus on outcomes; scrutiny could favor data tools or create barriers"
+    },
+    {
+      "name": "Council on Foundations",
+      "acceptability": "Favorable",
+      "note": "900+ foundation association; advocates nonprofit capacity building; supportive of tools democratizing funding access"
+    },
+    {
+      "name": "Nonprofit Technology Network (NTEN)",
+      "acceptability": "Favorable",
+      "note": "Tech adoption advocates; tech-forward practitioner community; natural amplification channel and innovation validator"
+    },
+    {
+      "name": "Major philanthropic foundations",
+      "acceptability": "Favorable",
+      "note": "Gates, Ford, etc.; innovation-focused; nonprofit capacity interest; enterprise license customers; thought leadership influence"
+    },
+    {
+      "name": "Tech media (TechCrunch, VentureBeat)",
+      "acceptability": "Favorable",
+      "note": "Validates market opportunity; AI vertical SaaS coverage; positive narrative around democratizing capital access"
+    }
+  ]
+}

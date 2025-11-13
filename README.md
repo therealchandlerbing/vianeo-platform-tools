@@ -63,7 +63,8 @@ Step 3: 29-Question Market Maturity (45-60 min)
   → Three professional outputs: Markdown report + 2 DOCX documents
 
 Step 4: Legitimacy Deep Dive (20-30 min)
-  → Problem validation and domain fit analysis
+  → Problem definition, application domain, team & approach, available resources
+  → Two professional outputs: Markdown worksheet + DOCX formatted version
 
 Step 5: Desirability Analysis (30-40 min)
   → User segments, needs extraction, persona development
@@ -192,7 +193,7 @@ vianeo-platform-tools/
 │   ├── step_1_application_form.md               # Optional: Program applications
 │   ├── step_2_diagnostic_40q.md                 # 40-question diagnostic
 │   ├── step_3_market_maturity_29q.md            # 29-question market maturity (complete)
-│   ├── step_4_legitimacy_worksheet.md           # Problem validation (TODO)
+│   ├── step_4_legitimacy_worksheet.md           # Legitimacy deep dive (complete)
 │   ├── step_5_desirability_personas.md          # Needs & personas (TODO)
 │   ├── step_6_needs_matrix_html.md              # HTML matrix generator (TODO)
 │   ├── step_7_ecosystem_mapping.md              # Stakeholder analysis (TODO)
@@ -210,6 +211,8 @@ vianeo-platform-tools/
 │   ├── Step3_MarketMaturity_Markdown_Template.md    # Step 3: Full report (18 sections)
 │   ├── Step3_Assessment_Results_Template.md         # Step 3: DOCX table format
 │   ├── Step3_Dimension_Analysis_Template.md         # Step 3: DOCX narrative format
+│   ├── Step4_Legitimacy_Markdown_Template.md        # Step 4: Legitimacy worksheet
+│   ├── Step4_Legitimacy_DOCX_Template.md            # Step 4: DOCX format reference
 │   ├── Evidence_Log_Template.md                     # Evidence tracking with E### IDs
 │   ├── Hypotheses_Log_Template.md                   # Hypothesis validation tracking
 │   ├── Gate_A_Decision_Brief_Template.md            # Go/pivot/stop decision framework

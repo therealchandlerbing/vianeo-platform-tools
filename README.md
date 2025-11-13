@@ -70,8 +70,9 @@ Step 5: Desirability - Needs/Requesters Analysis (30-40 min)
   → Requesters (6-10 roles), Needs (10: Tasks/Pains/Expectations), Existing Solutions
   → FOUR professional outputs: Markdown analysis + 3 DOCX (Core Analysis, Strategic Analysis, Interview Guide)
 
-Step 6: Needs Qualification Matrix (45 min)
-  → Interactive HTML heatmap showing priority targets
+Step 6: Needs Qualification Matrix (45-90 min)
+  → Interactive HTML needs matrix + comprehensive analysis report (9-12 pages)
+  → Visual dashboard with opportunity zones + strategic action plan
 
 Step 7: Players & Influencers Ecosystem Analysis (30-45 min)
   → 8-10 most critical Players (active market participants)

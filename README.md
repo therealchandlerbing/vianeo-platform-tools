@@ -192,7 +192,10 @@ vianeo-platform-tools/
 │   ├── VIANEO_Market_Maturity_System_Prompt.md # Step 3: Primary prompt
 │   ├── VIANEO_Assessment_Workflow_Guide.md     # Step 3: Detailed process
 │   ├── VIANEO_29Question_Quick_Reference.md    # Step 3: Question details
-│   └── VIANEO_Evidence_Checklist.md            # Step 3: Evidence requirements
+│   ├── VIANEO_Evidence_Checklist.md            # Step 3: Evidence requirements
+│   ├── VIANEO_Desirability_Quick_Start.md      # Step 5: Quick generation guide
+│   ├── VIANEO_Desirability_Complete_Reference.md # Step 5: Comprehensive best practices
+│   └── VIANEO_Document_Formatting_Guide.md     # Step 5: Professional DOCX styling
 │
 ├── prompts/                                 # Step-by-step prompts
 │   ├── step_0_canvas_extraction.md              # Extract business model canvas

@@ -1,7 +1,7 @@
 # STEP 8: Ecosystem Value Network Map
 
 **Time Required:** 60-90 minutes (or 15-20 minutes if importing from Step 7)
-**Output:** THREE documents - (1) Ecosystem Data Matrix (Markdown → DOCX), (2) HTML Interactive Visualization, (3) Priority Targets Summary (Markdown → DOCX)
+**Output:** FOUR documents - (1) Master Markdown Analysis, (2) Ecosystem Data DOCX, (3) Priority Targets DOCX, (4) HTML Interactive Visualization
 **Prerequisites:** Step 5 (Desirability Analysis) recommended; Step 7 (Ecosystem Mapping) optional but accelerates process
 
 ---
@@ -58,45 +58,73 @@ If working standalone, gather:
 
 ---
 
-## Output Structure: THREE-FILE PACKAGE
+## Output Structure: FOUR-FILE PACKAGE
 
-### Output 1: Ecosystem Data Matrix (Markdown → DOCX)
+### Output 1: Master Markdown Analysis
 
-**File Name:** `[ProjectName]_Ecosystem_Data.md`
+**File Name:** `[ProjectName]_[Date]_08_Analysis.md`
 
-Structured data table capturing all organizations, requesters, and classifications across five value chain positions. Includes:
-- Project overview (product name, industry, core solution)
-- Five value chain tables (Enablers, Core Product, Channels, Buyers, End Users)
-- Priority Targets Quick Reference
+Complete comprehensive analysis containing ALL content in a single reference document. Includes:
+- Executive summary and strategic insights
+- Project overview (product, industry, core solution)
+- All five value chain tables with complete data
+- Priority targets identification and analysis
+- Ecosystem composition analysis (distribution by acceptability/need level)
+- Evidence citations and assumptions requiring validation
+- Organizations to monitor
+- Next steps and recommendations
+- Classification guidance appendices
 
-**Use for:** Working document, team reference, data source for updates
+**Use for:** Master reference, version control, team working document, comprehensive analysis
 
-### Output 2: HTML Interactive Visualization
+### Output 2: Ecosystem Data DOCX
 
-**File Name:** `[ProjectName]_Value_Network.html`
+**File Name:** `[ProjectName]_[Date]_08_Ecosystem_Data_DOCX.md` (copy to Word as .docx)
 
-Interactive visual network map with:
-- 5-column grid layout (Enablers → Product → Channels → Buyers → Users)
-- Color-coded priority targets (green gradient for Favorable + Needs)
+**Template:** `templates/Step8_Ecosystem_Data_DOCX_Template.md`
+
+DOCX-formatted document with detailed styling specifications for Word:
+- Professional formatted tables across 5 value chain positions
+- Color-coded rows (priority targets highlighted in green)
+- Core product section with styled feature list
+- Priority Targets Quick Reference section
+- Complete formatting guide (fonts, colors, spacing, borders)
+
+**Use for:** Committee evaluations, investor due diligence, strategic planning sessions, board presentations
+
+### Output 3: Priority Targets DOCX
+
+**File Name:** `[ProjectName]_[Date]_08_Priority_Targets_DOCX.md` (copy to Word as .docx)
+
+**Template:** `templates/Step8_Priority_Targets_DOCX_Template.md`
+
+DOCX-formatted strategic engagement plan with styling specifications:
+- Executive summary with priority target definition
+- Detailed profile for each priority target (organization, requester, strategy, timeline, metrics)
+- Engagement timeline with color-coded urgency (30/60/90 days)
+- Resource requirements (team, budget, materials)
+- Success factors and risk mitigation
+- Organizations to monitor section
+- Complete formatting guide for professional DOCX creation
+
+**Use for:** Sales/BD execution, resource allocation, quarterly reviews, team alignment
+
+### Output 4: HTML Interactive Visualization
+
+**File Name:** `[ProjectName]_[Date]_08_Value_Network.html`
+
+**Template:** `templates/Step8_Value_Network_Visualization.html`
+
+Interactive visual network map (standalone HTML file):
+- 5-column grid layout (Enablers → Product → Channels → Buyers → End Users)
+- Color-coded priority targets (green gradient for Favorable + Critical/Important needs)
 - Need badges (Critical/Important/Secondary)
 - Acceptability status dots (green/orange/red)
 - Professional legend explaining visual encoding
 - PDF-ready format (16:9 landscape)
+- Embedded CSS/JS (no external dependencies)
 
-**Use for:** Presentations, stakeholder communication, strategic planning sessions
-
-### Output 3: Priority Targets Summary (Markdown → DOCX)
-
-**File Name:** `[ProjectName]_Priority_Targets.md`
-
-Strategic engagement plan focused on highest-value opportunities:
-- Executive summary (total priority targets, breakdown by need level)
-- Detailed target profiles (organization, requester, needs, strategy)
-- Engagement timeline (immediate/near-term/medium-term)
-- Resource requirements
-- Success factors and risks
-
-**Use for:** Sales/BD execution, resource allocation, quarterly planning
+**Use for:** Presentations, stakeholder communication, strategic planning, screenshots for reports
 
 ---
 
@@ -492,7 +520,7 @@ If using VIANEO scoring system, cite evidence for:
 - Comprehensively reassess all classifications
 - Validate all requester information
 - Update core product features and positioning
-- Regenerate all three deliverables from scratch
+- Regenerate all four deliverables from scratch
 - Document major changes and lessons learned
 - Present updated view to leadership
 
@@ -517,9 +545,14 @@ You've successfully completed Step 8 when:
 **Format:** `[ProjectName]_[Date]_08_[Deliverable].[ext]`
 
 **Examples:**
-- `TechEd_2025-01-15_08_Ecosystem_Data.md`
+- `TechEd_2025-01-15_08_Analysis.md` (master markdown)
+- `TechEd_2025-01-15_08_Ecosystem_Data_DOCX.md` (copy to Word, save as .docx)
+- `TechEd_2025-01-15_08_Priority_Targets_DOCX.md` (copy to Word, save as .docx)
 - `TechEd_2025-01-15_08_Value_Network.html`
-- `TechEd_2025-01-15_08_Priority_Targets.md`
+
+**After DOCX Conversion:**
+- `TechEd_2025-01-15_08_Ecosystem_Data.docx`
+- `TechEd_2025-01-15_08_Priority_Targets.docx`
 
 **Archive Format:** `[ProjectName]_[Date]_08_[Deliverable]_ARCHIVE.[ext]`
 
@@ -585,13 +618,13 @@ START: What is your use case?
 │  → Use: PRIORITY TARGETS SUMMARY (deliverable 3)
 │
 ├─ Quarterly strategy review or planning session
-│  → Use: ALL THREE DELIVERABLES
+│  → Use: ALL FOUR DELIVERABLES
 │
 ├─ Investor presentation or board meeting
-│  → Use: HTML VISUALIZATION + PRIORITY TARGETS SUMMARY
+│  → Use: ECOSYSTEM DATA DOCX + HTML VISUALIZATION + PRIORITY TARGETS DOCX
 │
 └─ New team member onboarding
-   → Use: ALL THREE DELIVERABLES
+   → Use: MASTER MARKDOWN ANALYSIS + ALL DOCX/HTML FILES
 ```
 
 ---
@@ -600,9 +633,10 @@ START: What is your use case?
 
 All templates available in `templates/` directory:
 
-1. **Step8_Ecosystem_Data_Matrix_Template.md** - Markdown table structure with all 5 value chain positions
-2. **Step8_Value_Network_Visualization.html** - Complete HTML with embedded CSS/JS
-3. **Step8_Priority_Targets_Template.md** - Strategic summary document structure
+1. **Step8_Analysis_Markdown_Template.md** - Master comprehensive analysis with all sections
+2. **Step8_Ecosystem_Data_DOCX_Template.md** - DOCX formatting specifications for ecosystem data matrix
+3. **Step8_Priority_Targets_DOCX_Template.md** - DOCX formatting specifications for priority targets summary
+4. **Step8_Value_Network_Visualization.html** - Complete HTML with embedded CSS/JS
 
 ---
 
@@ -633,4 +667,8 @@ With completed value network map:
 
 ---
 
-**Step 8 Complete!** You now have three strategic deliverables that transform ecosystem understanding into focused action.
+**Step 8 Complete!** You now have four strategic deliverables that transform ecosystem understanding into focused action:
+1. Master Markdown Analysis (comprehensive reference)
+2. Ecosystem Data DOCX (formatted for Word)
+3. Priority Targets DOCX (formatted for Word)
+4. HTML Interactive Visualization (presentation-ready)

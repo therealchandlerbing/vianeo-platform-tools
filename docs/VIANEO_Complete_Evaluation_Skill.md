@@ -1251,35 +1251,44 @@ Create 3-5 detailed personas for top segments including:
 **Quick Reference:** `docs/VIANEO_Step8_Quick_Reference.md` (print this!)
 
 **Template Locations:**
-- `templates/Step8_Ecosystem_Data_Matrix_Template.md`
+- `templates/Step8_Analysis_Markdown_Template.md`
+- `templates/Step8_Ecosystem_Data_DOCX_Template.md`
+- `templates/Step8_Priority_Targets_DOCX_Template.md`
 - `templates/Step8_Value_Network_Visualization.html`
-- `templates/Step8_Priority_Targets_Template.md`
 
 **Core Concept:** Organizations don't have needs—people do. Success requires identifying specific requesters within favorable organizations who face urgent problems.
 
-**Three Deliverables:**
+**Four Deliverables:**
 
-1. **Ecosystem Data Matrix (Markdown → DOCX)**
-   - Structured table: All organizations across 5 value chain positions
-   - For each: Organization name, role, requester, acceptability, need level, notes
-   - Priority Targets Quick Reference section
-   - Use for: Working document, team reference, monthly updates
+1. **Master Markdown Analysis**
+   - File: `[Project]_[Date]_08_Analysis.md`
+   - Template: `Step8_Analysis_Markdown_Template.md`
+   - Complete comprehensive analysis with ALL content in single reference document
+   - Includes: Executive summary, all 5 value chain tables, priority targets, ecosystem composition, evidence citations, next steps
+   - Use for: Master reference, version control, comprehensive working document
 
-2. **HTML Interactive Visualization**
+2. **Ecosystem Data DOCX**
+   - File: `[Project]_[Date]_08_Ecosystem_Data_DOCX.md` (copy to Word, save as .docx)
+   - Template: `Step8_Ecosystem_Data_DOCX_Template.md`
+   - DOCX-formatted with detailed styling specifications (fonts, colors, spacing)
+   - Professional tables across 5 value chain positions with color-coded rows
+   - Use for: Committee evaluations, investor due diligence, board presentations
+
+3. **Priority Targets DOCX**
+   - File: `[Project]_[Date]_08_Priority_Targets_DOCX.md` (copy to Word, save as .docx)
+   - Template: `Step8_Priority_Targets_DOCX_Template.md`
+   - DOCX-formatted strategic engagement plan with styling specifications
+   - Each target: organization, requester, strategy, timeline, metrics, barriers
+   - Engagement timeline (30/60/90 days), resource requirements, success factors/risks
+   - Use for: Sales/BD execution, resource allocation, quarterly reviews
+
+4. **HTML Interactive Visualization**
+   - File: `[Project]_[Date]_08_Value_Network.html`
+   - Template: `Step8_Value_Network_Visualization.html`
    - 5-column grid: Enablers → Product → Channels → Buyers → End Users
    - Color-coded priority targets (green gradient = Favorable + Critical/Important needs)
-   - Need badges (Critical/Important/Secondary)
-   - Acceptability dots (green/orange/red)
-   - Professional legend, PDF-ready (16:9 landscape)
+   - Need badges, acceptability dots, professional legend, PDF-ready (16:9 landscape)
    - Use for: Presentations, stakeholder communication, strategic planning
-
-3. **Priority Targets Summary (Markdown → DOCX)**
-   - Strategic engagement plan for highest-value opportunities
-   - Each target: Organization, requester, need, strategy, timeline, metrics, barriers
-   - Engagement timeline (30/60/90 days)
-   - Resource requirements
-   - Success factors and risks
-   - Use for: Sales/BD execution, resource allocation, quarterly planning
 
 **Priority Target Logic:**
 ```
@@ -1310,7 +1319,9 @@ Step 8 (Value Network) → Complete visualization + Priority targets + Strategy
 - [ ] HTML opens in browser, priority targets visually distinct (green gradient)
 - [ ] Priority Targets Summary has specific strategies (not generic "reach out")
 - [ ] Character limits respected: Org names (60), Roles (120), Requesters (60), Notes (250)
-- [ ] All three deliverables align perfectly (no contradictions)
+- [ ] All four deliverables align perfectly (no contradictions)
+- [ ] Master markdown contains ALL content from other deliverables
+- [ ] DOCX templates include detailed formatting specifications
 
 **Next Step:** Create final committee report or begin priority target engagement
 

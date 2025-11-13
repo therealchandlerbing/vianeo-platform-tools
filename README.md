@@ -74,8 +74,12 @@ Step 6: Needs Qualification Matrix (45-90 min)
   → Interactive HTML needs matrix + comprehensive analysis report (9-12 pages)
   → Visual dashboard with opportunity zones + strategic action plan
 
-Step 7: Ecosystem Mapping (30-45 min)
-  → Stakeholder analysis with acceptability ratings
+Step 7: Players & Influencers Ecosystem Analysis (30-45 min)
+  → 8-10 most critical Players (active market participants)
+  → 8-10 most critical Influencers (market shapers)
+  → Acceptability ratings (Favorable/Neutral/Unfavorable) with strategic notes
+  → TWO professional outputs: 2-page DOCX (BCG-level) + Markdown analysis
+  → Optional: Python generator for automated formatting
 
 Step 8: Network Visualization (60-90 min)
   → Interactive HTML value network map
@@ -197,11 +201,19 @@ vianeo-platform-tools/
 │   ├── step_3_market_maturity_29q.md            # 29-question market maturity (complete)
 │   ├── step_4_legitimacy_worksheet.md           # Legitimacy deep dive (complete)
 │   ├── step_5_needs_requesters.md               # Needs/Requesters analysis (complete)
-│   ├── step_6_needs_qualification_matrix.md     # Needs matrix + analysis report (complete)
-│   ├── step_7_ecosystem_mapping.md              # Stakeholder analysis (TODO)
+│   ├── step_6_needs_matrix_html.md              # HTML matrix generator (TODO)
+│   ├── step_7_players_influencers.md            # Players/Influencers ecosystem (complete)
 │   └── step_8_network_visualization.md          # HTML network map (TODO)
 │
-├── visualizations/                          # HTML templates (placeholder for future use)
+├── tools/                                   # Automation scripts
+│   ├── players_influencers_generator.py         # Step 7: Python DOCX generator
+│   ├── requirements.txt                         # Python dependencies
+│   ├── example_rayla_ai.json                    # Example input for generator
+│   ├── rayla_ai_ecosystem.docx                  # Example output (generated)
+│   └── README_Tools.md                          # ⭐ Tools usage guide
+│
+├── visualizations/                          # HTML templates
+│   ├── needs_matrix_template.html               # Priority heatmap (TODO)
 │   └── network_map_template.html                # Value network (TODO)
 │
 ├── worksheets/                              # Analysis worksheets
@@ -218,9 +230,8 @@ vianeo-platform-tools/
 │   ├── Step5_NeedsRequesters_DOCX_Part1_Template.md # Step 5: Core Analysis DOCX format
 │   ├── Step5_NeedsRequesters_DOCX_Part2_Template.md # Step 5: Strategic Analysis DOCX format
 │   ├── Step5_NeedsRequesters_DOCX_Part3_Template.md # Step 5: Interview Guide DOCX format
-│   ├── Step6_Needs_Matrix_Template.html             # Step 6: Landscape HTML matrix dashboard
-│   ├── Step6_Analysis_Report_Template.md            # Step 6: Portrait strategic report (9-12 pages)
-│   ├── Step6_Quick_Start_Guide.md                   # Step 6: Quick start execution guide
+│   ├── Step7_EcosystemAnalysis_Markdown_Template.md # Step 7: Complete ecosystem analysis
+│   ├── Step7_PlayersInfluencers_DOCX_Format_Spec.md # Step 7: DOCX formatting specifications
 │   ├── Evidence_Log_Template.md                     # Evidence tracking with E### IDs
 │   ├── Hypotheses_Log_Template.md                   # Hypothesis validation tracking
 │   ├── Gate_A_Decision_Brief_Template.md            # Go/pivot/stop decision framework

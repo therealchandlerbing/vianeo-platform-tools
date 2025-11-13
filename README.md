@@ -70,8 +70,9 @@ Step 5: Desirability - Needs/Requesters Analysis (30-40 min)
   → Requesters (6-10 roles), Needs (10: Tasks/Pains/Expectations), Existing Solutions
   → FOUR professional outputs: Markdown analysis + 3 DOCX (Core Analysis, Strategic Analysis, Interview Guide)
 
-Step 6: Needs Qualification Matrix (45 min)
-  → Interactive HTML heatmap showing priority targets
+Step 6: Needs Qualification Matrix (45-90 min)
+  → Interactive HTML needs matrix + comprehensive analysis report (9-12 pages)
+  → Visual dashboard with opportunity zones + strategic action plan
 
 Step 7: Ecosystem Mapping (30-45 min)
   → Stakeholder analysis with acceptability ratings
@@ -196,12 +197,11 @@ vianeo-platform-tools/
 │   ├── step_3_market_maturity_29q.md            # 29-question market maturity (complete)
 │   ├── step_4_legitimacy_worksheet.md           # Legitimacy deep dive (complete)
 │   ├── step_5_needs_requesters.md               # Needs/Requesters analysis (complete)
-│   ├── step_6_needs_matrix_html.md              # HTML matrix generator (TODO)
+│   ├── step_6_needs_qualification_matrix.md     # Needs matrix + analysis report (complete)
 │   ├── step_7_ecosystem_mapping.md              # Stakeholder analysis (TODO)
 │   └── step_8_network_visualization.md          # HTML network map (TODO)
 │
-├── visualizations/                          # HTML templates
-│   ├── needs_matrix_template.html               # Priority heatmap (TODO)
+├── visualizations/                          # HTML templates (placeholder for future use)
 │   └── network_map_template.html                # Value network (TODO)
 │
 ├── worksheets/                              # Analysis worksheets
@@ -218,6 +218,9 @@ vianeo-platform-tools/
 │   ├── Step5_NeedsRequesters_DOCX_Part1_Template.md # Step 5: Core Analysis DOCX format
 │   ├── Step5_NeedsRequesters_DOCX_Part2_Template.md # Step 5: Strategic Analysis DOCX format
 │   ├── Step5_NeedsRequesters_DOCX_Part3_Template.md # Step 5: Interview Guide DOCX format
+│   ├── Step6_Needs_Matrix_Template.html             # Step 6: Landscape HTML matrix dashboard
+│   ├── Step6_Analysis_Report_Template.md            # Step 6: Portrait strategic report (9-12 pages)
+│   ├── Step6_Quick_Start_Guide.md                   # Step 6: Quick start execution guide
 │   ├── Evidence_Log_Template.md                     # Evidence tracking with E### IDs
 │   ├── Hypotheses_Log_Template.md                   # Hypothesis validation tracking
 │   ├── Gate_A_Decision_Brief_Template.md            # Go/pivot/stop decision framework

@@ -11,7 +11,7 @@ Step 0: Executive Brief (20-30 min) → B1-B7 structure + maturity stage
 Step 1: Application Forms [OPTIONAL] (15-20 min) → 360 SIS or CNEN format
 Step 2: 40-Question Diagnostic (30-45 min) → Team/Tech/Mgmt/Commercial (2 docs)
 Step 3: 29-Question Market Maturity (45-60 min) → 5 Dimensional scores (3 outputs)
-Step 4: Legitimacy Deep Dive (20-30 min) → Problem validation
+Step 4: Legitimacy Deep Dive (20-30 min) → Problem/domain/team/resources (2 outputs)
 Step 5: Desirability Analysis (30-40 min) → Segments, needs, personas
 Step 6: Needs Matrix (45 min) → HTML priority heatmap
 Step 7: Ecosystem Mapping (30-45 min) → Stakeholder acceptability

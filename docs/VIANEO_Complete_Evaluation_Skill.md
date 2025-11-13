@@ -702,47 +702,363 @@ Formula: Overall = (Legitimacy × 0.15) + (Desirability × 0.25) + (Acceptabilit
 
 ### STEP 4: Legitimacy Deep Dive (20-30 min)
 
-**Purpose:** Detailed validation of problem significance and domain appropriateness
+**Purpose:** Comprehensive validation of the foundational justification for the business by examining problem definition, application domain, team approach, and available resources
 
 **Prompt Location:** `prompts/step_4_legitimacy_worksheet.md`
 
-**Worksheet Location:** `worksheets/Legitimacy_Analysis_Template.md`
+**Template Locations:**
+- `templates/Step4_Legitimacy_Markdown_Template.md` (Worksheet template)
+- `templates/Step4_Legitimacy_DOCX_Template.md` (DOCX format reference)
 
-**Components:**
-1. **Problem Definition Analysis** (25% of legitimacy score)
-   - Solution-neutrality check
-   - Measurability and specificity
-   - Evidence of problem existence
+**Two Required Outputs:**
 
-2. **Problem Significance** (25% of legitimacy score)
-   - Magnitude (how many affected)
-   - Severity (impact level)
-   - Urgency (timeline pressure)
-   - Economic impact
+1. **Markdown Worksheet** (3-4 pages)
+   - Core project information (genesis, problem, field)
+   - Human resources table with differentiators
+   - Physical/intellectual resources table
+   - Financial resources table
+   - Differentiating advantages synthesis
+   - Comprehensive assessment summary
 
-3. **Field of Application Analysis** (25% of legitimacy score)
-   - Domain specificity and stability
-   - Problem-domain fit
-   - Alternative domains consideration
+2. **DOCX Worksheet** (identical content, professional formatting)
+   - Color-coded scores
+   - Professional table formatting
+   - Committee-ready presentation
 
-4. **Innovator's Approach** (25% of legitimacy score)
-   - Unique insight or perspective
-   - Domain experience and credibility
-   - Approach differentiation
+**Weight in Overall VIANEO Score:** 15% of total evaluation
 
-**Outputs:**
-- Component scores for each element
-- Total legitimacy score (0-5)
-- Red flag identification
-- Specific recommendations
+---
+
+**The Seven Sections:**
+
+**Section 1: Core Project Information (3 fields)**
+
+| Field | Max Chars | Purpose |
+|-------|-----------|---------|
+| Project Genesis | 250 | Origin story, founding context, key dates, founders, initial partnerships/funding |
+| Problem to Solve | 250 | Problem definition WITHOUT embedding solution, include evidence of significance |
+| Field of Application | 60 | Specific socio-economic domain or sector with boundaries |
+
+**Key Requirements:**
+- Problem must be solution-neutral (not "How do we create an app...")
+- Field must be specific (not "Healthcare" but "Cognitive health for aging populations 55-75")
+- Genesis should include catalyst, backing, and founding context
+
+---
+
+**Section 2: Human Resources Table**
+
+**Structure:** Means | Differentiator? | Note
+
+- List 4-8 key team members or advisors
+- Format: "[Name] ([Role]): [Years] [Key Experience]"
+- Differentiator?: Yes/No (Is this person's background rare or uniquely valuable?)
+- Note: 50-80 chars explaining why valuable or ordinary
+- Overall Note (250 chars): Synthesis of team strengths, gaps, differentiators
+
+**Evaluation Criteria:**
+- Domain experts with deep relevant experience? (+1)
+- Rare credentials or networks? (+1)
+- Critical gaps (no technical lead, no regulatory expert)? (-1)
+- Startup/scale experience present? (+0.5)
+- Full-time commitment vs. part-time? (+0.5 if full-time)
+
+**Red Flags:**
+- No domain expertise among core team
+- No evidence of customer interviews or problem validation
+- Part-time team for full-time problem
+- Missing critical functions
+- Team turnover or instability
+
+---
+
+**Section 3: Physical/Intellectual Resources Table**
+
+**Structure:** Means | Differentiator? | Note
+
+- List 4-10 key assets: patents, licenses, technology, data, partnerships, facilities, equipment
+- Differentiator?: Yes/No (Is this asset rare, proprietary, or hard to replicate?)
+- Note: 50-80 chars explaining value or limitations
+- Overall Note (250 chars): IP position, technical assets, dependencies, competitive moats
+
+**Evaluation Criteria:**
+- Proprietary vs. standard technology? (Proprietary +1)
+- Owned patents or exclusive licenses? (Yes +1)
+- Validation through research, trials, or commercial use? (Yes +1)
+- Manufacturing or infrastructure capacity? (Adequate +0.5)
+- Data assets or network effects? (Yes +0.5)
+
+**Red Flags:**
+- Critical dependencies on partners without commitments
+- No proprietary assets or defensible advantages
+- Infrastructure requirements vastly exceed current resources
+
+---
+
+**Section 4: Financial Resources Table**
+
+**Structure:** Resource | Amount | Differentiator? | Note
+
+- List 3-6 financial resources: funding raised, revenue, personal investment, grants
+- Amount: Dollar figures or "N/A"
+- Differentiator?: Yes/No (Is this funding source unusual or strategically valuable?)
+- Note: 50-80 chars context about the funding
+- Overall Financial Note: Financial position, runway, dependencies, sustainability
+
+**Evaluation Criteria:**
+- Current capital position and burn rate?
+- Revenue generation (even if minimal)?
+- Unusual funding sources (corporate backing, strategic investors)?
+- Dependency on external fundraising?
+- Runway: <6mo (poor), 6-12mo (adequate), 12-18mo (good), 18+mo (strong)
+
+**Red Flags:**
+- Running out of capital with no fundraising progress
+- No revenue and no clear path to funding
+- Heavy dependencies without commitments
+
+---
+
+**Section 5: Differentiating Advantages (250 chars)**
+
+**Content:** Synthesize the 2-4 strongest competitive moats from all resources above
+
+**Guidelines:**
+- Focus on defensible advantages (not just "good team")
+- Prioritize: exclusive partnerships, proprietary IP, validated data, regulatory approvals, rare networks
+- Explain WHY each advantage is hard to replicate
+- Connect advantages to specific problem being solved
+
+---
+
+**Section 6: Assessment Summary (7 subsections)**
+
+#### 1. Legitimacy Score: X.X/5 (Category)
+
+**Formula:** (Problem Definition + Application Domain + Team & Approach + Resources) ÷ 4
+
+**Categories:**
+- 4.5-5.0: Exceptional - Proceed with confidence
+- 3.5-4.4: Above Average - Proceed with focus areas
+- 3.0-3.4: Adequate - Conditional proceed
+- 2.0-2.9: Below Average - Major rework needed
+- <2.0: Poor - Reconsider fundamentals
+
+#### 2. Strengths (4-6 bullets)
+- Evidence-based strengths with specific metrics
+- Genuine differentiators highlighted
+- Early traction or validation noted
+
+#### 3. Gaps (5-8 bullets)
+- Honest assessment of missing information
+- Team capability gaps identified
+- Resource dependencies noted
+- Areas requiring attention flagged
+
+#### 4. Detailed Scoring (4 components)
+
+**Problem Definition (X/5):**
+- **5:** Precise definition with clear metrics/boundaries. Strong evidence of significance. Multiple sources validate.
+- **4:** Clear statement with minor solution elements. Good evidence. Some external validation.
+- **3:** Basic clarity but some vagueness. Moderate evidence. Limited validation beyond team.
+- **2:** Includes solution elements or vague. Weak evidence. Mostly internal validation.
+- **1:** Vague, solution-dependent, or constantly shifting. No evidence beyond innovator.
+
+**Application Domain (X/5):**
+- **5:** Well-defined domain with clear boundaries. Strong domain expertise. Appropriate scope for resources.
+- **4:** Clear definition with minor boundary questions. Good understanding. Reasonable scope.
+- **3:** Basic clarity but boundaries fuzzy. Adequate knowledge. Scope manageable but broad.
+- **2:** Definition shifting or unclear. Limited understanding. Scope too broad or narrow.
+- **1:** Overly broad or constantly shifting. No demonstrated domain knowledge.
+
+**Team & Approach (X/5):**
+- **5:** Rare expertise directly relevant. Demonstrates exploratory methodology. Full-time commitment. No critical gaps.
+- **4:** Strong relevant experience with some unique capabilities. Good exploration/execution balance. Mostly committed. Minor gaps.
+- **3:** Basic relevant experience without standout credentials. Some customer exploration. Partial commitment. Some gaps.
+- **2:** Limited relevant experience or major gaps. Little validation approach. Minimal commitment. Significant gaps.
+- **1:** No relevant domain experience. Solution-obsessed without validation. No clear commitment. Critical gaps.
+
+**Resources (X/5):**
+- **5:** Comprehensive resources with multiple differentiating assets. Strong IP. Adequate capital with unusual funding.
+- **4:** Good resource base with some differentiators. Decent IP or partnerships. Sufficient capital for near-term.
+- **3:** Basic resources adequate for next phase. Standard assets. Minimal capital requiring fundraising soon.
+- **2:** Significant resource gaps. Limited assets. Capital concerns or heavy dependencies.
+- **1:** Major resource gaps across categories. No distinct assets. Critical capital shortage.
+
+#### 5. Overall Assessment (150-200 words)
+- Is foundation solid enough to proceed?
+- What are critical dependencies for success?
+- Should project advance to Desirability, Acceptability, Feasibility, Viability evaluation?
+- What areas need attention in next phases?
+
+#### 6. Key Risk Factors (4-6 bullets)
+- Founder/team concentration risks
+- Financial/funding dependencies
+- Competitive threats
+- Partnership dependencies
+- Regulatory uncertainties
+- Technical execution risks
+
+#### 7. Key Success Factors (4-6 bullets)
+- Specific, actionable items
+- Prioritized by importance
+- Tied to identified gaps
+- Achievable within 6-12 months
+
+---
+
+**Critical Character Limits (Strictly Enforced):**
+
+| Field | Max Characters |
+|-------|---------------|
+| Project Genesis | 250 |
+| Problem to Solve | 250 |
+| Field of Application | 60 |
+| Human Resources Overall Note | 250 |
+| Physical/Intellectual Resources Overall Note | 250 |
+| Financial Means Note per row | 80 |
+| Differentiating Advantages | 250 |
+
+---
+
+**Execution Process:**
+
+**Phase 1: Preparation (5 min)**
+- Gather Step 0 (Executive Brief - B1, B2, B4, B6, B7)
+- Gather Step 2 (40Q Diagnostic - Team T1-T9, Tech Tech1-Tech11, Mgmt M8-M9)
+- Collect pitch deck, team bios, financial info, technical documentation
+
+**Phase 2: Core Information (5 min)**
+- Fill 3-row table (Genesis, Problem, Field)
+- Ensure problem is solution-neutral
+- Make field specific with boundaries
+
+**Phase 3: Human Resources (5 min)**
+- List 4-8 key people with experience
+- Assess differentiators (rare expertise, unique credentials, exceptional networks)
+- Write Overall Note synthesizing strengths and gaps
+
+**Phase 4: Physical/Intellectual Resources (5 min)**
+- List 4-10 assets (patents, tech, data, partnerships, facilities)
+- Mark differentiators (proprietary, exclusive, validated)
+- Write Overall Note on IP position and dependencies
+
+**Phase 5: Financial Resources (3 min)**
+- List 3-6 resources (funding, revenue, grants)
+- Mark unusual sources or strategic value
+- Write Overall Financial Note on runway and sustainability
+
+**Phase 6: Differentiating Advantages (3 min)**
+- Synthesize 2-4 strongest moats from all tables
+- Explain WHY hard to replicate
+- Connect to specific problem
+
+**Phase 7: Assessment Summary (10-12 min)**
+- Calculate 4 component scores using rubrics
+- Calculate overall score (average of 4)
+- Write Strengths (4-6 bullets)
+- Write Gaps (5-8 bullets)
+- Write Overall Assessment (150-200 words)
+- Write Risk Factors (4-6 bullets)
+- Write Success Factors (4-6 bullets)
+
+**Phase 8: Quality Check (2 min)**
+- Verify all character limits
+- Check scoring calculation
+- Ensure evidence-based (not aspirational)
+- Confirm gaps honestly identified
+- Verify coherent story across sections
+
+**Total Time:** 20-30 minutes
+
+---
+
+**Integration with VIANEO Framework:**
+
+**Links from Previous Steps:**
+- **Step 0 (B2):** Problem statement → Problem to Solve field
+- **Step 0 (B4):** Target Market → Field of Application
+- **Step 0 (B6):** Traction → Evidence of validation
+- **Step 0 (B7):** Team → Human Resources table
+- **Step 2 (T1-T9):** Team assessment → Human Resources evaluation
+- **Step 2 (Tech1-Tech11):** Technology assessment → Physical/Intellectual Resources
+- **Step 2 (M8-M9):** Financial assessment → Financial Resources
+
+**Links to Evidence Log:**
+- All claims should cite Evidence IDs (E###) where available
+- Team credentials: E### (LinkedIn profiles, bios)
+- Patents/IP: E### (Patent filing documentation)
+- Financial information: E### (Investment agreements, financial statements)
+
+**Feeds into Overall VIANEO Score:**
+- Legitimacy Weight: 15% of total
+- If Legitimacy < 3.0, red flag for overall evaluation
+- Legitimacy gaps inform Desirability, Acceptability, Feasibility, Viability focus areas
+
+**Feeds Gate A Decision:**
+- Legitimacy assessment becomes Appendix D in Gate A Decision Brief
+- Low scores (< 3.0) may trigger reconsideration before full evaluation
+- Identified gaps inform resource requirements and validation priorities
+
+---
 
 **Quality Checks:**
-- [ ] Problem statement evaluated for solution-neutrality
-- [ ] Evidence cited for problem significance
-- [ ] Domain fit assessed objectively
-- [ ] Team credibility documented
+- [ ] All character limits respected (250, 60, 80 chars)
+- [ ] Problem statement is solution-neutral
+- [ ] Differentiators clearly marked (Yes/No) with justification
+- [ ] Component scores calculated using rubrics
+- [ ] Overall score = average of 4 components
+- [ ] Category label matches score range
+- [ ] Strengths are evidence-based (4-6 items)
+- [ ] Gaps are comprehensive and honest (5-8 items)
+- [ ] Detailed scoring has 2-3 sentence explanations
+- [ ] Overall assessment is 150-200 words
+- [ ] Risk factors are specific (4-6 items)
+- [ ] Success factors are actionable (4-6 items)
+- [ ] Both markdown and DOCX files created
+- [ ] Identical content in both formats
+- [ ] Professional formatting in DOCX
 
-**Next Step:** Proceed to Step 5
+---
+
+**File Naming Conventions:**
+- Markdown: `Vianeo_Legitimacy_Worksheet_[ProjectName].md`
+- DOCX: `Vianeo_Legitimacy_Worksheet_[ProjectName].docx`
+- Example: `Vianeo_Legitimacy_Worksheet_Thinkie_System.docx`
+
+---
+
+**Common Pitfalls:**
+
+**Problem Definition Errors:**
+- Solution-embedding: "How do we create an app..." (Fix: "How might we enable [outcome]?")
+- Too vague: "Help people be healthier" (Fix: Add specifics about who, what, evidence)
+- Scope creep: Problem keeps expanding (Fix: Anchor to Step 0 B2)
+
+**Domain Errors:**
+- Too broad: "Healthcare" (Fix: Add boundaries like age, geography, condition)
+- Shifting focus: B2C → B2B pivot (Fix: Document current domain, note history)
+- Mismatched resources: Complex regulated domain with lightweight team (Fix: Lower score, note gap)
+
+**Team/Resource Errors:**
+- Overstating capability: "World-class team" with no evidence (Fix: Use specific metrics)
+- Ignoring gaps: Not acknowledging missing functions (Fix: List explicitly in gaps)
+- Claiming differentiators: Standard experience as unique (Fix: Mark "No" unless truly rare)
+
+---
+
+**Tips for Accurate Scoring:**
+
+1. **Default skeptical:** Without evidence, score ≤3
+2. **Look for proof:** Rare expertise, unique credentials, proprietary IP
+3. **Be honest about gaps:** Low scores are valuable signals
+4. **Use rubrics:** Follow the 1-5 scale definitions, don't guess
+5. **Evidence over aspirations:** "Has 15 yrs experience" not "Will be great..."
+6. **Compare to examples:** Review scoring in user's Thinkie System (4.2) vs. Rayla AI (3.5) examples
+
+---
+
+**Next Step:** Proceed to Step 5 (Desirability Analysis)
 
 ---
 

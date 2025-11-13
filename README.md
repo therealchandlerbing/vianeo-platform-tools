@@ -201,15 +201,18 @@ vianeo-platform-tools/
 │   └── VIANEO_Document_Formatting_Guide.md     # Step 5: Professional DOCX styling
 │
 ├── prompts/                                 # Step-by-step prompts
-│   ├── step_0_canvas_extraction.md              # Extract business model canvas
-│   ├── step_1_application_form.md               # Optional: Program applications
-│   ├── step_2_diagnostic_40q.md                 # 40-question diagnostic
-│   ├── step_3_market_maturity_29q.md            # 29-question market maturity (complete)
+│   ├── step_0_executive_brief_extraction.md     # Extract executive brief (B1-B7 format) [PRIMARY]
+│   ├── step_0_canvas_extraction.md              # Alternative: Business model canvas approach
+│   ├── step_1_application_forms.md              # Optional: Program applications (360 SIS/CNEN) [PRIMARY]
+│   ├── step_1_application_form.md               # Alternative: Simplified application format
+│   ├── step_2_diagnostic_40q.md                 # 40-question diagnostic (complete)
+│   ├── step_3_market_maturity_29q.md            # References docs/ for complete 29Q system
+│   ├── step_3_market_maturity_link.md           # Direct link to primary Step 3 documentation
 │   ├── step_4_legitimacy_worksheet.md           # Legitimacy deep dive (complete)
 │   ├── step_5_needs_requesters.md               # Needs/Requesters analysis (complete)
-│   ├── step_6_needs_matrix_html.md              # HTML matrix generator (TODO)
+│   ├── step_6_needs_qualification_matrix.md     # Matrix + Analysis Report (complete)
 │   ├── step_7_players_influencers.md            # Players/Influencers ecosystem (complete)
-│   └── step_8_network_visualization.md          # HTML network map (TODO)
+│   └── step_8_ecosystem_value_network.md        # Value network with 4 deliverables (complete)
 │
 ├── tools/                                   # Automation scripts
 │   ├── players_influencers_generator.py         # Step 7: Python DOCX generator
@@ -218,15 +221,12 @@ vianeo-platform-tools/
 │   ├── rayla_ai_ecosystem.docx                  # Example output (generated)
 │   └── README_Tools.md                          # ⭐ Tools usage guide
 │
-├── visualizations/                          # HTML templates
-│   ├── needs_matrix_template.html               # Priority heatmap (TODO)
-│   └── network_map_template.html                # Value network (TODO)
-│
-├── worksheets/                              # Analysis worksheets
-│   ├── Legitimacy_Analysis_Template.md          # Problem validation (TODO)
-│   └── Ecosystem_Mapping_Template.md            # Stakeholder table (TODO)
-│
-├── templates/                               # Blank templates
+├── templates/                               # Blank templates and HTML visualizations
+│   ├── Executive_Brief_Template.md                  # Step 0: B1-B7 executive brief format
+│   ├── 360SIS_Application_Template.md               # Step 1: Social impact application
+│   ├── CNEN_Application_Template.md                 # Step 1: Research institution application
+│   ├── 40Q_Assessment_Results_Template.md           # Step 2: Diagnostic results table
+│   ├── 40Q_Score_Summary_Template.md                # Step 2: Score summary format
 │   ├── Step3_MarketMaturity_Markdown_Template.md    # Step 3: Full report (18 sections)
 │   ├── Step3_Assessment_Results_Template.md         # Step 3: DOCX table format
 │   ├── Step3_Dimension_Analysis_Template.md         # Step 3: DOCX narrative format
@@ -236,17 +236,26 @@ vianeo-platform-tools/
 │   ├── Step5_NeedsRequesters_DOCX_Part1_Template.md # Step 5: Core Analysis DOCX format
 │   ├── Step5_NeedsRequesters_DOCX_Part2_Template.md # Step 5: Strategic Analysis DOCX format
 │   ├── Step5_NeedsRequesters_DOCX_Part3_Template.md # Step 5: Interview Guide DOCX format
+│   ├── Step6_Needs_Matrix_Template.html             # Step 6: Interactive HTML needs matrix
+│   ├── Step6_Analysis_Report_Template.md            # Step 6: Comprehensive 9-12 page analysis
+│   ├── Step6_Quick_Start_Guide.md                   # Step 6: Complete methodology guide
 │   ├── Step7_EcosystemAnalysis_Markdown_Template.md # Step 7: Complete ecosystem analysis
 │   ├── Step7_PlayersInfluencers_DOCX_Format_Spec.md # Step 7: DOCX formatting specifications
+│   ├── Step8_Analysis_Markdown_Template.md          # Step 8: Master comprehensive analysis
+│   ├── Step8_Ecosystem_Data_DOCX_Template.md        # Step 8: Ecosystem data matrix DOCX
+│   ├── Step8_Priority_Targets_DOCX_Template.md      # Step 8: Priority targets strategy DOCX
+│   ├── Step8_Value_Network_Visualization.html       # Step 8: Interactive HTML value network
 │   ├── Evidence_Log_Template.md                     # Evidence tracking with E### IDs
 │   ├── Hypotheses_Log_Template.md                   # Hypothesis validation tracking
 │   ├── Gate_A_Decision_Brief_Template.md            # Go/pivot/stop decision framework
 │   ├── Interview_Guide_Template.md                  # Discovery interview protocol
-│   └── Committee_Report_Template.md                 # Final report (TODO)
+│   └── Assessment_Template.md                       # Generic assessment template
 │
 ├── examples/                                # Complete examples
 │   ├── Example_Assessment_Early_Stage.md        # Score ~1.9 (Step 3)
-│   └── Example_Assessment_Promising_Stage.md    # Score ~4.1 (Step 3)
+│   ├── Example_Assessment_Promising_Stage.md    # Score ~4.1 (Step 3)
+│   ├── Step8_Example_TechEd_Analysis.md         # Complete Step 8 worked example
+│   └── TechEd_2025-01-15_08_Value_Network.html  # Step 8 HTML visualization example
 │
 └── README.md                                # This file
 ```

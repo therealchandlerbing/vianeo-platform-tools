@@ -1,153 +1,205 @@
-# Step 7: Players & Influencers Ecosystem Analysis
-
-Complete implementation of the Players & Influencers ecosystem mapping framework following the hybrid approach (AI prompts + Python automation).
+# Add Step 6: Persona Development and Renumber Steps (8→9 Step System)
 
 ## Summary
 
-This PR implements Step 7 of the Vianeo Business Model Evaluation Framework, providing comprehensive stakeholder analysis with professional BCG-level outputs.
+This PR transforms the Vianeo Platform Tools from an **8-step to a 9-step evaluation system** by adding comprehensive **Persona Development as Step 6** and renumbering all subsequent steps accordingly.
 
 ## What's New
 
-### 🎯 Core Features
-- **Strategic Selection Approach:** 8-10 most critical Players and Influencers (not comprehensive listing)
-- **Acceptability Framework:** Favorable/Neutral/Unfavorable/Don't know ratings with strategic implications
-- **Professional Outputs:** 2-page DOCX (BCG-level) + comprehensive Markdown analysis
-- **Character Limits:** 60 chars (names), 250 chars (strategic notes)
-- **Color-Coded Ratings:** Visual distinction for quick stakeholder assessment
+### ✨ NEW: Step 6 - Persona Development
 
-### 📁 Files Added
+A complete persona development framework that validates the **Desirability dimension (25% of total score)** through evidence-based user personas.
+
+**Key Features:**
+- 🎯 Evidence-based personas (3-5 per project)
+- 📊 Validation badges (Green/Orange/Red based on interview count)
+- 📄 Professional DOCX output (3-11 pages)
+- 📚 Four comprehensive documentation guides
+- ✅ Character limits enforced (60 chars for bullets)
+- 🔍 Supports 1-5 scoring based on interview validation
+
+**Interview Requirements:**
+- Minimum: 3 interviews per persona (adequate validation)
+- Recommended: 5+ interviews per persona (strong validation)
+- Exceptional: 10+ interviews per persona (comprehensive validation)
+
+### 🔄 Step Renumbering
+
+All subsequent steps have been renumbered to accommodate the new Step 6:
+
+| Previous | New | Step Name |
+|----------|-----|-----------|
+| Step 6 | **Step 7** | Needs Qualification Matrix |
+| Step 7 | **Step 8** | Players & Influencers Ecosystem Analysis |
+| Step 8 | **Step 9** | Ecosystem Value Network Map |
+
+## Files Changed
+
+### New Files Created (5)
 
 **Prompts:**
-- `prompts/step_7_players_influencers.md` (2,000+ lines)
-  - 8-phase execution process (30-45 minutes)
-  - Core definitions and selection criteria
-  - Strategic note writing formula
-  - Quality standards and validation
-  - Industry-specific guidance
+- `prompts/step_6_persona_development.md` - Main execution prompt (14KB)
 
-**Templates:**
-- `templates/Step7_EcosystemAnalysis_Markdown_Template.md`
-  - 14-section comprehensive analysis structure
-  - Integration with Steps 3 and 5
-  - Risk analysis and mitigation frameworks
-- `templates/Step7_PlayersInfluencers_DOCX_Format_Spec.md`
-  - Complete BCG-level formatting specifications
-  - Typography, colors, spacing details
-  - Implementation methods
+**Documentation:**
+- `docs/VIANEO_Persona_Development_Skill.md` - Master overview (10KB)
+- `docs/VIANEO_Persona_Generation_Prompt.md` - Exact template & formatting (13KB)
+- `docs/VIANEO_Persona_Reference_Guide.md` - Examples & best practices (26KB)
+- `docs/VIANEO_Persona_Complete_System_Guide.md` - System navigation guide (13KB)
 
-**Tools (NEW directory):**
-- `tools/players_influencers_generator.py` (650+ lines)
-  - Python DOCX generator with validation
-  - Precise formatting control (fonts, colors, layouts)
-  - CLI interface + programmatic API
-- `tools/requirements.txt`
-  - python-docx dependency
-- `tools/example_rayla_ai.json`
-  - Complete example (9 players + 9 influencers)
-- `tools/rayla_ai_ecosystem.docx`
-  - Generated example output
-- `tools/README_Tools.md` (500+ lines)
-  - Comprehensive usage guide
-  - Installation instructions
-  - Best practices and troubleshooting
+### Files Renamed (16)
 
-### 📝 Files Modified
-- `README.md`
-  - Updated Step 7 description with details
-  - Added `/tools/` directory to repository structure
-  - Added Step 7 templates to documentation
+**Prompts (3):**
+- `step_6_needs_qualification_matrix.md` → `step_7_needs_qualification_matrix.md`
+- `step_7_players_influencers.md` → `step_8_players_influencers.md`
+- `step_8_ecosystem_value_network.md` → `step_9_ecosystem_value_network.md`
 
-## Implementation Approach
+**Templates (10):**
+- All Step6 → Step7 templates (4 files)
+- All Step7 → Step8 templates (2 files)
+- All Step8 → Step9 templates (4 files)
 
-**Hybrid System (Option 3):**
-1. **AI Prompt Method:** Comprehensive prompt for conversational analysis
-2. **Python Generator:** Automated BCG-level DOCX creation
-3. **User Choice:** Teams can use either or both methods
+**Examples & Docs (3):**
+- `VIANEO_Step8_Quick_Reference.md` → `VIANEO_Step9_Quick_Reference.md`
+- `Step8_Example_TechEd_Analysis.md` → `Step9_Example_TechEd_Analysis.md`
+- Example HTML visualization file name updated
 
-## Key Capabilities
+### Files Updated (2)
 
-### Strategic Selection
-- Identifies 8-10 MOST CRITICAL stakeholders (not exhaustive lists)
-- Prioritizes by power and influence, not completeness
-- "If I could only engage with 10..." selection test
+**README.md:**
+- System description updated to 9-step system
+- Complete workflow section updated with Step 6 details
+- Execution paths updated (Standard: 4-5 hours, Complete: 6-7 hours)
+- Repository structure updated with new files
+- Version bumped to 2.1
 
-### Professional Formatting
-- 2-page DOCX constraint (forces strategic focus)
-- BCG consultant-level presentation quality
-- Color-coded acceptability (green/yellow/red/gray)
-- Executive-ready for C-suite, board, investors
+**docs/VIANEO_Complete_Evaluation_Skill.md:**
+- System overview updated to 9-step
+- Complete Step 6 section added with full specifications
+- All subsequent steps renumbered
+- Quality gates updated with Step 6 checklist
+- Time management section updated
 
-### Evidence-Based Analysis
-- Acceptability ratings require rationale
-- "Don't know" is acceptable and valuable
-- Validation status tracked
-- Integration with Step 3 questions (Q3, Q10, Q17, Q20, Q23, Q24)
+## Persona Structure
 
-### Automation Features
-- Automated validation (entry counts, character limits)
-- CLI interface: `python generator.py input.json output.docx`
-- Batch processing capability
-- Repeatable, consistent output
+Each persona includes:
 
-## Integration Points
+1. **Requester Profile**
+   - First name (single name only)
+   - Age (specific number)
+   - Life/Motivations (2-3 sentences)
+   - Personality/Values (2-3 sentences)
 
-**From Step 3 (Market Maturity):**
-- Q3: Ecosystem players identification
-- Q10: Stakeholder interests
-- Q17: Resistance and barriers
-- Q20: Market structure
-- Q23: Regulatory environment
-- Q24: Partners and allies
+2. **Field of Application**
+   - Thinks/Feels (2-3 sentences)
+   - Observes (2-3 sentences)
+   - Does (2-3 sentences)
+   - Others Say (2-3 sentences)
 
-**From Step 5 (Needs/Requesters):**
-- Requesters table → Convert to ecosystem players
-- Existing solutions → Identify competitor players
-- Validation status → Inform acceptability confidence
+3. **Activities and Challenges**
+   - Tasks/Activities (4-6 bullets, max 60 chars)
+   - Pains/Lacks (4-6 bullets, max 60 chars)
+   - Expectations/Hopes (4-6 bullets, max 60 chars)
 
-**To Step 8 (Network Visualization):**
-- Acceptability ratings → Node colors
-- Player types → Column positioning
-- Strategic priorities → Node emphasis
+4. **Current Solutions**
+   - 2-3 sentences naming specific tools/products
+   - Why they're inadequate
+   - What gaps remain
 
-## Testing
+## Documentation System
 
-✅ Python generator tested with example data
-✅ Generated `rayla_ai_ecosystem.docx` successfully
-✅ Validation working (character limits, entry counts)
-✅ Color coding applied correctly
-✅ 2-page format maintained
+The persona development step includes a comprehensive 4-document system:
 
-## Documentation
+1. **VIANEO_Persona_Development_Skill.md** - Master reference for skill usage
+2. **VIANEO_Persona_Generation_Prompt.md** - Detailed prompt for persona creation
+3. **VIANEO_Persona_Reference_Guide.md** - Comprehensive guide with examples and scoring
+4. **VIANEO_Persona_Complete_System_Guide.md** - Navigation guide for the 3-file system
 
-Comprehensive documentation includes:
-- Complete AI prompt with execution phases
-- Python generator usage guide
-- Format specifications (BCG-level standards)
-- Markdown analysis template
-- Industry-specific guidance
-- Common pitfalls and solutions
-- Quality checklists
+## Validation & Testing
 
-## File Statistics
+✅ All step references validated
+✅ No broken file paths detected
+✅ Character limits verified
+✅ Documentation consistency checked
+✅ All 21 files successfully renamed/created
+✅ Git history preserved with proper renames
 
-- **Total Lines Added:** 3,913+
-- **New Files:** 8
-- **Modified Files:** 1
-- **New Directory:** `/tools/`
+## Impact
 
-## Next Steps
+**Execution Time Updates:**
+- **Fast Track:** 90 minutes (unchanged)
+- **Standard:** 4-5 hours (was 3-4 hours)
+- **Complete:** 6-7 hours (was 5-6 hours)
 
-After merge, users can:
-1. Use AI prompt for strategic stakeholder analysis
-2. Use Python generator for professional DOCX output
-3. Combine both methods for comprehensive evaluation
-4. Integrate with existing Steps 3-5 workflows
+**Scoring Impact:**
+Personas directly impact **Desirability dimension (25% of total)**:
+- 5 points: Exceptional (10+ interviews per persona)
+- 4 points: Strong (5-10 interviews per persona)
+- 3 points: Adequate (3-5 interviews per persona)
+- 2 points: Weak (1-2 interviews per persona)
+- 1 point: Insufficient (no validation)
+
+## Statistics
+
+- **Files Created:** 5
+- **Files Renamed:** 16
+- **Files Updated:** 2
+- **Total Changes:** 21 files
+- **Lines Added:** 2,290
+- **Lines Removed:** 69
 
 ## Version
 
-**Version 2.0** | Vianeo Framework Step 7 Complete
-**Date:** 2025-01-15
+**Version:** 2.1 (Complete 9-Step System with Persona Development)
+**Last Updated:** November 2025
+**Framework:** VIANEO Business Model Evaluation Methodology
+
+## Integration
+
+This change integrates seamlessly with the existing Vianeo framework:
+- Builds on Step 5 (Needs/Requesters Analysis)
+- Feeds into Step 7 (Needs Qualification Matrix)
+- Supports overall Desirability assessment
+- Maintains backward compatibility with data flows
+
+## Common Pitfalls Addressed
+
+The comprehensive documentation includes solutions for:
+1. **Generic Personas** - Shows how to add specific behavioral depth
+2. **Solution-First Thinking** - Guides documenting actual problems
+3. **Overlapping Personas** - Helps find what makes personas distinct
+4. **Character Limit Violations** - Provides strategies for staying under 60 chars
+5. **Missing Current Solutions** - Shows how to name tools and analyze gaps
+
+## How to Review
+
+1. **Check New Step 6 Documentation:**
+   - Review `docs/VIANEO_Persona_Development_Skill.md` for overview
+   - Review `docs/VIANEO_Persona_Generation_Prompt.md` for template details
+   - Review `prompts/step_6_persona_development.md` for execution guide
+
+2. **Verify Renumbering:**
+   - Confirm all Step 6→7, 7→8, 8→9 files renamed correctly
+   - Check README.md workflow section
+   - Verify VIANEO_Complete_Evaluation_Skill.md updates
+
+3. **Test Integration:**
+   - Ensure Step 5 flows naturally into Step 6
+   - Verify Step 6 outputs support Step 7 (Needs Matrix)
+   - Check all file paths and references
+
+## Merge Checklist
+
+- [x] All files created and renamed
+- [x] Documentation updated comprehensively
+- [x] Version number bumped to 2.1
+- [x] All validations passed
+- [x] Commit message detailed and clear
+- [x] No broken references or links
+- [x] Git history preserved with proper renames
+- [x] Character limit validation in place
+- [x] Quality gates defined
+- [x] Integration points documented
 
 ---
 
-**Ready to merge!** This completes Step 7 with both AI-based and automated approaches, following established repository patterns while adding powerful new automation capabilities.
+**Ready to merge:** All validations passed, documentation complete, and changes tested.

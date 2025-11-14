@@ -4,7 +4,7 @@
 
 ## System Overview
 
-This is a comprehensive 8-step business model evaluation system using the VIANEO methodology. It transforms raw startup applications into complete assessments across five interconnected dimensions: **Legitimacy (15%)**, **Desirability (25%)**, **Acceptability (20%)**, **Feasibility (20%)**, and **Viability (20%)**.
+This is a comprehensive 9-step business model evaluation system using the VIANEO methodology. It transforms raw startup applications into complete assessments across five interconnected dimensions: **Legitimacy (15%)**, **Desirability (25%)**, **Acceptability (20%)**, **Feasibility (20%)**, and **Viability (20%)**.
 
 ## When to Use This System
 
@@ -30,7 +30,7 @@ This is a comprehensive 8-step business model evaluation system using the VIANEO
 
 ---
 
-## The Complete 8-Step Workflow
+## The Complete 9-Step Workflow
 
 ```
 INPUT: Startup application, pitch deck, or business plan
@@ -51,15 +51,18 @@ STEP 4: Legitimacy Deep Dive (20-30 min)
   → Problem validation and domain fit analysis
   ↓
 STEP 5: Desirability Analysis (30-40 min)
-  → User segments, needs, and personas
+  → User segments, needs, and requesters
   ↓
-STEP 6: Needs Qualification Matrix (45 min)
+STEP 6: Persona Development (60-90 min / 20-30 min)
+  → Evidence-based personas with validation badges
+  ↓
+STEP 7: Needs Qualification Matrix (45 min)
   → Visual HTML heatmap of priority targets
   ↓
-STEP 7: Ecosystem Mapping (30-45 min)
+STEP 8: Ecosystem Mapping (30-45 min)
   → Stakeholder analysis with acceptability ratings
   ↓
-STEP 8: Network Visualization (60-90 min)
+STEP 9: Network Visualization (60-90 min)
   → Interactive HTML value network map
   ↓
 OUTPUT: Complete evaluation package with committee report
@@ -67,8 +70,8 @@ OUTPUT: Complete evaluation package with committee report
 
 **Total Time:**
 - **Fast Track** (Steps 0, 2, 4, 5): 90 minutes
-- **Standard** (Steps 0-7): 3-4 hours
-- **Complete** (All steps 0-8): 5-6 hours
+- **Standard** (Steps 0-8): 4-5 hours
+- **Complete** (All steps 0-9): 6-7 hours
 
 ---
 
@@ -90,11 +93,11 @@ OUTPUT: Complete evaluation package with committee report
 
 ---
 
-### Path 2: Standard Evaluation (3-4 hours)
+### Path 2: Standard Evaluation (4-5 hours)
 
 **Use For:** Committee-ready evaluation of finalists
 
-**Steps:** 0 → 2 → 3 → 4 → 5 → 6 → 7
+**Steps:** 0 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 
 **Outputs:**
 - Complete canvas and diagnostics
@@ -107,11 +110,11 @@ OUTPUT: Complete evaluation package with committee report
 
 ---
 
-### Path 3: Complete Assessment (5-6 hours)
+### Path 3: Complete Assessment (6-7 hours)
 
 **Use For:** Executive presentation packages, major investments
 
-**Steps:** All steps 0-8
+**Steps:** All steps 0-9
 
 **Outputs:**
 - Everything from Standard path
@@ -1066,7 +1069,7 @@ Formula: Overall = (Legitimacy × 0.15) + (Desirability × 0.25) + (Acceptabilit
 
 **Purpose:** Identify and structure user segments, needs, and personas
 
-**Prompt Location:** `prompts/step_5_desirability_personas.md`
+**Prompt Location:** `prompts/step_5_needs_requesters.md`
 
 **Part 1: Requester Segments (3-10 segments)**
 
@@ -1122,15 +1125,89 @@ Create 3-5 detailed personas for top segments including:
 - [ ] Distinctness verified for all need pairs
 - [ ] Priority ranking based on evidence
 
-**Next Step:** Proceed to Step 6
+**Next Step:** Proceed to Step 6 (Persona Development)
 
 ---
 
-### STEP 6: Needs Qualification Matrix (45 min)
+### STEP 6: Persona Development (60-90 min with interviews / 20-30 min from existing data)
+
+**Purpose:** Create evidence-based user personas that validate Desirability with behavioral depth
+
+**Prompt Location:** `prompts/step_6_persona_development.md`
+
+**Documentation System (4 comprehensive guides):**
+- `docs/VIANEO_Persona_Development_Skill.md` - Master overview
+- `docs/VIANEO_Persona_Generation_Prompt.md` - Exact template
+- `docs/VIANEO_Persona_Reference_Guide.md` - Examples & best practices
+- `docs/VIANEO_Persona_Complete_System_Guide.md` - Navigation guide
+
+**Evidence Requirements:**
+- Minimum 3 interviews per persona (adequate validation)
+- Recommended 5+ interviews per persona (strong validation)
+- 10-15 interviews for complex B2B personas (exceptional validation)
+
+**Persona Structure (each persona):**
+
+1. **Requester Profile:**
+   - First name (single name only)
+   - Age (specific number, not range)
+   - Life/Motivations (2-3 sentences)
+   - Personality/Values (2-3 sentences)
+
+2. **Field of Application:**
+   - Thinks/Feels (2-3 sentences about internal state)
+   - Observes (2-3 sentences about external patterns)
+   - Does (2-3 sentences about actual behaviors)
+   - Others Say (2-3 sentences about reputation/feedback)
+
+3. **Activities and Challenges:**
+   - Tasks/Activities (4-6 bullets, max 60 chars each)
+   - Pains/Lacks (4-6 bullets, max 60 chars each)
+   - Expectations/Hopes (4-6 bullets, max 60 chars each)
+
+4. **Current Solutions:**
+   - 2-3 sentences naming specific tools/products
+   - Why they're inadequate
+   - What gaps remain
+
+**Validation Badges:**
+- ✓ VALIDATED (Green): 5+ interviews conducted
+- ⚠ PARTIALLY VALIDATED (Orange): 1-4 interviews
+- ✗ NEEDS VALIDATION (Red): 0 interviews
+
+**Output Specification:**
+- Professional DOCX document (3-11 pages maximum)
+- Cover page with validation metadata
+- Evidence base summary (page 2)
+- Individual personas (1 per page, pages 3+)
+- Color-coded validation badges
+
+**Quality Checks:**
+- [ ] 3-5 evidence-based personas created
+- [ ] Minimum 3 interviews per persona (adequate) or 5+ (strong)
+- [ ] All bullets under 60 characters verified
+- [ ] All paragraphs are 2-3 sentences
+- [ ] Current solutions specifically named with gaps
+- [ ] Validation badges match evidence level
+- [ ] Professional DOCX generated (max 11 pages)
+- [ ] Each persona is distinct with unique needs
+
+**Scoring Impact on Desirability (25% of total):**
+- **5 points:** Exceptional (10+ interviews each, comprehensive validation)
+- **4 points:** Strong (5-10 interviews each, good behavioral detail)
+- **3 points:** Adequate (3-5 interviews each, basic validation)
+- **2 points:** Weak (1-2 interviews, limited evidence)
+- **1 point:** Insufficient (no validation, hypothetical only)
+
+**Next Step:** Proceed to Step 7 (Needs Qualification Matrix)
+
+---
+
+### STEP 7: Needs Qualification Matrix (45 min)
 
 **Purpose:** Create visual HTML heatmap showing importance vs. satisfaction across segments
 
-**Prompt Location:** `prompts/step_6_needs_matrix_html.md`
+**Prompt Location:** `prompts/step_7_needs_qualification_matrix.md`
 
 **Template Location:** `visualizations/needs_matrix_template.html`
 
@@ -1175,11 +1252,11 @@ Create 3-5 detailed personas for top segments including:
 
 ---
 
-### STEP 7: Ecosystem Mapping (30-45 min)
+### STEP 8: Ecosystem Mapping (30-45 min)
 
 **Purpose:** Map all stakeholders with acceptability ratings and mitigation strategies
 
-**Prompt Location:** `prompts/step_7_ecosystem_mapping.md`
+**Prompt Location:** `prompts/step_8_players_influencers.md`
 
 **Template Location:** `worksheets/Ecosystem_Mapping_Template.md`
 
@@ -1242,49 +1319,49 @@ Create 3-5 detailed personas for top segments including:
 
 ---
 
-### STEP 8: Ecosystem Value Network Map (60-90 min)
+### STEP 9: Ecosystem Value Network Map (60-90 min)
 
 **Purpose:** Transform stakeholder data into strategic action by identifying Priority Targets—favorable organizations containing requesters with urgent needs
 
-**Prompt Location:** `prompts/step_8_ecosystem_value_network.md`
+**Prompt Location:** `prompts/step_9_ecosystem_value_network.md`
 
-**Quick Reference:** `docs/VIANEO_Step8_Quick_Reference.md` (print this!)
+**Quick Reference:** `docs/VIANEO_Step9_Quick_Reference.md` (print this!)
 
 **Template Locations:**
-- `templates/Step8_Analysis_Markdown_Template.md`
-- `templates/Step8_Ecosystem_Data_DOCX_Template.md`
-- `templates/Step8_Priority_Targets_DOCX_Template.md`
-- `templates/Step8_Value_Network_Visualization.html`
+- `templates/Step9_Analysis_Markdown_Template.md`
+- `templates/Step9_Ecosystem_Data_DOCX_Template.md`
+- `templates/Step9_Priority_Targets_DOCX_Template.md`
+- `templates/Step9_Value_Network_Visualization.html`
 
 **Core Concept:** Organizations don't have needs—people do. Success requires identifying specific requesters within favorable organizations who face urgent problems.
 
 **Four Deliverables:**
 
 1. **Master Markdown Analysis**
-   - File: `[Project]_[Date]_08_Analysis.md`
-   - Template: `Step8_Analysis_Markdown_Template.md`
+   - File: `[Project]_[Date]_09_Analysis.md`
+   - Template: `Step9_Analysis_Markdown_Template.md`
    - Complete comprehensive analysis with ALL content in single reference document
    - Includes: Executive summary, all 5 value chain tables, priority targets, ecosystem composition, evidence citations, next steps
    - Use for: Master reference, version control, comprehensive working document
 
 2. **Ecosystem Data DOCX**
-   - File: `[Project]_[Date]_08_Ecosystem_Data_DOCX.md` (copy to Word, save as .docx)
-   - Template: `Step8_Ecosystem_Data_DOCX_Template.md`
+   - File: `[Project]_[Date]_09_Ecosystem_Data_DOCX.md` (copy to Word, save as .docx)
+   - Template: `Step9_Ecosystem_Data_DOCX_Template.md`
    - DOCX-formatted with detailed styling specifications (fonts, colors, spacing)
    - Professional tables across 5 value chain positions with color-coded rows
    - Use for: Committee evaluations, investor due diligence, board presentations
 
 3. **Priority Targets DOCX**
-   - File: `[Project]_[Date]_08_Priority_Targets_DOCX.md` (copy to Word, save as .docx)
-   - Template: `Step8_Priority_Targets_DOCX_Template.md`
+   - File: `[Project]_[Date]_09_Priority_Targets_DOCX.md` (copy to Word, save as .docx)
+   - Template: `Step9_Priority_Targets_DOCX_Template.md`
    - DOCX-formatted strategic engagement plan with styling specifications
    - Each target: organization, requester, strategy, timeline, metrics, barriers
    - Engagement timeline (30/60/90 days), resource requirements, success factors/risks
    - Use for: Sales/BD execution, resource allocation, quarterly reviews
 
 4. **HTML Interactive Visualization**
-   - File: `[Project]_[Date]_08_Value_Network.html`
-   - Template: `Step8_Value_Network_Visualization.html`
+   - File: `[Project]_[Date]_09_Value_Network.html`
+   - Template: `Step9_Value_Network_Visualization.html`
    - 5-column grid: Enablers → Product → Channels → Buyers → End Users
    - Color-coded priority targets (green gradient = Favorable + Critical/Important needs)
    - Need badges, acceptability dots, professional legend, PDF-ready (16:9 landscape)
@@ -1363,18 +1440,27 @@ After each step, verify:
 - [ ] Priority ranking evidence-based
 
 **Step 6:**
+- [ ] 3-5 evidence-based personas created
+- [ ] Minimum 3 interviews per persona (adequate) or 5+ (strong)
+- [ ] All bullets under 60 characters verified
+- [ ] All paragraphs are 2-3 sentences
+- [ ] Current solutions specifically named with gaps
+- [ ] Validation badges match evidence level
+- [ ] Professional DOCX generated (max 11 pages)
+
+**Step 7:**
 - [ ] HTML renders in browser
 - [ ] All cells have both importance and satisfaction
 - [ ] Priority zones color-coded
 - [ ] Screenshots captured
 
-**Step 7:**
+**Step 8:**
 - [ ] All 5 stakeholder types covered
 - [ ] Acceptability ratings for each player
 - [ ] Mitigation strategies for unfavorable
 - [ ] Overall acceptability calculated
 
-**Step 8:**
+**Step 9:**
 - [ ] All 5 value chain positions populated (minimum 2 organizations each)
 - [ ] Organizations are specific entities (not generic categories)
 - [ ] Requesters identified for each organization
@@ -1511,25 +1597,27 @@ After each step, verify:
 - Step 4: 15 min
 - Step 5: 15 min
 
-**Standard** (3-4 hours):
+**Standard** (4-5 hours):
 - Step 0: 25 min
 - Step 2: 35 min
 - Step 3: 50 min
 - Step 4: 25 min
 - Step 5: 35 min
-- Step 6: 30 min
+- Step 6: 30 min (from existing data) / 60 min (with new interviews)
 - Step 7: 30 min
+- Step 8: 30 min
 
-**Complete** (5-6 hours):
+**Complete** (6-7 hours):
 - Step 0: 25 min
 - Step 1: 10 min
 - Step 2: 35 min
 - Step 3: 50 min
 - Step 4: 25 min
-- Step 5: 40 min (with personas)
-- Step 6: 45 min
-- Step 7: 40 min
-- Step 8: 75 min
+- Step 5: 40 min
+- Step 6: 60-90 min (persona development with validation)
+- Step 7: 45 min
+- Step 8: 40 min
+- Step 9: 75 min
 - Report: 30 min
 
 ### Cohort Processing

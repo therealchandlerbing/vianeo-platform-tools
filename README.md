@@ -1,6 +1,6 @@
 # Vianeo Platform Tools
 
-**Complete 8-Step Business Model Evaluation System**
+**Complete 9-Step Business Model Evaluation System**
 
 A comprehensive, AI-assisted framework for systematic startup assessment using the VIANEO methodology. Transform raw applications into evidence-based evaluations across five dimensions with professional visual outputs.
 
@@ -45,7 +45,7 @@ This is a complete evaluation toolkit that takes you from initial startup applic
 
 ---
 
-## The Complete 8-Step Workflow
+## The Complete 9-Step Workflow
 
 ```
 Step 0: Executive Brief Extraction (20-30 min)
@@ -70,18 +70,24 @@ Step 5: Desirability - Needs/Requesters Analysis (30-40 min)
   → Requesters (6-10 roles), Needs (10: Tasks/Pains/Expectations), Existing Solutions
   → FOUR professional outputs: Markdown analysis + 3 DOCX (Core Analysis, Strategic Analysis, Interview Guide)
 
-Step 6: Needs Qualification Matrix (45-90 min)
+Step 6: Persona Development (60-90 min with interviews, 20-30 min from existing data)
+  → 3-5 evidence-based personas with validation badges (Green/Orange/Red)
+  → Each persona: Requester profile, Field of Application, Activities/Challenges, Current Solutions
+  → Professional DOCX output (3-11 pages) ready for committee evaluation
+  → FOUR comprehensive guides: Skill overview, Generation prompt, Reference guide, System navigation
+
+Step 7: Needs Qualification Matrix (45-90 min)
   → Interactive HTML needs matrix + comprehensive analysis report (9-12 pages)
   → Visual dashboard with opportunity zones + strategic action plan
 
-Step 7: Players & Influencers Ecosystem Analysis (30-45 min)
+Step 8: Players & Influencers Ecosystem Analysis (30-45 min)
   → 8-10 most critical Players (active market participants)
   → 8-10 most critical Influencers (market shapers)
   → Acceptability ratings (Favorable/Neutral/Unfavorable) with strategic notes
   → TWO professional outputs: 2-page DOCX (BCG-level) + Markdown analysis
   → Optional: Python generator for automated formatting
 
-Step 8: Ecosystem Value Network Map (60-90 min)
+Step 9: Ecosystem Value Network Map (60-90 min)
   → FOUR deliverables: Master Markdown + Ecosystem Data DOCX + Priority Targets DOCX + HTML Visualization
   → Identifies Priority Targets (Favorable organizations + Critical/Important needs)
   → Color-coded visual network with 5 value chain positions
@@ -107,27 +113,28 @@ Step 8: Ecosystem Value Network Map (60-90 min)
 
 ---
 
-### 🚶 Standard (3-4 hours)
+### 🚶 Standard (4-5 hours)
 
 **Best For:** Committee-ready evaluation of top 5 finalists
 
-**Steps:** 0 → 2 → 3 → 4 → 5 → 6 → 7
+**Steps:** 0 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 
 **Output:**
 - Executive Brief + Application form (if needed)
 - Complete diagnostics (40Q with 2 docs)
 - All five dimensional scores (29Q with 3 docs: Markdown + Assessment Results DOCX + Dimension Analysis DOCX)
+- Evidence-based personas (3-5 with validation)
 - Needs matrix HTML visualization
 - Ecosystem mapping
 - Investment recommendation with conditions
 
 ---
 
-### 🎯 Complete (5-6 hours)
+### 🎯 Complete (6-7 hours)
 
 **Best For:** Executive presentations, Series A+ due diligence
 
-**Steps:** All 0-8
+**Steps:** All 0-9
 
 **Output:**
 - Everything from Standard
@@ -198,7 +205,12 @@ vianeo-platform-tools/
 │   ├── VIANEO_Evidence_Checklist.md            # Step 3: Evidence requirements
 │   ├── VIANEO_Desirability_Quick_Start.md      # Step 5: Quick generation guide
 │   ├── VIANEO_Desirability_Complete_Reference.md # Step 5: Comprehensive best practices
-│   └── VIANEO_Document_Formatting_Guide.md     # Step 5: Professional DOCX styling
+│   ├── VIANEO_Document_Formatting_Guide.md     # Step 5: Professional DOCX styling
+│   ├── VIANEO_Persona_Development_Skill.md     # Step 6: Master persona guide
+│   ├── VIANEO_Persona_Generation_Prompt.md     # Step 6: Exact template & formatting
+│   ├── VIANEO_Persona_Reference_Guide.md       # Step 6: Examples & best practices
+│   ├── VIANEO_Persona_Complete_System_Guide.md # Step 6: System navigation
+│   └── VIANEO_Step9_Quick_Reference.md         # Step 9: Value network quick ref
 │
 ├── prompts/                                 # Step-by-step prompts
 │   ├── step_0_executive_brief_extraction.md     # Extract executive brief (B1-B7 format) [PRIMARY]
@@ -210,12 +222,13 @@ vianeo-platform-tools/
 │   ├── step_3_market_maturity_link.md           # Direct link to primary Step 3 documentation
 │   ├── step_4_legitimacy_worksheet.md           # Legitimacy deep dive (complete)
 │   ├── step_5_needs_requesters.md               # Needs/Requesters analysis (complete)
-│   ├── step_6_needs_qualification_matrix.md     # Matrix + Analysis Report (complete)
-│   ├── step_7_players_influencers.md            # Players/Influencers ecosystem (complete)
-│   └── step_8_ecosystem_value_network.md        # Value network with 4 deliverables (complete)
+│   ├── step_6_persona_development.md            # Persona Development with validation (complete)
+│   ├── step_7_needs_qualification_matrix.md     # Matrix + Analysis Report (complete)
+│   ├── step_8_players_influencers.md            # Players/Influencers ecosystem (complete)
+│   └── step_9_ecosystem_value_network.md        # Value network with 4 deliverables (complete)
 │
 ├── tools/                                   # Automation scripts
-│   ├── players_influencers_generator.py         # Step 7: Python DOCX generator
+│   ├── players_influencers_generator.py         # Step 8: Python DOCX generator
 │   ├── requirements.txt                         # Python dependencies
 │   ├── example_rayla_ai.json                    # Example input for generator
 │   ├── rayla_ai_ecosystem.docx                  # Example output (generated)
@@ -236,15 +249,15 @@ vianeo-platform-tools/
 │   ├── Step5_NeedsRequesters_DOCX_Part1_Template.md # Step 5: Core Analysis DOCX format
 │   ├── Step5_NeedsRequesters_DOCX_Part2_Template.md # Step 5: Strategic Analysis DOCX format
 │   ├── Step5_NeedsRequesters_DOCX_Part3_Template.md # Step 5: Interview Guide DOCX format
-│   ├── Step6_Needs_Matrix_Template.html             # Step 6: Interactive HTML needs matrix
-│   ├── Step6_Analysis_Report_Template.md            # Step 6: Comprehensive 9-12 page analysis
-│   ├── Step6_Quick_Start_Guide.md                   # Step 6: Complete methodology guide
-│   ├── Step7_EcosystemAnalysis_Markdown_Template.md # Step 7: Complete ecosystem analysis
-│   ├── Step7_PlayersInfluencers_DOCX_Format_Spec.md # Step 7: DOCX formatting specifications
-│   ├── Step8_Analysis_Markdown_Template.md          # Step 8: Master comprehensive analysis
-│   ├── Step8_Ecosystem_Data_DOCX_Template.md        # Step 8: Ecosystem data matrix DOCX
-│   ├── Step8_Priority_Targets_DOCX_Template.md      # Step 8: Priority targets strategy DOCX
-│   ├── Step8_Value_Network_Visualization.html       # Step 8: Interactive HTML value network
+│   ├── Step7_Needs_Matrix_Template.html             # Step 7: Interactive HTML needs matrix
+│   ├── Step7_Analysis_Report_Template.md            # Step 7: Comprehensive 9-12 page analysis
+│   ├── Step7_Quick_Start_Guide.md                   # Step 7: Complete methodology guide
+│   ├── Step8_EcosystemAnalysis_Markdown_Template.md # Step 8: Complete ecosystem analysis
+│   ├── Step8_PlayersInfluencers_DOCX_Format_Spec.md # Step 8: DOCX formatting specifications
+│   ├── Step9_Analysis_Markdown_Template.md          # Step 9: Master comprehensive analysis
+│   ├── Step9_Ecosystem_Data_DOCX_Template.md        # Step 9: Ecosystem data matrix DOCX
+│   ├── Step9_Priority_Targets_DOCX_Template.md      # Step 9: Priority targets strategy DOCX
+│   ├── Step9_Value_Network_Visualization.html       # Step 9: Interactive HTML value network
 │   ├── Evidence_Log_Template.md                     # Evidence tracking with E### IDs
 │   ├── Hypotheses_Log_Template.md                   # Hypothesis validation tracking
 │   ├── Gate_A_Decision_Brief_Template.md            # Go/pivot/stop decision framework
@@ -254,8 +267,8 @@ vianeo-platform-tools/
 ├── examples/                                # Complete examples
 │   ├── Example_Assessment_Early_Stage.md        # Score ~1.9 (Step 3)
 │   ├── Example_Assessment_Promising_Stage.md    # Score ~4.1 (Step 3)
-│   ├── Step8_Example_TechEd_Analysis.md         # Complete Step 8 worked example
-│   └── TechEd_2025-01-15_08_Value_Network.html  # Step 8 HTML visualization example
+│   ├── Step9_Example_TechEd_Analysis.md         # Complete Step 9 worked example
+│   └── TechEd_2025-01-15_09_Value_Network.html  # Step 9 HTML visualization example
 │
 └── README.md                                # This file
 ```
@@ -580,6 +593,8 @@ This system is optimized for AI assistance (Claude recommended):
 
 "Complete the 29-question market maturity assessment"
 
+"Execute Step 6 Persona Development from interview data"
+
 "Generate needs qualification matrix HTML"
 
 "Create interactive network visualization"
@@ -610,9 +625,9 @@ Each step has a detailed prompt in `/prompts/` for consistent execution.
 
 ## Version & Attribution
 
-**Version:** 2.0 (Complete 8-Step System)
+**Version:** 2.1 (Complete 9-Step System with Persona Development)
 **Framework:** VIANEO Business Model Evaluation Methodology
-**Last Updated:** 2025-01-15
+**Last Updated:** November 2025
 
 ---
 

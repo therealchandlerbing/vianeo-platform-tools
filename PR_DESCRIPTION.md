@@ -1,205 +1,81 @@
-# Add Step 6: Persona Development and Renumber Steps (8→9 Step System)
+# Add Step 10: Vianeo Diagnostic Comment & Report
 
 ## Summary
 
-This PR transforms the Vianeo Platform Tools from an **8-step to a 9-step evaluation system** by adding comprehensive **Persona Development as Step 6** and renumbering all subsequent steps accordingly.
+This PR adds **Step 10: Vianeo Diagnostic Comment & Report** to the complete evaluation system, transforming it from a 9-step to a **10-step comprehensive framework**. Step 10 synthesizes all assessment findings into executive-ready diagnostic comments with professional formatting.
 
 ## What's New
 
-### ✨ NEW: Step 6 - Persona Development
+### Step 10: Vianeo Diagnostic Comment & Report (25-35 min)
 
-A complete persona development framework that validates the **Desirability dimension (25% of total score)** through evidence-based user personas.
+**Generates TWO professional outputs:**
+1. **Markdown Diagnostic Comment** - Clean, portable format for internal reference
+2. **Professional DOCX Report** - Executive-ready with design elevation for stakeholders
 
 **Key Features:**
-- 🎯 Evidence-based personas (3-5 per project)
-- 📊 Validation badges (Green/Orange/Red based on interview count)
-- 📄 Professional DOCX output (3-11 pages)
-- 📚 Four comprehensive documentation guides
-- ✅ Character limits enforced (60 chars for bullets)
-- 🔍 Supports 1-5 scoring based on interview validation
+- **6-8 sentence executive diagnostic** organized in 4 concise paragraphs:
+  - Strengths (validated assets, competitive advantages)
+  - Risks (critical vulnerabilities threatening viability)
+  - Near-term Actions (3-4 actions with responsible owners in parentheses)
+  - Evidence Gaps (material missing validation)
+- **Dimension Summary Table** with color-coded scores (green/yellow/red)
+- **Critical Path Forward** with 4 time horizons:
+  - Immediate Priority (Weeks 1-4)
+  - Short-term Priority (Months 2-3)
+  - Medium-term Priority (Months 4-6)
+  - Success Metrics (6 specific, measurable thresholds)
+- **Professional DOCX formatting** with typography scale, strategic colors, semantic highlighting
 
-**Interview Requirements:**
-- Minimum: 3 interviews per persona (adequate validation)
-- Recommended: 5+ interviews per persona (strong validation)
-- Exceptional: 10+ interviews per persona (comprehensive validation)
+## Files Added
 
-### 🔄 Step Renumbering
+### Core Prompt
+- `prompts/step_10_vianeo_diagnostic.md` - Complete generation workflow with quality validation
 
-All subsequent steps have been renumbered to accommodate the new Step 6:
+### Documentation (7 comprehensive guides)
+- `docs/VIANEO_Diagnostic_Skill.md` - Skill overview and integration guide
+- `docs/VIANEO_Diagnostic_Reference.md` - Decision matrices and paragraph guidelines
+- `docs/VIANEO_Diagnostic_Template.md` - Exact output structure specifications
+- `docs/VIANEO_Diagnostic_DOCX_Formatting.md` - Professional styling technical specs
+- `docs/VIANEO_Diagnostic_Examples.md` - Good/bad examples for each section
+- `docs/VIANEO_Diagnostic_Quality_Checklist.md` - Pre-delivery validation checklist
 
-| Previous | New | Step Name |
-|----------|-----|-----------|
-| Step 6 | **Step 7** | Needs Qualification Matrix |
-| Step 7 | **Step 8** | Players & Influencers Ecosystem Analysis |
-| Step 8 | **Step 9** | Ecosystem Value Network Map |
+### Templates
+- `templates/Step10_Diagnostic_Markdown_Template.md` - Markdown output template
+- `templates/Step10_Diagnostic_DOCX_Template.md` - DOCX formatting specifications
 
-## Files Changed
+## Files Modified
 
-### New Files Created (5)
+### README.md Updates
+- Updated system description: "Complete 10-Step Business Model Evaluation System"
+- Added Step 10 to workflow section with complete specifications
+- Updated execution paths (Standard and Complete now include Step 10)
+- Added Step 10 files to repository structure
+- Updated version to 2.2 (Complete 10-Step System with Diagnostic Comments)
 
-**Prompts:**
-- `prompts/step_6_persona_development.md` - Main execution prompt (14KB)
+## Design Philosophy
 
-**Documentation:**
-- `docs/VIANEO_Persona_Development_Skill.md` - Master overview (10KB)
-- `docs/VIANEO_Persona_Generation_Prompt.md` - Exact template & formatting (13KB)
-- `docs/VIANEO_Persona_Reference_Guide.md` - Examples & best practices (26KB)
-- `docs/VIANEO_Persona_Complete_System_Guide.md` - System navigation guide (13KB)
+**Conciseness over comprehensiveness** - Every sentence must add unique value
 
-### Files Renamed (16)
+**Specificity over abstraction** - Use actual numbers, names, concrete examples
 
-**Prompts (3):**
-- `step_6_needs_qualification_matrix.md` → `step_7_needs_qualification_matrix.md`
-- `step_7_players_influencers.md` → `step_8_players_influencers.md`
-- `step_8_ecosystem_value_network.md` → `step_9_ecosystem_value_network.md`
+**Actionability over analysis** - Each action has responsible owner and timeframe
 
-**Templates (10):**
-- All Step6 → Step7 templates (4 files)
-- All Step7 → Step8 templates (2 files)
-- All Step8 → Step9 templates (4 files)
+**Evidence-based over aspirational** - Every claim backed by assessment data
 
-**Examples & Docs (3):**
-- `VIANEO_Step8_Quick_Reference.md` → `VIANEO_Step9_Quick_Reference.md`
-- `Step8_Example_TechEd_Analysis.md` → `Step9_Example_TechEd_Analysis.md`
-- Example HTML visualization file name updated
+## Quality Standards
 
-### Files Updated (2)
+Every diagnostic must pass the **Five Essential Questions:**
+1. **Actionable?** Can someone read this and know exactly what to do?
+2. **Specific?** Is this clearly about THIS business, not any business?
+3. **Balanced?** Does it acknowledge both strengths AND real problems?
+4. **Evidence-based?** Is every claim supported by assessment data?
+5. **Concise?** Could any sentence be cut without losing meaning?
 
-**README.md:**
-- System description updated to 9-step system
-- Complete workflow section updated with Step 6 details
-- Execution paths updated (Standard: 4-5 hours, Complete: 6-7 hours)
-- Repository structure updated with new files
-- Version bumped to 2.1
+## Version Update
 
-**docs/VIANEO_Complete_Evaluation_Skill.md:**
-- System overview updated to 9-step
-- Complete Step 6 section added with full specifications
-- All subsequent steps renumbered
-- Quality gates updated with Step 6 checklist
-- Time management section updated
-
-## Persona Structure
-
-Each persona includes:
-
-1. **Requester Profile**
-   - First name (single name only)
-   - Age (specific number)
-   - Life/Motivations (2-3 sentences)
-   - Personality/Values (2-3 sentences)
-
-2. **Field of Application**
-   - Thinks/Feels (2-3 sentences)
-   - Observes (2-3 sentences)
-   - Does (2-3 sentences)
-   - Others Say (2-3 sentences)
-
-3. **Activities and Challenges**
-   - Tasks/Activities (4-6 bullets, max 60 chars)
-   - Pains/Lacks (4-6 bullets, max 60 chars)
-   - Expectations/Hopes (4-6 bullets, max 60 chars)
-
-4. **Current Solutions**
-   - 2-3 sentences naming specific tools/products
-   - Why they're inadequate
-   - What gaps remain
-
-## Documentation System
-
-The persona development step includes a comprehensive 4-document system:
-
-1. **VIANEO_Persona_Development_Skill.md** - Master reference for skill usage
-2. **VIANEO_Persona_Generation_Prompt.md** - Detailed prompt for persona creation
-3. **VIANEO_Persona_Reference_Guide.md** - Comprehensive guide with examples and scoring
-4. **VIANEO_Persona_Complete_System_Guide.md** - Navigation guide for the 3-file system
-
-## Validation & Testing
-
-✅ All step references validated
-✅ No broken file paths detected
-✅ Character limits verified
-✅ Documentation consistency checked
-✅ All 21 files successfully renamed/created
-✅ Git history preserved with proper renames
-
-## Impact
-
-**Execution Time Updates:**
-- **Fast Track:** 90 minutes (unchanged)
-- **Standard:** 4-5 hours (was 3-4 hours)
-- **Complete:** 6-7 hours (was 5-6 hours)
-
-**Scoring Impact:**
-Personas directly impact **Desirability dimension (25% of total)**:
-- 5 points: Exceptional (10+ interviews per persona)
-- 4 points: Strong (5-10 interviews per persona)
-- 3 points: Adequate (3-5 interviews per persona)
-- 2 points: Weak (1-2 interviews per persona)
-- 1 point: Insufficient (no validation)
-
-## Statistics
-
-- **Files Created:** 5
-- **Files Renamed:** 16
-- **Files Updated:** 2
-- **Total Changes:** 21 files
-- **Lines Added:** 2,290
-- **Lines Removed:** 69
-
-## Version
-
-**Version:** 2.1 (Complete 9-Step System with Persona Development)
-**Last Updated:** November 2025
-**Framework:** VIANEO Business Model Evaluation Methodology
-
-## Integration
-
-This change integrates seamlessly with the existing Vianeo framework:
-- Builds on Step 5 (Needs/Requesters Analysis)
-- Feeds into Step 7 (Needs Qualification Matrix)
-- Supports overall Desirability assessment
-- Maintains backward compatibility with data flows
-
-## Common Pitfalls Addressed
-
-The comprehensive documentation includes solutions for:
-1. **Generic Personas** - Shows how to add specific behavioral depth
-2. **Solution-First Thinking** - Guides documenting actual problems
-3. **Overlapping Personas** - Helps find what makes personas distinct
-4. **Character Limit Violations** - Provides strategies for staying under 60 chars
-5. **Missing Current Solutions** - Shows how to name tools and analyze gaps
-
-## How to Review
-
-1. **Check New Step 6 Documentation:**
-   - Review `docs/VIANEO_Persona_Development_Skill.md` for overview
-   - Review `docs/VIANEO_Persona_Generation_Prompt.md` for template details
-   - Review `prompts/step_6_persona_development.md` for execution guide
-
-2. **Verify Renumbering:**
-   - Confirm all Step 6→7, 7→8, 8→9 files renamed correctly
-   - Check README.md workflow section
-   - Verify VIANEO_Complete_Evaluation_Skill.md updates
-
-3. **Test Integration:**
-   - Ensure Step 5 flows naturally into Step 6
-   - Verify Step 6 outputs support Step 7 (Needs Matrix)
-   - Check all file paths and references
-
-## Merge Checklist
-
-- [x] All files created and renamed
-- [x] Documentation updated comprehensively
-- [x] Version number bumped to 2.1
-- [x] All validations passed
-- [x] Commit message detailed and clear
-- [x] No broken references or links
-- [x] Git history preserved with proper renames
-- [x] Character limit validation in place
-- [x] Quality gates defined
-- [x] Integration points documented
+**Previous:** 2.1 (Complete 9-Step System with Persona Development)
+**Current:** 2.2 (Complete 10-Step System with Diagnostic Comments)
 
 ---
 
-**Ready to merge:** All validations passed, documentation complete, and changes tested.
+**This PR completes the evaluation system by adding executive-ready diagnostic synthesis, transforming raw assessments into actionable, stakeholder-ready insights.**

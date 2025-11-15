@@ -443,12 +443,12 @@ Every score of 1 requires:
 
 ### Visual Outputs
 
-**Needs Qualification Matrix** (Step 6):
+**Needs Qualification Matrix** (Step 7):
 - Interactive HTML heatmap
 - Priority zones color-coded (Critical/High/Medium/Low)
 - Importance vs. Satisfaction across segments
 
-**Network Visualization** (Step 8):
+**Ecosystem Value Network Map** (Step 9):
 - FOUR deliverables: Master Markdown (comprehensive) + Ecosystem Data DOCX (formatted) + Priority Targets DOCX (formatted) + HTML Visualization (presentation)
 - Identifies Priority Targets: Favorable organizations + Critical/Important needs
 - 5-column layout (Enablers → Product → Channels → Buyers → End Users)
@@ -456,6 +456,12 @@ Every score of 1 requires:
 - Need badges (Critical/Important/Secondary) and acceptability dots (green/orange/red)
 - DOCX files include detailed styling specifications (fonts, colors, spacing) for Word
 - Strategic engagement plan with specific actions, timelines, and resource requirements
+
+**Vianeo Diagnostic Comment** (Step 10):
+- Professional DOCX with design elevation
+- Color-coded dimension summary table (green/yellow/red scores)
+- Typography scale (24pt/16pt/14pt/11pt) with strategic color palette
+- Formatted critical path with numbered priorities and bullet metrics
 
 ### Quality Control
 

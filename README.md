@@ -1,8 +1,8 @@
 # Vianeo Platform Tools
 
-**Complete 9-Step Business Model Evaluation System**
+**Complete 10-Step Business Model Evaluation System**
 
-A comprehensive, AI-assisted framework for systematic startup assessment using the VIANEO methodology. Transform raw applications into evidence-based evaluations across five dimensions with professional visual outputs.
+A comprehensive, AI-assisted framework for systematic startup assessment using the VIANEO methodology. Transform raw applications into evidence-based evaluations across five dimensions with professional visual outputs and executive-ready diagnostic comments.
 
 ---
 
@@ -45,7 +45,7 @@ This is a complete evaluation toolkit that takes you from initial startup applic
 
 ---
 
-## The Complete 9-Step Workflow
+## The Complete 10-Step Workflow
 
 ```
 Step 0: Executive Brief Extraction (20-30 min)
@@ -92,6 +92,15 @@ Step 9: Ecosystem Value Network Map (60-90 min)
   → Identifies Priority Targets (Favorable organizations + Critical/Important needs)
   → Color-coded visual network with 5 value chain positions
   → DOCX files include detailed formatting specifications for Word
+
+Step 10: Vianeo Diagnostic Comment & Report (25-35 min)
+  → Executive-ready diagnostic synthesizing all assessment findings
+  → TWO professional outputs: Markdown diagnostic + DOCX report with design elevation
+  → 6-8 sentence executive diagnostic (Strengths, Risks, Actions with owners, Evidence gaps)
+  → Dimension summary table with color-coded scores
+  → Critical path forward (Immediate/Short-term/Medium-term priorities + Success metrics)
+  → Professional DOCX with typography scale, strategic colors, semantic table highlighting
+  → SEVEN comprehensive guides: Skill overview, Prompt, Reference, Template, DOCX formatting, Examples, Quality checklist
 ```
 
 ---
@@ -117,7 +126,7 @@ Step 9: Ecosystem Value Network Map (60-90 min)
 
 **Best For:** Committee-ready evaluation of top 5 finalists
 
-**Steps:** 0 → 2 → 3 → 4 → 5 → 6 → 7 → 8
+**Steps:** 0 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 10
 
 **Output:**
 - Executive Brief + Application form (if needed)
@@ -126,6 +135,7 @@ Step 9: Ecosystem Value Network Map (60-90 min)
 - Evidence-based personas (3-5 with validation)
 - Needs matrix HTML visualization
 - Ecosystem mapping
+- Executive diagnostic comment (2 files: Markdown + Professional DOCX)
 - Investment recommendation with conditions
 
 ---
@@ -134,11 +144,12 @@ Step 9: Ecosystem Value Network Map (60-90 min)
 
 **Best For:** Executive presentations, Series A+ due diligence
 
-**Steps:** All 0-9
+**Steps:** All 0-10
 
 **Output:**
 - Everything from Standard
-- Interactive network visualization
+- Interactive network visualization (Step 9)
+- Executive diagnostic comment (Step 10)
 - Professional committee report
 - Board-ready presentation deck
 
@@ -210,7 +221,13 @@ vianeo-platform-tools/
 │   ├── VIANEO_Persona_Generation_Prompt.md     # Step 6: Exact template & formatting
 │   ├── VIANEO_Persona_Reference_Guide.md       # Step 6: Examples & best practices
 │   ├── VIANEO_Persona_Complete_System_Guide.md # Step 6: System navigation
-│   └── VIANEO_Step9_Quick_Reference.md         # Step 9: Value network quick ref
+│   ├── VIANEO_Step9_Quick_Reference.md         # Step 9: Value network quick ref
+│   ├── VIANEO_Diagnostic_Skill.md              # Step 10: Diagnostic skill overview
+│   ├── VIANEO_Diagnostic_Reference.md          # Step 10: Decision matrices & guidelines
+│   ├── VIANEO_Diagnostic_Template.md           # Step 10: Exact output structure
+│   ├── VIANEO_Diagnostic_DOCX_Formatting.md    # Step 10: Professional DOCX specs
+│   ├── VIANEO_Diagnostic_Examples.md           # Step 10: Good/bad examples
+│   └── VIANEO_Diagnostic_Quality_Checklist.md  # Step 10: Pre-delivery validation
 │
 ├── prompts/                                 # Step-by-step prompts
 │   ├── step_0_executive_brief_extraction.md     # Extract executive brief (B1-B7 format) [PRIMARY]
@@ -225,7 +242,8 @@ vianeo-platform-tools/
 │   ├── step_6_persona_development.md            # Persona Development with validation (complete)
 │   ├── step_7_needs_qualification_matrix.md     # Matrix + Analysis Report (complete)
 │   ├── step_8_players_influencers.md            # Players/Influencers ecosystem (complete)
-│   └── step_9_ecosystem_value_network.md        # Value network with 4 deliverables (complete)
+│   ├── step_9_ecosystem_value_network.md        # Value network with 4 deliverables (complete)
+│   └── step_10_vianeo_diagnostic.md             # Diagnostic comment with 2 outputs (complete)
 │
 ├── tools/                                   # Automation scripts
 │   ├── players_influencers_generator.py         # Step 8: Python DOCX generator
@@ -258,6 +276,8 @@ vianeo-platform-tools/
 │   ├── Step9_Ecosystem_Data_DOCX_Template.md        # Step 9: Ecosystem data matrix DOCX
 │   ├── Step9_Priority_Targets_DOCX_Template.md      # Step 9: Priority targets strategy DOCX
 │   ├── Step9_Value_Network_Visualization.html       # Step 9: Interactive HTML value network
+│   ├── Step10_Diagnostic_Markdown_Template.md       # Step 10: Diagnostic comment markdown
+│   ├── Step10_Diagnostic_DOCX_Template.md           # Step 10: DOCX formatting specifications
 │   ├── Evidence_Log_Template.md                     # Evidence tracking with E### IDs
 │   ├── Hypotheses_Log_Template.md                   # Hypothesis validation tracking
 │   ├── Gate_A_Decision_Brief_Template.md            # Go/pivot/stop decision framework
@@ -625,7 +645,7 @@ Each step has a detailed prompt in `/prompts/` for consistent execution.
 
 ## Version & Attribution
 
-**Version:** 2.1 (Complete 9-Step System with Persona Development)
+**Version:** 2.2 (Complete 10-Step System with Diagnostic Comments)
 **Framework:** VIANEO Business Model Evaluation Methodology
 **Last Updated:** November 2025
 

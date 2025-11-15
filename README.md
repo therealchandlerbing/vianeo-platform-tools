@@ -50,57 +50,53 @@ This is a complete evaluation toolkit that takes you from initial startup applic
 ```
 Step 0: Executive Brief Extraction (20-30 min)
   → B1-B7 structure (150-300 char limits) + Maturity Stage (TRL 1-9)
+  → Two outputs: Executive Brief template + Maturity classification
 
 Step 1: Application Forms [OPTIONAL] (15-20 min)
-  → 360 SIS (social impact) or CNEN (research) format with DOCX output
+  → 360 SIS (social impact) or CNEN (research) format
+  → One output: Professional DOCX application form
 
 Step 2: 40-Question Diagnostic (30-45 min)
   → Team (9Q), Technology (11Q), Management (12Q), Commercial (8Q)
-  → Two documents: Assessment Results + Score Summary
+  → Two outputs: Assessment Results + Score Summary
 
 Step 3: 29-Question Market Maturity (45-60 min)
   → Five dimensional scores: Legitimacy, Desirability, Acceptability, Feasibility, Viability
-  → Three professional outputs: Markdown report + 2 DOCX documents
+  → Three outputs: Markdown report + Assessment Results DOCX + Dimension Analysis DOCX
 
 Step 4: Legitimacy Deep Dive (20-30 min)
   → Problem definition, application domain, team & approach, available resources
-  → Two professional outputs: Markdown worksheet + DOCX formatted version
+  → Two outputs: Markdown worksheet + DOCX formatted version
 
 Step 5: Desirability - Needs/Requesters Analysis (30-40 min)
   → Requesters (6-10 roles), Needs (10: Tasks/Pains/Expectations), Existing Solutions
-  → FOUR professional outputs: Markdown analysis + 3 DOCX (Core Analysis, Strategic Analysis, Interview Guide)
+  → Four outputs: Markdown analysis + 3 DOCX (Core Analysis, Strategic Analysis, Interview Guide)
 
 Step 6: Persona Development (60-90 min with interviews, 20-30 min from existing data)
   → 3-5 evidence-based personas with validation badges (Green/Orange/Red)
-  → Each persona: Requester profile, Field of Application, Activities/Challenges, Current Solutions
-  → Professional DOCX output (3-11 pages) ready for committee evaluation
-  → FOUR comprehensive guides: Skill overview, Generation prompt, Reference guide, System navigation
+  → One output: Professional DOCX (3-11 pages) ready for committee evaluation
+  → Four comprehensive guides: Skill overview, Generation prompt, Reference guide, System navigation
 
 Step 7: Needs Qualification Matrix (45-90 min)
-  → Interactive HTML needs matrix + comprehensive analysis report (9-12 pages)
   → Visual dashboard with opportunity zones + strategic action plan
+  → Two outputs: Interactive HTML needs matrix + Comprehensive analysis report (9-12 pages)
 
 Step 8: Players & Influencers Ecosystem Analysis (30-45 min)
-  → 8-10 most critical Players (active market participants)
-  → 8-10 most critical Influencers (market shapers)
+  → 8-10 Players (active participants) + 8-10 Influencers (market shapers)
   → Acceptability ratings (Favorable/Neutral/Unfavorable) with strategic notes
-  → TWO professional outputs: 2-page DOCX (BCG-level) + Markdown analysis
+  → Two outputs: Professional 2-page DOCX (BCG-level) + Markdown analysis
   → Optional: Python generator for automated formatting
 
 Step 9: Ecosystem Value Network Map (60-90 min)
-  → FOUR deliverables: Master Markdown + Ecosystem Data DOCX + Priority Targets DOCX + HTML Visualization
   → Identifies Priority Targets (Favorable organizations + Critical/Important needs)
   → Color-coded visual network with 5 value chain positions
-  → DOCX files include detailed formatting specifications for Word
+  → Four outputs: Master Markdown + Ecosystem Data DOCX + Priority Targets DOCX + HTML Visualization
 
 Step 10: Vianeo Diagnostic Comment & Report (25-35 min)
-  → Executive-ready diagnostic synthesizing all assessment findings
-  → TWO professional outputs: Markdown diagnostic + DOCX report with design elevation
-  → 6-8 sentence executive diagnostic (Strengths, Risks, Actions with owners, Evidence gaps)
-  → Dimension summary table with color-coded scores
-  → Critical path forward (Immediate/Short-term/Medium-term priorities + Success metrics)
-  → Professional DOCX with typography scale, strategic colors, semantic table highlighting
-  → SEVEN comprehensive guides: Skill overview, Prompt, Reference, Template, DOCX formatting, Examples, Quality checklist
+  → Executive diagnostic: Strengths, Risks, Actions with owners, Evidence gaps (6-8 sentences)
+  → Dimension summary table with color-coded scores + Critical path forward (4 time horizons)
+  → Two outputs: Markdown diagnostic + Professional DOCX with design elevation
+  → Seven comprehensive guides: Skill, Prompt, Reference, Template, DOCX formatting, Examples, Quality checklist
 ```
 
 ---
@@ -208,26 +204,28 @@ If you only need the 29-question dimensional assessment:
 vianeo-platform-tools/
 ├── docs/                                    # Core documentation
 │   ├── VIANEO_Complete_Evaluation_Skill.md      # ⭐ MASTER GUIDE - Start here
-│   ├── VIANEO_Quick_Reference_Card.md          # Print this! All essentials
-│   ├── VIANEO_System_Overview.md               # How components fit together
-│   ├── VIANEO_Market_Maturity_System_Prompt.md # Step 3: Primary prompt
-│   ├── VIANEO_Assessment_Workflow_Guide.md     # Step 3: Detailed process
-│   ├── VIANEO_29Question_Quick_Reference.md    # Step 3: Question details
-│   ├── VIANEO_Evidence_Checklist.md            # Step 3: Evidence requirements
-│   ├── VIANEO_Desirability_Quick_Start.md      # Step 5: Quick generation guide
+│   ├── VIANEO_Quick_Reference_Card.md           # Print this! All essentials
+│   ├── VIANEO_Quick_Start_Card.md               # Quick start guide for new users
+│   ├── VIANEO_System_Overview.md                # How components fit together
+│   ├── AI_Guardrails.md                         # AI safety and usage guidelines
+│   ├── VIANEO_Market_Maturity_System_Prompt.md  # Step 3: Primary prompt
+│   ├── VIANEO_Assessment_Workflow_Guide.md      # Step 3: Detailed process
+│   ├── VIANEO_29Question_Quick_Reference.md     # Step 3: Question details
+│   ├── VIANEO_Evidence_Checklist.md             # Step 3: Evidence requirements
+│   ├── VIANEO_Desirability_Quick_Start.md       # Step 5: Quick generation guide
 │   ├── VIANEO_Desirability_Complete_Reference.md # Step 5: Comprehensive best practices
-│   ├── VIANEO_Document_Formatting_Guide.md     # Step 5: Professional DOCX styling
-│   ├── VIANEO_Persona_Development_Skill.md     # Step 6: Master persona guide
-│   ├── VIANEO_Persona_Generation_Prompt.md     # Step 6: Exact template & formatting
-│   ├── VIANEO_Persona_Reference_Guide.md       # Step 6: Examples & best practices
-│   ├── VIANEO_Persona_Complete_System_Guide.md # Step 6: System navigation
-│   ├── VIANEO_Step9_Quick_Reference.md         # Step 9: Value network quick ref
-│   ├── VIANEO_Diagnostic_Skill.md              # Step 10: Diagnostic skill overview
-│   ├── VIANEO_Diagnostic_Reference.md          # Step 10: Decision matrices & guidelines
-│   ├── VIANEO_Diagnostic_Template.md           # Step 10: Exact output structure
-│   ├── VIANEO_Diagnostic_DOCX_Formatting.md    # Step 10: Professional DOCX specs
-│   ├── VIANEO_Diagnostic_Examples.md           # Step 10: Good/bad examples
-│   └── VIANEO_Diagnostic_Quality_Checklist.md  # Step 10: Pre-delivery validation
+│   ├── VIANEO_Document_Formatting_Guide.md      # Step 5: Professional DOCX styling
+│   ├── VIANEO_Persona_Development_Skill.md      # Step 6: Master persona guide
+│   ├── VIANEO_Persona_Generation_Prompt.md      # Step 6: Exact template & formatting
+│   ├── VIANEO_Persona_Reference_Guide.md        # Step 6: Examples & best practices
+│   ├── VIANEO_Persona_Complete_System_Guide.md  # Step 6: System navigation
+│   ├── VIANEO_Step9_Quick_Reference.md          # Step 9: Value network quick ref
+│   ├── VIANEO_Diagnostic_Skill.md               # Step 10: Diagnostic skill overview
+│   ├── VIANEO_Diagnostic_Reference.md           # Step 10: Decision matrices & guidelines
+│   ├── VIANEO_Diagnostic_Template.md            # Step 10: Exact output structure
+│   ├── VIANEO_Diagnostic_DOCX_Formatting.md     # Step 10: Professional DOCX specs
+│   ├── VIANEO_Diagnostic_Examples.md            # Step 10: Good/bad examples
+│   └── VIANEO_Diagnostic_Quality_Checklist.md   # Step 10: Pre-delivery validation
 │
 ├── prompts/                                 # Step-by-step prompts
 │   ├── step_0_executive_brief_extraction.md     # Extract executive brief (B1-B7 format) [PRIMARY]

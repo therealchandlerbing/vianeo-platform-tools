@@ -198,12 +198,36 @@ If you only need the 29-question dimensional assessment:
 
 ---
 
+### Option 3: Comprehensive Reference Guide (All Frameworks)
+
+For a single consolidated resource containing all assessment frameworks and specifications:
+
+1. **Read the Comprehensive Reference Guide** (30-45 min)
+   ```
+   docs/VIANEO_Comprehensive_Reference_Guide.md
+   ```
+
+   **Contains:**
+   - 40-Question Diagnostic Scan (complete instrument)
+   - 29-Question Market Maturity Assessment (complete instrument)
+   - Platform character limit specifications
+   - Common pitfalls and solutions guide
+   - Needs Qualification Matrix tool
+   - Scoring guidance and validation thresholds
+
+2. **Use as ongoing reference** during evaluations
+
+3. **Cross-reference with step-by-step prompts** in `/prompts/` directory
+
+---
+
 ## Repository Structure
 
 ```
 vianeo-platform-tools/
 ├── docs/                                    # Core documentation
 │   ├── VIANEO_Complete_Evaluation_Skill.md      # ⭐ MASTER GUIDE - Start here
+│   ├── VIANEO_Comprehensive_Reference_Guide.md  # 📚 CONSOLIDATED REFERENCE - All frameworks in one place
 │   ├── VIANEO_Quick_Reference_Card.md           # Print this! All essentials
 │   ├── VIANEO_Quick_Start_Card.md               # Quick start guide for new users
 │   ├── VIANEO_System_Overview.md                # How components fit together
@@ -586,6 +610,12 @@ Built-in quality gates between steps:
 docs/VIANEO_Complete_Evaluation_Skill.md
 ```
 
+**Step 1a (Optional):** Review the comprehensive reference
+```
+docs/VIANEO_Comprehensive_Reference_Guide.md
+```
+Contains all assessment instruments, character limits, and execution guidance in one place.
+
 **Step 2:** Print the quick reference
 ```
 docs/VIANEO_Quick_Reference_Card.md
@@ -634,6 +664,7 @@ Each step has a detailed prompt in `/prompts/` for consistent execution.
 
 **Complete Guides:**
 - Master System Guide: `docs/VIANEO_Complete_Evaluation_Skill.md`
+- Comprehensive Reference Guide: `docs/VIANEO_Comprehensive_Reference_Guide.md` ⭐ NEW
 - Quick Reference: `docs/VIANEO_Quick_Reference_Card.md`
 - System Overview: `docs/VIANEO_System_Overview.md`
 
@@ -674,9 +705,10 @@ To suggest improvements:
 **Ready to conduct your first complete evaluation?**
 
 1. Start with `docs/VIANEO_Complete_Evaluation_Skill.md`
-2. Print `docs/VIANEO_Quick_Reference_Card.md`
-3. Choose your execution path (Fast/Standard/Complete)
-4. Execute step-by-step using prompts in `/prompts/`
-5. Generate professional outputs with HTML visualizations
+2. Review `docs/VIANEO_Comprehensive_Reference_Guide.md` for all frameworks
+3. Print `docs/VIANEO_Quick_Reference_Card.md`
+4. Choose your execution path (Fast/Standard/Complete)
+5. Execute step-by-step using prompts in `/prompts/`
+6. Generate professional outputs with HTML visualizations
 
 **Transform startup applications into evidence-based investment decisions.**

@@ -1,0 +1,1720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vianeo Business Model Evaluation Flow</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@700&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fafafa;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(to bottom, #ffffff 0%, #fafafa 100%);
+            border-bottom: 1px solid #f0f0f0;
+            padding: 24px 40px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 900;
+            letter-spacing: -1.5px;
+            color: #1a1a1a;
+            margin-bottom: 6px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #7a7a7a;
+            font-weight: 500;
+        }
+
+        .stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 16px;
+        }
+
+        .stat-value {
+            font-size: 28px;
+            font-weight: 900;
+            color: #2a2a2a;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .stat-label {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: #aaa;
+        }
+
+        .viewport {
+            height: calc(100vh - 140px);
+            cursor: grab;
+            overflow: hidden;
+            background: #fcfcfc;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(107, 140, 127, 0.02) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(155, 138, 157, 0.02) 0%, transparent 50%);
+            position: relative;
+        }
+
+        .viewport.grabbing { cursor: grabbing; }
+
+        .canvas {
+            width: 3200px;
+            height: 1400px;
+            position: absolute;
+            transform-origin: 0 0;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .flow {
+            opacity: 0.18;
+            transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                        filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .flow:hover {
+            opacity: 0.32;
+            filter: brightness(1.1);
+        }
+
+        .node {
+            position: absolute;
+            background: white;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.015'/%3E%3C/svg%3E");
+            border-radius: 10px;
+            padding: 20px 24px;
+            box-shadow: 
+                0 3px 12px rgba(0, 0, 0, 0.08),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+            border-left: 5px solid;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            transform-style: preserve-3d;
+            overflow: hidden;
+        }
+
+        .node::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -5px;
+            width: 5px;
+            height: 100%;
+            border-radius: 10px 0 0 10px;
+            background: inherit;
+            opacity: 0;
+            transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+            filter: brightness(1.15) saturate(1.3);
+        }
+
+        .node:hover::before {
+            opacity: 0.6;
+        }
+
+        .node::after {
+            content: '···';
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            font-size: 18px;
+            font-weight: 900;
+            color: #d0d0d0;
+            letter-spacing: 2px;
+            opacity: 0;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+        }
+
+        .node:hover::after {
+            opacity: 1;
+            color: #999;
+        }
+
+        .corner-peel {
+            position: absolute;
+            bottom: -2px;
+            right: -2px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 0 0 0;
+            border-color: transparent transparent #e8e8e8 transparent;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+            z-index: 10;
+            filter: drop-shadow(-2px -2px 3px rgba(0,0,0,0.2));
+            transform-origin: bottom right;
+        }
+
+        .node:hover .corner-peel {
+            border-width: 0 0 35px 35px;
+            transform: rotate(-5deg);
+            filter: drop-shadow(-3px -3px 5px rgba(0,0,0,0.25));
+        }
+
+        .node {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            transition: clip-path 0.35s cubic-bezier(0.4, 0, 0.2, 1), 
+                        all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .node:hover {
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 32px), calc(100% - 32px) 100%, 0 100%);
+            transform: translateY(-3px) rotateX(1deg) rotateY(-0.5deg);
+            box-shadow: 
+                0 12px 32px rgba(0, 0, 0, 0.14),
+                0 4px 8px rgba(0, 0, 0, 0.08),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+        }
+
+        .node:active {
+            transform: translateY(-1px) rotateX(0deg) rotateY(0deg) scale(0.99);
+            transition: all 0.1s;
+        }
+
+        .label {
+            font-size: 9px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+            color: #c0c0c0;
+            margin-bottom: 6px;
+            position: relative;
+            z-index: 3;
+        }
+
+        .title {
+            font-size: 17px;
+            font-weight: 800;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+            transition: letter-spacing 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .node:hover .title {
+            letter-spacing: -0.3px;
+        }
+
+        .desc {
+            font-size: 12px;
+            color: #6a6a6a;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .data {
+            display: flex;
+            gap: 24px;
+            padding-top: 10px;
+            border-top: 1px solid #f5f5f5;
+            font-size: 11px;
+            font-weight: 700;
+            color: #5a5a5a;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            z-index: 1000;
+        }
+
+        .btn {
+            width: 54px;
+            height: 54px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 11px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 20px;
+            color: #4a4a4a;
+            transition: all 0.2s;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .btn:hover {
+            background: rgba(248, 248, 248, 0.98);
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .zoom-num {
+            width: 54px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 9px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 800;
+            color: #4a4a4a;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .legend {
+            position: fixed;
+            bottom: 40px;
+            left: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 20px 24px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .legend-title {
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.3px;
+            color: #bbb;
+            margin-bottom: 12px;
+        }
+
+        .leg-item {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            margin-bottom: 9px;
+            padding: 6px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .leg-item:hover {
+            background: rgba(0, 0, 0, 0.02);
+        }
+
+        .leg-item:last-child { margin-bottom: 0; }
+
+        .swatch {
+            width: 30px;
+            height: 19px;
+            border-radius: 4px;
+        }
+
+        .leg-name {
+            flex: 1;
+            font-size: 13px;
+            font-weight: 600;
+            color: #3a3a3a;
+        }
+
+        .leg-val {
+            font-size: 12px;
+            font-weight: 800;
+            color: #8a8a8a;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+            animation: fadeIn 0.2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            padding: 48px;
+            max-width: 850px;
+            width: 90%;
+            max-height: 85vh;
+            overflow-y: auto;
+            box-shadow: 
+                0 25px 70px rgba(0, 0, 0, 0.3),
+                0 10px 24px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .modal-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--accent-color, #6b8c7f);
+            border-radius: 20px 20px 0 0;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: #f5f5f5;
+            border: none;
+            cursor: pointer;
+            font-size: 22px;
+            color: #666;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            font-weight: 300;
+        }
+
+        .modal-close:hover {
+            background: #e8e8e8;
+            color: #333;
+            transform: scale(1.05);
+        }
+
+        .modal-label {
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.6px;
+            color: #999;
+            margin-bottom: 12px;
+        }
+
+        .modal-title {
+            font-size: 36px;
+            font-weight: 900;
+            color: #1a1a1a;
+            margin-bottom: 32px;
+            letter-spacing: -1.2px;
+            line-height: 1.1;
+        }
+
+        .modal-section {
+            margin-bottom: 28px;
+        }
+
+        .modal-section-title {
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .modal-section-content {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #444;
+        }
+
+        .modal-section-content ul {
+            margin: 12px 0;
+            padding-left: 20px;
+        }
+
+        .modal-section-content li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .modal-section-content strong {
+            font-weight: 700;
+            color: #2a2a2a;
+        }
+
+        .modal-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            background: #f0f0f0;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            color: #666;
+            margin: 2px 4px 2px 0;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .modal-badge.green { background: #d4edda; color: #155724; }
+        .modal-badge.yellow { background: #fff3cd; color: #856404; }
+        .modal-badge.red { background: #f8d7da; color: #721c24; }
+
+        .modal-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 28px;
+            padding-top: 28px;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        .modal-metric {
+            text-align: center;
+            padding: 16px 12px;
+            background: #fafafa;
+            border-radius: 10px;
+            transition: all 0.2s;
+        }
+
+        .modal-metric:hover {
+            background: #f5f5f5;
+            transform: translateY(-2px);
+        }
+
+        .modal-metric-value {
+            font-size: 24px;
+            font-weight: 900;
+            color: #2a2a2a;
+            font-family: 'JetBrains Mono', monospace;
+            margin-bottom: 6px;
+        }
+
+        .modal-metric-label {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.1px;
+            color: #999;
+        }
+
+        .insights-widget {
+            position: fixed;
+            bottom: 160px;
+            right: 40px;
+            z-index: 1000;
+        }
+
+        .insights-btn {
+            width: 54px;
+            height: 54px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 11px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 20px;
+            color: #4a4a4a;
+            transition: all 0.2s;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .insights-btn:hover {
+            background: rgba(248, 248, 248, 0.98);
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .insights-panel {
+            display: none;
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            width: 420px;
+            max-height: calc(100vh - 200px);
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            z-index: 2001;
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            overflow-y: auto;
+        }
+
+        .insights-panel.active {
+            display: block;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .insights-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .insights-title {
+            font-size: 18px;
+            font-weight: 900;
+            color: #1a1a1a;
+            letter-spacing: -0.5px;
+        }
+
+        .insights-close {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: #f5f5f5;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            color: #666;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            font-weight: 300;
+        }
+
+        .insights-close:hover {
+            background: #e8e8e8;
+            color: #333;
+            transform: scale(1.05);
+        }
+
+        .insight-section {
+            margin-bottom: 24px;
+        }
+
+        .insight-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .insight-section-title {
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.3px;
+            color: #6b8c7f;
+            margin-bottom: 12px;
+        }
+
+        .insight-item {
+            background: #fafafa;
+            border-radius: 8px;
+            padding: 12px 14px;
+            margin-bottom: 8px;
+            transition: all 0.2s;
+        }
+
+        .insight-item:hover {
+            background: #f5f5f5;
+            transform: translateX(2px);
+        }
+
+        .insight-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .insight-item-label {
+            font-size: 12px;
+            font-weight: 700;
+            color: #2a2a2a;
+            margin-bottom: 4px;
+        }
+
+        .insight-item-text {
+            font-size: 11px;
+            line-height: 1.5;
+            color: #666;
+        }
+
+        .path-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            background: #6b8c7f;
+            color: white;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 700;
+            margin-right: 6px;
+            margin-bottom: 4px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .path-badge.standard {
+            background: #d89b71;
+        }
+
+        .path-badge.complete {
+            background: #9b8a9d;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Vianeo Business Model Evaluation</h1>
+        <div class="subtitle">10-step systematic startup assessment framework • Sequential workflow design • Steps can be used independently if necessary</div>
+        <div class="stats">
+            <div><div class="stat-value">10</div><div class="stat-label">Steps</div></div>
+            <div><div class="stat-value">3</div><div class="stat-label">Paths</div></div>
+            <div><div class="stat-value">90m-7h</div><div class="stat-label">Duration</div></div>
+        </div>
+    </div>
+
+    <div class="viewport" id="vp">
+        <div class="canvas" id="canvas">
+            <svg id="svg"></svg>
+            
+            <!-- Step 0 -->
+            <div class="node" data-node="step0" style="left: 100px; top: 450px; width: 320px; border-left-color: #6b8c7f;">
+                <div class="corner-peel"></div>
+                <div class="label">STEP 0 • ENTRY</div>
+                <div class="title">Executive Brief</div>
+                <div class="desc">B1-B7 extraction • Maturity stage (TRL 1-9)</div>
+                <div class="data">
+                    <span>100%</span>
+                    <span>20-30m</span>
+                </div>
+            </div>
+
+            <!-- Step 1 (Optional) -->
+            <div class="node" data-node="step1" style="left: 550px; top: 750px; width: 290px; border-left-color: #9b8a9d;">
+                <div class="corner-peel"></div>
+                <div class="label">STEP 1 • OPTIONAL</div>
+                <div class="title">Application Forms</div>
+                <div class="desc">360 SIS / CNEN format</div>
+                <div class="data">
+                    <span>Optional</span>
+                    <span>15-20m</span>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="node" data-node="step2" style="left: 550px; top: 330px; width: 340px; border-left-color: #6b8c7f;">
+                <div class="corner-peel"></div>
+                <div class="label">STEP 2 • DIAGNOSTIC</div>
+                <div class="title">40-Question Assessment</div>
+                <div class="desc">Team • Technology • Management • Commercial</div>
+                <div class="data">
+                    <span>All Paths</span>
+                    <span>30-45m</span>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="node" data-node="step3" style="left: 550px; top: 150px; width: 340px; border-left-color: #d89b71;">
+                <div class="corner-peel"></div>
+                <div class="label">STEP 3 • MATURITY</div>
+                <div class="title">29-Question Market Maturity</div>
+                <div class="desc">5 Dimensions • Evidence-based scores</div>
+                <div class="data">
+                    <span>Standard+</span>
+                    <span>45-60m</span>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="node" data-node="step4" style="left: 1000px; top: 300px; width: 320px; border-left-color: #6b8c7f;">
+                <div class="corner-peel"></div>
+                <div class="label">STEP 4 • LEGITIMACY</div>
+                <div class="title">Legitimacy Deep Dive</div>
+                <div class="desc">Problem validation • Team • Resources</div>
+                <div class="data">
+                    <span>All Paths</span>
+                    <span>20-30m</span>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="node" data-node="step5" style="left: 1420px; top: 300px; width: 360px; border-left-color: #6b8c7f;">
+                <div class="corner-peel"></div>
+                <div class="label">STEP 5 • DESIRABILITY</div>
+                <div class="title">Needs & Requesters</div>
+                <div class="desc">6-10 Roles • 10 Needs • Existing solutions</div>
+                <div class="data">
+                    <span>All Paths</span>
+                    <span>30-40m</span>
+                </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="node" data-node="step6" style="left: 1000px; top: 130px; width: 340px; border-left-color: #d89b71;">
+                <div class="corner-peel"></div>
+                <div class="label">STEP 6 • PERSONAS</div>
+                <div class="title">Persona Development</div>
+                <div class="desc">3-5 Personas • Evidence badges</div>
+                <div class="data">
+                    <span>Standard+</span>
+                    <span>60-90m</span>
+                </div>
+            </div>
+
+            <!-- Step 7 -->
+            <div class="node" data-node="step7" style="left: 1860px; top: 270px; width: 340px; border-left-color: #d89b71;">
+                <div class="corner-peel"></div>
+                <div class="label">STEP 7 • MATRIX</div>
+                <div class="title">Needs Qualification</div>
+                <div class="desc">HTML dashboard • Opportunity zones</div>
+                <div class="data">
+                    <span>Standard+</span>
+                    <span>45-90m</span>
+                </div>
+            </div>
+
+            <!-- Step 8 -->
+            <div class="node" data-node="step8" style="left: 1860px; top: 100px; width: 360px; border-left-color: #d89b71;">
+                <div class="corner-peel"></div>
+                <div class="label">STEP 8 • ECOSYSTEM</div>
+                <div class="title">Players & Influencers</div>
+                <div class="desc">8-10 Each • Acceptability ratings</div>
+                <div class="data">
+                    <span>Standard+</span>
+                    <span>30-45m</span>
+                </div>
+            </div>
+
+            <!-- Step 9 -->
+            <div class="node" data-node="step9" style="left: 2300px; top: 170px; width: 370px; border-left-color: #9b8a9d;">
+                <div class="corner-peel"></div>
+                <div class="label">STEP 9 • NETWORK</div>
+                <div class="title">Value Network Map</div>
+                <div class="desc">HTML visualization • Priority targets</div>
+                <div class="data">
+                    <span>Complete</span>
+                    <span>60-90m</span>
+                </div>
+            </div>
+
+            <!-- Step 10 -->
+            <div class="node" data-node="step10" style="left: 2300px; top: 380px; width: 400px; border-left-color: #6b8c7f;">
+                <div class="corner-peel"></div>
+                <div class="label">STEP 10 • REPORT</div>
+                <div class="title">Diagnostic Comment & Report</div>
+                <div class="desc">Strengths • Risks • Actions • Evidence gaps</div>
+                <div class="data">
+                    <span>Standard+</span>
+                    <span>25-35m</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="btn" onclick="zoom(0.2)">+</button>
+        <div class="zoom-num" id="z">100%</div>
+        <button class="btn" onclick="zoom(-0.2)">−</button>
+        <button class="btn" onclick="reset()">⟲</button>
+    </div>
+
+    <div class="insights-widget">
+        <button class="insights-btn" onclick="toggleInsights()">💡</button>
+    </div>
+
+    <div class="insights-panel" id="insights">
+        <div class="insights-header">
+            <div class="insights-title">Workflow Insights</div>
+            <button class="insights-close" onclick="toggleInsights()">×</button>
+        </div>
+
+        <div class="insight-section">
+            <div class="insight-section-title">Execution Paths</div>
+            <div class="insight-item">
+                <div class="insight-item-label">
+                    <span class="path-badge">Fast Track</span> 90 minutes
+                </div>
+                <div class="insight-item-text">Steps 0, 2, 4, 5 • Initial screening, quick assessment for cohort applications</div>
+            </div>
+            <div class="insight-item">
+                <div class="insight-item-label">
+                    <span class="path-badge standard">Standard</span> 4-5 hours
+                </div>
+                <div class="insight-item-text">Steps 0, 2, 3, 4, 5, 6, 7, 8, 10 • Committee-ready evaluation for finalists</div>
+            </div>
+            <div class="insight-item">
+                <div class="insight-item-label">
+                    <span class="path-badge complete">Complete</span> 6-7 hours
+                </div>
+                <div class="insight-item-text">All Steps 0-10 • Executive presentations, Series A+ due diligence</div>
+            </div>
+        </div>
+
+        <div class="insight-section">
+            <div class="insight-section-title">Common Mistakes to Avoid</div>
+            <div class="insight-item">
+                <div class="insight-item-label">Step 0: Character Limits</div>
+                <div class="insight-item-text">Exceeding limits breaks consistency across evaluations</div>
+            </div>
+            <div class="insight-item">
+                <div class="insight-item-label">Step 2: Scoring Without Evidence</div>
+                <div class="insight-item-text">Assumption-based scores invalidate entire analysis</div>
+            </div>
+            <div class="insight-item">
+                <div class="insight-item-label">Step 3: Ignoring Thresholds</div>
+                <div class="insight-item-text">Weak dimension can sink evaluation (Desirability ≥3.5 required)</div>
+            </div>
+            <div class="insight-item">
+                <div class="insight-item-label">Step 5: Combining Requesters</div>
+                <div class="insight-item-text">Merging distinct user types blurs segmentation</div>
+            </div>
+            <div class="insight-item">
+                <div class="insight-item-label">Step 6: Personas Without Interviews</div>
+                <div class="insight-item-text">Assumptions ≠ validation. Need 5+ interviews for green badge</div>
+            </div>
+            <div class="insight-item">
+                <div class="insight-item-label">Step 8: Players vs Influencers</div>
+                <div class="insight-item-text">Different engagement strategies required for each type</div>
+            </div>
+        </div>
+
+        <div class="insight-section">
+            <div class="insight-section-title">Success Metrics</div>
+            <div class="insight-item">
+                <div class="insight-item-label">Step 2: Complete Assessment</div>
+                <div class="insight-item-text">All 40 questions scored with evidence citations documented</div>
+            </div>
+            <div class="insight-item">
+                <div class="insight-item-label">Step 3: Threshold Check</div>
+                <div class="insight-item-text">Composite score calculated, all dimension minimums verified</div>
+            </div>
+            <div class="insight-item">
+                <div class="insight-item-label">Step 5: Needs Format</div>
+                <div class="insight-item-text">10 needs at ≤60 chars each, 6-10 distinct requesters identified</div>
+            </div>
+            <div class="insight-item">
+                <div class="insight-item-label">Step 6: Evidence Quality</div>
+                <div class="insight-item-text">3-5 personas, majority green/orange badges (not all red)</div>
+            </div>
+            <div class="insight-item">
+                <div class="insight-item-label">Step 7: Priority Zones</div>
+                <div class="insight-item-text">HTML heatmap shows clear critical zones for roadmap decisions</div>
+            </div>
+            <div class="insight-item">
+                <div class="insight-item-label">Step 8: Ecosystem Coverage</div>
+                <div class="insight-item-text">8-10 players + 8-10 influencers with acceptability ratings</div>
+            </div>
+            <div class="insight-item">
+                <div class="insight-item-label">Step 10: Committee Ready</div>
+                <div class="insight-item-text">Professional DOCX, executive summary 6-8 sentences, clear recommendation</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="legend">
+        <div class="legend-title">Execution Paths</div>
+        <div class="leg-item">
+            <div class="swatch" style="background: #6b8c7f;"></div>
+            <div class="leg-name">Fast Track</div>
+            <div class="leg-val">90m</div>
+        </div>
+        <div class="leg-item">
+            <div class="swatch" style="background: #d89b71;"></div>
+            <div class="leg-name">Standard</div>
+            <div class="leg-val">4-5h</div>
+        </div>
+        <div class="leg-item">
+            <div class="swatch" style="background: #9b8a9d;"></div>
+            <div class="leg-name">Complete</div>
+            <div class="leg-val">6-7h</div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script>
+        const nodes = {
+            step0: {x: 100, y: 450, w: 320, h: 140},
+            step1: {x: 550, y: 750, w: 290, h: 120},
+            step2: {x: 550, y: 330, w: 340, h: 140},
+            step3: {x: 550, y: 150, w: 340, h: 140},
+            step4: {x: 1000, y: 300, w: 320, h: 140},
+            step5: {x: 1420, y: 300, w: 360, h: 140},
+            step6: {x: 1000, y: 130, w: 340, h: 140},
+            step7: {x: 1860, y: 270, w: 340, h: 140},
+            step8: {x: 1860, y: 100, w: 360, h: 140},
+            step9: {x: 2300, y: 170, w: 370, h: 140},
+            step10: {x: 2300, y: 380, w: 400, h: 140}
+        };
+
+        function edge(id, side) {
+            const n = nodes[id];
+            return {
+                x: side === 'right' ? n.x + n.w : n.x,
+                y: n.y + n.h / 2
+            };
+        }
+
+        function sankeyPath(fromId, toId, value, yOffset = 0) {
+            const from = edge(fromId, 'right');
+            const to = edge(toId, 'left');
+            
+            from.y += yOffset;
+            to.y += yOffset;
+            
+            const thickness = (value / 100) * 100;
+            const cp = (to.x - from.x) * 0.5;
+            
+            return `
+                M ${from.x},${from.y - thickness/2}
+                C ${from.x + cp},${from.y - thickness/2}
+                  ${to.x - cp},${to.y - thickness/2}
+                  ${to.x},${to.y - thickness/2}
+                L ${to.x},${to.y + thickness/2}
+                C ${to.x - cp},${to.y + thickness/2}
+                  ${from.x + cp},${from.y + thickness/2}
+                  ${from.x},${from.y + thickness/2}
+                Z
+            `;
+        }
+
+        const svg = document.getElementById('svg');
+        
+        // Flow paths
+        const flows = [
+            // Optional branch
+            {from: 'step0', to: 'step1', val: 20, col: '#9b8a9d', offset: 140},
+            
+            // Fast Track: 0 → 2 → 4 → 5
+            {from: 'step0', to: 'step2', val: 100, col: '#6b8c7f', offset: -15},
+            {from: 'step2', to: 'step4', val: 100, col: '#6b8c7f', offset: 0},
+            {from: 'step4', to: 'step5', val: 100, col: '#6b8c7f', offset: 0},
+            
+            // Standard adds: 3, 6, 7, 8, 10
+            {from: 'step2', to: 'step3', val: 60, col: '#d89b71', offset: -25},
+            {from: 'step3', to: 'step6', val: 60, col: '#d89b71', offset: 15},
+            {from: 'step5', to: 'step7', val: 60, col: '#d89b71', offset: -5},
+            {from: 'step6', to: 'step8', val: 60, col: '#d89b71', offset: 0},
+            {from: 'step7', to: 'step10', val: 60, col: '#d89b71', offset: 5},
+            {from: 'step8', to: 'step10', val: 60, col: '#d89b71', offset: -40},
+            
+            // Complete adds: 9
+            {from: 'step8', to: 'step9', val: 30, col: '#9b8a9d', offset: 15},
+            {from: 'step9', to: 'step10', val: 30, col: '#9b8a9d', offset: -15}
+        ];
+
+        let svgContent = '';
+        
+        flows.forEach((f) => {
+            const pathD = sankeyPath(f.from, f.to, f.val, f.offset);
+            svgContent += `<path d="${pathD}" fill="${f.col}" stroke="${f.col}" class="flow" data-from="${f.from}" data-to="${f.to}" stroke-width="0.5"/>`;
+        });
+
+        // Timeline
+        svgContent += `
+            <line x1="100" y1="60" x2="550" y2="60" stroke="#e5e5e5" stroke-dasharray="3,3"/>
+            <line x1="1000" y1="60" x2="1420" y2="60" stroke="#e5e5e5" stroke-dasharray="3,3"/>
+            <line x1="1860" y1="60" x2="2300" y2="60" stroke="#e5e5e5" stroke-dasharray="3,3"/>
+            <text x="100" y="45" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="#aaa">Entry</text>
+            <text x="550" y="45" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="#aaa">Diagnostic</text>
+            <text x="1210" y="45" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="#aaa">Analysis</text>
+            <text x="2080" y="45" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="#aaa">Validation</text>
+            <text x="2550" y="45" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="#aaa">Output</text>
+        `;
+
+        svg.innerHTML = svgContent;
+
+        // Pan/zoom with mouse wheel
+        let scale = 0.55;
+        let tx = 50;
+        let ty = 100;
+        let dragging = false;
+        let startX, startY;
+
+        const vp = document.getElementById('vp');
+        const canvas = document.getElementById('canvas');
+        const zoomEl = document.getElementById('z');
+
+        function update() {
+            canvas.style.transform = `translate(${tx}px, ${ty}px) scale(${scale})`;
+            zoomEl.textContent = `${Math.round(scale * 100)}%`;
+        }
+
+        vp.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const rect = vp.getBoundingClientRect();
+            const mx = e.clientX - rect.left;
+            const my = e.clientY - rect.top;
+            const cx = (mx - tx) / scale;
+            const cy = (my - ty) / scale;
+            const delta = -e.deltaY * 0.001;
+            const newScale = Math.max(0.3, Math.min(2, scale + delta));
+            tx = mx - cx * newScale;
+            ty = my - cy * newScale;
+            scale = newScale;
+            update();
+        });
+
+        vp.addEventListener('mousedown', (e) => {
+            if (e.target.closest('.node')) return;
+            dragging = true;
+            startX = e.clientX - tx;
+            startY = e.clientY - ty;
+            vp.classList.add('grabbing');
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (!dragging) return;
+            tx = e.clientX - startX;
+            ty = e.clientY - startY;
+            update();
+        });
+
+        document.addEventListener('mouseup', () => {
+            dragging = false;
+            vp.classList.remove('grabbing');
+        });
+
+        function zoom(delta) {
+            const cx = vp.clientWidth / 2;
+            const cy = vp.clientHeight / 2;
+            const px = (cx - tx) / scale;
+            const py = (cy - ty) / scale;
+            const newScale = Math.max(0.3, Math.min(2, scale + delta));
+            tx = cx - px * newScale;
+            ty = cy - py * newScale;
+            scale = newScale;
+            update();
+        }
+
+        function reset() {
+            scale = 0.55;
+            tx = 50;
+            ty = 100;
+            update();
+        }
+
+        update();
+        
+        // Enhanced modal data
+        const modalData = {
+            step0: {
+                label: "STEP 0 • ENTRY POINT",
+                title: "Executive Brief Extraction",
+                sections: [
+                    {
+                        title: "Workflow Design",
+                        content: "This evaluation system is designed as a sequential workflow (Steps 0-10) where each step builds on previous outputs. However, individual steps can be used independently as evaluation tools when you already have the required inputs from other sources."
+                    },
+                    {
+                        title: "Purpose",
+                        content: "Establish baseline understanding with B1-B7 executive brief structure. Provides concise snapshot of venture while maintaining strict character limits for consistency across evaluations."
+                    },
+                    {
+                        title: "Prerequisites",
+                        content: "None. This is the entry point for all evaluation paths. Only requires access to venture application, pitch deck, or founder interview."
+                    },
+                    {
+                        title: "B1-B7 Structure with Character Limits",
+                        content: `<ul>
+                            <li><strong>B1 One-Line Description (150 chars):</strong> Elevator pitch distilled to essence</li>
+                            <li><strong>B2 Problem Statement (300 chars):</strong> Clear articulation of problem being solved</li>
+                            <li><strong>B3 Proposed Solution (300 chars):</strong> How venture addresses the problem</li>
+                            <li><strong>B4 Target Market/Users (300 chars):</strong> Primary customer segments</li>
+                            <li><strong>B5 Business Model/Revenue (300 chars):</strong> How money is made</li>
+                            <li><strong>B6 Traction/Validation (300 chars):</strong> Evidence of progress</li>
+                            <li><strong>B7 Team/Resources (200 chars):</strong> Who's building and what they have</li>
+                        </ul>`
+                    },
+                    {
+                        title: "Maturity Classification",
+                        content: "Technology Readiness Level (TRL) assessment from 1-9. Determines appropriate evaluation depth and expectations. Early stage (TRL 1-3) requires different validation than late stage (TRL 7-9)."
+                    },
+                    {
+                        title: "Output Specifications",
+                        content: `<strong>1. Executive Brief Template:</strong> B1-B7 formatted with character count verification, TRL classification with rationale.<br><br>
+                        <strong>2. Supplementary Notes:</strong> Up to 5 additional context items at 250 chars each for information that doesn't fit B1-B7 structure.<br><br>
+                        All outputs formatted in Markdown for easy integration into evaluation systems.`
+                    },
+                    {
+                        title: "Use Cases",
+                        content: "Initial screening for accelerator cohorts, intake for investment pipeline, quick assessment for partnership opportunities, board meeting summaries."
+                    }
+                ],
+                metrics: [
+                    {value: "100%", label: "Required"},
+                    {value: "20-30m", label: "Duration"},
+                    {value: "TRL 1-9", label: "Classification"}
+                ]
+            },
+            step1: {
+                label: "STEP 1 • OPTIONAL",
+                title: "Application Forms",
+                sections: [
+                    {
+                        title: "Purpose",
+                        content: "Generate professional application forms tailored to specific program requirements. Optional step useful for standardized intake processes across cohorts or portfolios."
+                    },
+                    {
+                        title: "Prerequisites",
+                        content: "Requires Step 0 Executive Brief completion. Application forms expand on B1-B7 structure with program-specific requirements."
+                    },
+                    {
+                        title: "Format Options",
+                        content: `<ul>
+                            <li><strong>360 SIS Application:</strong> Social impact venture format emphasizing mission alignment, impact metrics, stakeholder analysis, and community outcomes</li>
+                            <li><strong>CNEN Application:</strong> Research institution format for technology transfer, nuclear/energy technologies, academic spin-outs</li>
+                        </ul>`
+                    },
+                    {
+                        title: "Character Limits",
+                        content: "Project Summary: 500 characters (2-3 sentences). All other sections: 750 characters (3-5 sentences). Strict enforcement ensures consistency and comparability across applications."
+                    },
+                    {
+                        title: "Output Specifications",
+                        content: `<strong>Professional DOCX Application Form:</strong> Formatted with program branding, section headers, character-limited responses, submission-ready layout. Includes all required sections for chosen format (360 SIS or CNEN) with proper styling and page structure.`
+                    },
+                    {
+                        title: "When to Use",
+                        content: "Program-specific requirements, cohort standardization, portfolio comparison, grant application preparation."
+                    }
+                ],
+                metrics: [
+                    {value: "Optional", label: "Status"},
+                    {value: "15-20m", label: "Duration"},
+                    {value: "DOCX", label: "Format"}
+                ]
+            },
+            step2: {
+                label: "STEP 2 • DIAGNOSTIC",
+                title: "40-Question Diagnostic Assessment",
+                sections: [
+                    {
+                        title: "Purpose",
+                        content: "Comprehensive baseline across four critical dimensions. Identifies strengths, gaps, and red flags requiring immediate attention. Foundation for all execution paths."
+                    },
+                    {
+                        title: "Prerequisites",
+                        content: "Requires Step 0 Executive Brief. Uses B1-B7 as starting point but requires additional information from founders, pitch materials, or existing diligence data."
+                    },
+                    {
+                        title: "Four Dimensions",
+                        content: `<ul>
+                            <li><strong>Team (9 Questions):</strong> Completeness, expertise, commitment, complementarity, gaps in critical roles</li>
+                            <li><strong>Technology (11 Questions):</strong> Readiness, differentiation, IP strength, scalability, technical feasibility</li>
+                            <li><strong>Management (12 Questions):</strong> Planning, resources, execution capability, risk mitigation, operational readiness</li>
+                            <li><strong>Commercial (8 Questions):</strong> Market validation, business model, revenue strategy, competition, customer evidence</li>
+                        </ul>`
+                    },
+                    {
+                        title: "Scoring System",
+                        content: "1-5 scale with strict evidence requirements. Scores ≥3 require specific external validation with sources documented. Scores of 1 require explicit statement of needed evidence."
+                    },
+                    {
+                        title: "Red Flags Identified",
+                        content: `<div class="modal-badge red">No Customer Discovery</div> <div class="modal-badge red">Unfunded Execution</div> <div class="modal-badge red">Untested Revenue</div> <div class="modal-badge red">Missing Core Resources</div><br><br>System automatically flags critical gaps requiring immediate action before proceeding with development.`
+                    },
+                    {
+                        title: "Output Specifications",
+                        content: `<strong>1. Assessment Results Table:</strong> 40 questions organized by dimension (Team/Tech/Mgmt/Commercial), each with score (1-5), evidence citation, and source documentation.<br><br>
+                        <strong>2. Score Summary:</strong> Dimensional averages with visual indicators, overall composite score, red flag listing with severity ratings, recommended next actions based on gaps identified.`
+                    }
+                ],
+                metrics: [
+                    {value: "40Q", label: "Questions"},
+                    {value: "30-45m", label: "Duration"},
+                    {value: "All Paths", label: "Inclusion"}
+                ]
+            },
+            step3: {
+                label: "STEP 3 • MARKET MATURITY",
+                title: "29-Question Market Maturity Assessment",
+                sections: [
+                    {
+                        title: "Purpose",
+                        content: "Deep dimensional analysis across five VIANEO pillars. Generates weighted composite score with minimum thresholds. Evidence-based scoring requires external validation, preventing assumption-based evaluations."
+                    },
+                    {
+                        title: "Prerequisites",
+                        content: "Requires Step 2 (40-Question Diagnostic) completion. Builds on dimensional baseline with deeper market validation evidence. Cannot proceed without Step 2 scores and evidence citations."
+                    },
+                    {
+                        title: "Five Dimensions with Weights",
+                        content: `<ul>
+                            <li><strong>Legitimacy (15%, threshold ≥3.0):</strong> Problem validation, field appropriateness, team insight, domain expertise</li>
+                            <li><strong>Desirability (25%, threshold ≥3.5):</strong> Customer validation, needs clarity, solution fit, willingness to pay</li>
+                            <li><strong>Acceptability (20%, threshold ≥3.0):</strong> Ecosystem support, stakeholder alignment, partnership viability, regulatory fit</li>
+                            <li><strong>Feasibility (20%, threshold ≥3.0):</strong> Team capability, technical viability, resource access, execution plan</li>
+                            <li><strong>Viability (20%, threshold ≥3.0):</strong> Business model sustainability, pricing validation, profitability path, unit economics</li>
+                        </ul>`
+                    },
+                    {
+                        title: "Composite Scoring",
+                        content: `<div class="modal-badge green">4.5-5.0 Strong</div> Proceed with implementation<br>
+                        <div class="modal-badge green">3.5-4.4 Promising</div> Proceed, strengthen gaps<br>
+                        <div class="modal-badge yellow">3.0-3.4 Developing</div> Conditional proceed, address gaps<br>
+                        <div class="modal-badge red">2.0-2.9 Problematic</div> Reassess assumptions, pivot likely<br>
+                        <div class="modal-badge red">&lt;2.0 Non-viable</div> Consider pivot or validation sprint`
+                    },
+                    {
+                        title: "Quality Gate",
+                        content: "Every score ≥3 requires specific external validation cited (X interviews, Y customers), source documented, numbers provided. No vague 'needs validation' allowed."
+                    },
+                    {
+                        title: "Output Specifications",
+                        content: `<strong>1. Comprehensive Markdown Report (18 sections):</strong> Executive Summary, Five Dimensional Analyses (Legitimacy/Desirability/Acceptability/Feasibility/Viability), Composite Score Calculation, Threshold Analysis, Evidence Log, Recommendations, Critical Path Forward.<br><br>
+                        <strong>2. Assessment Results DOCX:</strong> Professional table format with all 29 questions, scores, evidence citations, dimensional grouping, color-coded scoring.<br><br>
+                        <strong>3. Dimension Analysis DOCX:</strong> Narrative format with detailed analysis per dimension, strengths/weaknesses breakdown, improvement roadmap.`
+                    }
+                ],
+                metrics: [
+                    {value: "29Q", label: "Questions"},
+                    {value: "45-60m", label: "Duration"},
+                    {value: "Standard+", label: "Path"}
+                ]
+            },
+            step4: {
+                label: "STEP 4 • LEGITIMACY",
+                title: "Legitimacy Deep Dive",
+                sections: [
+                    {
+                        title: "Purpose",
+                        content: "Validate problem is real, significant, and appropriate for proposed solution and team. First dimensional deep dive focusing on foundation of venture."
+                    },
+                    {
+                        title: "Prerequisites",
+                        content: "Can be conducted after Step 2 completion. Optionally enhanced by Step 3 Legitimacy dimension scores. Works independently but benefits from prior diagnostic context."
+                    },
+                    {
+                        title: "Analysis Areas",
+                        content: `<ul>
+                            <li><strong>Problem Definition:</strong> Clear articulation, magnitude quantification, stakeholder confirmation</li>
+                            <li><strong>Application Domain:</strong> Field appropriateness, regulatory landscape, competitive environment context</li>
+                            <li><strong>Team & Approach:</strong> Unique insights, domain expertise, personal connection to problem space</li>
+                            <li><strong>Available Resources:</strong> Current assets, partner commitments, funding secured or accessible</li>
+                        </ul>`
+                    },
+                    {
+                        title: "Critical Questions",
+                        content: "Is problem validated by external stakeholders? Is field of application appropriate? Does team have unique insight? What resources are secured vs. needed?"
+                    },
+                    {
+                        title: "Evidence Required",
+                        content: "Multiple stakeholders confirming problem independently, data quantifying problem magnitude, documentation of domain expertise or personal connection to problem."
+                    },
+                    {
+                        title: "Output Specifications",
+                        content: `<strong>1. Legitimacy Worksheet (Markdown):</strong> Problem validation summary, domain appropriateness analysis, team insight documentation, resource inventory with gap analysis.<br><br>
+                        <strong>2. DOCX Formatted Version:</strong> Professional styling with section headers, evidence citations highlighted, stakeholder validation log, recommended actions for gaps.`
+                    }
+                ],
+                metrics: [
+                    {value: "≥3.0", label: "Threshold"},
+                    {value: "20-30m", label: "Duration"},
+                    {value: "All Paths", label: "Inclusion"}
+                ]
+            },
+            step5: {
+                label: "STEP 5 • DESIRABILITY",
+                title: "Needs & Requesters Analysis",
+                sections: [
+                    {
+                        title: "Purpose",
+                        content: "Systematic analysis of who needs the solution (Requesters) and what they need (Needs). Foundation for persona development and needs qualification matrix in subsequent steps."
+                    },
+                    {
+                        title: "Prerequisites",
+                        content: "Can be conducted after Step 2 or Step 4 completion. Does not require Step 3, but benefits from prior customer discovery evidence. Essential prerequisite for Steps 6 and 7."
+                    },
+                    {
+                        title: "Three Components",
+                        content: `<ul>
+                            <li><strong>Requesters (6-10 roles):</strong> Distinct user/customer roles with unique needs, buying behaviors, and decision criteria</li>
+                            <li><strong>Needs (10 total, 60 chars each):</strong> Tasks to accomplish, Pains to alleviate, Expectations to meet</li>
+                            <li><strong>Existing Solutions:</strong> Current alternatives, workarounds, competitive offerings with direct comparison</li>
+                        </ul>`
+                    },
+                    {
+                        title: "Evidence Requirements",
+                        content: "Customer discovery interviews (5-20+ per segment documented), user testing with prototypes or concepts, competitive analysis with direct testing of alternatives."
+                    },
+                    {
+                        title: "Output Specifications",
+                        content: `<strong>1. Complete Markdown Analysis (12 sections):</strong> Executive Summary, Requesters Breakdown (6-10 profiles), Needs Analysis (10 needs categorized), Existing Solutions Matrix, Competitive Positioning, Gaps & Opportunities, Validation Summary, Interview Protocol.<br><br>
+                        <strong>2. Core Analysis DOCX:</strong> Requesters table + Needs list formatted for presentation.<br><br>
+                        <strong>3. Strategic Analysis DOCX:</strong> Competitive comparison table, solution gaps matrix, differentiation opportunities.<br><br>
+                        <strong>4. Interview Guide DOCX:</strong> Discovery protocol with sample questions per requester type, validation checklist.`
+                    },
+                    {
+                        title: "Foundation For",
+                        content: "Step 6 Persona Development (who are these requesters in detail?), Step 7 Needs Qualification Matrix (which needs are most important and least satisfied?)."
+                    }
+                ],
+                metrics: [
+                    {value: "6-10", label: "Requesters"},
+                    {value: "30-40m", label: "Duration"},
+                    {value: "All Paths", label: "Inclusion"}
+                ]
+            },
+            step6: {
+                label: "STEP 6 • PERSONAS",
+                title: "Evidence-Based Persona Development",
+                sections: [
+                    {
+                        title: "Purpose",
+                        content: "Create 3-5 detailed personas with evidence validation badges. Each persona represents a distinct requester segment from Step 5 with validated characteristics and needs."
+                    },
+                    {
+                        title: "Prerequisites",
+                        content: "REQUIRES Step 5 (Needs & Requesters) completion. Personas are detailed versions of Step 5 requesters. Cannot proceed without defined requester segments. Step 5's 6-10 requesters inform which personas to develop."
+                    },
+                    {
+                        title: "Persona Structure",
+                        content: `<ul>
+                            <li><strong>Profile:</strong> Name, age, role, organization type, location, professional context</li>
+                            <li><strong>Context:</strong> Day-in-life scenarios, goals, frustrations, current solutions and workarounds</li>
+                            <li><strong>Needs Mapping:</strong> Direct connection to Step 5 needs with priority ranking and satisfaction levels</li>
+                            <li><strong>Decision Criteria:</strong> How they evaluate solutions, what matters most, deal-breakers</li>
+                        </ul>`
+                    },
+                    {
+                        title: "Evidence Badges",
+                        content: `<div class="modal-badge green">Green (5+ interviews)</div> Well-validated, high confidence<br>
+                        <div class="modal-badge yellow">Orange (2-4 interviews)</div> Partially validated, needs more evidence<br>
+                        <div class="modal-badge red">Red (assumed)</div> Hypothesis only, requires validation before proceeding`
+                    },
+                    {
+                        title: "Time Investment",
+                        content: "60-90 minutes with fresh interviews and persona development, OR 20-30 minutes from existing validated customer discovery data."
+                    },
+                    {
+                        title: "Output Specifications",
+                        content: `<strong>Professional DOCX (3-11 pages):</strong> Cover page with executive summary, 3-5 persona profiles (1-2 pages each), evidence badge key and interview log, needs mapping matrix (persona × Step 5 needs), decision criteria comparison table, recommended engagement strategies per persona. Committee-ready formatting with professional typography and layout.`
+                    }
+                ],
+                metrics: [
+                    {value: "3-5", label: "Personas"},
+                    {value: "60-90m", label: "Duration"},
+                    {value: "Standard+", label: "Path"}
+                ]
+            },
+            step7: {
+                label: "STEP 7 • NEEDS MATRIX",
+                title: "Needs Qualification Matrix",
+                sections: [
+                    {
+                        title: "Purpose",
+                        content: "Interactive HTML heatmap visualization showing Importance vs. Satisfaction across all needs and requester segments. Identifies opportunity zones for product development and go-to-market strategy."
+                    },
+                    {
+                        title: "Prerequisites",
+                        content: "REQUIRES Step 5 (Needs & Requesters) AND Step 6 (Personas) completion. Matrix maps Step 5's 10 needs across Step 6's 3-5 personas. Cannot proceed without both inputs defined."
+                    },
+                    {
+                        title: "Priority Zones with Color Coding",
+                        content: `<div class="modal-badge red">Critical (Red)</div> High Importance + Low Satisfaction = Top priority opportunities, biggest pain points<br>
+                        <div class="modal-badge" style="background: #ff9800; color: white;">High (Orange)</div> High Importance + Medium Satisfaction = Competitive differentiation opportunities<br>
+                        <div class="modal-badge yellow">Medium (Yellow)</div> Medium Importance + Low Satisfaction = Secondary opportunities, niche possibilities<br>
+                        <div class="modal-badge green">Low (Green)</div> Well-served needs = Potential commoditization risk, avoid competing here`
+                    },
+                    {
+                        title: "Strategic Outputs",
+                        content: "Product roadmap prioritization (focus on Critical zones), Competitive differentiation strategy (target High zones), Market entry planning (avoid Low zones), Resource allocation guidance."
+                    },
+                    {
+                        title: "Output Specifications",
+                        content: `<strong>1. Interactive HTML Needs Matrix Dashboard:</strong> Presentation-ready heatmap with color-coded cells (Importance × Satisfaction), hover tooltips showing need details, persona filtering, exportable as PNG/PDF for slides.<br><br>
+                        <strong>2. Comprehensive Analysis Report (9-12 pages):</strong> Executive Summary with top opportunities, Critical Zones Analysis (detailed breakdown of high-priority needs), Persona-by-Persona Assessment, Competitive Gap Analysis, Strategic Action Plan with prioritized initiatives, Resource Allocation Recommendations, 90-day Roadmap for addressing critical zones.`
+                    },
+                    {
+                        title: "Use Cases",
+                        content: "Product feature prioritization, Go-to-market strategy development, Competitive positioning analysis, Investor pitch preparation (show market opportunity)."
+                    }
+                ],
+                metrics: [
+                    {value: "HTML", label: "Visual"},
+                    {value: "45-90m", label: "Duration"},
+                    {value: "Standard+", label: "Path"}
+                ]
+            },
+            step8: {
+                label: "STEP 8 • ECOSYSTEM",
+                title: "Players & Influencers Analysis",
+                sections: [
+                    {
+                        title: "Purpose",
+                        content: "Map ecosystem participants and their acceptability toward venture. Players are active value chain participants. Influencers shape market conditions without direct transactions."
+                    },
+                    {
+                        title: "Prerequisites",
+                        content: "Can be conducted after Step 2 or Step 3 completion. Optionally enhanced by Step 3 Acceptability dimension scores. Essential prerequisite for Step 9 (Value Network Map)."
+                    },
+                    {
+                        title: "Two Categories",
+                        content: `<ul>
+                            <li><strong>Players (8-10):</strong> Suppliers, partners, distributors, customers, competitors. Active participants in value chain, direct transactions or relationships.</li>
+                            <li><strong>Influencers (8-10):</strong> Regulators, media, associations, standards bodies, thought leaders. Market shapers, no direct transactions but significant impact.</li>
+                        </ul>`
+                    },
+                    {
+                        title: "Acceptability Ratings",
+                        content: `<div class="modal-badge green">Favorable</div> Actively supportive, partnership potential, aligned interests<br>
+                        <div class="modal-badge yellow">Neutral</div> Aware but uncommitted, could go either way, needs cultivation<br>
+                        <div class="modal-badge red">Unfavorable</div> Resistant or threatened, requires mitigation strategy, potential blocker`
+                    },
+                    {
+                        title: "Evidence Requirements",
+                        content: "Ecosystem map with 5-20+ players documented, acceptability ratings with basis (conversations, public positions, market behavior), mitigation strategies for resistance, partnership discussions initiated with favorable parties."
+                    },
+                    {
+                        title: "Output Specifications",
+                        content: `<strong>1. Professional 2-Page DOCX (BCG consulting-level quality):</strong> Players table (organization, role, acceptability, strategic notes), Influencers table (organization, influence type, acceptability, engagement approach), Ecosystem Summary (favorable/neutral/unfavorable breakdown), Mitigation Strategies for unfavorable parties, Partnership Opportunities with favorable parties.<br><br>
+                        <strong>2. Markdown Analysis:</strong> Detailed notes per organization, engagement history, relationship development roadmap, risk assessment for unfavorable parties.<br><br>
+                        <strong>Optional Python Generator:</strong> Automated DOCX formatting tool available in repository (tools/players_influencers_generator.py).`
+                    }
+                ],
+                metrics: [
+                    {value: "8-10", label: "Each Type"},
+                    {value: "30-45m", label: "Duration"},
+                    {value: "Standard+", label: "Path"}
+                ]
+            },
+            step9: {
+                label: "STEP 9 • VALUE NETWORK",
+                title: "Ecosystem Value Network Map",
+                sections: [
+                    {
+                        title: "Purpose",
+                        content: "Visual network mapping all ecosystem participants across 5 value chain positions. Identifies Priority Targets combining Favorable acceptability with Critical/Important needs for focused engagement strategy."
+                    },
+                    {
+                        title: "Prerequisites",
+                        content: "REQUIRES Step 8 (Players & Influencers) completion. Network visualizes Step 8's players/influencers mapped to value chain positions. Optionally enhanced by Step 7 needs data for priority targeting. Cannot proceed without Step 8's acceptability ratings."
+                    },
+                    {
+                        title: "Five Value Chain Positions",
+                        content: `<ul>
+                            <li><strong>Enablers:</strong> Suppliers, technology providers, infrastructure, foundational capabilities</li>
+                            <li><strong>Product/Service Providers:</strong> Direct producers, manufacturers, developers, solution creators</li>
+                            <li><strong>Channels:</strong> Distributors, platforms, aggregators, resellers, market access</li>
+                            <li><strong>Buyers:</strong> Direct customers, purchasing decision makers, budget holders</li>
+                            <li><strong>End Users:</strong> Final beneficiaries, consumers, users, value recipients</li>
+                        </ul>`
+                    },
+                    {
+                        title: "Priority Targets",
+                        content: "Color-coded targets (green gradient = highest conversion probability) combining Favorable organizations with Critical/Important needs. Strategic focus for partnership development and go-to-market execution."
+                    },
+                    {
+                        title: "Strategic Plan Components",
+                        content: "Specific engagement actions for each priority target, timeline and sequencing for outreach, resource requirements and ownership, success metrics and milestones."
+                    },
+                    {
+                        title: "Output Specifications",
+                        content: `<strong>1. Master Markdown (Comprehensive Analysis):</strong> Value chain position breakdown, priority target identification methodology, strategic rationale for sequencing, relationship development roadmap.<br><br>
+                        <strong>2. Ecosystem Data DOCX (Formatted Matrix):</strong> 5-column value chain table with Step 8 players/influencers positioned, acceptability ratings color-coded, need badges (Critical/Important/Secondary), professional formatting with fonts/colors/spacing specs for Word.<br><br>
+                        <strong>3. Priority Targets DOCX (Strategic Plan):</strong> Top 5-8 priority targets ranked by conversion probability, engagement actions per target with owners and timelines, resource requirements, success metrics and milestones, 90-day execution roadmap.<br><br>
+                        <strong>4. Interactive HTML Visualization (Presentation-Ready):</strong> 5-column network map, color-coded priority targets (green gradient), hover tooltips with organization details, exportable for board presentations, Series A+ due diligence materials.`
+                    },
+                    {
+                        title: "Use Cases",
+                        content: "Executive presentations to board or investors, Series A+ due diligence materials, Partnership development roadmaps, Go-to-market execution plans."
+                    }
+                ],
+                metrics: [
+                    {value: "5 Layers", label: "Value Chain"},
+                    {value: "60-90m", label: "Duration"},
+                    {value: "Complete", label: "Path"}
+                ]
+            },
+            step10: {
+                label: "STEP 10 • DIAGNOSTIC REPORT",
+                title: "Vianeo Diagnostic Comment & Report",
+                sections: [
+                    {
+                        title: "Purpose",
+                        content: "Executive diagnostic summary synthesizing all previous steps into actionable recommendations. Committee-ready format integrating dimensional scores, strengths, risks, and evidence-based path forward."
+                    },
+                    {
+                        title: "Prerequisites",
+                        content: "REQUIRES Standard or Complete path completion (Steps 3-9). Synthesizes all dimensional work: Step 3 (market maturity scores), Steps 4-8 (dimensional deep dives), Step 9 (network strategy if Complete path). Cannot proceed without prior steps completed."
+                    },
+                    {
+                        title: "Diagnostic Components",
+                        content: `<ul>
+                            <li><strong>Executive Summary (6-8 sentences):</strong> Overall assessment and key findings in concise format</li>
+                            <li><strong>Strengths (Top 3-4):</strong> Competitive advantages with supporting evidence</li>
+                            <li><strong>Risks (Critical vulnerabilities):</strong> Issues requiring mitigation before scale</li>
+                            <li><strong>Required Actions (with owners):</strong> Prioritized next steps with clear accountability</li>
+                            <li><strong>Evidence Gaps:</strong> Specific validations needed before investment or scale decisions</li>
+                        </ul>`
+                    },
+                    {
+                        title: "Dimension Summary Table",
+                        content: `Color-coded scores for all five dimensions:<br>
+                        <div class="modal-badge red">Red (&lt;3.0)</div> Below threshold, requires immediate attention<br>
+                        <div class="modal-badge yellow">Yellow (3.0-3.9)</div> Meets threshold, could be stronger<br>
+                        <div class="modal-badge green">Green (4.0-5.0)</div> Strong performance, competitive advantage<br><br>
+                        Composite weighted score with investment recommendation category (Strong/Promising/Developing/Problematic/Non-viable).`
+                    },
+                    {
+                        title: "Critical Path Forward",
+                        content: `Four time horizons with numbered priorities and success metrics:<br>
+                        <strong>Immediate (0-30 days):</strong> Critical actions required now<br>
+                        <strong>Near-term (30-90 days):</strong> Foundation-building activities<br>
+                        <strong>Medium-term (90-180 days):</strong> Validation and refinement<br>
+                        <strong>Long-term (180+ days):</strong> Scale preparation and optimization`
+                    },
+                    {
+                        title: "Output Specifications",
+                        content: `<strong>1. Markdown Diagnostic:</strong> Complete analysis with all sections (Executive Summary, Strengths, Risks, Actions, Evidence Gaps, Dimensional Summary, Critical Path Forward), evidence citations, recommendation rationale.<br><br>
+                        <strong>2. Professional DOCX with Design Elevation:</strong> Typography scale (24pt headers/16pt subheads/14pt body/11pt captions), strategic color palette (#6b8c7f sage, #d89b71 terracotta, #9b8a9d plum), formatted dimension summary table with color-coded scores (red/yellow/green cells), critical path with numbered priorities and bullet metrics, committee-ready layout with page breaks and section formatting, investor-grade presentation quality matching 360 brand standards.`
+                    }
+                ],
+                metrics: [
+                    {value: "2 Files", label: "Outputs"},
+                    {value: "25-35m", label: "Duration"},
+                    {value: "Standard+", label: "Path"}
+                ]
+            }
+        };
+
+        // Modal functions
+        function openModal(nodeType) {
+            const data = modalData[nodeType];
+            if (!data) return;
+            
+            const accentColors = {
+                step0: '#6b8c7f',
+                step1: '#9b8a9d',
+                step2: '#6b8c7f',
+                step3: '#d89b71',
+                step4: '#6b8c7f',
+                step5: '#6b8c7f',
+                step6: '#d89b71',
+                step7: '#d89b71',
+                step8: '#d89b71',
+                step9: '#9b8a9d',
+                step10: '#6b8c7f'
+            };
+            
+            const modalContent = document.querySelector('.modal-content');
+            modalContent.style.setProperty('--accent-color', accentColors[nodeType]);
+            
+            let html = `
+                <div class="modal-label">${data.label}</div>
+                <div class="modal-title">${data.title}</div>
+            `;
+            
+            data.sections.forEach(section => {
+                html += `
+                    <div class="modal-section">
+                        <div class="modal-section-title">${section.title}</div>
+                        <div class="modal-section-content">${section.content}</div>
+                    </div>
+                `;
+            });
+            
+            html += '<div class="modal-metrics">';
+            data.metrics.forEach(metric => {
+                html += `
+                    <div class="modal-metric">
+                        <div class="modal-metric-value">${metric.value}</div>
+                        <div class="modal-metric-label">${metric.label}</div>
+                    </div>
+                `;
+            });
+            html += '</div>';
+            
+            document.getElementById('modal-body').innerHTML = html;
+            document.getElementById('modal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.remove('active');
+        }
+
+        function toggleInsights() {
+            document.getElementById('insights').classList.toggle('active');
+        }
+
+        document.querySelectorAll('.node').forEach(node => {
+            const nodeType = node.getAttribute('data-node');
+            
+            node.addEventListener('click', (e) => {
+                openModal(nodeType);
+            });
+            
+            node.addEventListener('mouseenter', () => {
+                document.querySelectorAll('.flow').forEach(flow => {
+                    const from = flow.getAttribute('data-from');
+                    const to = flow.getAttribute('data-to');
+                    
+                    if (from === nodeType || to === nodeType) {
+                        flow.style.opacity = '0.35';
+                        flow.style.filter = 'brightness(1.15)';
+                    }
+                });
+            });
+            
+            node.addEventListener('mouseleave', () => {
+                document.querySelectorAll('.flow').forEach(flow => {
+                    flow.style.opacity = '';
+                    flow.style.filter = '';
+                });
+            });
+        });
+
+        document.getElementById('modal').addEventListener('click', (e) => {
+            if (e.target.id === 'modal') {
+                closeModal();
+            }
+        });
+
+        // Close insights panel when clicking outside
+        document.addEventListener('click', (e) => {
+            const insightsPanel = document.getElementById('insights');
+            const insightsBtn = document.querySelector('.insights-btn');
+            
+            if (insightsPanel.classList.contains('active') && 
+                !insightsPanel.contains(e.target) && 
+                !insightsBtn.contains(e.target)) {
+                toggleInsights();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,7 +1,8 @@
-# STEP 8: Ecosystem Value Network Map
+# STEP 9: Ecosystem Value Network Map
 
-**Time Required:** 60-90 minutes (or 15-20 minutes if importing from Step 7)
-**Output:** FOUR documents - (1) Master Markdown Analysis, (2) Ecosystem Data DOCX, (3) Priority Targets DOCX, (4) HTML Interactive Visualization
+**Time Required:** 30-60 minutes for HTML visualization (primary output)
+**Primary Output:** HTML Interactive Visualization (styled, presentation-ready)
+**Secondary Outputs:** (Optional, on request) Markdown Analysis, DOCX Data Tables, Priority Targets Summary
 **Prerequisites:** Step 5 (Desirability Analysis) recommended; Step 7 (Ecosystem Mapping) optional but accelerates process
 
 ---
@@ -12,10 +13,28 @@ The Ecosystem Value Network Map transforms stakeholder data into strategic actio
 
 1. **WHO** comprises your ecosystem? (5 value chain positions: Enablers → Product → Channels → Buyers → End Users)
 2. **WHAT** is their stance? (Acceptability: Favorable/Neutral/Unfavorable)
-3. **WHICH** requesters have urgent needs? (Need Level: Critical/Important/Secondary/None)
+3. **WHICH** requesters have urgent needs? (Need Level: Critical/Important/None)
 4. **WHERE** should you focus? (Priority Targets: Favorable + Critical/Important needs)
 
 **Philosophy:** Organizations don't have needs—people do. Success requires identifying specific requesters within favorable organizations who face urgent problems. This framework combines acceptability (organizational readiness) with need intensity (individual urgency) to reveal highest-probability conversion opportunities.
+
+---
+
+## Documentation Package
+
+A comprehensive Value Network Map Documentation Package is available at:
+`docs/value_network_map/`
+
+This package includes:
+1. **README.md** - System overview and getting started guide
+2. **value_network_implementation_guide.md** - Complete workflow guide
+3. **value_network_quick_reference.md** - Decision trees and categorization guidance
+4. **value_network_map_build_guide.md** - Technical specifications
+5. **value_network_cheat_sheet.md** - One-page quick reference
+6. **value_network_map_template.html** - Ready-to-use HTML template
+
+**For first-time users:** Review the Implementation Guide before starting
+**For experienced users:** Use the Quick Reference and Cheat Sheet
 
 ---
 
@@ -58,79 +77,82 @@ If working standalone, gather:
 
 ---
 
-## Output Structure: FOUR-FILE PACKAGE
+## Output Priority: HTML-FIRST APPROACH
 
-### Output 1: Master Markdown Analysis
+### PRIMARY OUTPUT: HTML Interactive Visualization
 
-**File Name:** `[ProjectName]_[Date]_08_Analysis.md`
+**File Name:** `[ProjectName]_[Date]_09_Value_Network.html`
 
-Complete comprehensive analysis containing ALL content in a single reference document. Includes:
-- Executive summary and strategic insights
-- Project overview (product, industry, core solution)
-- All five value chain tables with complete data
-- Priority targets identification and analysis
-- Ecosystem composition analysis (distribution by acceptability/need level)
-- Evidence citations and assumptions requiring validation
-- Organizations to monitor
-- Next steps and recommendations
-- Classification guidance appendices
+**Template:** `docs/value_network_map/value_network_map_template.html`
 
-**Use for:** Master reference, version control, team working document, comprehensive analysis
+**THIS IS THE FIRST AND MOST IMPORTANT DELIVERABLE**
 
-### Output 2: Ecosystem Data DOCX
-
-**File Name:** `[ProjectName]_[Date]_08_Ecosystem_Data_DOCX.md` (copy to Word as .docx)
-
-**Template:** `templates/Step8_Ecosystem_Data_DOCX_Template.md`
-
-DOCX-formatted document with detailed styling specifications for Word:
-- Professional formatted tables across 5 value chain positions
-- Color-coded rows (priority targets highlighted in green)
-- Core product section with styled feature list
-- Priority Targets Quick Reference section
-- Complete formatting guide (fonts, colors, spacing, borders)
-
-**Use for:** Committee evaluations, investor due diligence, strategic planning sessions, board presentations
-
-### Output 3: Priority Targets DOCX
-
-**File Name:** `[ProjectName]_[Date]_08_Priority_Targets_DOCX.md` (copy to Word as .docx)
-
-**Template:** `templates/Step8_Priority_Targets_DOCX_Template.md`
-
-DOCX-formatted strategic engagement plan with styling specifications:
-- Executive summary with priority target definition
-- Detailed profile for each priority target (organization, requester, strategy, timeline, metrics)
-- Engagement timeline with color-coded urgency (30/60/90 days)
-- Resource requirements (team, budget, materials)
-- Success factors and risk mitigation
-- Organizations to monitor section
-- Complete formatting guide for professional DOCX creation
-
-**Use for:** Sales/BD execution, resource allocation, quarterly reviews, team alignment
-
-### Output 4: HTML Interactive Visualization
-
-**File Name:** `[ProjectName]_[Date]_08_Value_Network.html`
-
-**Template:** `templates/Step8_Value_Network_Visualization.html`
-
-Interactive visual network map (standalone HTML file):
+Professional, presentation-ready HTML visualization with:
 - 5-column grid layout (Enablers → Product → Channels → Buyers → End Users)
-- Color-coded priority targets (green gradient for Favorable + Critical/Important needs)
-- Need badges (Critical/Important/Secondary)
+- Styled priority targets (green gradient + thick border for Favorable + Need)
+- Need badges (CRITICAL NEED red, NEED orange)
 - Acceptability status dots (green/orange/red)
 - Professional legend explaining visual encoding
-- PDF-ready format (16:9 landscape)
-- Embedded CSS/JS (no external dependencies)
+- Complete embedded styling (no external dependencies)
+- Opens directly in any browser
+- Client-ready presentation format
 
-**Use for:** Presentations, stakeholder communication, strategic planning, screenshots for reports
+**Key Features:**
+- 1900px × 1100px presentation container
+- Responsive, professional design
+- Color-coded by column (Blue → Purple → Yellow → Red → Green)
+- Priority targets immediately visible
+- Hover effects for interactivity
+- Print/PDF ready
+
+**Use for:**
+- Primary deliverable for client presentations
+- Executive briefings and stakeholder communication
+- Strategic planning sessions
+- Screenshots for reports and proposals
+- Team alignment and discussion
 
 ---
 
-## EXECUTION WORKFLOW
+### SECONDARY OUTPUTS (Generate on Request Only)
 
-### PHASE 1: Data Collection & Organization (60-75 min standalone OR 5-10 min import)
+The following outputs can be generated if specifically requested, but HTML is the priority:
+
+#### Optional Output 1: Master Markdown Analysis
+
+**File Name:** `[ProjectName]_[Date]_09_Analysis.md`
+
+Complete comprehensive analysis containing ALL content in a single reference document.
+
+**Use for:** Master reference, version control, team working document
+
+#### Optional Output 2: Ecosystem Data DOCX
+
+**File Name:** `[ProjectName]_[Date]_09_Ecosystem_Data_DOCX.md`
+
+**Template:** `templates/Step9_Ecosystem_Data_DOCX_Template.md`
+
+DOCX-formatted document with detailed styling specifications for Word.
+
+**Use for:** Committee evaluations, investor due diligence, detailed data tables
+
+#### Optional Output 3: Priority Targets DOCX
+
+**File Name:** `[ProjectName]_[Date]_09_Priority_Targets_DOCX.md`
+
+**Template:** `templates/Step9_Priority_Targets_DOCX_Template.md`
+
+DOCX-formatted strategic engagement plan with styling specifications.
+
+**Use for:** Sales/BD execution, resource allocation, quarterly reviews
+
+---
+
+## EXECUTION WORKFLOW: HTML-FIRST APPROACH
+
+**Priority:** Generate the HTML visualization FIRST. Other outputs only if requested.
+
+### PHASE 1: Stakeholder Mapping & Data Collection (20-30 min)
 
 #### If Importing from Step 7:
 1. Load Step 7 stakeholder table
@@ -178,32 +200,134 @@ Organizations where end users work or receive services.
 
 ---
 
-### PHASE 2: Identify Priority Targets (10-15 min)
+### PHASE 2: Determine Box States & Priority Targets (10-15 min)
+
+**Reference:** `docs/value_network_map/value_network_quick_reference.md`
+
+**For Each Stakeholder, Determine:**
+
+1. **Acceptability Status:**
+   - Favorable: Supportive, engaged, sees value
+   - Neutral: Aware but uncommitted, needs convincing
+   - Unfavorable: Resistant, concerned, negatively impacted
+
+2. **Need Status:**
+   - CRITICAL NEED: Urgent end user needs (red badge)
+   - NEED: Important partner/buyer requirements (orange badge)
+   - No immediate unmet needs (no badge)
+
+3. **Box State Logic:**
+   ```
+   IF Favorable + Has Need → Priority Box (box-priority, green border 4px)
+   ELSE IF Favorable + No Need → Favorable Box (box-favorable, light green)
+   ELSE IF Neutral → Neutral Box (box-neutral, light yellow)
+   ELSE IF Unfavorable → Unfavorable Box (box-unfavorable, light red)
+   ```
 
 **Priority Target Criteria:**
-An organization is a Priority Target if it meets BOTH:
-1. **Acceptability = Favorable** (organizational support exists)
-2. **Need Level = Critical OR Important** (specific requester has urgent need)
-
-**Why This Matters:**
-- Favorable organizations with no urgent needs → Low conversion probability (nice relationship, no action driver)
-- Unfavorable organizations with urgent needs → High resistance (need exists, but organizational barriers)
-- **Priority Targets** → High conversion probability (organizational support + urgent individual need)
-
-**Process:**
-1. Review completed data matrix
-2. Mark organizations meeting both criteria
-3. Count total priority targets
-4. Verify each has specific requester with validated need
-5. Note priority ranking (High/Medium based on strategic value)
-
-**Expected Output:** 5-15 priority targets across all value chain positions
+- Favorable + Need = PRIORITY TARGET (green highlighted boxes)
+- Expected: 5-15 priority targets across all columns
 
 ---
 
-### PHASE 3: Create Ecosystem Data Matrix (10-15 min)
+### PHASE 3: Generate HTML Visualization (20-30 min) **[PRIMARY DELIVERABLE]**
 
-Use template: `templates/Step8_Ecosystem_Data_Matrix_Template.md`
+**Template:** `docs/value_network_map/value_network_map_template.html`
+
+**Step-by-Step Process:**
+
+1. **Open Template in Text Editor**
+   - Use VS Code, Sublime, or any text editor
+   - Search for `<!-- EDIT:` to find all customization points
+
+2. **Update Header**
+   ```html
+   <h1><!-- EDIT: Project Name Value Network --></h1>
+   <p><!-- EDIT: Ecosystem Analysis & Stakeholder Mapping --></p>
+   ```
+
+3. **Update Core Product (Column 2)**
+   ```html
+   <div class="player-title"><!-- Your Product Name --></div>
+   <div class="player-content">
+       <!-- Brief description -->
+       <ul class="feature-list">
+           <li><!-- Feature 1 --></li>
+           <!-- 4-8 features total -->
+       </ul>
+   </div>
+   ```
+
+4. **For Each Stakeholder in Each Column:**
+
+   **Priority Box Example (Favorable + Need):**
+   ```html
+   <div class="player-box box-priority">
+       <span class="need-badge badge-need">NEED</span>
+       <div class="player-title">Organization Name</div>
+       <div class="player-subtitle">Role/Context (2-6 words)</div>
+       <div class="acceptability-indicator">
+           <div class="acceptability-dot dot-favorable"></div>
+       </div>
+   </div>
+   ```
+
+   **Favorable Box Example (No urgent need):**
+   ```html
+   <div class="player-box box-favorable">
+       <div class="player-title">Organization Name</div>
+       <div class="player-subtitle">Role/Context</div>
+       <div class="acceptability-indicator">
+           <div class="acceptability-dot dot-favorable"></div>
+       </div>
+   </div>
+   ```
+
+   **Neutral Box Example:**
+   ```html
+   <div class="player-box box-neutral">
+       <div class="player-title">Organization Name</div>
+       <div class="player-subtitle">Role/Context</div>
+       <div class="acceptability-indicator">
+           <div class="acceptability-dot dot-neutral"></div>
+       </div>
+   </div>
+   ```
+
+   **Unfavorable Box Example:**
+   ```html
+   <div class="player-box box-unfavorable">
+       <div class="player-title">Organization Name</div>
+       <div class="player-subtitle">Role/Context</div>
+       <div class="acceptability-indicator">
+           <div class="acceptability-dot dot-unfavorable"></div>
+       </div>
+   </div>
+   ```
+
+5. **Populate All 5 Columns:**
+   - Column 1: Enablers & Inputs (4-6 boxes)
+   - Column 2: Product/Service (1 box only - purple)
+   - Column 3: Channels & Partners (4-6 boxes)
+   - Column 4: Buyers & Clients (4-6 boxes)
+   - Column 5: End Users (4-6 boxes)
+
+6. **Save File**
+   - Format: `[ProjectName]_[Date]_09_Value_Network.html`
+   - Example: `TechEd_2025-01-15_09_Value_Network.html`
+
+7. **Quality Check:**
+   - [ ] Opens correctly in browser
+   - [ ] Priority targets (green boxes) immediately visible
+   - [ ] All 5 columns display properly
+   - [ ] Need badges only on stakeholders with needs
+   - [ ] Dots match box states
+   - [ ] Legend displays correctly
+   - [ ] Professional appearance (client-ready)
+
+---
+
+### PHASE 4: Optional Secondary Outputs (Only If Requested)
 
 **Structure:**
 ```markdown
@@ -528,33 +652,57 @@ If using VIANEO scoring system, cite evidence for:
 
 ## SUCCESS CRITERIA
 
-You've successfully completed Step 8 when:
+You've successfully completed Step 9 when:
 
-1. **Data Matrix** contains 15-40 organizations across all 5 value chain positions
-2. **Priority Targets** identified (5-15 organizations meeting both criteria)
-3. **HTML Visualization** renders perfectly and clearly highlights priority targets
-4. **Strategic Plan** specific and actionable (not generic guidance)
-5. **Team Alignment** everyone understands visual encoding and priority logic
-6. **Action-Oriented** engagement activities planned for next 30/60/90 days
-7. **Evidence-Based** acceptability classifications justified, not assumed
+1. **HTML Visualization** (PRIMARY) - Professional, client-ready HTML file that:
+   - Renders perfectly in browser
+   - Priority targets (green boxes) immediately visible
+   - All 5 columns properly populated (4-6 boxes each, except Product = 1)
+   - Visual encoding consistent (colors, badges, dots match specifications)
+   - Ready for client presentation or screenshot
+
+2. **Strategic Clarity** - The map reveals:
+   - 5-15 priority targets clearly identified
+   - Mix of stakeholders across all value chain positions
+   - Realistic acceptability assessments (evidence-based)
+   - Actionable stakeholder categorizations
+
+3. **Content Quality:**
+   - Stakeholder names specific and actionable (not generic)
+   - Subtitles add meaningful context (2-6 words)
+   - Product features differentiate from alternatives
+   - Need badges only where appropriate
+
+4. **Team Alignment:**
+   - Everyone understands visual encoding system
+   - Priority target logic clear (Favorable + Need)
+   - Ready to use map for engagement planning
+
+5. **Secondary Outputs** (if requested):
+   - Generated only when specifically asked
+   - Align with HTML content
+   - Professional formatting maintained
 
 ---
 
 ## FILE NAMING CONVENTIONS
 
-**Format:** `[ProjectName]_[Date]_08_[Deliverable].[ext]`
+**Primary Output (HTML):**
+`[ProjectName]_[Date]_09_Value_Network.html`
 
-**Examples:**
-- `TechEd_2025-01-15_08_Analysis.md` (master markdown)
-- `TechEd_2025-01-15_08_Ecosystem_Data_DOCX.md` (copy to Word, save as .docx)
-- `TechEd_2025-01-15_08_Priority_Targets_DOCX.md` (copy to Word, save as .docx)
-- `TechEd_2025-01-15_08_Value_Network.html`
+**Example:**
+- `TechEd_2025-01-15_09_Value_Network.html`
+
+**Optional Secondary Outputs (if requested):**
+- `TechEd_2025-01-15_09_Analysis.md` (master markdown)
+- `TechEd_2025-01-15_09_Ecosystem_Data_DOCX.md` (copy to Word)
+- `TechEd_2025-01-15_09_Priority_Targets_DOCX.md` (copy to Word)
 
 **After DOCX Conversion:**
-- `TechEd_2025-01-15_08_Ecosystem_Data.docx`
-- `TechEd_2025-01-15_08_Priority_Targets.docx`
+- `TechEd_2025-01-15_09_Ecosystem_Data.docx`
+- `TechEd_2025-01-15_09_Priority_Targets.docx`
 
-**Archive Format:** `[ProjectName]_[Date]_08_[Deliverable]_ARCHIVE.[ext]`
+**Archive Format:** `[ProjectName]_[Date]_09_[Deliverable]_ARCHIVE.[ext]`
 
 ---
 

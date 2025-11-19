@@ -1,6 +1,6 @@
 # Vianeo Platform Tools
 
-**Complete 10-Step Business Model Evaluation System**
+**Complete 11-Step Business Model Evaluation System**
 
 A comprehensive, AI-assisted framework for systematic startup assessment using the VIANEO methodology. Transform raw applications into evidence-based evaluations across five dimensions with professional visual outputs and executive-ready diagnostic comments.
 
@@ -15,7 +15,8 @@ This is a complete evaluation toolkit that takes you from initial startup applic
 - ✅ 40-question diagnostic across Team/Technology/Management/Commercial
 - ✅ 29-question market maturity assessment with dimensional scores
 - ✅ Deep-dive legitimacy and desirability analysis
-- ✅ Interactive HTML visualizations (needs matrix, network map)
+- ✅ Interactive HTML visualizations (needs matrix, features matrix, network map)
+- ✅ Features-needs alignment mapping with coverage analytics
 - ✅ Complete committee report with recommendations
 - ✅ Professional presentation deck ready for investors/boards
 
@@ -45,7 +46,7 @@ This is a complete evaluation toolkit that takes you from initial startup applic
 
 ---
 
-## The Complete 10-Step Workflow
+## The Complete 11-Step Workflow
 
 ```
 Step 0: Executive Brief Extraction (20-30 min)
@@ -97,6 +98,14 @@ Step 10: Vianeo Diagnostic Comment & Report (25-35 min)
   → Dimension summary table with color-coded scores + Critical path forward (4 time horizons)
   → Two outputs: Markdown diagnostic + Professional DOCX with design elevation
   → Seven comprehensive guides: Skill, Prompt, Reference, Template, DOCX formatting, Examples, Quality checklist
+
+Step 11: Features-Needs Matrix (30-45 min)
+  → Maps solution features against validated customer needs from Step 7
+  → Color-coded opportunity levels (High/Medium/Low/Expected/Accessory)
+  → Coverage metrics: Overall %, High-opportunity X/Y, per-level breakdown
+  → Two outputs: Interactive HTML matrix (export/print) + Strategic analysis markdown
+  → MVP scoping guidance and development prioritization
+  → Five comprehensive guides: Skill overview, Reference guide, Quality checklist, Quick reference, Implementation guide
 ```
 
 ---
@@ -136,16 +145,18 @@ Step 10: Vianeo Diagnostic Comment & Report (25-35 min)
 
 ---
 
-### 🎯 Complete (6-7 hours)
+### 🎯 Complete (7-8 hours)
 
 **Best For:** Executive presentations, Series A+ due diligence
 
-**Steps:** All 0-10
+**Steps:** All 0-11
 
 **Output:**
 - Everything from Standard
 - Interactive network visualization (Step 9)
 - Executive diagnostic comment (Step 10)
+- Features-needs matrix with coverage analytics (Step 11)
+- MVP definition and development priorities
 - Professional committee report
 - Board-ready presentation deck
 
@@ -249,7 +260,11 @@ vianeo-platform-tools/
 │   ├── VIANEO_Diagnostic_Template.md            # Step 10: Exact output structure
 │   ├── VIANEO_Diagnostic_DOCX_Formatting.md     # Step 10: Professional DOCX specs
 │   ├── VIANEO_Diagnostic_Examples.md            # Step 10: Good/bad examples
-│   └── VIANEO_Diagnostic_Quality_Checklist.md   # Step 10: Pre-delivery validation
+│   ├── VIANEO_Diagnostic_Quality_Checklist.md   # Step 10: Pre-delivery validation
+│   ├── VIANEO_Step11_Skill_Overview.md          # Step 11: Features-needs matrix skill overview
+│   ├── VIANEO_Step11_Reference_Guide.md         # Step 11: Interpretation methodology
+│   ├── VIANEO_Step11_Quality_Checklist.md       # Step 11: 120-point validation criteria
+│   └── VIANEO_Step11_Quick_Reference.md         # Step 11: Quick lookup card
 │
 ├── prompts/                                 # Step-by-step prompts
 │   ├── step_0_executive_brief_extraction.md     # Extract executive brief (B1-B7 format) [PRIMARY]
@@ -265,7 +280,8 @@ vianeo-platform-tools/
 │   ├── step_7_needs_qualification_matrix.md     # Matrix + Analysis Report (complete)
 │   ├── step_8_players_influencers.md            # Players/Influencers ecosystem (complete)
 │   ├── step_9_ecosystem_value_network.md        # Value network with 4 deliverables (complete)
-│   └── step_10_vianeo_diagnostic.md             # Diagnostic comment with 2 outputs (complete)
+│   ├── step_10_vianeo_diagnostic.md             # Diagnostic comment with 2 outputs (complete)
+│   └── step_11_features_needs_matrix.md         # Features-needs matrix with 2 outputs (complete)
 │
 ├── tools/                                   # Automation scripts
 │   ├── players_influencers_generator.py         # Step 8: Python DOCX generator
@@ -300,6 +316,8 @@ vianeo-platform-tools/
 │   ├── Step9_Value_Network_Visualization.html       # Step 9: Interactive HTML value network
 │   ├── Step10_Diagnostic_Markdown_Template.md       # Step 10: Diagnostic comment markdown
 │   ├── Step10_Diagnostic_DOCX_Template.md           # Step 10: DOCX formatting specifications
+│   ├── Step11_FeaturesNeeds_Matrix_Template.html    # Step 11: Interactive HTML matrix
+│   ├── Step11_FeaturesNeeds_Analysis_Template.md    # Step 11: Strategic analysis markdown
 │   ├── Evidence_Log_Template.md                     # Evidence tracking with E### IDs
 │   ├── Hypotheses_Log_Template.md                   # Hypothesis validation tracking
 │   ├── Gate_A_Decision_Brief_Template.md            # Go/pivot/stop decision framework
@@ -487,6 +505,14 @@ Every score of 1 requires:
 - Typography scale (24pt/16pt/14pt/11pt) with strategic color palette
 - Formatted critical path with numbered priorities and bullet metrics
 
+**Features-Needs Matrix** (Step 11):
+- Interactive HTML with sticky headers (scrollable row and column)
+- Color-coded opportunity levels (High/Medium/Low/Expected/Accessory)
+- Coverage metrics: Overall %, High-opportunity X/Y, per-level breakdown
+- Export to CSV (Ctrl+E) and print-optimized layout (Ctrl+P)
+- Strategic analysis with MVP scoping guidance
+- Development prioritization based on coverage patterns
+
 ### Quality Control
 
 Built-in quality gates between steps:
@@ -653,6 +679,8 @@ This system is optimized for AI assistance (Claude recommended):
 
 "Create interactive network visualization"
 
+"Generate features-needs matrix with coverage analysis"
+
 "Compile complete committee report"
 ```
 
@@ -670,7 +698,8 @@ Each step has a detailed prompt in `/prompts/` for consistent execution.
 
 **Step-Specific:**
 - Market Maturity (Step 3): `docs/VIANEO_Market_Maturity_System_Prompt.md`
-- All Other Steps: `prompts/step_[0-8]_*.md`
+- Features-Needs Matrix (Step 11): `docs/VIANEO_Step11_Skill_Overview.md`
+- All Other Steps: `prompts/step_[0-11]_*.md`
 
 **Examples:**
 - Early Stage: `examples/Example_Assessment_Early_Stage.md`
@@ -680,7 +709,7 @@ Each step has a detailed prompt in `/prompts/` for consistent execution.
 
 ## Version & Attribution
 
-**Version:** 2.2 (Complete 10-Step System with Diagnostic Comments)
+**Version:** 2.3 (Complete 11-Step System with Features-Needs Matrix)
 **Framework:** VIANEO Business Model Evaluation Methodology
 **Last Updated:** November 2025
 

@@ -267,7 +267,14 @@ vianeo-platform-tools/
 │   ├── VIANEO_Step11_Skill_Overview.md          # Step 11: Features-needs matrix skill overview
 │   ├── VIANEO_Step11_Reference_Guide.md         # Step 11: Interpretation methodology
 │   ├── VIANEO_Step11_Quality_Checklist.md       # Step 11: 120-point validation criteria
-│   └── VIANEO_Step11_Quick_Reference.md         # Step 11: Quick lookup card
+│   ├── VIANEO_Step11_Quick_Reference.md         # Step 11: Quick lookup card
+│   └── step11/                                  # ⭐ Step 11: Complete skill package (7 files)
+│       ├── README.md                                # Package overview & quick start
+│       ├── step11-features-needs-SKILL.md           # Primary skill for Claude
+│       ├── QUICK-REFERENCE-step11.md                # Rapid implementation guide
+│       ├── DATA-PLANNING-WORKSHEET-step11.md        # Data organization tool
+│       ├── IMPLEMENTATION-GUIDE-step11.md           # Step-by-step walkthrough
+│       └── vianeo-step11-matrix-styles.css          # Standalone CSS reference
 │
 ├── prompts/                                 # Step-by-step prompts
 │   ├── step_0_executive_brief_extraction.md     # Extract executive brief (B1-B7 format) [PRIMARY]
@@ -319,7 +326,8 @@ vianeo-platform-tools/
 │   ├── Step9_Value_Network_Visualization.html       # Step 9: Interactive HTML value network
 │   ├── Step10_Diagnostic_Markdown_Template.md       # Step 10: Diagnostic comment markdown
 │   ├── Step10_Diagnostic_DOCX_Template.md           # Step 10: DOCX formatting specifications
-│   ├── Step11_FeaturesNeeds_Matrix_Template.html    # Step 11: Interactive HTML matrix
+│   ├── Step11_FeaturesNeeds_DualView_Template.html  # Step 11: Dual-view interactive HTML (Partners/Means toggle)
+│   ├── Step11_FeaturesNeeds_Matrix_Template.html    # Step 11: Original single-view HTML matrix (legacy)
 │   ├── Step11_FeaturesNeeds_Analysis_Template.md    # Step 11: Strategic analysis markdown
 │   ├── Evidence_Log_Template.md                     # Evidence tracking with E### IDs
 │   ├── Hypotheses_Log_Template.md                   # Hypothesis validation tracking
@@ -509,12 +517,14 @@ Every score of 1 requires:
 - Formatted critical path with numbered priorities and bullet metrics
 
 **Features-Needs Matrix** (Step 11):
-- Interactive HTML with sticky headers (scrollable row and column)
+- **ENHANCED**: Dual-view interactive HTML with Partners/Means toggle
+- Toggle between Partners (external dependencies) and Means (internal resources)
+- Implementation timeline badges (Already Available, Short/Mid/Long-term)
 - Color-coded opportunity levels (High/Medium/Low/Expected/Accessory)
-- Coverage metrics: Overall %, High-opportunity X/Y, per-level breakdown
-- Export to CSV (Ctrl+E) and print-optimized layout (Ctrl+P)
-- Strategic analysis with MVP scoping guidance
-- Development prioritization based on coverage patterns
+- Interactive features: View toggle, CSV export (Ctrl+E), print-optimized (Ctrl+P)
+- Sticky headers for navigation, WCAG 2.1 AA accessibility compliant
+- Strategic analysis with MVP scoping and resource planning for Step 12
+- Complete skill package in `docs/step11/` with 7 comprehensive files
 
 ### Quality Control
 
@@ -701,7 +711,10 @@ Each step has a detailed prompt in `/prompts/` for consistent execution.
 
 **Step-Specific:**
 - Market Maturity (Step 3): `docs/VIANEO_Market_Maturity_System_Prompt.md`
-- Features-Needs Matrix (Step 11): `docs/VIANEO_Step11_Skill_Overview.md`
+- Features-Needs Matrix (Step 11): `docs/step11/` ⭐ Complete skill package (7 files)
+  - Primary skill: `docs/step11/step11-features-needs-SKILL.md`
+  - Quick start: `docs/step11/README.md`
+  - Legacy overview: `docs/VIANEO_Step11_Skill_Overview.md`
 - All Other Steps: `prompts/step_[0-11]_*.md`
 
 **Examples:**

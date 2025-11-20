@@ -100,15 +100,11 @@ Step 10: Vianeo Diagnostic Comment & Report (25-35 min)
   → Seven comprehensive guides: Skill, Prompt, Reference, Template, DOCX formatting, Examples, Quality checklist
 
 Step 11: Features & Needs Matrix (30-45 min)
-  → **ENHANCED**: Dual-view toggle between Partners (external dependencies) and Means (internal resources)
-  → Maps solution features against partners AND means with smooth view switching
-  → Implementation timeline badges (Already Available, Short/Mid/Long-term)
-  → Color-coded opportunity levels (High/Medium/Low/Expected/Accessory)
-  → Interactive HTML dashboard: Toggle views, CSV export, professional print
-  → Complete skill package: SKILL.md, Template, Quick Reference, Data Planning Worksheet, Implementation Guide, CSS Reference
-  → Accessibility compliant (WCAG 2.1 AA), keyboard navigation, screen reader support
+  → Dual-view toggle: Partners (external dependencies) ↔ Means (internal resources)
+  → Implementation timeline badges + color-coded opportunity levels (High/Medium/Low/Expected/Accessory)
+  → Interactive HTML: Toggle views, CSV export, print-optimized, WCAG 2.1 AA compliant
+  → Complete skill package (7 files): Primary skill, Quick Reference, Data Worksheet, Implementation Guide, Template, CSS
   → MVP scoping guidance and resource planning for Step 12
-  → Seven comprehensive files in docs/step11/ directory
 ```
 
 ---
@@ -517,14 +513,10 @@ Every score of 1 requires:
 - Formatted critical path with numbered priorities and bullet metrics
 
 **Features-Needs Matrix** (Step 11):
-- **ENHANCED**: Dual-view interactive HTML with Partners/Means toggle
-- Toggle between Partners (external dependencies) and Means (internal resources)
-- Implementation timeline badges (Already Available, Short/Mid/Long-term)
-- Color-coded opportunity levels (High/Medium/Low/Expected/Accessory)
-- Interactive features: View toggle, CSV export (Ctrl+E), print-optimized (Ctrl+P)
-- Sticky headers for navigation, WCAG 2.1 AA accessibility compliant
-- Strategic analysis with MVP scoping and resource planning for Step 12
-- Complete skill package in `docs/step11/` with 7 comprehensive files
+- Dual-view interactive HTML: Toggle between Partners (external) and Means (internal resources)
+- Implementation timeline badges + color-coded opportunity levels
+- CSV export, print-optimized, WCAG 2.1 AA compliant
+- Strategic analysis with MVP scoping for Step 12
 
 ### Quality Control
 

@@ -236,41 +236,55 @@ For a single consolidated resource containing all assessment frameworks and spec
 ```
 vianeo-platform-tools/
 ├── docs/                                    # Core documentation
-│   ├── VIANEO_Complete_Evaluation_Skill.md      # ⭐ MASTER GUIDE - Start here
-│   ├── VIANEO_Comprehensive_Reference_Guide.md  # 📚 CONSOLIDATED REFERENCE - All frameworks in one place
-│   ├── VIANEO_Quick_Reference_Card.md           # Print this! All essentials
-│   ├── VIANEO_Quick_Start_Card.md               # Quick start guide for new users
-│   ├── VIANEO_System_Overview.md                # How components fit together
-│   ├── AI_Guardrails.md                         # AI safety and usage guidelines
-│   ├── VIANEO_Market_Maturity_System_Prompt.md  # Step 3: Primary prompt
-│   ├── VIANEO_Assessment_Workflow_Guide.md      # Step 3: Detailed process
-│   ├── VIANEO_29Question_Quick_Reference.md     # Step 3: Question details
-│   ├── VIANEO_Evidence_Checklist.md             # Step 3: Evidence requirements
-│   ├── VIANEO_Desirability_Quick_Start.md       # Step 5: Quick generation guide
-│   ├── VIANEO_Desirability_Complete_Reference.md # Step 5: Comprehensive best practices
-│   ├── VIANEO_Document_Formatting_Guide.md      # Step 5: Professional DOCX styling
-│   ├── VIANEO_Persona_Development_Skill.md      # Step 6: Master persona guide
-│   ├── VIANEO_Persona_Generation_Prompt.md      # Step 6: Exact template & formatting
-│   ├── VIANEO_Persona_Reference_Guide.md        # Step 6: Examples & best practices
-│   ├── VIANEO_Persona_Complete_System_Guide.md  # Step 6: System navigation
-│   ├── VIANEO_Step9_Quick_Reference.md          # Step 9: Value network quick ref
-│   ├── VIANEO_Diagnostic_Skill.md               # Step 10: Diagnostic skill overview
-│   ├── VIANEO_Diagnostic_Reference.md           # Step 10: Decision matrices & guidelines
-│   ├── VIANEO_Diagnostic_Template.md            # Step 10: Exact output structure
-│   ├── VIANEO_Diagnostic_DOCX_Formatting.md     # Step 10: Professional DOCX specs
-│   ├── VIANEO_Diagnostic_Examples.md            # Step 10: Good/bad examples
-│   ├── VIANEO_Diagnostic_Quality_Checklist.md   # Step 10: Pre-delivery validation
-│   ├── VIANEO_Step11_Skill_Overview.md          # Step 11: Features-needs matrix skill overview
-│   ├── VIANEO_Step11_Reference_Guide.md         # Step 11: Interpretation methodology
-│   ├── VIANEO_Step11_Quality_Checklist.md       # Step 11: 120-point validation criteria
-│   ├── VIANEO_Step11_Quick_Reference.md         # Step 11: Quick lookup card
-│   └── step11/                                  # ⭐ Step 11: Complete skill package (7 files)
-│       ├── README.md                                # Package overview & quick start
-│       ├── step11-features-needs-SKILL.md           # Primary skill for Claude
-│       ├── QUICK-REFERENCE-step11.md                # Rapid implementation guide
-│       ├── DATA-PLANNING-WORKSHEET-step11.md        # Data organization tool
-│       ├── IMPLEMENTATION-GUIDE-step11.md           # Step-by-step walkthrough
-│       └── vianeo-step11-matrix-styles.css          # Standalone CSS reference
+│   │
+│   ├── MASTER GUIDES (Start Here)
+│   │   ├── VIANEO_Complete_Evaluation_Skill.md      # ⭐ Complete 8-step evaluation process
+│   │   ├── VIANEO_Comprehensive_Reference_Guide.md  # 📚 All frameworks in one place
+│   │   ├── VIANEO_Quick_Reference_Card.md           # Print this! All essentials
+│   │   ├── VIANEO_Quick_Start_Card.md               # Quick start for new users
+│   │   ├── VIANEO_System_Overview.md                # How components fit together
+│   │   └── AI_Guardrails.md                         # AI safety and usage guidelines
+│   │
+│   ├── STEP 3: Market Maturity (29Q Assessment)
+│   │   ├── VIANEO_Market_Maturity_System_Prompt.md  # Primary prompt
+│   │   ├── VIANEO_Assessment_Workflow_Guide.md      # Detailed process
+│   │   ├── VIANEO_29Question_Quick_Reference.md     # Question details
+│   │   └── VIANEO_Evidence_Checklist.md             # Evidence requirements
+│   │
+│   ├── STEP 5: Desirability - Needs/Requesters
+│   │   ├── VIANEO_Desirability_Quick_Start.md       # Quick generation guide
+│   │   ├── VIANEO_Desirability_Complete_Reference.md # Comprehensive best practices
+│   │   └── VIANEO_Document_Formatting_Guide.md      # Professional DOCX styling
+│   │
+│   ├── STEP 6: Persona Development
+│   │   ├── VIANEO_Persona_Development_Skill.md      # Master persona guide
+│   │   ├── VIANEO_Persona_Generation_Prompt.md      # Exact template & formatting
+│   │   ├── VIANEO_Persona_Reference_Guide.md        # Examples & best practices
+│   │   └── VIANEO_Persona_Complete_System_Guide.md  # System navigation
+│   │
+│   ├── STEP 9: Ecosystem Value Network
+│   │   └── VIANEO_Step9_Quick_Reference.md          # Value network quick ref
+│   │
+│   ├── STEP 10: Diagnostic Comment & Report
+│   │   ├── VIANEO_Diagnostic_Skill.md               # Diagnostic skill overview
+│   │   ├── VIANEO_Diagnostic_Reference.md           # Decision matrices & guidelines
+│   │   ├── VIANEO_Diagnostic_Template.md            # Exact output structure
+│   │   ├── VIANEO_Diagnostic_DOCX_Formatting.md     # Professional DOCX specs
+│   │   ├── VIANEO_Diagnostic_Examples.md            # Good/bad examples
+│   │   └── VIANEO_Diagnostic_Quality_Checklist.md   # Pre-delivery validation
+│   │
+│   └── STEP 11: Features & Needs Matrix
+│       ├── VIANEO_Step11_Skill_Overview.md          # Features-needs matrix skill overview
+│       ├── VIANEO_Step11_Reference_Guide.md         # Interpretation methodology
+│       ├── VIANEO_Step11_Quality_Checklist.md       # 120-point validation criteria
+│       ├── VIANEO_Step11_Quick_Reference.md         # Quick lookup card
+│       └── step11/                                  # ⭐ Complete skill package (7 files)
+│           ├── README.md                                # Package overview & quick start
+│           ├── step11-features-needs-SKILL.md           # Primary skill for Claude
+│           ├── QUICK-REFERENCE-step11.md                # Rapid implementation guide
+│           ├── DATA-PLANNING-WORKSHEET-step11.md        # Data organization tool
+│           ├── IMPLEMENTATION-GUIDE-step11.md           # Step-by-step walkthrough
+│           └── vianeo-step11-matrix-styles.css          # Standalone CSS reference
 │
 ├── prompts/                                 # Step-by-step prompts
 │   ├── step_0_executive_brief_extraction.md     # Extract executive brief (B1-B7 format) [PRIMARY]

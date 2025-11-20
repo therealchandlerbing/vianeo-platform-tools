@@ -99,13 +99,16 @@ Step 10: Vianeo Diagnostic Comment & Report (25-35 min)
   → Two outputs: Markdown diagnostic + Professional DOCX with design elevation
   → Seven comprehensive guides: Skill, Prompt, Reference, Template, DOCX formatting, Examples, Quality checklist
 
-Step 11: Features-Needs Matrix (30-45 min)
-  → Maps solution features against validated customer needs from Step 7
+Step 11: Features & Needs Matrix (30-45 min)
+  → **ENHANCED**: Dual-view toggle between Partners (external dependencies) and Means (internal resources)
+  → Maps solution features against partners AND means with smooth view switching
+  → Implementation timeline badges (Already Available, Short/Mid/Long-term)
   → Color-coded opportunity levels (High/Medium/Low/Expected/Accessory)
-  → Coverage metrics: Overall %, High-opportunity X/Y, per-level breakdown
-  → Two outputs: Interactive HTML matrix (export/print) + Strategic analysis markdown
-  → MVP scoping guidance and development prioritization
-  → Five comprehensive guides: Skill overview, Reference guide, Quality checklist, Quick reference, Implementation guide
+  → Interactive HTML dashboard: Toggle views, CSV export, professional print
+  → Complete skill package: SKILL.md, Template, Quick Reference, Data Planning Worksheet, Implementation Guide, CSS Reference
+  → Accessibility compliant (WCAG 2.1 AA), keyboard navigation, screen reader support
+  → MVP scoping guidance and resource planning for Step 12
+  → Seven comprehensive files in docs/step11/ directory
 ```
 
 ---

@@ -47,3 +47,8 @@ Thumbs.db
 
 # DOCX output files (generated)
 tools/*.docx
+
+# Node.js
+node_modules/
+package-lock.json
+yarn.lock

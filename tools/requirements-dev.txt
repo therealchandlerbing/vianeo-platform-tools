@@ -1,0 +1,13 @@
+# Development and Testing Dependencies
+# Vianeo Business Model Evaluation Framework
+# Version 2.0 | November 2025
+
+# Include production dependencies
+-r requirements.txt
+
+# Testing Framework
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Test utilities
+pytest-mock>=3.12.0

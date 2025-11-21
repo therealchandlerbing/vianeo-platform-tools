@@ -1,0 +1,12 @@
+{
+  "project_name": "Test Project",
+  "executive_context": "Valid context",
+  "players": [
+    {
+      "name": "Player 1",
+      "acceptability": "Favorable",
+      "note": "Note 1"
+    },
+    # This comment makes it invalid JSON
+    {
+      "name": "Player 2"

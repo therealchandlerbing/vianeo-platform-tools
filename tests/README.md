@@ -10,11 +10,15 @@ tests/
 ├── README.md                         # This file
 ├── test_validation.py                # Validation logic tests (30 tests)
 ├── test_document_generation.py       # Document generation tests (24 tests)
+├── test_integration.py               # Integration tests (28 tests)
 └── fixtures/                         # Test data fixtures
     ├── valid_input.json              # Valid test data
     ├── missing_project_name.json     # Missing required field
     ├── too_few_players.json          # Count constraint violation
-    └── invalid_acceptability.json    # Invalid enum value
+    ├── invalid_acceptability.json    # Invalid enum value
+    ├── malformed.json                # Malformed JSON for error testing
+    ├── empty.json                    # Empty JSON object
+    └── not_json.txt                  # Non-JSON file for error testing
 ```
 
 ## Running Tests
@@ -55,26 +59,36 @@ pytest tests/ --cov=. --cov-report=html
 # Run only validation tests
 pytest tests/ -m validation
 
+# Run only integration tests
+pytest tests/ -m integration
+
 # Run with test name pattern
 pytest tests/ -k "test_validate_data"
+
+# Run excluding slow tests
+pytest tests/ -m "not slow"
 ```
 
 ## Test Coverage Summary
 
-### Current Coverage (54 Total Tests)
+### Current Coverage (82 Total Tests)
 
 | Component | Tests | Coverage |
 |-----------|-------|----------|
 | **validate_data()** | 20 tests | ~95% |
 | **validate_stakeholder()** | 10 tests | ~95% |
 | **generate_document()** | 24 tests | ~90% |
-| **Overall module** | 54 tests | **84%** |
-| **Total project** | 54 tests | **93%** |
+| **load_json_data()** | 5 tests | ~100% |
+| **CLI interface** | 10 tests | ~95% |
+| **End-to-end workflows** | 13 tests | ~100% |
+| **Overall module** | 82 tests | **89%** |
+| **Total project** | 82 tests | **96%** |
 
-**Uncovered Areas:**
-- CLI main() function and argument parsing (~30 lines)
-- Utility functions (hex_to_rgb, set_cell_background - tested indirectly)
+**Uncovered Areas (11%):**
+- `main()` entry point wrapper (~5 lines)
+- Utility functions (hex_to_rgb - tested indirectly)
 - Error handling for python-docx import failure
+- Print message formatting functions
 
 ## Test Categories
 
@@ -163,13 +177,81 @@ pytest tests/ -k "test_validate_data"
 - Maximum entries (10 players/influencers)
 - Unicode character preservation
 
-## Next Testing Phases
+## Integration Tests (28 tests)
 
-### Phase 3: Integration Tests (Planned)
-- CLI interface testing
-- File I/O operations
-- End-to-end workflow tests
-- Error handling and recovery
+### 1. File Loading Tests (5 tests)
+- Valid JSON file loading
+- Missing file error handling
+- Malformed JSON detection
+- Non-JSON file handling
+- Empty JSON object handling
+
+### 2. End-to-End Workflow Tests (4 tests)
+- Complete workflow with example file (Rayla AI)
+- Complete workflow with test fixtures
+- Workflow validation failure handling
+- Workflow with missing required fields
+
+### 3. CLI Interface Tests (7 tests)
+- No arguments (show usage)
+- One argument (show usage)
+- Valid arguments (success)
+- Example Rayla AI file processing
+- Missing input file error
+- Invalid JSON error
+- Validation failure error
+
+### 4. Error Recovery and Edge Cases (9 tests)
+- Output paths with spaces
+- Nested directory creation
+- Overwriting existing files
+- Unicode in file paths
+- Relative vs absolute paths
+- Concurrent file generation
+- Empty JSON object handling
+
+### 5. Exit Codes and Error Messages (3 tests)
+- Exit code 0 on success
+- Exit code 1 on validation failure
+- Exit code 1 on file not found
+- Helpful error messages
+
+### 6. Real-World Scenarios (1 test)
+- Full workflow with all acceptability states
+
+## Integration Testing Methodology
+
+Integration tests use **subprocess** to test the CLI as a black box, ensuring:
+- Argument parsing works correctly
+- Exit codes are appropriate (0 for success, 1 for errors)
+- Error messages are helpful and informative
+- File I/O operations succeed in various scenarios
+
+### Key Integration Test Features
+
+1. **Real subprocess execution** - Tests run the actual CLI script
+2. **End-to-end validation** - Complete JSON → DOCX workflows
+3. **Error scenario coverage** - Missing files, malformed JSON, validation failures
+4. **Path edge cases** - Spaces, unicode, nested directories, relative/absolute
+5. **File operations** - Overwriting, concurrent generation, permission handling
+
+### Example Integration Test Flow
+
+```python
+# Test complete CLI workflow
+result = subprocess.run(
+    [sys.executable, "players_influencers_generator.py",
+     "input.json", "output.docx"],
+    capture_output=True,
+    text=True
+)
+
+assert result.returncode == 0  # Success exit code
+assert output_file.exists()    # File created
+assert "✓" in result.stdout    # Success message
+```
+
+## Next Testing Phases
 
 ### Phase 4: JavaScript Tests (Planned)
 - HTML template interactions

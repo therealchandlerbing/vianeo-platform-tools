@@ -1,6 +1,6 @@
 # Vianeo Platform Tools
 
-**Complete 11-Step Business Model Evaluation System**
+**Complete 12-Step Business Model Evaluation System**
 
 A comprehensive, AI-assisted framework for systematic startup assessment using the VIANEO methodology. Transform raw applications into evidence-based evaluations across five dimensions with professional visual outputs and executive-ready diagnostic comments.
 
@@ -46,7 +46,7 @@ This is a complete evaluation toolkit that takes you from initial startup applic
 
 ---
 
-## The Complete 11-Step Workflow
+## The Complete 12-Step Workflow
 
 ```
 Step 0: Executive Brief Extraction (20-30 min)
@@ -105,6 +105,16 @@ Step 11: Features & Needs Matrix (30-45 min)
   → Interactive HTML: Toggle views, CSV export, print-optimized, WCAG 2.1 AA compliant
   → Complete skill package (7 files): Primary skill, Quick Reference, Data Worksheet, Implementation Guide, Template, CSS
   → MVP scoping guidance and resource planning for Step 12
+
+Step 12: Viability Assessment - Product-Market Fit & Business Model (2-4 hours per product)
+  → Translates validated needs (Desirability) + capabilities (Feasibility) into commercial structures
+  → Product/Market Fit Sheets: Product identity, targeted requesters, MVP features (6-10), resource requirements
+  → Business Model Canvas: Value proposition, revenue stream, distribution channel, cost structure (all ≤250 chars)
+  → Summary Dashboard: Portfolio view across products with strategic recommendations
+  → Three outputs per product: PMF Sheet (md + docx), Business Model (md + docx), Dashboard (md)
+  → Coherence validation: Ensures value-features-revenue-distribution-costs align with no contradictions
+  → Evidence-based only: No aspirational planning, flags assumptions explicitly
+  → Feeds into Financial Modeling (Step 13) with validated revenue models and cost structures
 ```
 
 ---
@@ -144,11 +154,11 @@ Step 11: Features & Needs Matrix (30-45 min)
 
 ---
 
-### 🎯 Complete (7-8 hours)
+### 🎯 Complete (9-12 hours)
 
-**Best For:** Executive presentations, Series A+ due diligence
+**Best For:** Executive presentations, Series A+ due diligence, complete business model validation
 
-**Steps:** All 0-11
+**Steps:** All 0-12
 
 **Output:**
 - Everything from Standard

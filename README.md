@@ -273,19 +273,19 @@ vianeo-platform-tools/
 │       └── vianeo-step11-matrix-styles.css          # Standalone CSS reference
 │
 ├── prompts/                                 # Step-by-step prompts
-│   ├── step_0_executive_brief_extraction.md     # Extract executive brief (B1-B7 format) [PRIMARY]
-│   ├── step_0_canvas_extraction.md              # Alternative: Business model canvas approach
-│   ├── step_1_application_forms.md              # Optional: Program applications (360 SIS/CNEN) [PRIMARY]
-│   ├── step_1_application_form.md               # Alternative: Simplified application format
-│   ├── step_2_diagnostic_40q.md                 # 40-question diagnostic (complete)
-│   ├── step_3_market_maturity_29q.md            # References docs/ for complete 29Q system
-│   ├── step_3_market_maturity_link.md           # Direct link to primary Step 3 documentation
-│   ├── step_4_legitimacy_worksheet.md           # Legitimacy deep dive (complete)
-│   ├── step_5_needs_requesters.md               # Needs/Requesters analysis (complete)
-│   ├── step_6_persona_development.md            # Persona Development with validation (complete)
-│   ├── step_7_needs_qualification_matrix.md     # Matrix + Analysis Report (complete)
-│   ├── step_8_players_influencers.md            # Players/Influencers ecosystem (complete)
-│   ├── step_9_ecosystem_value_network.md        # Value network with 4 deliverables (complete)
+│   ├── step_00_executive_brief_extraction.md     # Extract executive brief (B1-B7 format) [PRIMARY]
+│   ├── step_00_canvas_extraction.md              # Alternative: Business model canvas approach
+│   ├── step_01_application_forms.md              # Optional: Program applications (360 SIS/CNEN) [PRIMARY]
+│   ├── step_01_application_form.md               # Alternative: Simplified application format
+│   ├── step_02_diagnostic_40q.md                 # 40-question diagnostic (complete)
+│   ├── step_03_market_maturity_29q.md            # References docs/ for complete 29Q system
+│   ├── step_03_market_maturity_link.md           # Direct link to primary Step 3 documentation
+│   ├── step_04_legitimacy_worksheet.md           # Legitimacy deep dive (complete)
+│   ├── step_05_needs_requesters.md               # Needs/Requesters analysis (complete)
+│   ├── step_06_persona_development.md            # Persona Development with validation (complete)
+│   ├── step_07_needs_qualification_matrix.md     # Matrix + Analysis Report (complete)
+│   ├── step_08_players_influencers.md            # Players/Influencers ecosystem (complete)
+│   ├── step_09_ecosystem_value_network.md        # Value network with 4 deliverables (complete)
 │   ├── step_10_vianeo_diagnostic.md             # Diagnostic comment with 2 outputs (complete)
 │   └── step_11_features_needs_matrix.md         # Features-needs matrix with 2 outputs (complete)
 │

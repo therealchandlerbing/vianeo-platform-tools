@@ -1191,7 +1191,7 @@ Before finalizing:
 
 ## Next Step
 
-After completing Step 5, proceed to **Step 6: Needs Qualification Matrix** (prompts/step_6_needs_matrix_html.md) to create:
+After completing Step 5, proceed to **Step 6: Persona Development** (prompts/step_06_persona_development.md) or **Step 7: Needs Qualification Matrix** (prompts/step_07_needs_qualification_matrix.md) to create:
 - Interactive HTML heatmap
 - Priority zones (Critical/High/Medium/Low)
 - Importance vs. Satisfaction visualization

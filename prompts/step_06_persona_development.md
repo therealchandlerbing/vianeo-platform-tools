@@ -410,8 +410,8 @@ Before proceeding to Step 7, verify:
 - System Navigation: `docs/VIANEO_Persona_Complete_System_Guide.md`
 
 **Related Steps:**
-- Previous: `prompts/step_5_needs_requesters.md`
-- Next: `prompts/step_7_needs_qualification_matrix.md`
+- Previous: `prompts/step_05_needs_requesters.md`
+- Next: `prompts/step_07_needs_qualification_matrix.md`
 
 **Templates:**
 - Persona templates are embedded in Generation Prompt document

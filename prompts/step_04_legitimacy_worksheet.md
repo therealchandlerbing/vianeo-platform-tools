@@ -759,7 +759,7 @@ Before finalizing:
 
 ## Next Step
 
-After completing Step 4, proceed to **Step 5: Desirability Analysis** (prompts/step_5_desirability_personas.md) to evaluate:
+After completing Step 4, proceed to **Step 5: Desirability Analysis** (prompts/step_05_needs_requesters.md) to evaluate:
 - User segments and personas
 - Needs statements and validation
 - Priority ranking

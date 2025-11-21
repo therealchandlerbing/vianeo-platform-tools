@@ -251,13 +251,82 @@ assert output_file.exists()    # File created
 assert "✓" in result.stdout    # Success message
 ```
 
+## JavaScript Tests (32 tests)
+
+### Setup
+
+JavaScript tests are located in `tests/js/` and use Jest with jsdom.
+
+```bash
+# Install Node.js dependencies
+npm install
+
+# Run JavaScript tests
+npm test
+
+# Run with coverage
+npm run test:coverage
+
+# Watch mode
+npm run test:watch
+```
+
+### Test Files
+
+#### `step11-dual-view.test.js` (32 tests)
+
+Tests for the Features & Needs Dual View HTML template.
+
+**Coverage:**
+- Initialization and DOM setup (7 tests)
+- View toggle functionality (8 tests)
+- Keyboard shortcuts (6 tests)
+- CSV export (3 tests)
+- Accessibility (5 tests)
+- State management (2 tests)
+- Error handling (2 tests)
+
+**Current Status:** 29/32 passing (90.6%)
+
+### Test Approach
+
+JavaScript tests use jsdom to create a browser-like environment:
+
+```javascript
+const { JSDOM } = require('jsdom');
+
+// Load HTML template
+const html = fs.readFileSync('template.html', 'utf8');
+const dom = new JSDOM(html, {
+  runScripts: 'dangerously',
+  resources: 'usable'
+});
+
+// Test interactions
+const toggle = dom.window.document.getElementById('toggleSwitch');
+toggle.click();
+```
+
+See `tests/js/README.md` for detailed documentation.
+
+## Combined Test Suite Summary
+
+**Total:** 114 tests across Python and JavaScript
+- ✅ Python tests: 82 tests (96% coverage)
+- ✅ JavaScript tests: 32 tests (90.6% passing)
+
+**Execution:**
+- Python: ~6.5 seconds
+- JavaScript: ~11 seconds
+- **Total: ~17.5 seconds**
+
 ## Next Testing Phases
 
-### Phase 4: JavaScript Tests (Planned)
-- HTML template interactions
-- CSV export functionality
-- View toggle features
-- Keyboard shortcuts
+### Future Enhancements
+- Additional HTML template tests (Step 7, Step 9)
+- End-to-end browser tests with Playwright
+- Visual regression testing
+- Performance benchmarking
 
 ## Writing New Tests
 

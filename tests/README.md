@@ -6,14 +6,15 @@ This directory contains automated tests for the Vianeo Platform Tools, focusing 
 
 ```
 tests/
-├── __init__.py                     # Test package initialization
-├── README.md                       # This file
-├── test_validation.py              # Validation logic tests (30 tests)
-└── fixtures/                       # Test data fixtures
-    ├── valid_input.json           # Valid test data
-    ├── missing_project_name.json  # Missing required field
-    ├── too_few_players.json       # Count constraint violation
-    └── invalid_acceptability.json # Invalid enum value
+├── __init__.py                       # Test package initialization
+├── README.md                         # This file
+├── test_validation.py                # Validation logic tests (30 tests)
+├── test_document_generation.py       # Document generation tests (24 tests)
+└── fixtures/                         # Test data fixtures
+    ├── valid_input.json              # Valid test data
+    ├── missing_project_name.json     # Missing required field
+    ├── too_few_players.json          # Count constraint violation
+    └── invalid_acceptability.json    # Invalid enum value
 ```
 
 ## Running Tests
@@ -60,15 +61,20 @@ pytest tests/ -k "test_validate_data"
 
 ## Test Coverage Summary
 
-### Current Coverage (Validation Tests)
+### Current Coverage (54 Total Tests)
 
 | Component | Tests | Coverage |
 |-----------|-------|----------|
 | **validate_data()** | 20 tests | ~95% |
 | **validate_stakeholder()** | 10 tests | ~95% |
-| **Overall module** | 30 tests | ~30% |
+| **generate_document()** | 24 tests | ~90% |
+| **Overall module** | 54 tests | **84%** |
+| **Total project** | 54 tests | **93%** |
 
-**Note:** Overall module coverage is lower because document generation, file I/O, and CLI functions are not yet tested (planned for Phase 2).
+**Uncovered Areas:**
+- CLI main() function and argument parsing (~30 lines)
+- Utility functions (hex_to_rgb, set_cell_background - tested indirectly)
+- Error handling for python-docx import failure
 
 ## Test Categories
 
@@ -115,14 +121,49 @@ pytest tests/ -k "test_validate_data"
 - Multiple simultaneous errors
 - Complex punctuation
 
-## Next Testing Phases
+## Document Generation Tests (24 tests)
 
-### Phase 2: Document Generation Tests (Planned)
-- DOCX file creation
-- Table structure validation
-- Color coding verification
-- Font and styling tests
-- Page breaks and layout
+### 1. Successful Generation (3 tests)
+- File creation verification
+- Return value on success
+- Return value on validation failure
+
+### 2. Document Structure (6 tests)
+- Correct number of sections
+- Exactly 2 tables (Players and Influencers)
+- Page break between tables
+- Players table structure (9 rows, 3 columns)
+- Influencers table structure (9 rows, 3 columns)
+- Table header text validation
+
+### 3. Content Accuracy (5 tests)
+- Project name in title
+- Executive context in document
+- Players data correctness
+- Influencers data correctness
+- All stakeholder information preserved
+
+### 4. Color Coding (5 tests)
+- Favorable → Green background
+- Neutral → Yellow/amber background
+- Unfavorable → Red background
+- Don't know → Gray background
+- Table headers → Dark blue-gray background
+
+### 5. Font and Styling (2 tests)
+- Table header background color
+- Stakeholder names are bold
+
+### 6. Page Layout (2 tests)
+- Letter size (8.5 x 11 inches)
+- 0.75 inch margins (all sides)
+
+### 7. Error Handling and Edge Cases (3 tests)
+- Invalid output path handling
+- Maximum entries (10 players/influencers)
+- Unicode character preservation
+
+## Next Testing Phases
 
 ### Phase 3: Integration Tests (Planned)
 - CLI interface testing

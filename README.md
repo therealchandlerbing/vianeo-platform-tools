@@ -50,27 +50,33 @@ This is a complete evaluation toolkit that takes you from initial startup applic
 
 ```
 Step 0: Executive Brief Extraction (20-30 min)
-  → B1-B7 structure (150-300 char limits) + Maturity Stage (TRL 1-9)
+  → B1-B7 structure with strict character limits (150-300 chars) + Maturity Stage (TRL 1-9)
+  → Extracts core business model from raw application materials
   → Two outputs: Executive Brief template + Maturity classification
 
 Step 1: Application Forms [OPTIONAL] (15-20 min)
-  → 360 SIS (social impact) or CNEN (research) format
+  → 360 SIS (social impact) or CNEN (research) format with structured sections
+  → Character limits enforced: 500 chars (summary), 750 chars (all other sections)
   → One output: Professional DOCX application form
 
 Step 2: 40-Question Diagnostic (30-45 min)
-  → Team (9Q), Technology (11Q), Management (12Q), Commercial (8Q)
+  → Team (9Q), Technology (11Q), Management (12Q), Commercial (8Q) with evidence-based scoring
+  → Identifies critical gaps and red flag patterns across four dimensions
   → Two outputs: Assessment Results + Score Summary
 
 Step 3: 29-Question Market Maturity (45-60 min)
   → Five dimensional scores: Legitimacy, Desirability, Acceptability, Feasibility, Viability
+  → Weighted scoring with evidence requirements (5-20+ validations for scores ≥3)
   → Three outputs: Markdown report + Assessment Results DOCX + Dimension Analysis DOCX
 
 Step 4: Legitimacy Deep Dive (20-30 min)
   → Problem definition, application domain, team & approach, available resources
+  → Validates problem significance with external stakeholder confirmation
   → Two outputs: Markdown worksheet + DOCX formatted version
 
 Step 5: Desirability - Needs/Requesters Analysis (30-40 min)
-  → Requesters (6-10 roles), Needs (10: Tasks/Pains/Expectations), Existing Solutions
+  → Requesters (6-10 roles), Needs (10: Tasks/Pains/Expectations, 60 chars each), Existing Solutions
+  → Foundation for customer discovery and problem-solution fit validation
   → Four outputs: Markdown analysis + 3 DOCX (Core Analysis, Strategic Analysis, Interview Guide)
 
 Step 6: Persona Development (60-90 min with interviews, 20-30 min from existing data)
@@ -79,7 +85,8 @@ Step 6: Persona Development (60-90 min with interviews, 20-30 min from existing 
   → Four comprehensive guides: Skill overview, Generation prompt, Reference guide, System navigation
 
 Step 7: Needs Qualification Matrix (45-90 min)
-  → Visual dashboard with opportunity zones + strategic action plan
+  → Visual dashboard with opportunity zones (Critical/High/Medium/Low) + strategic action plan
+  → Importance vs. Satisfaction heatmap across customer segments with color-coded priorities
   → Two outputs: Interactive HTML needs matrix + Comprehensive analysis report (9-12 pages)
 
 Step 8: Players & Influencers Ecosystem Analysis (30-45 min)
@@ -106,8 +113,9 @@ Step 11: Features & Needs Matrix (30-45 min)
   → Complete skill package (7 files): Primary skill, Quick Reference, Data Worksheet, Implementation Guide, Template, CSS
 
 Step 12: Viability Assessment - Product-Market Fit & Business Model (2-4 hours per product)
-  → Product/Market Fit Sheets + Business Model Canvas with coherence validation (no contradictions)
-  → Value proposition, revenue model, distribution channel, cost structure (≤250 chars, evidence-based only)
+  → Product/Market Fit Sheets: Product identity, targeted requesters, MVP features (6-10), resource requirements
+  → Business Model Canvas: Value proposition, revenue model, distribution channel, cost structure (≤250 chars each)
+  → Coherence validation with evidence-based approach (no aspirational planning, flags assumptions explicitly)
   → Three outputs per product: PMF Sheet (md + docx), Business Model (md + docx), Summary Dashboard (md)
 ```
 

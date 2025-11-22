@@ -276,13 +276,7 @@ vianeo-platform-tools/
 │   ├── VIANEO_Step11_Reference_Guide.md         # Step 11: Interpretation methodology
 │   ├── VIANEO_Step11_Quality_Checklist.md       # Step 11: 120-point validation criteria
 │   ├── VIANEO_Step11_Quick_Reference.md         # Step 11: Quick lookup card
-│   └── step11/                                  # ⭐ Step 11: Complete skill package (7 files)
-│       ├── README.md                                # Package overview & quick start
-│       ├── step11-features-needs-SKILL.md           # Primary skill for Claude
-│       ├── QUICK-REFERENCE-step11.md                # Rapid implementation guide
-│       ├── DATA-PLANNING-WORKSHEET-step11.md        # Data organization tool
-│       ├── IMPLEMENTATION-GUIDE-step11.md           # Step-by-step walkthrough
-│       └── vianeo-step11-matrix-styles.css          # Standalone CSS reference
+│   └── step11/                                  # Step 11: Complete skill package (6 files)
 │
 ├── prompts/                                 # Step-by-step prompts
 │   ├── step_00_executive_brief_extraction.md     # Extract executive brief (B1-B7 format) [PRIMARY]
@@ -715,10 +709,7 @@ Each step has a detailed prompt in `/prompts/` for consistent execution.
 
 **Step-Specific:**
 - Market Maturity (Step 3): `docs/VIANEO_Market_Maturity_System_Prompt.md`
-- Features-Needs Matrix (Step 11): `docs/step11/` ⭐ Complete skill package (7 files)
-  - Primary skill: `docs/step11/step11-features-needs-SKILL.md`
-  - Quick start: `docs/step11/README.md`
-  - Legacy overview: `docs/VIANEO_Step11_Skill_Overview.md`
+- Features-Needs Matrix (Step 11): `docs/step11/` (complete skill package)
 - All Other Steps: `prompts/step_[0-11]_*.md`
 
 **Examples:**

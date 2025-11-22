@@ -106,8 +106,9 @@ Step 11: Features & Needs Matrix (30-45 min)
   → Complete skill package (7 files): Primary skill, Quick Reference, Data Worksheet, Implementation Guide, Template, CSS
 
 Step 12: Viability Assessment - Product-Market Fit & Business Model (2-4 hours per product)
-  → Product/Market Fit Sheets + Business Model Canvas with coherence validation (no contradictions)
-  → Value proposition, revenue model, distribution channel, cost structure (≤250 chars, evidence-based only)
+  → Product/Market Fit Sheets: Product identity, targeted requesters, MVP features (6-10), resource requirements
+  → Business Model Canvas: Value proposition, revenue model, distribution channel, cost structure (≤250 chars each)
+  → Coherence validation with evidence-based approach (no aspirational planning, flags assumptions explicitly)
   → Three outputs per product: PMF Sheet (md + docx), Business Model (md + docx), Summary Dashboard (md)
 ```
 

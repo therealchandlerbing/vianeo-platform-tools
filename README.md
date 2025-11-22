@@ -100,21 +100,15 @@ Step 10: Vianeo Diagnostic Comment & Report (25-35 min)
   → Seven comprehensive guides: Skill, Prompt, Reference, Template, DOCX formatting, Examples, Quality checklist
 
 Step 11: Features & Needs Matrix (30-45 min)
-  → Dual-view toggle: Partners (external dependencies) ↔ Means (internal resources)
+  → Dual-view interactive toggle: Partners (external dependencies) ↔ Means (internal resources)
   → Implementation timeline badges + color-coded opportunity levels (High/Medium/Low/Expected/Accessory)
-  → Interactive HTML: Toggle views, CSV export, print-optimized, WCAG 2.1 AA compliant
+  → Two outputs: Interactive HTML (CSV export, print-optimized, WCAG 2.1 AA) + Strategic analysis markdown
   → Complete skill package (7 files): Primary skill, Quick Reference, Data Worksheet, Implementation Guide, Template, CSS
-  → MVP scoping guidance and resource planning for Step 12
 
 Step 12: Viability Assessment - Product-Market Fit & Business Model (2-4 hours per product)
-  → Translates validated needs (Desirability) + capabilities (Feasibility) into commercial structures
-  → Product/Market Fit Sheets: Product identity, targeted requesters, MVP features (6-10), resource requirements
-  → Business Model Canvas: Value proposition, revenue stream, distribution channel, cost structure (all ≤250 chars)
-  → Summary Dashboard: Portfolio view across products with strategic recommendations
-  → Three outputs per product: PMF Sheet (md + docx), Business Model (md + docx), Dashboard (md)
-  → Coherence validation: Ensures value-features-revenue-distribution-costs align with no contradictions
-  → Evidence-based only: No aspirational planning, flags assumptions explicitly
-  → Feeds into Financial Modeling (Step 13) with validated revenue models and cost structures
+  → Product/Market Fit Sheets + Business Model Canvas with coherence validation (no contradictions)
+  → Value proposition, revenue model, distribution channel, cost structure (≤250 chars, evidence-based only)
+  → Three outputs per product: PMF Sheet (md + docx), Business Model (md + docx), Summary Dashboard (md)
 ```
 
 ---
@@ -727,7 +721,7 @@ Each step has a detailed prompt in `/prompts/` for consistent execution.
 
 ## Version & Attribution
 
-**Version:** 2.3 (Complete 11-Step System with Features-Needs Matrix)
+**Version:** 2.4 (Complete 12-Step System with Viability Assessment)
 **Framework:** VIANEO Business Model Evaluation Methodology
 **Last Updated:** November 2025
 

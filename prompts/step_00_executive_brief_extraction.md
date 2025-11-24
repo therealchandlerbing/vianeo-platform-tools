@@ -4,6 +4,8 @@
 **Output:** Executive Brief (Markdown + DOCX)
 **Purpose:** Transform raw application materials into structured, standardized Executive Brief
 
+> For shared conventions on time/output labels and skip criteria reused across prompts, see [`_common_prompt_guidelines.md`](./_common_prompt_guidelines.md).
+
 ---
 
 ## Overview

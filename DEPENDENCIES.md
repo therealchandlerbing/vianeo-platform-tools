@@ -16,21 +16,34 @@ This document defines critical data flow requirements between sprint steps.
 ## Visual Flow
 
 ```
-LEGITIMACY              DESIRABILITY                 ACCEPTABILITY
-    |                        |                            |
-Step 4                   Step 5                       Step 8
-(Problem/Means)      (Needs/Requesters)         (Players/Influencers)
-    |                        |                            |
-    |               +--------+--------+                   |
-    |               |        |        |                   |
-    |               v        |        |                   |
-    |           Step 7       |        |                   |
-    |    (Needs Qualification)|       |                   |
-    |               |        |        |                   |
-    |               |        |        |                   |
-    v               v        v        v                   v
-Step 11         Step 11    Step 9    Step 9            Step 9
-(Means view)   (Needs view) (Requesters) (Players)  (Influencers)
+Step 5 (Needs/Requesters)
+    │
+    ├── Requesters (individual names + organizational grouping)
+    ├── Needs (list)
+    │
+    ├──────────────────────────────────────────┐
+    │                                          │
+    ▼                                          │
+Step 7 (Needs Qualification)                   │
+    │                                          │
+    ├── Importance × Satisfaction ratings      │
+    │                                          │
+    │                                          ▼
+    │                                    Step 9 (Value Network)
+    │                                          ▲
+    │                                          │
+Step 8 (Players/Influencers)                   │
+    │                                          │
+    ├── Players (with acceptability) ──────────┤
+    ├── Influencers (with acceptability) ──────┘
+
+
+Step 4 (Legitimacy/Means) ──────────────────► Step 11 (Features/Means Matrix)
+                                                      ▲
+Step 5 (Needs) ─────────────────────────────────────┘
+                                                      │
+Step 7 (Importance/Satisfaction) ─────────────────────┘
+                                              Step 11 (Features/Needs Matrix)
 ```
 
 ## Grouping Logic

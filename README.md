@@ -1,45 +1,101 @@
-# Vianeo Platform Tools
+# VIANEO Platform Tools
 
-**Evidence-based startup evaluation framework | 5 Dimensions | 13-Step Process | Committee-Ready Outputs**
+> **Evidence-based startup evaluation framework** | 5 Dimensions | 13-Step Process | Committee-Ready Outputs
 
-A comprehensive, AI-assisted framework for systematic startup assessment using the VIANEO methodology. Transform raw applications into evidence-based evaluations across five dimensions with professional visual outputs and executive-ready diagnostic comments.
+![status](https://img.shields.io/badge/status-production--ready-brightgreen) ![prompts](https://img.shields.io/badge/prompts-18%20complete-blue) ![content](https://img.shields.io/badge/content-50000%2B%20lines-orange)
+
+## Repository Status
+
+**PRODUCTION READY** - Complete evaluation toolkit with 18 prompts, comprehensive reference materials, scoring frameworks, and quality checklists. This repository contains everything needed to conduct rigorous, evidence-based startup evaluations.
+
+**Recent Updates (November 2025):**
+
+- All 18 evaluation prompts complete with executable content
+- 50,000+ lines of comprehensive methodology added
+- Full question frameworks embedded (40Q, 29Q, and all deep-dive prompts)
+- Evidence requirements and validation checklists included
+- Professional output specifications and templates integrated
+- AI assistant execution instructions added to all steps
+- Interactive HTML visualizations for Steps 7, 9, 11, and 12
+
+---
+
+## Table of Contents
+
+- [Quick Start](#quick-start)
+- [What This System Does](#what-this-system-does)
+- [Who This Is For](#who-this-is-for)
+- [Framework at a Glance](#framework-at-a-glance)
+- [The Complete 13-Step Workflow](#the-complete-13-step-workflow)
+- [Three Execution Paths](#three-execution-paths)
+- [Repository Structure](#repository-structure)
+- [The Five VIANEO Dimensions](#the-five-vianeo-dimensions)
+- [Scoring Scales](#scoring-scales)
+- [Key Features](#key-features)
+- [Critical Red Flags](#critical-red-flags)
+- [Usage Examples](#usage-examples)
+- [AI-Assisted Execution](#ai-assisted-execution)
+- [Support & Documentation](#support--documentation)
+- [Contributing](#contributing)
+
+---
+
+## Quick Start
+
+**First-time users** - Get started in 5 minutes:
+
+1. **Read** [Complete Evaluation Skill Guide](docs/VIANEO_Complete_Evaluation_Skill.md) - Understand the 13 steps
+2. **Print** [Quick Reference Card](docs/VIANEO_Quick_Reference_Card.md) - Keep visible for thresholds, scoring, quality gates
+3. **Start** with [Step 0: Executive Brief](prompts/step_00_executive_brief_extraction.md) - Transform raw materials into structured brief
+4. **Assess** with [Step 2: 40Q Diagnostic](prompts/step_02_diagnostic_40q.md) - Rapid comprehensive assessment
+5. **Validate** with [Step 3: Market Maturity](prompts/step_03_market_maturity_29q.md) - Score across 5 dimensions
+
+**Experienced users** - Quick reference:
+
+- **Prompts:** `prompts/` - All 18 evaluation prompts (Steps 0-12)
+- **Templates:** `templates/` - Professional output templates
+- **Docs:** `docs/` - Methodology guides and checklists
+- **Examples:** `examples/` - Sample assessments
 
 ---
 
 ## What This System Does
 
+A comprehensive, AI-assisted framework for systematic startup assessment using the VIANEO methodology. Transform raw applications into evidence-based evaluations across five dimensions with professional visual outputs and executive-ready diagnostic comments.
+
 This is a complete evaluation toolkit that takes you from initial startup application to committee-ready assessment package in **90 minutes to 6 hours** (depending on depth needed).
 
 **You Get:**
-- ✅ Structured business model canvas extraction
-- ✅ 40-question diagnostic across Team/Technology/Management/Commercial
-- ✅ 29-question market maturity assessment with dimensional scores
-- ✅ Deep-dive legitimacy and desirability analysis
-- ✅ Interactive HTML visualizations (needs matrix, features matrix, network map)
-- ✅ Features-needs alignment mapping with coverage analytics
-- ✅ Complete committee report with recommendations
-- ✅ Professional presentation deck ready for investors/boards
+
+- Structured business model canvas extraction
+- 40-question diagnostic across Team/Technology/Management/Commercial
+- 29-question market maturity assessment with dimensional scores
+- Deep-dive legitimacy and desirability analysis
+- Interactive HTML visualizations (needs matrix, features matrix, network map)
+- Features-needs alignment mapping with coverage analytics
+- Complete committee report with recommendations
+- Professional presentation deck ready for investors/boards
 
 ---
 
 ## Who This Is For
 
-**🎯 Accelerators & Incubators**
+**Accelerators & Incubators**
 - Screen applications efficiently (90 min per startup)
 - Compare cohorts objectively
 - Track progress through milestones
 
-**💰 Investors**
+**Investors**
 - Conduct systematic due diligence
 - Standardize deal flow evaluation
 - Identify risks before investment
 
-**🤝 Advisors & Mentors**
+**Advisors & Mentors**
 - Provide structured feedback to founders
 - Identify critical gaps requiring attention
 - Track validation progress over time
 
-**🚀 Founders**
+**Founders**
 - Self-assess business readiness
 - Identify evidence gaps before fundraising
 - Prioritize validation activities
@@ -147,7 +203,7 @@ Step 12: Viability Assessment - Product-Market Fit & Business Model (2-4 hours p
 
 ## Three Execution Paths
 
-### 🏃 Fast Track (90 minutes)
+### Fast Track (90 minutes)
 
 **Best For:** Initial screening, processing 10+ applications
 
@@ -162,7 +218,7 @@ Step 12: Viability Assessment - Product-Market Fit & Business Model (2-4 hours p
 
 ---
 
-### 🚶 Standard (3-4 hours)
+### Standard (3-4 hours)
 
 **Best For:** Committee-ready evaluation of top 5 finalists
 
@@ -180,7 +236,7 @@ Step 12: Viability Assessment - Product-Market Fit & Business Model (2-4 hours p
 
 ---
 
-### 🎯 Complete (5-6 hours)
+### Complete (5-6 hours)
 
 **Best For:** Executive presentations, Series A+ due diligence, complete business model validation
 
@@ -194,76 +250,6 @@ Step 12: Viability Assessment - Product-Market Fit & Business Model (2-4 hours p
 - MVP definition and development priorities
 - Professional committee report
 - Board-ready presentation deck
-
----
-
-## Quick Start
-
-### Option 1: Use Complete System (Recommended)
-
-1. **Read the Complete Evaluation Skill Guide** (15 min)
-   ```
-   docs/VIANEO_Complete_Evaluation_Skill.md
-   ```
-   Understand the complete 13-step process
-
-2. **Print the Quick Reference Card**
-   ```
-   docs/VIANEO_Quick_Reference_Card.md
-   ```
-   Keep visible for thresholds, scoring scales, quality gates
-
-3. **Choose Your Execution Path**
-   - Fast Track: 90 min screening
-   - Standard: 3-4 hour evaluation
-   - Complete: 5-6 hour package
-
-4. **Execute Step-by-Step**
-   Use prompts in `/prompts/` directory for each step
-
----
-
-### Option 2: Market Maturity Assessment Only (Step 3)
-
-If you only need the 29-question dimensional assessment:
-
-1. **Read Quick Start Card** (5 min)
-   ```
-   docs/VIANEO_Quick_Start_Card.md
-   ```
-
-2. **Use the System Prompt**
-   ```
-   docs/VIANEO_Market_Maturity_System_Prompt.md
-   ```
-
-3. **Follow the Workflow**
-   ```
-   docs/VIANEO_Assessment_Workflow_Guide.md
-   ```
-
----
-
-### Option 3: Comprehensive Reference Guide (All Frameworks)
-
-For a single consolidated resource containing all assessment frameworks and specifications:
-
-1. **Read the Comprehensive Reference Guide** (30-45 min)
-   ```
-   docs/VIANEO_Comprehensive_Reference_Guide.md
-   ```
-
-   **Contains:**
-   - 40-Question Diagnostic Scan (complete instrument)
-   - 29-Question Market Maturity Assessment (complete instrument)
-   - Platform character limit specifications
-   - Common pitfalls and solutions guide
-   - Needs Qualification Matrix tool
-   - Scoring guidance and validation thresholds
-
-2. **Use as ongoing reference** during evaluations
-
-3. **Cross-reference with step-by-step prompts** in `/prompts/` directory
 
 ---
 
@@ -570,28 +556,28 @@ Built-in quality gates between steps:
 
 ## Critical Red Flags
 
-### 🚨 Pattern 1: No Customer Validation
+### Pattern 1: No Customer Validation
 - Q7 = 1 (no interviews)
 - Q13 = 1 (problem not validated)
 - Q22 = 1 (not tested with customers)
 
 **Action:** STOP building. START customer discovery immediately.
 
-### 🚨 Pattern 2: Ecosystem Blindness
+### Pattern 2: Ecosystem Blindness
 - Q3 = 1 (no ecosystem map)
 - Q17 = 1 (no resistance identified)
 - Multiple unfavorable critical players
 
 **Action:** Map ecosystem before investing more. May face unexpected resistance.
 
-### 🚨 Pattern 3: Business Model Untested
+### Pattern 3: Business Model Untested
 - Q14 = 1 (revenue undefined)
 - Q19 = 1 (not tested with customers)
 - Q27 = 1 (can't articulate value)
 
 **Action:** Define and test revenue model immediately. Great product ≠ sustainable business.
 
-### 🚨 Pattern 4: Resource Constraints
+### Pattern 4: Resource Constraints
 - Q1 = 1 (lacking resources)
 - Q16 = 1 (no committed team)
 - Team all part-time
@@ -737,7 +723,7 @@ Each step has a detailed prompt in `/prompts/` for consistent execution.
 
 **Complete Guides:**
 - Master System Guide: `docs/VIANEO_Complete_Evaluation_Skill.md`
-- Comprehensive Reference Guide: `docs/VIANEO_Comprehensive_Reference_Guide.md` ⭐ NEW
+- Comprehensive Reference Guide: `docs/VIANEO_Comprehensive_Reference_Guide.md`
 - Quick Reference: `docs/VIANEO_Quick_Reference_Card.md`
 - System Overview: `docs/VIANEO_System_Overview.md`
 

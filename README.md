@@ -279,10 +279,10 @@ vianeo-platform-tools/
 │   └── step11/                                  # Step 11: Complete skill package (6 files)
 │
 ├── prompts/                                 # Step-by-step prompts
+│   ├── _common_prompt_guidelines.md              # Shared time/output/skip scaffolding reused across prompts
 │   ├── step_00_executive_brief_extraction.md     # Extract executive brief (B1-B7 format) [PRIMARY]
 │   ├── step_00_canvas_extraction.md              # Alternative: Business model canvas approach
 │   ├── step_01_application_forms.md              # Optional: Program applications (360 SIS/CNEN) [PRIMARY]
-│   ├── step_01_application_form.md               # Alternative: Simplified application format
 │   ├── step_02_diagnostic_40q.md                 # 40-question diagnostic (complete)
 │   ├── step_03_market_maturity_29q.md            # References docs/ for complete 29Q system
 │   ├── step_03_market_maturity_link.md           # Direct link to primary Step 3 documentation

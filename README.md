@@ -336,6 +336,10 @@ vianeo-platform-tools/
 │   ├── Step11_FeaturesNeeds_DualView_Template.html  # Step 11: Dual-view interactive HTML (Partners/Means toggle)
 │   ├── Step11_FeaturesNeeds_Matrix_Template.html    # Step 11: Original single-view HTML matrix (legacy)
 │   ├── Step11_FeaturesNeeds_Analysis_Template.md    # Step 11: Strategic analysis markdown
+│   ├── Step12_PMF_Template.md                       # Step 12: Product-Market Fit sheet template
+│   ├── Step12_Business_Model_Template.md            # Step 12: Business Model Canvas template
+│   ├── Step12_Dashboard_Template.md                 # Step 12: Viability summary dashboard markdown
+│   ├── Step12_Viability_Dashboard.html              # Step 12: Interactive HTML dashboard visualization
 │   ├── Evidence_Log_Template.md                     # Evidence tracking with E### IDs
 │   ├── Hypotheses_Log_Template.md                   # Hypothesis validation tracking
 │   ├── Gate_A_Decision_Brief_Template.md            # Go/pivot/stop decision framework

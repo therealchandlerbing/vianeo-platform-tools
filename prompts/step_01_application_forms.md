@@ -5,6 +5,8 @@
 **Purpose:** Transform Executive Brief into program-specific application formats
 **Status:** OPTIONAL - Skip if not managing formal program applications
 
+> Shared scaffolding for time/output/skip criteria is maintained in [`_common_prompt_guidelines.md`](./_common_prompt_guidelines.md). Update that file first if you need to tweak baseline instructions that multiple prompts reuse.
+
 ---
 
 ## Overview
@@ -49,6 +51,30 @@ Step 1 converts the Executive Brief from Step 0 into standardized application fo
 ## Instructions for AI Assistant
 
 Using the completed Executive Brief from Step 0, populate the appropriate application format below. Map the B1-B7 sections from Step 0 to the corresponding application fields, expanding within sentence limits.
+
+### Fast-Transfer Field Lists (for quick data entry)
+If you only need a structured, form-style export without narrative expansions, use these condensed field lists before moving to the detailed sections.
+
+**360 SIS Quick Fields**
+- Company information (name, legal name, incorporation country, year founded, website, one-line description)
+- Problem statement and solution summary with field of application
+- Target user and client segments (primary/secondary) with market size snapshot (TAM/SAM/initial target)
+- Business model snapshot (revenue model, pricing strategy, key metrics such as LTV/CAC/gross margin)
+- Traction and validation (customer validation counts, revenue status, product status checklist)
+- Team overview (founders, additional team members, advisors, key gaps)
+- Funding history and current ask with runway
+- Application details (program, dates, referral source)
+
+**CNEN Quick Fields**
+- Identificação (company name, CNPJ, foundation date, site, one-line description)
+- Problema e solução (problem statement, field of application, solution summary)
+- Mercado e usuários (user/client segments, TAM/SAM/initial target)
+- Modelo de negócio (revenue model, pricing)
+- Tração e validação (customer validation counts, product status, revenue status)
+- Equipe e lacunas-chave
+- Financiamento (previous funding, current ask, use of funds)
+
+Proceed to the detailed format sections below when you need the fuller guidance, examples, and quality checks.
 
 ---
 

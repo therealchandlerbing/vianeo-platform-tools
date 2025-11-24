@@ -3,6 +3,8 @@
 **Time Required:** 20-30 minutes
 **Output:** VIANEO Business Model Canvas + Executive Brief
 
+> For shared conventions on time/output labels and skip criteria reused across prompts, see [`_common_prompt_guidelines.md`](./_common_prompt_guidelines.md).
+
 ---
 
 ## Instructions for AI Assistant

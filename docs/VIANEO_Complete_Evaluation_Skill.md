@@ -4,7 +4,7 @@
 
 ## System Overview
 
-This is a comprehensive 9-step business model evaluation system using the VIANEO methodology. It transforms raw startup applications into complete assessments across five interconnected dimensions: **Legitimacy (15%)**, **Desirability (25%)**, **Acceptability (20%)**, **Feasibility (20%)**, and **Viability (20%)**.
+This is a comprehensive 13-step business model evaluation system using the VIANEO methodology. It transforms raw startup applications into complete assessments across five interconnected dimensions: **Legitimacy (15%)**, **Desirability (25%)**, **Acceptability (20%)**, **Feasibility (20%)**, and **Viability (20%)**.
 
 ## When to Use This System
 
@@ -30,16 +30,18 @@ This is a comprehensive 9-step business model evaluation system using the VIANEO
 
 ---
 
-## The Complete 9-Step Workflow
+## The Complete 13-Step Workflow
 
 ```
 INPUT: Startup application, pitch deck, or business plan
   ↓
-STEP 0: Canvas Extraction (20-30 min)
-  → Structured business model canvas
+PHASE 1: FOUNDATION
   ↓
-STEP 1: Application Forms [OPTIONAL] (15 min)
-  → Standardized format for tracking
+STEP 0: Executive Brief Extraction (20-30 min)
+  → Structured B1-B7 business model brief + Maturity Stage
+  ↓
+STEP 1: Application Forms [OPTIONAL] (15-20 min)
+  → 360 SIS or CNEN standardized format
   ↓
 STEP 2: 40-Question Diagnostic (30-45 min)
   → Team, Technology, Management, Commercial scores
@@ -47,31 +49,46 @@ STEP 2: 40-Question Diagnostic (30-45 min)
 STEP 3: 29-Question Market Maturity (45-60 min)
   → Five dimensional scores with weighted total
   ↓
-STEP 4: Legitimacy Deep Dive (20-30 min)
+PHASE 2: DEEP DIVE
+  ↓
+STEP 4: Legitimacy Worksheet (30-40 min)
   → Problem validation and domain fit analysis
   ↓
-STEP 5: Desirability Analysis (30-40 min)
-  → User segments, needs, and requesters
+STEP 5: Needs/Requesters Analysis (45-60 min)
+  → WHO/WHAT/WHY/HOW analysis with 4-file output
   ↓
-STEP 6: Persona Development (60-90 min / 20-30 min)
+STEP 6: Persona Development (30-45 min)
   → Evidence-based personas with validation badges
   ↓
-STEP 7: Needs Qualification Matrix (45 min)
-  → Visual HTML heatmap of priority targets
+STEP 7: Needs Qualification Matrix (45-90 min)
+  → Interactive HTML heatmap + comprehensive report
   ↓
-STEP 8: Ecosystem Mapping (30-45 min)
-  → Stakeholder analysis with acceptability ratings
+STEP 8: Players & Influencers (30-45 min)
+  → Ecosystem acceptability mapping
   ↓
-STEP 9: Network Visualization (60-90 min)
-  → Interactive HTML value network map
+STEP 9: Value Network Map (45-60 min)
+  → Interactive HTML value network visualization
+  ↓
+PHASE 3: SYNTHESIS
+  ↓
+STEP 10: Diagnostic Comment (25-35 min)
+  → Executive decision brief with recommendations
+  ↓
+STEP 11: Features-Needs Matrix (30-45 min)
+  → MVP scope analysis with dual-view HTML
+  ↓
+PHASE 4: VIABILITY
+  ↓
+STEP 12: Viability Assessment (2-4 hours)
+  → PMF sheets, Business Model Canvas, Dashboard
   ↓
 OUTPUT: Complete evaluation package with committee report
 ```
 
 **Total Time:**
 - **Fast Track** (Steps 0, 2, 4, 5): 90 minutes
-- **Standard** (Steps 0-8): 4-5 hours
-- **Complete** (All steps 0-9): 6-7 hours
+- **Standard** (Steps 0-10): 5-6 hours
+- **Complete** (All steps 0-12): 8-10 hours
 
 ---
 
@@ -93,36 +110,42 @@ OUTPUT: Complete evaluation package with committee report
 
 ---
 
-### Path 2: Standard Evaluation (4-5 hours)
+### Path 2: Standard Evaluation (5-6 hours)
 
 **Use For:** Committee-ready evaluation of finalists
 
-**Steps:** 0 → 2 → 3 → 4 → 5 → 6 → 7 → 8
+**Steps:** 0 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 9 → 10
 
 **Outputs:**
 - Complete canvas and diagnostics
 - All five dimensional scores
+- Evidence-based personas
 - Needs qualification matrix (HTML)
 - Ecosystem mapping
+- Value network visualization (HTML)
+- Executive diagnostic comment
 - Investment recommendation
 
 **Best For:** Top 5 finalists requiring deep analysis
 
 ---
 
-### Path 3: Complete Assessment (6-7 hours)
+### Path 3: Complete Assessment (8-10 hours)
 
-**Use For:** Executive presentation packages, major investments
+**Use For:** Executive presentation packages, major investments, full viability analysis
 
-**Steps:** All steps 0-9
+**Steps:** All steps 0-12
 
 **Outputs:**
 - Everything from Standard path
-- Interactive network visualization (HTML)
+- Features-needs matrix with MVP scope (HTML)
+- Product-Market Fit sheets
+- Business Model Canvas
+- Viability Dashboard
 - Professional committee report
 - Executive presentation deck ready
 
-**Best For:** Series A+ due diligence, accelerator demo days
+**Best For:** Series A+ due diligence, accelerator demo days, comprehensive business model validation
 
 ---
 
@@ -295,10 +318,14 @@ Create folder structure:
   ├── 03_Market_Maturity/
   ├── 04_Legitimacy/
   ├── 05_Desirability/
-  ├── 06_Needs_Matrix/
-  ├── 07_Ecosystem/
-  ├── 08_Network_Map/
-  └── 09_Final_Report/
+  ├── 06_Personas/
+  ├── 07_Needs_Matrix/
+  ├── 08_Ecosystem/
+  ├── 09_Network_Map/
+  ├── 10_Diagnostic_Comment/
+  ├── 11_Features_Matrix/
+  ├── 12_Viability/
+  └── Final_Report/
 ```
 
 **Step 4: Execute the Workflow**
@@ -1400,7 +1427,173 @@ Step 8 (Value Network) → Complete visualization + Priority targets + Strategy
 - [ ] Master markdown contains ALL content from other deliverables
 - [ ] DOCX templates include detailed formatting specifications
 
-**Next Step:** Create final committee report or begin priority target engagement
+**Next Step:** Proceed to Step 10 (Diagnostic Comment)
+
+---
+
+### STEP 10: Diagnostic Comment (25-35 min)
+
+**Purpose:** Create executive-ready diagnostic summary with clear recommendations and action priorities
+
+**Prompt Location:** `prompts/step_10_vianeo_diagnostic.md`
+
+**Template Locations:**
+- `templates/Step10_Diagnostic_Markdown_Template.md`
+- `templates/Step10_Diagnostic_DOCX_Template.md`
+
+**Documentation System (7 comprehensive guides):**
+- `docs/VIANEO_Diagnostic_Skill.md` - Master overview
+- `docs/VIANEO_Diagnostic_Reference.md` - Decision matrices & guidelines
+- `docs/VIANEO_Diagnostic_Template.md` - Exact output structure
+- `docs/VIANEO_Diagnostic_DOCX_Formatting.md` - Professional DOCX specs
+- `docs/VIANEO_Diagnostic_Examples.md` - Good/bad examples
+- `docs/VIANEO_Diagnostic_Quality_Checklist.md` - Pre-delivery validation
+
+**Two Required Outputs:**
+
+1. **Markdown Diagnostic**
+   - Executive diagnostic (6-8 sentences): Strengths, Risks, Actions with owners, Evidence gaps
+   - Dimension summary table with color-coded scores
+   - Critical path forward (4 time horizons: Immediate/30-day/60-day/90-day)
+   - GO/PIVOT/STOP recommendation with conditions
+
+2. **Professional DOCX**
+   - Typography scale (24pt/16pt/14pt/11pt)
+   - Strategic color palette
+   - Formatted critical path with numbered priorities
+   - Design elevation for committee presentation
+
+**Quality Checks:**
+- [ ] Executive diagnostic is 6-8 sentences, not a list
+- [ ] All 5 dimensions have scores with color coding
+- [ ] Strengths cite specific evidence
+- [ ] Risks identify specific gaps
+- [ ] Actions have specific owners assigned
+- [ ] Critical path has realistic timelines
+- [ ] Recommendation is justified with evidence
+- [ ] Both MD and DOCX files generated
+
+**Next Step:** Proceed to Step 11 (Features-Needs Matrix)
+
+---
+
+### STEP 11: Features-Needs Matrix (30-45 min)
+
+**Purpose:** Map features and resources against validated needs to define MVP scope and identify coverage gaps
+
+**Prompt Location:** `prompts/step_11_features_needs_matrix.md`
+
+**Template Locations:**
+- `templates/Step11_FeaturesNeeds_DualView_Template.html` (Dual-view interactive)
+- `templates/Step11_FeaturesNeeds_Analysis_Template.md` (Strategic analysis)
+
+**Documentation System (6 files):**
+- `docs/VIANEO_Step11_Skill_Overview.md` - Master skill overview
+- `docs/VIANEO_Step11_Reference_Guide.md` - Interpretation methodology
+- `docs/VIANEO_Step11_Quality_Checklist.md` - 120-point validation
+- `docs/VIANEO_Step11_Quick_Reference.md` - Quick lookup card
+- `docs/step11/` - Complete skill package
+
+**Two Views:**
+
+1. **Needs View (Partners as rows)**
+   - Features as columns (from product roadmap)
+   - Needs from Step 5 as columns
+   - Coverage analysis: which features address which needs
+   - Gap identification: unaddressed critical needs
+
+2. **Means View (Resources as rows)**
+   - Internal resources as columns (from Step 4 Legitimacy)
+   - External partners/dependencies as columns
+   - Resource allocation analysis
+   - Differentiation status indicators
+
+**Two Required Outputs:**
+
+1. **Interactive HTML (Dual-View)**
+   - Toggle between Partners and Means views
+   - Implementation timeline badges
+   - Color-coded opportunity levels (High/Medium/Low/Expected/Accessory)
+   - CSV export, print-optimized, WCAG 2.1 AA compliant
+
+2. **Strategic Analysis Markdown**
+   - Coverage metrics
+   - MVP scope definition
+   - Gap analysis
+   - Development priorities
+   - Resource requirements
+
+**Quality Checks:**
+- [ ] All needs from Step 5 included as columns
+- [ ] All means from Step 4 included in Means view
+- [ ] Coverage metrics calculated correctly
+- [ ] MVP scope clearly defined
+- [ ] Gaps identified with specific features needed
+- [ ] HTML toggles between both views
+- [ ] Export and print functions work
+- [ ] Both HTML and MD files generated
+
+**Next Step:** Proceed to Step 12 (Viability Assessment)
+
+---
+
+### STEP 12: Viability Assessment (2-4 hours)
+
+**Purpose:** Comprehensive Product-Market Fit analysis and Business Model validation with viability dashboard
+
+**Prompt Locations:**
+- `prompts/step_12_viability.md` - Overview
+- `prompts/step_12a_product_market_fit.md` - PMF sheets
+- `prompts/step_12b_business_model.md` - Business Model Canvas
+- `prompts/step_12_dashboard_generation.md` - Dashboard visualization
+
+**Template Locations:**
+- `templates/Step12_PMF_Template.md` - Product-Market Fit sheet
+- `templates/Step12_Business_Model_Template.md` - Business Model Canvas
+- `templates/Step12_Dashboard_Template.md` - Viability summary
+- `templates/Step12_Viability_Dashboard.html` - Interactive HTML
+
+**Three Components Per Product:**
+
+1. **Product-Market Fit Sheet**
+   - Product identity and positioning
+   - Targeted requesters (from Step 5/6)
+   - MVP features (6-10 features from Step 11)
+   - Resource requirements
+   - Success metrics
+
+2. **Business Model Canvas**
+   - Value proposition (≤250 chars)
+   - Revenue model and pricing
+   - Distribution channels
+   - Cost structure
+   - Key partnerships
+   - Evidence-based approach (flags assumptions explicitly)
+
+3. **Viability Dashboard**
+   - Summary of all PMF sheets
+   - Business model coherence validation
+   - Risk assessment
+   - GO/PIVOT/STOP recommendation
+   - Investment requirements
+
+**Outputs Per Product:**
+- PMF Sheet (MD + DOCX)
+- Business Model Canvas (MD + DOCX)
+- Viability Dashboard (MD + HTML)
+
+**Quality Checks:**
+- [ ] Product identity clearly defined
+- [ ] Requesters mapped from Step 5/6
+- [ ] Features aligned with Step 11 MVP scope
+- [ ] Revenue model is specific, not generic
+- [ ] Pricing has evidence (tested with customers)
+- [ ] Assumptions flagged explicitly
+- [ ] Dashboard summarizes all components
+- [ ] Coherence between PMF and Business Model
+- [ ] All outputs generated (MD + DOCX + HTML)
+
+**Next Step:** Generate final committee report and presentation package
 
 ---
 
@@ -1472,6 +1665,34 @@ After each step, verify:
 - [ ] Evidence-based acceptability classifications
 - [ ] Priority Targets Summary has specific engagement strategies
 
+**Step 10:**
+- [ ] Executive diagnostic is 6-8 sentences
+- [ ] All 5 dimensions have scores with color coding
+- [ ] Strengths cite specific evidence
+- [ ] Risks identify specific gaps
+- [ ] Actions have owners assigned
+- [ ] Critical path has 4 time horizons
+- [ ] GO/PIVOT/STOP recommendation justified
+- [ ] Both MD and DOCX generated
+
+**Step 11:**
+- [ ] All needs from Step 5 as columns
+- [ ] All means from Step 4 in Means view
+- [ ] Coverage metrics calculated
+- [ ] MVP scope defined
+- [ ] Gaps identified with features needed
+- [ ] HTML dual-view toggle works
+- [ ] Both HTML and MD generated
+
+**Step 12:**
+- [ ] PMF sheet complete per product
+- [ ] Business Model Canvas complete
+- [ ] Revenue model specific with evidence
+- [ ] Assumptions explicitly flagged
+- [ ] Dashboard summarizes all components
+- [ ] Coherence validated
+- [ ] All outputs generated (MD + DOCX + HTML)
+
 ---
 
 ## Final Output Package
@@ -1494,12 +1715,17 @@ After each step, verify:
 3. **Visual Outputs**
    - Needs Qualification Matrix (HTML + screenshot)
    - Network Map (HTML + screenshot)
+   - Features-Needs Matrix (HTML + screenshot)
+   - Viability Dashboard (HTML + screenshot)
 
 4. **Deep Dive Documents**
    - Complete 40-question diagnostic
    - Complete 29-question market maturity
    - Legitimacy worksheet
    - Ecosystem mapping table
+   - Diagnostic comment (Step 10)
+   - Product-Market Fit sheets (Step 12)
+   - Business Model Canvas (Step 12)
 
 5. **Final Recommendation** (1-2 pages)
    - Go / Conditional / No-Go decision
@@ -1514,8 +1740,11 @@ After each step, verify:
 - Slide 4: Dimensional scores visualization
 - Slide 5: Needs matrix (screenshot)
 - Slide 6: Network map (screenshot)
-- Slide 7: Key risks and mitigations
-- Slide 8: Recommendation and next steps
+- Slide 7: Features-needs matrix (screenshot)
+- Slide 8: PMF and business model summary
+- Slide 9: Viability dashboard
+- Slide 10: Key risks and mitigations
+- Slide 11: Recommendation and next steps
 
 ---
 
@@ -1597,28 +1826,32 @@ After each step, verify:
 - Step 4: 15 min
 - Step 5: 15 min
 
-**Standard** (4-5 hours):
+**Standard** (5-6 hours):
 - Step 0: 25 min
 - Step 2: 35 min
 - Step 3: 50 min
 - Step 4: 25 min
 - Step 5: 35 min
-- Step 6: 30 min (from existing data) / 60 min (with new interviews)
-- Step 7: 30 min
-- Step 8: 30 min
+- Step 6: 30 min (from existing data)
+- Step 7: 45 min
+- Step 8: 35 min
+- Step 9: 45 min
+- Step 10: 30 min
 
-**Complete** (6-7 hours):
+**Complete** (8-10 hours):
 - Step 0: 25 min
-- Step 1: 10 min
+- Step 1: 15 min (optional)
 - Step 2: 35 min
 - Step 3: 50 min
-- Step 4: 25 min
-- Step 5: 40 min
-- Step 6: 60-90 min (persona development with validation)
-- Step 7: 45 min
+- Step 4: 30 min
+- Step 5: 45 min
+- Step 6: 45 min (persona development)
+- Step 7: 60 min
 - Step 8: 40 min
-- Step 9: 75 min
-- Report: 30 min
+- Step 9: 60 min
+- Step 10: 30 min
+- Step 11: 45 min
+- Step 12: 2-4 hours (viability assessment)
 
 ### Cohort Processing
 
@@ -1628,14 +1861,15 @@ After each step, verify:
 - Select top 5 for deeper evaluation
 
 **Top 5 Standard Evaluation:**
-- 4 hours × 5 = 20 hours
+- 5-6 hours × 5 = 25-30 hours
 - Spread over 1 week
 - Select top 2-3 for complete
 
 **Top 3 Complete Assessment:**
-- 6 hours × 3 = 18 hours
+- 8-10 hours × 3 = 24-30 hours
 - Final committee packages
 - Executive presentations ready
+- Full viability analysis
 
 ---
 
@@ -1746,14 +1980,20 @@ Use consistent naming for organization:
 [CompanyName]_[Date]_[StepNumber]_[StepName].[ext]
 
 Examples:
-HealthTech_2025-01-15_00_Canvas.md
+HealthTech_2025-01-15_00_ExecutiveBrief.md
 HealthTech_2025-01-15_02_Diagnostic.md
 HealthTech_2025-01-15_03_MarketMaturity.md
 HealthTech_2025-01-15_04_Legitimacy.md
-HealthTech_2025-01-15_05_Desirability.md
-HealthTech_2025-01-15_06_NeedsMatrix.html
-HealthTech_2025-01-15_07_Ecosystem.md
-HealthTech_2025-01-15_08_NetworkMap.html
+HealthTech_2025-01-15_05_NeedsRequesters.md
+HealthTech_2025-01-15_06_Personas.md
+HealthTech_2025-01-15_07_NeedsMatrix.html
+HealthTech_2025-01-15_08_Ecosystem.md
+HealthTech_2025-01-15_09_NetworkMap.html
+HealthTech_2025-01-15_10_DiagnosticComment.md
+HealthTech_2025-01-15_11_FeaturesMatrix.html
+HealthTech_2025-01-15_12_PMF.md
+HealthTech_2025-01-15_12_BusinessModel.md
+HealthTech_2025-01-15_12_Dashboard.html
 HealthTech_2025-01-15_FINAL_Report.pdf
 ```
 
@@ -1764,14 +2004,18 @@ HealthTech_2025-01-15_FINAL_Report.pdf
 For rapid execution with AI assistant:
 
 ```
-"Execute VIANEO Step 0 canvas extraction on this document"
+"Execute VIANEO Step 0 executive brief extraction on this document"
 "Run 40-question diagnostic with evidence citations"
 "Complete 29-question market maturity assessment"
 "Generate legitimacy worksheet analysis"
 "Extract user segments and needs for desirability"
+"Develop evidence-based personas"
 "Create needs qualification matrix HTML"
 "Map ecosystem with acceptability ratings"
-"Generate interactive network visualization"
+"Generate interactive value network visualization"
+"Create executive diagnostic comment"
+"Generate features-needs matrix with dual views"
+"Complete viability assessment with PMF sheets and business model"
 "Compile complete evaluation package"
 ```
 
@@ -1781,11 +2025,10 @@ For rapid execution with AI assistant:
 
 All prompts and templates are located in:
 
-**Prompts:** `/prompts/step_[0-8]_*.md`
-**Templates:** `/templates/*.md`
-**Worksheets:** `/worksheets/*.md`
-**Visualizations:** `/visualizations/*.html`
-**Examples:** `/examples/*_Complete_Evaluation.md`
+**Prompts:** `/prompts/step_[00-12]_*.md` (13 complete evaluation prompts)
+**Templates:** `/templates/*.md` and `/templates/*.html`
+**Docs:** `/docs/` (methodology guides, quality checklists, reference materials)
+**Examples:** `/examples/*.md` (sample assessments by maturity stage)
 
 ---
 
@@ -1796,6 +2039,7 @@ All prompts and templates are located in:
 - Individual step prompts (detailed instructions)
 - Quick Reference Card (one-page reminder)
 - System Overview (how components fit together)
+- Comprehensive Reference Guide (all frameworks consolidated)
 
 **For Questions:**
 1. Check relevant step prompt file
@@ -1807,9 +2051,9 @@ All prompts and templates are located in:
 
 ## Version Information
 
-**System Version:** 2.0 (Complete 8-Step System)
+**System Version:** 2.5 (Complete 13-Step System)
 **Framework:** VIANEO Business Model Evaluation Methodology
-**Last Updated:** 2025-01-15
+**Last Updated:** November 2025
 **Author:** Claude Code Implementation
 
 ---
@@ -1819,8 +2063,8 @@ All prompts and templates are located in:
 1. **Review the Quick Reference Card** at `docs/VIANEO_Quick_Reference_Card.md`
 2. **Choose your execution path** (Fast Track / Standard / Complete)
 3. **Gather startup materials** (application, pitch deck, research)
-4. **Start with Step 0** using `prompts/step_0_canvas_extraction.md`
+4. **Start with Step 0** using `prompts/step_00_executive_brief_extraction.md`
 5. **Work sequentially** through your chosen path
-6. **Generate final report** using `templates/Committee_Report_Template.md`
+6. **Generate final outputs** using templates in `/templates/`
 
 **Ready to begin your first evaluation!**

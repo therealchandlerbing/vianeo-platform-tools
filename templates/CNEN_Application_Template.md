@@ -438,7 +438,7 @@ After completing CNEN Application:
 
 ---
 
-**Template Version:** 1.0 - Step 1 CNEN Application
-**Last Updated:** 2025-01-15
-**Compatible with:** VIANEO 8-Step Evaluation System
+**Template Version:** 2.5 - Step 1 CNEN Application
+**Last Updated:** November 2025
+**Compatible with:** VIANEO 13-Step Evaluation System
 **Designed for:** Research institutions, technology transfer, academic spin-outs

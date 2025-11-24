@@ -1,6 +1,6 @@
 # Vianeo Platform Tools
 
-**Complete 12-Step Business Model Evaluation System**
+**Evidence-based startup evaluation framework | 5 Dimensions | 13-Step Process | Committee-Ready Outputs**
 
 A comprehensive, AI-assisted framework for systematic startup assessment using the VIANEO methodology. Transform raw applications into evidence-based evaluations across five dimensions with professional visual outputs and executive-ready diagnostic comments.
 
@@ -46,7 +46,31 @@ This is a complete evaluation toolkit that takes you from initial startup applic
 
 ---
 
-## The Complete 12-Step Workflow
+## Framework at a Glance
+
+**The 13-Step Evaluation Process:**
+
+| Phase | Step | Name | Time | Key Output |
+|-------|------|------|------|------------|
+| **Phase 1: Foundation** | 0 | Executive Brief | 20-30m | Structured 7-section brief |
+| | 1 | Application Forms | 15-20m | Program-specific docs |
+| | 2 | 40Q Diagnostic | 30-45m | 4-dimension assessment |
+| | 3 | 29Q Market Maturity | 45-60m | 5-dimension VIANEO scores |
+| **Phase 2: Deep Dive** | 4 | Legitimacy Worksheet | 30-40m | Foundation validation |
+| | 5 | Needs/Requesters | 45-60m | WHO/WHAT/WHY/HOW analysis |
+| | 6 | Personas | 30-45m | Evidence-based personas |
+| | 7 | Needs Qualification | 45-90m | Interactive matrix + report |
+| | 8 | Players/Influencers | 30-40m | Ecosystem acceptability |
+| | 9 | Value Network Map | 45-60m | Network visualization |
+| **Phase 3: Synthesis** | 10 | Diagnostic Comment | 25-35m | Executive decision brief |
+| | 11 | Features-Needs Matrix | 30-45m | MVP scope analysis |
+| **Phase 4: Viability** | 12 | Viability Assessment | 2-4h | PMF sheets, Business models, Dashboard |
+
+**Core Steps:** Steps 0, 2, and 3 are required. Others are optional based on project needs.
+
+---
+
+## The Complete 13-Step Workflow
 
 ```
 Step 0: Executive Brief Extraction (20-30 min)
@@ -181,7 +205,7 @@ Step 12: Viability Assessment - Product-Market Fit & Business Model (2-4 hours p
    ```
    docs/VIANEO_Complete_Evaluation_Skill.md
    ```
-   Understand the complete 12-step process
+   Understand the complete 13-step process
 
 2. **Print the Quick Reference Card**
    ```
@@ -731,7 +755,7 @@ Each step has a detailed prompt in `/prompts/` for consistent execution.
 
 ## Version & Attribution
 
-**Version:** 2.4 (Complete 12-Step System with Viability Assessment)
+**Version:** 2.5 (Complete 13-Step System with Viability Assessment)
 **Framework:** VIANEO Business Model Evaluation Methodology
 **Last Updated:** November 2025
 

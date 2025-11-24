@@ -249,6 +249,6 @@ After updates, validate with a test project:
 
 ---
 
-**Document Version:** 1.0
-**Last Updated:** 2025-01-15
-**Compatible With:** Vianeo Sprint Evaluation Framework
+**Document Version:** 2.5
+**Last Updated:** November 2025
+**Compatible With:** Vianeo 13-Step Evaluation Framework

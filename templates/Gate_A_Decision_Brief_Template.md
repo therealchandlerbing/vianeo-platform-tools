@@ -469,7 +469,7 @@
 
 ---
 
-**Template Version:** 1.0
-**Last Updated:** 2025-01-15
-**Compatible with:** VIANEO 8-Step Evaluation System, Evidence Log, Hypotheses Log
+**Template Version:** 2.5
+**Last Updated:** November 2025
+**Compatible with:** VIANEO 13-Step Evaluation System, Evidence Log, Hypotheses Log
 **Purpose:** Formal go/pivot/stop decision based on validated evidence

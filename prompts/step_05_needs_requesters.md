@@ -188,6 +188,34 @@ Use the four-tier system exactly:
 
 ---
 
+### Required: Organizational Grouping for Downstream Steps
+
+For each requester, capture BOTH the individual role AND organizational context:
+
+| Individual Requester | Organizational Context |
+|---------------------|----------------------|
+| Field operator | Industrial Operational Staff |
+| maintenance staff | Industrial Operational Staff |
+| Board operators | Industrial Operational Staff |
+| operation specialist/manager | Industrial Operational Staff |
+| board directors | Industrial manufacturer (management) |
+| plant manager | Industrial manufacturer (management) |
+| production/business manager | Industrial manufacturer (management) |
+| financial managers | Industrial manufacturer (management) |
+| operation engineer | Industrial manufacturer (management) |
+| logistics and material analyst | Industrial manufacturer (management) |
+
+**Why this matters for downstream steps:**
+- **Individual requester names** become column headers in Step 7 (Needs Qualification Matrix)
+- **Organizational groupings** become "Potential clients" boxes in Step 9 (Value Network)
+- Maintaining this dual structure ensures consistency across all framework steps
+
+**Important**: These exact need statements become:
+- Row labels in Step 7 (Needs Qualification Matrix)
+- Column headers in Step 11 (Features/Needs Matrix)
+
+---
+
 ### Section 3: NEEDS ANALYSIS (10 needs total)
 
 **Purpose:** Document what requesters need to accomplish, eliminate, or achieve.

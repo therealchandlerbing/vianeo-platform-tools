@@ -110,7 +110,7 @@ Step 11: Features & Needs Matrix (30-45 min)
   → Dual-view interactive toggle: Partners (external dependencies) ↔ Means (internal resources)
   → Implementation timeline badges + color-coded opportunity levels (High/Medium/Low/Expected/Accessory)
   → Two outputs: Interactive HTML (CSV export, print-optimized, WCAG 2.1 AA) + Strategic analysis markdown
-  → Complete skill package (7 files): Primary skill, Quick Reference, Data Worksheet, Implementation Guide, Template, CSS
+  → Complete skill package (6 files): Primary skill, Quick Reference, Data Worksheet, Implementation Guide, Template, CSS
 
 Step 12: Viability Assessment - Product-Market Fit & Business Model (2-4 hours per product)
   → Product/Market Fit Sheets: Product identity, targeted requesters, MVP features (6-10), resource requirements
@@ -138,7 +138,7 @@ Step 12: Viability Assessment - Product-Market Fit & Business Model (2-4 hours p
 
 ---
 
-### 🚶 Standard (4-5 hours)
+### 🚶 Standard (3-4 hours)
 
 **Best For:** Committee-ready evaluation of top 5 finalists
 
@@ -156,7 +156,7 @@ Step 12: Viability Assessment - Product-Market Fit & Business Model (2-4 hours p
 
 ---
 
-### 🎯 Complete (9-12 hours)
+### 🎯 Complete (5-6 hours)
 
 **Best For:** Executive presentations, Series A+ due diligence, complete business model validation
 
@@ -181,7 +181,7 @@ Step 12: Viability Assessment - Product-Market Fit & Business Model (2-4 hours p
    ```
    docs/VIANEO_Complete_Evaluation_Skill.md
    ```
-   Understand the complete 8-step process
+   Understand the complete 12-step process
 
 2. **Print the Quick Reference Card**
    ```
@@ -276,7 +276,8 @@ vianeo-platform-tools/
 │   ├── VIANEO_Step11_Reference_Guide.md         # Step 11: Interpretation methodology
 │   ├── VIANEO_Step11_Quality_Checklist.md       # Step 11: 120-point validation criteria
 │   ├── VIANEO_Step11_Quick_Reference.md         # Step 11: Quick lookup card
-│   └── step11/                                  # Step 11: Complete skill package (6 files)
+│   ├── step11/                                  # Step 11: Complete skill package (6 files)
+│   └── value_network_map/                       # Step 9: Value network documentation (6 files)
 │
 ├── prompts/                                 # Step-by-step prompts
 │   ├── step_00_executive_brief_extraction.md     # Extract executive brief (B1-B7 format) [PRIMARY]
@@ -292,8 +293,12 @@ vianeo-platform-tools/
 │   ├── step_07_needs_qualification_matrix.md     # Matrix + Analysis Report (complete)
 │   ├── step_08_players_influencers.md            # Players/Influencers ecosystem (complete)
 │   ├── step_09_ecosystem_value_network.md        # Value network with 4 deliverables (complete)
-│   ├── step_10_vianeo_diagnostic.md             # Diagnostic comment with 2 outputs (complete)
-│   └── step_11_features_needs_matrix.md         # Features-needs matrix with 2 outputs (complete)
+│   ├── step_10_vianeo_diagnostic.md              # Diagnostic comment with 2 outputs (complete)
+│   ├── step_11_features_needs_matrix.md          # Features-needs matrix with 2 outputs (complete)
+│   ├── step_12_viability.md                      # Viability assessment overview (complete)
+│   ├── step_12a_product_market_fit.md            # Product-Market Fit sheets (complete)
+│   ├── step_12b_business_model.md                # Business Model Canvas (complete)
+│   └── step_12_dashboard_generation.md           # Viability dashboard visualization (complete)
 │
 ├── tools/                                   # Automation scripts
 │   ├── players_influencers_generator.py         # Step 8: Python DOCX generator
@@ -343,6 +348,7 @@ vianeo-platform-tools/
 │   ├── Step9_Example_TechEd_Analysis.md         # Complete Step 9 worked example
 │   └── TechEd_2025-01-15_09_Value_Network.html  # Step 9 HTML visualization example
 │
+├── DEPENDENCIES.md                          # Step dependency documentation & data flow
 └── README.md                                # This file
 ```
 
@@ -709,8 +715,9 @@ Each step has a detailed prompt in `/prompts/` for consistent execution.
 
 **Step-Specific:**
 - Market Maturity (Step 3): `docs/VIANEO_Market_Maturity_System_Prompt.md`
+- Value Network (Step 9): `docs/value_network_map/` (complete documentation package)
 - Features-Needs Matrix (Step 11): `docs/step11/` (complete skill package)
-- All Other Steps: `prompts/step_[0-11]_*.md`
+- All Other Steps: `prompts/step_[0-12]_*.md`
 
 **Examples:**
 - Early Stage: `examples/Example_Assessment_Early_Stage.md`

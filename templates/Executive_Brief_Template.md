@@ -339,6 +339,6 @@ After completing Executive Brief:
 
 ---
 
-**Template Version:** 1.0 - Step 0 Executive Brief
-**Last Updated:** 2025-01-15
-**Compatible with:** VIANEO 8-Step Evaluation System
+**Template Version:** 2.5 - Step 0 Executive Brief
+**Last Updated:** November 2025
+**Compatible with:** VIANEO 13-Step Evaluation System

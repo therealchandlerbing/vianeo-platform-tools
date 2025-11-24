@@ -731,6 +731,6 @@ Vianeo_Desirability_Part2_StrategicAnalysis_Rare_Earth_Brazil.docx
 
 ---
 
-**Template Version:** 1.0
-**Last Updated:** 2025-01-15
-**Compatible With:** VIANEO 8-Step Evaluation System - Step 5
+**Template Version:** 2.5
+**Last Updated:** November 2025
+**Compatible With:** VIANEO 13-Step Evaluation System - Step 5

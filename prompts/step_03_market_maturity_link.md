@@ -7,13 +7,7 @@
 
 ## Instructions for AI Assistant
 
-This is a reference document pointing to the complete Step 3 documentation. When starting Market Maturity Assessment:
-
-1. **Navigate to** `docs/VIANEO_Market_Maturity_System_Prompt.md` for complete guidance
-2. **Reference** the 29 questions organized by dimension (Legitimacy, Desirability, Acceptability, Feasibility, Viability)
-3. **Apply** the scoring scale (1-5) with evidence requirements
-4. **Calculate** dimensional scores using specified weights
-5. **Output** assessment table with weighted totals and recommendations
+This is a reference document. For complete Step 3 guidance, navigate to `docs/VIANEO_Market_Maturity_System_Prompt.md` which contains all 29 questions, scoring criteria, and output specifications.
 
 ---
 

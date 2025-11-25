@@ -9,7 +9,7 @@
 
 ## Instructions for AI Assistant
 
-Create an interactive HTML Value Network Map visualization. Position stakeholders across 5 value chain columns (Enablers → Product → Channels → Buyers → End Users). Apply acceptability ratings (Favorable/Neutral/Unfavorable) with color coding. Identify Priority Targets (favorable organizations with requesters who have Critical/Important needs). Generate a presentation-ready HTML file with optional Markdown analysis and DOCX tables.
+Create an interactive HTML Value Network Map positioning stakeholders across 5 columns (Enablers → Product → Channels → Buyers → End Users). Apply color-coded acceptability ratings and identify Priority Targets (favorable + critical needs). Generate a presentation-ready HTML file.
 
 ---
 

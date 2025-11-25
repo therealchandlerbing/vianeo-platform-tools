@@ -8,7 +8,7 @@
 
 ## Instructions for AI Assistant
 
-Synthesize findings from Steps 2-9 into a concise executive diagnostic comment (6-8 sentences). Structure the output as: validated strengths (1-2 sentences), critical risks (1-2 sentences), immediate actions with owners (2-3 sentences), and evidence gaps (1-2 sentences). Include a dimension summary table with scores. Generate two deliverables: Markdown diagnostic comment and professional DOCX report.
+Synthesize findings from Steps 2-9 into a concise executive diagnostic (6-8 sentences total): strengths, risks, immediate actions with owners, and evidence gaps. Include a dimension summary table. Generate two deliverables: Markdown diagnostic comment and professional DOCX report.
 
 ---
 

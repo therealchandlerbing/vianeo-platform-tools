@@ -5,7 +5,7 @@
 
 ## Instructions for AI Assistant
 
-Create an interactive Features-Needs Matrix with TWO views sharing the same feature rows. View 1 (Features/Needs): Map 10-15 features against validated needs from Step 5, with color coding based on Step 7 opportunity analysis. View 2 (Features/Means): Map features against available resources from Step 4 with differentiation indicators. Generate an interactive HTML visualization showing coverage gaps, MVP boundaries, and resource priorities.
+Create an interactive Features-Needs Matrix with two views sharing the same feature rows: (1) Features vs. Needs from Step 5, and (2) Features vs. Means from Step 4. Generate an interactive HTML visualization showing coverage gaps, MVP boundaries, and resource priorities.
 
 ---
 

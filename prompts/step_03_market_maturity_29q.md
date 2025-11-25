@@ -22,14 +22,7 @@ Step 3 evaluates business model readiness through 29 evidence-based questions or
 
 ## Instructions for AI Assistant
 
-Conduct a comprehensive 29-question market maturity assessment across five VIANEO dimensions. For each question:
-
-1. **Score 1-5** using the evidence-based rubric (5=Absolutely, 1=Don't know)
-2. **Calculate dimension scores** using the specified weights (Legitimacy 15%, Desirability 25%, Acceptability 20%, Feasibility 20%, Viability 20%)
-3. **Apply thresholds** (overall ≥3.2, Desirability ≥3.5, others ≥3.0)
-4. **Document evidence** for each score with specific citations
-5. **Identify red flags** where scores fall below thresholds
-6. **Generate THREE deliverables**: Markdown Full Report, Assessment Results DOCX, and Dimension Analysis DOCX
+Evaluate this project using the 29-question framework below. Score each question 1-5, calculate weighted dimension averages, and check against thresholds. Generate three documents: Full Report (Markdown), Assessment Results (DOCX), and Dimension Analysis (DOCX). Flag any dimension below threshold as a red flag.
 
 ---
 

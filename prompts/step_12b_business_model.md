@@ -8,7 +8,7 @@ You are defining the complete business model for **[PRODUCT NAME]** serving **[C
 
 ## Instructions for AI Assistant
 
-Define the complete business model for the specified product-client combination. Complete all four critical dimensions: (1) Value Proposition with core positioning statement and 2-4 competitive advantages, (2) Revenue Stream with pricing model, unit economics, and validation status, (3) Distribution Channel with primary/secondary channels and customer journey, (4) Cost Structure with fixed/variable costs and break-even analysis. Ensure all four components align for business model coherence.
+Define the complete business model across four dimensions: (1) Value Proposition, (2) Revenue Stream, (3) Distribution Channel, and (4) Cost Structure. Ensure all four components align for coherence. Flag any unvalidated assumptions.
 
 ---
 

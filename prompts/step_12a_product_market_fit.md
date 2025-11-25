@@ -8,7 +8,7 @@ You are analyzing [PROJECT NAME] to define product-market fit configurations tha
 
 ## Instructions for AI Assistant
 
-Define product-market fit configurations connecting validated customer needs with specific product offerings. For each product, specify: Product identity (name 60 chars, description 250 chars, target client), targeted requesters with need intensity and validation status, MVP features mapped to needs with timelines, and resource requirements. Use only validated data from Steps 5-7 (Desirability) and Step 11 (Feasibility). Flag all assumptions explicitly.
+Define product-market fit configurations for each product: identity (name, description, target client), targeted requesters with validated needs, and MVP features mapped to timelines. Use only validated data from Steps 5-7 and Step 11—flag all assumptions explicitly.
 
 ---
 

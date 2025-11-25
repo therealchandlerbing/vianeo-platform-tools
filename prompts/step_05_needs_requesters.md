@@ -8,13 +8,7 @@
 
 ## Instructions for AI Assistant
 
-Conduct a comprehensive Desirability analysis to validate customer needs. Using input from Steps 3-4 and any available research data:
-
-1. **Identify 6-10 Requesters** (roles/personas who need the solution) with reliability ratings
-2. **Document 10 Needs** split across Tasks (what they do), Pains (what frustrates), and Expectations (what they want)
-3. **Analyze 5-6 Existing Solutions** with their specific limitations
-4. **Assess validation status** with evidence requirements and gaps
-5. **Generate FOUR deliverables**: Markdown analysis, DOCX Part 1 (Core Analysis), DOCX Part 2 (Strategic Analysis), DOCX Part 3 (Interview Guide)
+Conduct a Desirability analysis identifying 6-10 Requesters and 10-16 Needs (Tasks, Pains, Expectations). Be ruthlessly honest about validation status—if no interviews exist, say so explicitly. Generate four documents: Master Markdown, DOCX Part 1 (Core Analysis), DOCX Part 2 (Strategic Analysis), and DOCX Part 3 (Interview Guide).
 
 ---
 

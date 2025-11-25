@@ -22,7 +22,7 @@ Step 3 evaluates business model readiness through 29 evidence-based questions or
 
 ## Instructions for AI Assistant
 
-Evaluate this project using the 29-question framework below. Score each question 1-5, calculate weighted dimension averages, and check against thresholds. Generate three documents: Full Report (Markdown), Assessment Results (DOCX), and Dimension Analysis (DOCX). Flag any dimension below threshold as a red flag.
+Evaluate this project using the 29-question framework below. Score each question 1-5 in numerical order (Q1-Q29), calculate weighted dimension averages, and check against thresholds. Generate three documents: Full Report (Markdown), Assessment Results (DOCX), and Dimension Analysis (DOCX). Flag any dimension below threshold as a red flag.
 
 ---
 
@@ -59,55 +59,49 @@ Evaluate this project using the 29-question framework below. Score each question
 
 ---
 
-## The 29 Questions by Dimension
+## The 29 Questions (Numerical Order)
 
-### LEGITIMACY: Foundation and Problem Validation (2 questions, 15% weight)
-
-**Q8.** Identified one or more markets or fields of application
-- Score 5: Multiple markets clearly defined with boundaries and target segments
-- Score 3: Primary market identified but boundaries unclear
-- Score 1: Market not identified
-- **Evidence:** Market definition documents, target segment lists
-
-**Q13.** Validated with several people that the problem is real and important
-- Score 5: 10+ validations with documented evidence
-- Score 4: 5-9 validations
-- Score 3: 3-4 validations
-- Score 2: 1-2 validations
-- Score 1: No validation beyond team belief
-- **Evidence:** Interview transcripts, survey data, stakeholder confirmations
-
-**Legitimacy Score** = (Q8 + Q13) ÷ 2
+Each question indicates its dimension in brackets. Output assessment results in this order (Q1-Q29).
 
 ---
 
-### DESIRABILITY: Customer Needs and Market Fit (12 questions, 25% weight)
+**Q1.** Solid and tangible resources to launch and carry out the project (team, network, skills, patents, finances, equipment) **[FEASIBILITY]**
+- Score 5: All necessary resources secured and available
+- Score 3: Some resources available, significant gaps exist
+- Score 1: Resources unidentified or unavailable
+- **Evidence:** Resource inventory, team roster, funding documents, equipment list
 
-**Q2.** Identified people with strong needs who are looking for solutions
+**Q2.** Identified people with strong needs who are looking for solutions **[DESIRABILITY]**
 - Score 5: Multiple segments identified with documented high-urgency needs
 - Score 3: Some people identified but need strength not validated
 - Score 1: No specific people identified
 - **Evidence:** Customer discovery interviews, needs documentation
 
-**Q4.** Offer and features defined to meet unmet needs today
+**Q3.** Know the market players beyond clients and competitors **[ACCEPTABILITY]**
+- Score 5: Complete ecosystem map with all stakeholder types
+- Score 3: Basic understanding of some players beyond direct customers
+- Score 1: Only aware of direct customers and competitors
+- **Evidence:** Ecosystem map, stakeholder analysis document
+
+**Q4.** Offer and features defined to meet unmet needs today **[DESIRABILITY]**
 - Score 5: Features directly mapped to validated unmet needs
 - Score 3: Features defined but linkage to needs unclear
 - Score 1: Features not defined
 - **Evidence:** Feature-to-need mapping, product spec documents
 
-**Q5.** Target easiest and most strategic customers to enter the market
+**Q5.** Target easiest and most strategic customers to enter the market **[DESIRABILITY]**
 - Score 5: Clear prioritization with documented access strategy
 - Score 3: Some targeting logic but not validated
 - Score 1: No targeting strategy
 - **Evidence:** Customer prioritization matrix, beachhead strategy doc
 
-**Q6.** Identified and studied solutions currently used to meet needs
+**Q6.** Identified and studied solutions currently used to meet needs **[DESIRABILITY]**
 - Score 5: Comprehensive competitive analysis with direct testing
 - Score 3: Competitors identified but not studied in depth
 - Score 1: No competitive analysis
 - **Evidence:** Competitive analysis document, product testing notes
 
-**Q7.** Verified through interviews with at least 5 people per profile that needs are expressed
+**Q7.** Verified through interviews with at least 5 people per profile that needs are expressed **[DESIRABILITY]**
 - Score 5: 10+ interviews per segment
 - Score 4: 5-9 interviews per segment
 - Score 3: 3-4 interviews per segment
@@ -115,141 +109,75 @@ Evaluate this project using the 29-question framework below. Score each question
 - Score 1: No interviews conducted
 - **Evidence:** Interview transcripts (INT-###), interview log with counts
 
-**Q9.** Defined product-market fit per customer segment
+**Q8.** Identified one or more markets or fields of application **[LEGITIMACY]**
+- Score 5: Multiple markets clearly defined with boundaries and target segments
+- Score 3: Primary market identified but boundaries unclear
+- Score 1: Market not identified
+- **Evidence:** Market definition documents, target segment lists
+
+**Q9.** Defined product-market fit per customer segment **[DESIRABILITY]**
 - Score 5: Clear fit for each segment, tested and validated
 - Score 3: Fit defined but not tested
 - Score 1: Fit not defined
 - **Evidence:** Product-market fit hypothesis documents, validation data
 
-**Q11.** Customers will easily perceive the interest of the offer compared to existing solutions
-- Score 5: Tested with customers who immediately understood value
-- Score 3: Value proposition exists but not tested with customers
-- Score 1: No clear value proposition
-- **Evidence:** Customer feedback on value prop, A/B testing results
-
-**Q12.** Regularly test the offer with users at any stage of development
-- Score 5: Continuous testing with documented feedback cycles
-- Score 3: Occasional testing
-- Score 1: No testing with users
-- **Evidence:** Testing logs, user feedback database, iteration history
-
-**Q21.** Offer meets key needs better than existing solutions
-- Score 5: Clear superiority validated through comparative testing
-- Score 3: Claimed advantages but not validated
-- Score 1: No comparison to existing solutions
-- **Evidence:** Comparative testing results, user preference data
-
-**Q22.** Tested products or services with at least 3 customers per segment
-- Score 5: 5+ customers per segment tested
-- Score 4: 3-4 customers per segment tested
-- Score 3: 2 customers per segment tested
-- Score 2: 1 customer per segment tested
-- Score 1: No customers tested per segment
-- **Evidence:** Pilot test results, beta user feedback, usage data
-
-**Q25.** Can accurately describe profiles, behaviors, and expectations of people who express needs
-- Score 5: Detailed personas with observed behaviors and documented expectations
-- Score 3: Basic demographic profiles without behavioral data
-- Score 1: Cannot describe target users specifically
-- **Evidence:** Persona documents, behavioral analysis, customer journey maps
-
-**Q28.** Able to prioritize people with strong and poorly met needs
-- Score 5: Clear prioritization framework with validated high-need segments
-- Score 3: Some prioritization logic but not validated
-- Score 1: No prioritization approach
-- **Evidence:** Needs prioritization matrix (importance vs. satisfaction)
-
-**Desirability Score** = (Q2 + Q4 + Q5 + Q6 + Q7 + Q9 + Q11 + Q12 + Q21 + Q22 + Q25 + Q28) ÷ 12
-
----
-
-### ACCEPTABILITY: Ecosystem Alignment and Stakeholder Support (6 questions, 20% weight)
-
-**Q3.** Know the market players beyond clients and competitors
-- Score 5: Complete ecosystem map with all stakeholder types
-- Score 3: Basic understanding of some players beyond direct customers
-- Score 1: Only aware of direct customers and competitors
-- **Evidence:** Ecosystem map, stakeholder analysis document
-
-**Q10.** Regulations may help the project grow (legislation, standards)
+**Q10.** Regulations may help the project grow (legislation, standards) **[ACCEPTABILITY]**
 - Score 5: Specific regulations identified that create favorable conditions
 - Score 3: General awareness of regulatory environment
 - Score 1: No regulatory analysis conducted
 - **Evidence:** Regulatory analysis, policy documents, legal review
 
-**Q17.** Identified players potentially unfavorable to the project
-- Score 5: Potential detractors identified with mitigation strategies
-- Score 3: Some potential resistance identified
-- Score 1: No analysis of potential opposition
-- **Evidence:** Risk assessment, stakeholder stance analysis
+**Q11.** Customers will easily perceive the interest of the offer compared to existing solutions **[DESIRABILITY]**
+- Score 5: Tested with customers who immediately understood value
+- Score 3: Value proposition exists but not tested with customers
+- Score 1: No clear value proposition
+- **Evidence:** Customer feedback on value prop, A/B testing results
 
-**Q20.** Able to represent market organization and links between groups of players
-- Score 5: Detailed ecosystem map showing relationships and value flows
-- Score 3: Basic understanding of market structure
-- Score 1: Cannot map market organization
-- **Evidence:** Ecosystem visualization, value flow diagrams
+**Q12.** Regularly test the offer with users at any stage of development **[DESIRABILITY]**
+- Score 5: Continuous testing with documented feedback cycles
+- Score 3: Occasional testing
+- Score 1: No testing with users
+- **Evidence:** Testing logs, user feedback database, iteration history
 
-**Q23.** Identified market players who will support the project
-- Score 5: Confirmed support from 3+ key players with documentation
-- Score 3: Potential supporters identified but not confirmed
-- Score 1: No supporters identified
-- **Evidence:** Letters of support, MOUs, partnership agreements
+**Q13.** Validated with several people that the problem is real and important **[LEGITIMACY]**
+- Score 5: 10+ validations with documented evidence
+- Score 4: 5-9 validations
+- Score 3: 3-4 validations
+- Score 2: 1-2 validations
+- Score 1: No validation beyond team belief
+- **Evidence:** Interview transcripts, survey data, stakeholder confirmations
 
-**Q24.** Regulations may have a strong negative influence on the project (legislation, standards)
-- Score 5: Comprehensive analysis shows no significant regulatory barriers
-- Score 3: Some regulatory risks identified
-- Score 1: No regulatory risk analysis conducted
-- **Evidence:** Regulatory risk assessment, compliance analysis
-
-**Acceptability Score** = (Q3 + Q10 + Q17 + Q20 + Q23 + Q24) ÷ 6
-
----
-
-### FEASIBILITY: Technical and Operational Viability (5 questions, 20% weight)
-
-**Q1.** Solid and tangible resources to launch and carry out the project (team, network, skills, patents, finances, equipment)
-- Score 5: All necessary resources secured and available
-- Score 3: Some resources available, significant gaps exist
-- Score 1: Resources unidentified or unavailable
-- **Evidence:** Resource inventory, team roster, funding documents, equipment list
-
-**Q15.** Plan to use technical partners to focus on core project
-- Score 5: Strategic partners identified and committed
-- Score 3: Partnership strategy defined but partners not secured
-- Score 1: No partnership strategy
-- **Evidence:** Partnership agreements, MOUs, partner capability assessments
-
-**Q16.** Fully committed team formed
-- Score 5: Full team dedicated 100% with long-term commitment
-- Score 3: Team formed but commitment levels vary
-- Score 1: No team or frequent turnover
-- **Evidence:** Employment contracts, commitment letters, team roster
-
-**Q18.** Differentiating assets exist (expertise, patent, prototype, partnerships)
-- Score 5: Multiple strong differentiators with IP protection
-- Score 3: Some unique capabilities but not protected
-- Score 1: No clear differentiating assets
-- **Evidence:** Patent filings, prototype demonstrations, expertise documentation
-
-**Q26.** Have the necessary means to develop the offer
-- Score 5: All development resources secured
-- Score 3: Basic development capability but resource constraints
-- Score 1: Cannot develop offer with current means
-- **Evidence:** Development plan, resource allocation, capability assessment
-
-**Feasibility Score** = (Q1 + Q15 + Q16 + Q18 + Q26) ÷ 5
-
----
-
-### VIABILITY: Business Model Sustainability (4 questions, 20% weight)
-
-**Q14.** Defined revenue streams
+**Q14.** Defined revenue streams **[VIABILITY]**
 - Score 5: Multiple streams defined, tested, and documented
 - Score 3: Stream defined but not tested
 - Score 1: Revenue model not defined
 - **Evidence:** Business model canvas, revenue stream documentation
 
-**Q19.** Tested the revenue model with at least 3 potential customers
+**Q15.** Plan to use technical partners to focus on core project **[FEASIBILITY]**
+- Score 5: Strategic partners identified and committed
+- Score 3: Partnership strategy defined but partners not secured
+- Score 1: No partnership strategy
+- **Evidence:** Partnership agreements, MOUs, partner capability assessments
+
+**Q16.** Fully committed team formed **[FEASIBILITY]**
+- Score 5: Full team dedicated 100% with long-term commitment
+- Score 3: Team formed but commitment levels vary
+- Score 1: No team or frequent turnover
+- **Evidence:** Employment contracts, commitment letters, team roster
+
+**Q17.** Identified players potentially unfavorable to the project **[ACCEPTABILITY]**
+- Score 5: Potential detractors identified with mitigation strategies
+- Score 3: Some potential resistance identified
+- Score 1: No analysis of potential opposition
+- **Evidence:** Risk assessment, stakeholder stance analysis
+
+**Q18.** Differentiating assets exist (expertise, patent, prototype, partnerships) **[FEASIBILITY]**
+- Score 5: Multiple strong differentiators with IP protection
+- Score 3: Some unique capabilities but not protected
+- Score 1: No clear differentiating assets
+- **Evidence:** Patent filings, prototype demonstrations, expertise documentation
+
+**Q19.** Tested the revenue model with at least 3 potential customers **[VIABILITY]**
 - Score 5: Tested with 10+ customers
 - Score 4: Tested with 5-9 customers
 - Score 3: Tested with 3-4 customers
@@ -257,19 +185,81 @@ Evaluate this project using the 29-question framework below. Score each question
 - Score 1: Not tested with any customers
 - **Evidence:** Pricing test results, customer feedback, willingness-to-pay data
 
-**Q27.** Able to express value proposition in one sentence per customer type
+**Q20.** Able to represent market organization and links between groups of players **[ACCEPTABILITY]**
+- Score 5: Detailed ecosystem map showing relationships and value flows
+- Score 3: Basic understanding of market structure
+- Score 1: Cannot map market organization
+- **Evidence:** Ecosystem visualization, value flow diagrams
+
+**Q21.** Offer meets key needs better than existing solutions **[DESIRABILITY]**
+- Score 5: Clear superiority validated through comparative testing
+- Score 3: Claimed advantages but not validated
+- Score 1: No comparison to existing solutions
+- **Evidence:** Comparative testing results, user preference data
+
+**Q22.** Tested products or services with at least 3 customers per segment **[DESIRABILITY]**
+- Score 5: 5+ customers per segment tested
+- Score 4: 3-4 customers per segment tested
+- Score 3: 2 customers per segment tested
+- Score 2: 1 customer per segment tested
+- Score 1: No customers tested per segment
+- **Evidence:** Pilot test results, beta user feedback, usage data
+
+**Q23.** Identified market players who will support the project **[ACCEPTABILITY]**
+- Score 5: Confirmed support from 3+ key players with documentation
+- Score 3: Potential supporters identified but not confirmed
+- Score 1: No supporters identified
+- **Evidence:** Letters of support, MOUs, partnership agreements
+
+**Q24.** Regulations may have a strong negative influence on the project (legislation, standards) **[ACCEPTABILITY]**
+- Score 5: Comprehensive analysis shows no significant regulatory barriers
+- Score 3: Some regulatory risks identified
+- Score 1: No regulatory risk analysis conducted
+- **Evidence:** Regulatory risk assessment, compliance analysis
+
+**Q25.** Can accurately describe profiles, behaviors, and expectations of people who express needs **[DESIRABILITY]**
+- Score 5: Detailed personas with observed behaviors and documented expectations
+- Score 3: Basic demographic profiles without behavioral data
+- Score 1: Cannot describe target users specifically
+- **Evidence:** Persona documents, behavioral analysis, customer journey maps
+
+**Q26.** Have the necessary means to develop the offer **[FEASIBILITY]**
+- Score 5: All development resources secured
+- Score 3: Basic development capability but resource constraints
+- Score 1: Cannot develop offer with current means
+- **Evidence:** Development plan, resource allocation, capability assessment
+
+**Q27.** Able to express value proposition in one sentence per customer type **[VIABILITY]**
 - Score 5: Clear, tested value propositions for each segment
 - Score 3: Value propositions exist but not validated
 - Score 1: Cannot articulate value proposition
 - **Evidence:** Value proposition documents, customer validation interviews
 
-**Q29.** Have the means to reach customers (sales force, marketing budget)
+**Q28.** Able to prioritize people with strong and poorly met needs **[DESIRABILITY]**
+- Score 5: Clear prioritization framework with validated high-need segments
+- Score 3: Some prioritization logic but not validated
+- Score 1: No prioritization approach
+- **Evidence:** Needs prioritization matrix (importance vs. satisfaction)
+
+**Q29.** Have the means to reach customers (sales force, marketing budget) **[VIABILITY]**
 - Score 5: Established channels with proven customer access
 - Score 3: Some customer reach capability but limited
 - Score 1: No means to reach customers
 - **Evidence:** GTM strategy, sales plan, marketing budget, channel partnerships
 
-**Viability Score** = (Q14 + Q19 + Q27 + Q29) ÷ 4
+---
+
+## Dimension Score Calculations
+
+**Legitimacy Score** (15% weight) = (Q8 + Q13) ÷ 2
+
+**Desirability Score** (25% weight) = (Q2 + Q4 + Q5 + Q6 + Q7 + Q9 + Q11 + Q12 + Q21 + Q22 + Q25 + Q28) ÷ 12
+
+**Acceptability Score** (20% weight) = (Q3 + Q10 + Q17 + Q20 + Q23 + Q24) ÷ 6
+
+**Feasibility Score** (20% weight) = (Q1 + Q15 + Q16 + Q18 + Q26) ÷ 5
+
+**Viability Score** (20% weight) = (Q14 + Q19 + Q27 + Q29) ÷ 4
 
 ---
 
@@ -356,7 +346,7 @@ Overall Score = (Legitimacy × 0.15) + (Desirability × 0.25) + (Acceptability �
 2. Metadata block
 3. Executive summary
 4. Key finding
-5. Assessment results: 29-question table
+5. Assessment results: 29-question table **in numerical order (Q1-Q29)**
    - Columns: Question # | Score | Justification | Evidence Reference
    - All borders, header row shaded gray
    - Question numbers and scores in bold

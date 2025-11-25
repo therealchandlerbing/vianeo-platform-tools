@@ -6,6 +6,12 @@
 
 ---
 
+## Instructions for AI Assistant
+
+Using output from Step 5, create a Needs Qualification Matrix. Import all requester names and need statements exactly as written—do not paraphrase. Rate Importance and Satisfaction for each combination using the scales below. Generate two deliverables: HTML Matrix (landscape, color-coded) and Analysis Report (9-12 pages).
+
+---
+
 ## Overview
 
 Step 6 transforms the Needs/Requesters analysis from Step 5 into two powerful visual and strategic deliverables:

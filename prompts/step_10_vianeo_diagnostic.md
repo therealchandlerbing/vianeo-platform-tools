@@ -6,6 +6,12 @@
 
 ---
 
+## Instructions for AI Assistant
+
+Synthesize findings from Steps 2-9 into a concise executive diagnostic comment (6-8 sentences). Structure the output as: validated strengths (1-2 sentences), critical risks (1-2 sentences), immediate actions with owners (2-3 sentences), and evidence gaps (1-2 sentences). Include a dimension summary table with scores. Generate two deliverables: Markdown diagnostic comment and professional DOCX report.
+
+---
+
 ## Overview
 
 Step 10 transforms your complete Vianeo assessment into an executive-ready diagnostic comment that synthesizes findings into actionable insights for stakeholders and investors.

@@ -6,6 +6,12 @@
 
 ---
 
+## Instructions for AI Assistant
+
+Conduct a comprehensive Viability Assessment to define product-market fit and business models. Using validated needs from Steps 5-7 and features from Step 11, configure specific product offerings with: Product identity (name, description within 250 chars, target client), targeted requesters with validated needs, MVP features mapped to needs, and complete business model (value proposition, revenue stream, distribution channel, cost structure). Generate THREE deliverables per product: Product/Market Fit Sheet, Business Model Canvas, and Summary Dashboard.
+
+---
+
 ## Overview
 
 Step 12 translates validated customer needs (from Desirability) and technical capabilities (from Feasibility) into concrete commercial structures. You'll define specific product-market fit configurations and complete business models ready for financial modeling and go-to-market execution.

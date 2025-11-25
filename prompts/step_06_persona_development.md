@@ -6,6 +6,12 @@
 
 ---
 
+## Instructions for AI Assistant
+
+Create 3-5 evidence-based personas from interview data, representing key requester segments from Step 5. Apply validation badges based on interview counts (Green: 5+, Orange: 1-4, Red: 0). Follow character limits strictly (60 chars for Tasks/Pains/Expectations). Generate a professional DOCX (3-11 pages) with Cover Page, Evidence Base Summary, and Individual Personas.
+
+---
+
 ## Overview
 
 The Persona Development step creates evidence-based user personas that validate the Desirability dimension by documenting:

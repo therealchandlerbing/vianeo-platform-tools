@@ -6,6 +6,12 @@ Use this prompt to transform Step 12 Viability outputs into presentation-grade H
 
 ---
 
+## Instructions for AI Assistant
+
+Transform Step 12 Viability outputs into a presentation-grade HTML dashboard. Read all product/market fit sheets and business model canvases, then generate a single self-contained HTML file with: Header with portfolio metrics, Executive Summary, interactive Product Portfolio Grid, Need Coverage Analysis table, Progress Metrics, Strategic Insights, and Product Detail Modals. Apply VIANEO design system (blue scale: #1a365d primary) with responsive layout and WCAG AA accessibility.
+
+---
+
 ## When to Use This Dashboard
 
 **Perfect for:**

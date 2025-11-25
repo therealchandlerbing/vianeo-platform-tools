@@ -6,6 +6,12 @@
 
 ---
 
+## Instructions for AI Assistant
+
+Conduct a strategic ecosystem analysis identifying the 8-10 most critical Players (active market participants) and 8-10 most influential Influencers (market shapers). For each stakeholder, assess acceptability (Favorable/Neutral/Unfavorable) and strategic implications. Generate two deliverables: Professional 2-page DOCX with BCG-style presentation and comprehensive Markdown analysis.
+
+---
+
 ## Overview
 
 Map ecosystem acceptability by identifying who will support, resist, or influence your innovation. This analysis provides strategic clarity on stakeholder positioning and guides engagement strategy through a comprehensive assessment of the most critical Players (active market participants) and Influencers (market shapers) in your business ecosystem.

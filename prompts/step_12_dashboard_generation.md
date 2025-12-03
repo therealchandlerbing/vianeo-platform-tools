@@ -6,9 +6,28 @@ Use this prompt to transform Step 12 Viability outputs into presentation-grade H
 
 ---
 
+## Related Resources
+
+| Resource | Path | Purpose |
+|----------|------|---------|
+| **Skill Documentation** | `docs/VIANEO_Viability_Dashboard_Skill.md` | Complete skill reference with data schema, workflow, and validation checklist |
+| **Methodology Reference** | `references/vianeo-methodology.md` | Full 12-step Vianeo methodology context |
+| **Production Template** | `assets/viability-dashboard-template.html` | Stripe/Linear quality HTML template with placeholders |
+| **Worked Example** | `examples/Step12_Viability_Dashboard_IRDose.html` | Complete IRDose project dashboard |
+| **PMF Template** | `templates/Step12_PMF_Template.md` | Product-Market Fit sheet template |
+
+---
+
 ## Instructions for AI Assistant
 
-Transform Step 12 Viability outputs into a presentation-grade HTML dashboard. Generate a single self-contained HTML file with portfolio metrics, Executive Summary, Product Portfolio Grid, Need Coverage table, and Strategic Insights. Apply VIANEO design system with responsive layout.
+Transform Step 12 Viability outputs into a presentation-grade HTML dashboard. Generate a single self-contained HTML file with portfolio metrics, Executive Summary, Product Portfolio Grid, Need Coverage table, and Strategic Insights.
+
+**Recommended approach:**
+1. Review the skill documentation in `docs/VIANEO_Viability_Dashboard_Skill.md` for complete data schema
+2. Use `assets/viability-dashboard-template.html` as the production-grade base template
+3. Reference `examples/Step12_Viability_Dashboard_IRDose.html` for a working example
+
+Apply the production-grade Stripe/Linear design system with responsive layout.
 
 ---
 
@@ -241,7 +260,42 @@ For each insight card:
 
 ## Design System Standards
 
-**VIANEO Viability Dashboard follows established design conventions:**
+**Two design system options are available:**
+
+### Option 1: Production-Grade Stripe/Linear System (Recommended)
+
+Use the template at `assets/viability-dashboard-template.html` for the highest quality output.
+
+**Key Features:**
+- Layered composite shadow system (`--shadow-md`, `--shadow-lg`)
+- Staggered `fadeInUp` animations (50ms delays)
+- `--ease-out-expo` cubic bezier for natural motion
+- `prefers-reduced-motion` support
+- Accordion expand/collapse with `max-height` transitions
+
+**Status Colors (Stripe/Linear):**
+| Status | Color | Background |
+|--------|-------|------------|
+| Success (green) | `#00D68F` | `rgba(0,214,143,0.08)` |
+| Warning (yellow) | `#FFB800` | `rgba(255,184,0,0.08)` |
+| Error (red) | `#FF5B5B` | — |
+| Info (blue) | `#635BFF` | — |
+
+**Business Model Card Accents:**
+| Component | Left Border Color |
+|-----------|-------------------|
+| Value Proposition | Blue (`--accent-blue`) |
+| Revenue Model | Green (`--accent-green`) |
+| Distribution | Orange (`--accent-orange`) |
+| Cost Structure | Red (`--accent-red`) |
+
+See `docs/VIANEO_Viability_Dashboard_Skill.md` for complete design system documentation.
+
+---
+
+### Option 2: Classic VIANEO Blue Scale
+
+For simpler dashboards or legacy consistency:
 
 ### Colors (Primary Blue Scale)
 - **Primary Dark**: #1a365d (headers, primary text, key elements)

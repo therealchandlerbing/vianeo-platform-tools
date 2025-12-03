@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viability Dashboard | {{PROJECT_NAME}} - {{TAGLINE}}</title>
+    <style>
+/* ============================================
+   VIANEO VIABILITY DASHBOARD TEMPLATE
+   Design System: Stripe/Linear Production-Grade
+   ============================================ */
+
+:root {
+    /* Primary Colors */
+    --primary-900: #0A2540;
+    --primary-700: #1A3A5C;
+    --primary-500: #425A70;
+    --primary-300: #7A8B9A;
+    --primary-100: #E3E8ED;
+    --primary-50: #F6F9FC;
+
+    /* Accent Colors */
+    --accent-blue: #635BFF;
+    --accent-blue-hover: #7A73FF;
+    --accent-cyan: #00D4FF;
+    --accent-green: #00D68F;
+    --accent-yellow: #FFB800;
+    --accent-orange: #FF7A00;
+    --accent-red: #FF5B5B;
+
+    /* Status Colors */
+    --status-success: #00D68F;
+    --status-success-bg: rgba(0, 214, 143, 0.08);
+    --status-success-border: rgba(0, 214, 143, 0.2);
+    --status-warning: #FFB800;
+    --status-warning-bg: rgba(255, 184, 0, 0.08);
+    --status-warning-border: rgba(255, 184, 0, 0.2);
+    --status-error: #FF5B5B;
+    --status-error-bg: rgba(255, 91, 91, 0.08);
+    --status-info: #635BFF;
+    --status-info-bg: rgba(99, 91, 255, 0.08);
+    --status-info-border: rgba(99, 91, 255, 0.2);
+
+    /* Neutrals */
+    --white: #FFFFFF;
+    --gray-50: #FAFAFA;
+    --gray-100: #F4F4F5;
+    --gray-200: #E4E4E7;
+    --gray-300: #D4D4D8;
+    --gray-400: #A1A1AA;
+    --gray-500: #71717A;
+    --gray-600: #52525B;
+    --gray-700: #3F3F46;
+    --gray-800: #27272A;
+    --gray-900: #18181B;
+
+    /* Typography */
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+    /* Spacing */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+    --space-16: 64px;
+
+    /* Border Radius */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+    --radius-xl: 18px;
+
+    /* Layered Shadow System */
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-sm:
+        0 1px 2px rgba(0, 0, 0, 0.04),
+        0 1px 3px rgba(0, 0, 0, 0.06);
+    --shadow-md:
+        0 2px 4px rgba(0, 0, 0, 0.02),
+        0 4px 8px rgba(0, 0, 0, 0.04),
+        0 8px 16px rgba(0, 0, 0, 0.04);
+    --shadow-lg:
+        0 4px 8px rgba(0, 0, 0, 0.02),
+        0 8px 16px rgba(0, 0, 0, 0.04),
+        0 16px 32px rgba(0, 0, 0, 0.06);
+    --shadow-xl:
+        0 8px 16px rgba(0, 0, 0, 0.02),
+        0 16px 32px rgba(0, 0, 0, 0.04),
+        0 32px 64px rgba(0, 0, 0, 0.08);
+    --shadow-inner: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+    --shadow-glow-blue: 0 0 0 3px rgba(99, 91, 255, 0.15);
+    --shadow-glow-success: 0 0 0 3px rgba(0, 214, 143, 0.15);
+
+    /* Animation Timing */
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+    --duration-fast: 150ms;
+    --duration-normal: 250ms;
+    --duration-slow: 400ms;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+body {
+    font-family: var(--font-sans);
+    background: var(--gray-50);
+    color: var(--gray-900);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image:
+        radial-gradient(ellipse at 50% 0%, rgba(99, 91, 255, 0.03) 0%, transparent 50%),
+        linear-gradient(180deg, var(--gray-50) 0%, #F0F2F5 100%);
+    min-height: 100vh;
+}
+
+.dashboard {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--space-8);
+    animation: fadeIn var(--duration-slow) var(--ease-out-expo);
+}
+
+/* ============================================
+   HEADER SECTION
+   ============================================ */
+.dashboard-header {
+    margin-bottom: var(--space-8);
+    animation: fadeInUp var(--duration-slow) var(--ease-out-expo);
+}
+
+.dashboard-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary-900);
+    margin-bottom: var(--space-2);
+    letter-spacing: -0.025em;
+}
+
+.dashboard-header .subtitle {
+    font-size: 15px;
+    color: var(--gray-500);
+    font-weight: 450;
+}
+
+.dashboard-meta {
+    display: flex;
+    gap: var(--space-6);
+    margin-top: var(--space-4);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--gray-200);
+    flex-wrap: wrap;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: 13px;
+    color: var(--gray-600);
+}
+
+.meta-item strong {
+    color: var(--gray-900);
+    font-weight: 600;
+}
+
+/* ============================================
+   SUMMARY CARDS
+   ============================================ */
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
+}
+
+.summary-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+    border: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-sm);
+    transition:
+        transform var(--duration-normal) var(--ease-out-expo),
+        box-shadow var(--duration-normal) var(--ease-out-expo),
+        border-color var(--duration-fast);
+    animation: fadeInUp var(--duration-slow) var(--ease-out-expo) backwards;
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.summary-card:nth-child(1) { animation-delay: 50ms; }
+.summary-card:nth-child(2) { animation-delay: 100ms; }
+.summary-card:nth-child(3) { animation-delay: 150ms; }
+.summary-card:nth-child(4) { animation-delay: 200ms; }
+
+.summary-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--gray-300);
+}
+
+.summary-card:focus-within {
+    outline: none;
+    box-shadow: var(--shadow-md), var(--shadow-glow-blue);
+    border-color: var(--accent-blue);
+}
+
+.summary-card .label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: var(--space-2);
+}
+
+.summary-card .value {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary-900);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+}
+
+.summary-card .detail {
+    font-size: 13px;
+    color: var(--gray-500);
+    margin-top: var(--space-1);
+    font-weight: 450;
+}
+
+.summary-card.highlight {
+    background: linear-gradient(135deg, var(--accent-blue) 0%, #8B5CF6 50%, #7C3AED 100%);
+    border: none;
+    box-shadow:
+        var(--shadow-md),
+        0 4px 20px rgba(99, 91, 255, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+.summary-card.highlight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.summary-card.highlight:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        var(--shadow-lg),
+        0 8px 30px rgba(99, 91, 255, 0.35);
+}
+
+.summary-card.highlight .label,
+.summary-card.highlight .value,
+.summary-card.highlight .detail {
+    color: var(--white);
+    position: relative;
+    z-index: 1;
+}
+
+.summary-card.highlight .label {
+    opacity: 0.85;
+}
+
+/* ============================================
+   PRODUCT SECTION
+   ============================================ */
+.product-section {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--gray-200);
+    margin-bottom: var(--space-6);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    animation: fadeInUp var(--duration-slow) var(--ease-out-expo) 250ms backwards;
+}
+
+.product-header {
+    background: var(--primary-900);
+    color: var(--white);
+    padding: var(--space-6);
+    position: relative;
+    background:
+        linear-gradient(135deg, rgba(255,255,255,0.03) 0%, transparent 50%),
+        linear-gradient(180deg, var(--primary-900) 0%, #071B30 100%);
+}
+
+.product-header h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: var(--space-2);
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    letter-spacing: -0.01em;
+}
+
+.product-header h2 .icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(4px);
+}
+
+.product-description {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.75);
+    max-width: 900px;
+    line-height: 1.65;
+}
+
+.char-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-size: 11px;
+    font-family: var(--font-mono);
+    background: rgba(255, 255, 255, 0.08);
+    padding: 3px 10px;
+    border-radius: var(--radius-sm);
+    margin-left: var(--space-3);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    font-weight: 500;
+}
+
+.char-indicator.valid {
+    background: var(--status-success-bg);
+    color: var(--status-success);
+    border-color: var(--status-success-border);
+}
+
+.char-indicator.warning {
+    background: var(--status-warning-bg);
+    color: var(--status-warning);
+    border-color: var(--status-warning-border);
+}
+
+.char-indicator.error {
+    background: var(--status-error-bg);
+    color: var(--status-error);
+}
+
+/* ============================================
+   FEATURES SECTION
+   ============================================ */
+.features-section {
+    padding: var(--space-6);
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.section-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-700);
+    margin-bottom: var(--space-4);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    letter-spacing: -0.01em;
+}
+
+.section-title .count {
+    background: var(--gray-100);
+    color: var(--gray-600);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 100px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-3);
+}
+
+.feature-card {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-3);
+    background: var(--gray-50);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--gray-100);
+    transition:
+        background var(--duration-fast),
+        border-color var(--duration-fast),
+        box-shadow var(--duration-fast);
+    animation: fadeInUp var(--duration-normal) var(--ease-out-expo) backwards;
+}
+
+/* Staggered animation delays for features */
+.feature-card:nth-child(1) { animation-delay: 300ms; }
+.feature-card:nth-child(2) { animation-delay: 340ms; }
+.feature-card:nth-child(3) { animation-delay: 380ms; }
+.feature-card:nth-child(4) { animation-delay: 420ms; }
+.feature-card:nth-child(5) { animation-delay: 460ms; }
+.feature-card:nth-child(6) { animation-delay: 500ms; }
+.feature-card:nth-child(7) { animation-delay: 540ms; }
+.feature-card:nth-child(8) { animation-delay: 580ms; }
+.feature-card:nth-child(9) { animation-delay: 620ms; }
+.feature-card:nth-child(10) { animation-delay: 660ms; }
+
+.feature-card:hover {
+    background: var(--white);
+    border-color: var(--gray-200);
+    box-shadow: var(--shadow-xs);
+}
+
+.feature-badge {
+    flex-shrink: 0;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: var(--radius-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.feature-badge.mvp {
+    background: var(--accent-blue);
+    color: var(--white);
+    box-shadow: 0 2px 8px rgba(99, 91, 255, 0.3);
+}
+
+.feature-badge.phased {
+    background: var(--gray-200);
+    color: var(--gray-600);
+}
+
+.feature-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.feature-name {
+    font-size: 13px;
+    font-weight: 550;
+    color: var(--gray-800);
+    margin-bottom: var(--space-1);
+}
+
+.feature-meta {
+    font-size: 11px;
+    color: var(--gray-500);
+    display: flex;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+}
+
+.feature-meta span {
+    display: inline-flex;
+    align-items: center;
+}
+
+.feature-meta span::before {
+    content: '';
+    width: 3px;
+    height: 3px;
+    background: var(--gray-400);
+    border-radius: 50%;
+    margin-right: var(--space-2);
+}
+
+.feature-meta span:first-child::before {
+    display: none;
+}
+
+/* ============================================
+   CLIENT CARDS
+   ============================================ */
+.clients-container {
+    padding: var(--space-6);
+}
+
+.client-card {
+    background: var(--gray-50);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray-200);
+    margin-bottom: var(--space-4);
+    overflow: hidden;
+    transition:
+        box-shadow var(--duration-normal) var(--ease-out-expo),
+        border-color var(--duration-fast);
+}
+
+.client-card:last-child {
+    margin-bottom: 0;
+}
+
+.client-card:hover {
+    border-color: var(--gray-300);
+}
+
+.client-card.expanded {
+    box-shadow: var(--shadow-md);
+    border-color: var(--gray-300);
+    background: var(--white);
+}
+
+.client-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-4) var(--space-5);
+    background: var(--white);
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    transition:
+        background var(--duration-fast),
+        border-color var(--duration-fast);
+    outline: none;
+}
+
+.client-header:hover {
+    background: var(--gray-50);
+}
+
+.client-header:focus-visible {
+    box-shadow: inset 0 0 0 2px var(--accent-blue);
+}
+
+.client-card.expanded .client-header {
+    border-bottom-color: var(--gray-200);
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.client-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    border: 1px solid transparent;
+    transition: transform var(--duration-fast) var(--ease-out-back);
+}
+
+.client-card:hover .client-icon {
+    transform: scale(1.05);
+}
+
+/* Client Icon Types */
+.client-icon.research {
+    background: var(--status-info-bg);
+    border-color: var(--status-info-border);
+}
+.client-icon.patient {
+    background: var(--status-success-bg);
+    border-color: var(--status-success-border);
+}
+.client-icon.institution {
+    background: var(--status-warning-bg);
+    border-color: var(--status-warning-border);
+}
+.client-icon.enterprise {
+    background: var(--status-info-bg);
+    border-color: var(--status-info-border);
+}
+.client-icon.consumer {
+    background: var(--status-success-bg);
+    border-color: var(--status-success-border);
+}
+
+.client-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--gray-900);
+    letter-spacing: -0.01em;
+}
+
+.client-type {
+    font-size: 12px;
+    color: var(--gray-500);
+    margin-top: 1px;
+}
+
+.client-badges {
+    display: flex;
+    gap: var(--space-2);
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.acceptability-badge,
+.coherence-badge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 100px;
+    border: 1px solid transparent;
+}
+
+.acceptability-badge.favorable {
+    background: var(--status-success-bg);
+    color: var(--status-success);
+    border-color: var(--status-success-border);
+}
+
+.acceptability-badge.neutral {
+    background: var(--status-warning-bg);
+    color: var(--status-warning);
+    border-color: var(--status-warning-border);
+}
+
+.acceptability-badge.unfavorable {
+    background: var(--status-error-bg);
+    color: var(--status-error);
+}
+
+.coherence-badge.coherent {
+    background: var(--status-success-bg);
+    color: var(--status-success);
+    border-color: var(--status-success-border);
+}
+
+.coherence-badge.issues {
+    background: var(--status-warning-bg);
+    color: var(--status-warning);
+    border-color: var(--status-warning-border);
+}
+
+.expand-icon {
+    color: var(--gray-400);
+    font-size: 10px;
+    transition:
+        transform var(--duration-normal) var(--ease-out-expo),
+        color var(--duration-fast);
+    margin-left: var(--space-2);
+}
+
+.client-card:hover .expand-icon {
+    color: var(--gray-600);
+}
+
+.client-card.expanded .expand-icon {
+    transform: rotate(180deg);
+}
+
+/* Client Body - Animated expand/collapse */
+.client-body {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 var(--space-5);
+    transition:
+        max-height var(--duration-slow) var(--ease-out-expo),
+        opacity var(--duration-normal) var(--ease-out-expo),
+        padding var(--duration-slow) var(--ease-out-expo);
+}
+
+.client-card.expanded .client-body {
+    max-height: 2000px;
+    opacity: 1;
+    padding: var(--space-5);
+}
+
+/* ============================================
+   REQUESTERS SECTION
+   ============================================ */
+.requesters-section {
+    margin-bottom: var(--space-5);
+}
+
+.requesters-grid {
+    display: flex;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+}
+
+.requester-tag {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    padding: var(--space-2) var(--space-3);
+    transition:
+        border-color var(--duration-fast),
+        box-shadow var(--duration-fast);
+}
+
+.requester-tag:hover {
+    border-color: var(--gray-300);
+    box-shadow: var(--shadow-xs);
+}
+
+.requester-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    box-shadow: 0 0 6px currentColor;
+}
+
+.requester-dot.validated {
+    background: var(--status-success);
+    color: var(--status-success);
+}
+.requester-dot.partial {
+    background: var(--status-warning);
+    color: var(--status-warning);
+}
+.requester-dot.unvalidated {
+    background: var(--gray-300);
+    color: transparent;
+}
+
+.requester-name {
+    font-size: 13px;
+    font-weight: 550;
+    color: var(--gray-800);
+}
+
+.requester-validation {
+    font-size: 11px;
+    color: var(--gray-500);
+}
+
+/* ============================================
+   BUSINESS MODEL GRID
+   ============================================ */
+.business-model-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+}
+
+.bm-card {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--gray-200);
+    overflow: hidden;
+    transition:
+        box-shadow var(--duration-fast),
+        border-color var(--duration-fast);
+}
+
+.bm-card:hover {
+    box-shadow: var(--shadow-sm);
+    border-color: var(--gray-300);
+}
+
+.bm-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-3) var(--space-4);
+    background: var(--gray-50);
+    border-bottom: 1px solid var(--gray-100);
+    position: relative;
+}
+
+.bm-card-header::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    border-radius: 0 2px 2px 0;
+}
+
+/* Business Model Card Accent Colors */
+.bm-card.value-prop .bm-card-header::before { background: var(--accent-blue); }
+.bm-card.revenue .bm-card-header::before { background: var(--accent-green); }
+.bm-card.distribution .bm-card-header::before { background: var(--accent-orange); }
+.bm-card.cost .bm-card-header::before { background: var(--accent-red); }
+
+.bm-card-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--gray-600);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.bm-card-body {
+    padding: var(--space-4);
+}
+
+.bm-content {
+    font-size: 13px;
+    color: var(--gray-700);
+    line-height: 1.65;
+    margin-bottom: var(--space-3);
+}
+
+.bm-content strong {
+    color: var(--gray-900);
+    font-weight: 600;
+}
+
+.bm-content ul {
+    margin-left: var(--space-4);
+    margin-top: var(--space-2);
+}
+
+.bm-content li {
+    margin-bottom: var(--space-1);
+}
+
+.bm-platform-input {
+    background: var(--gray-50);
+    border: 1px dashed var(--gray-300);
+    border-radius: var(--radius-sm);
+    padding: var(--space-3);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--gray-600);
+    line-height: 1.55;
+    transition:
+        border-color var(--duration-fast),
+        background var(--duration-fast);
+}
+
+.bm-platform-input:hover {
+    background: var(--white);
+    border-color: var(--gray-400);
+}
+
+.bm-platform-input .label {
+    font-size: 10px;
+    color: var(--gray-400);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: var(--space-1);
+    display: block;
+    font-weight: 600;
+}
+
+/* ============================================
+   COVERAGE SECTION
+   ============================================ */
+.coverage-section {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--gray-200);
+    padding: var(--space-6);
+    margin-bottom: var(--space-6);
+    box-shadow: var(--shadow-sm);
+    animation: fadeInUp var(--duration-slow) var(--ease-out-expo) 300ms backwards;
+}
+
+.coverage-section h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-4);
+    letter-spacing: -0.01em;
+}
+
+.coverage-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.coverage-table th,
+.coverage-table td {
+    padding: var(--space-3) var(--space-4);
+    text-align: left;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.coverage-table th {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: var(--gray-50);
+    position: sticky;
+    top: 0;
+}
+
+.coverage-table th:first-child {
+    border-radius: var(--radius-sm) 0 0 0;
+}
+
+.coverage-table th:last-child {
+    border-radius: 0 var(--radius-sm) 0 0;
+}
+
+.coverage-table td {
+    font-size: 13px;
+    color: var(--gray-700);
+}
+
+.coverage-table tbody tr {
+    transition: background var(--duration-fast);
+}
+
+.coverage-table tbody tr:hover {
+    background: var(--gray-50);
+}
+
+.coverage-table .need-name {
+    font-weight: 550;
+    color: var(--gray-900);
+}
+
+.intensity-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: var(--radius-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.intensity-badge.fundamental {
+    background: #FEE2E2;
+    color: #DC2626;
+    border: 1px solid #FECACA;
+}
+
+.intensity-badge.important {
+    background: #FEF3C7;
+    color: #D97706;
+    border: 1px solid #FDE68A;
+}
+
+.intensity-badge.nice-to-have {
+    background: var(--gray-100);
+    color: var(--gray-600);
+    border: 1px solid var(--gray-200);
+}
+
+.coverage-status {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.coverage-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.coverage-icon.covered {
+    background: var(--status-success);
+    color: var(--white);
+    box-shadow: 0 2px 6px rgba(0, 214, 143, 0.35);
+}
+
+.coverage-icon.partial {
+    background: var(--status-warning);
+    color: var(--white);
+    box-shadow: 0 2px 6px rgba(255, 184, 0, 0.35);
+}
+
+.coverage-icon.gap {
+    background: var(--status-error);
+    color: var(--white);
+    box-shadow: 0 2px 6px rgba(255, 91, 91, 0.35);
+}
+
+/* ============================================
+   COHERENCE SECTION
+   ============================================ */
+.coherence-section {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--gray-200);
+    padding: var(--space-6);
+    margin-bottom: var(--space-6);
+    box-shadow: var(--shadow-sm);
+    animation: fadeInUp var(--duration-slow) var(--ease-out-expo) 350ms backwards;
+}
+
+.coherence-section h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-4);
+    letter-spacing: -0.01em;
+}
+
+.coherence-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+}
+
+.coherence-check {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    background: var(--gray-50);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--gray-100);
+    transition:
+        background var(--duration-fast),
+        border-color var(--duration-fast),
+        box-shadow var(--duration-fast);
+}
+
+.coherence-check:hover {
+    background: var(--white);
+    border-color: var(--gray-200);
+    box-shadow: var(--shadow-xs);
+}
+
+.coherence-icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.coherence-icon.pass {
+    background: var(--status-success);
+    color: var(--white);
+    box-shadow: 0 2px 8px rgba(0, 214, 143, 0.35);
+}
+
+.coherence-icon.warn {
+    background: var(--status-warning);
+    color: var(--white);
+    box-shadow: 0 2px 8px rgba(255, 184, 0, 0.35);
+}
+
+.coherence-icon.fail {
+    background: var(--status-error);
+    color: var(--white);
+    box-shadow: 0 2px 8px rgba(255, 91, 91, 0.35);
+}
+
+.coherence-content h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-800);
+    margin-bottom: var(--space-1);
+    letter-spacing: -0.01em;
+}
+
+.coherence-content p {
+    font-size: 12px;
+    color: var(--gray-500);
+    line-height: 1.55;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.dashboard-footer {
+    text-align: center;
+    padding: var(--space-8) 0;
+    border-top: 1px solid var(--gray-200);
+    margin-top: var(--space-8);
+    animation: fadeIn var(--duration-slow) var(--ease-out-expo) 400ms backwards;
+}
+
+.footer-text {
+    font-size: 12px;
+    color: var(--gray-400);
+    line-height: 1.7;
+}
+
+.footer-text strong {
+    color: var(--gray-600);
+    font-weight: 600;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1024px) {
+    .summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .business-model-grid {
+        grid-template-columns: 1fr;
+    }
+    .coherence-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .dashboard {
+        padding: var(--space-4);
+    }
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+    .dashboard-meta {
+        flex-direction: column;
+        gap: var(--space-2);
+    }
+    .client-badges {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Print styles */
+@media print {
+    .dashboard {
+        max-width: none;
+        padding: 0;
+    }
+    .client-body {
+        max-height: none !important;
+        opacity: 1 !important;
+        padding: var(--space-5) !important;
+    }
+    .expand-icon {
+        display: none;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- ============================================
+             HEADER - Replace {{PLACEHOLDERS}}
+             ============================================ -->
+        <header class="dashboard-header">
+            <h1>Viability Dashboard</h1>
+            <p class="subtitle">{{TAGLINE}}</p>
+            <div class="dashboard-meta">
+                <div class="meta-item">
+                    <strong>Project:</strong> {{PROJECT_NAME}}
+                </div>
+                <div class="meta-item">
+                    <strong>Field:</strong> {{FIELD_DESCRIPTION}}
+                </div>
+                <div class="meta-item">
+                    <strong>Date:</strong> {{DATE}}
+                </div>
+                <div class="meta-item">
+                    <strong>Status:</strong> {{STATUS_PERCENT}}
+                </div>
+            </div>
+        </header>
+
+        <!-- ============================================
+             SUMMARY CARDS
+             ============================================ -->
+        <section class="summary-grid">
+            <div class="summary-card highlight">
+                <div class="label">Products Defined</div>
+                <div class="value">{{PRODUCTS_COUNT}}</div>
+                <div class="detail">{{PRODUCT_NAME}}</div>
+            </div>
+            <div class="summary-card">
+                <div class="label">Clients Served</div>
+                <div class="value">{{CLIENTS_COUNT}}</div>
+                <div class="detail">Distinct business models</div>
+            </div>
+            <div class="summary-card">
+                <div class="label">MVP Features</div>
+                <div class="value">{{MVP_FEATURES_COUNT}}</div>
+                <div class="detail">Core capabilities validated</div>
+            </div>
+            <div class="summary-card">
+                <div class="label">Need Coverage</div>
+                <div class="value">{{NEED_COVERAGE_PCT}}%</div>
+                <div class="detail">Fundamental needs addressed</div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             PRODUCT SECTION
+             ============================================ -->
+        <section class="product-section">
+            <div class="product-header">
+                <h2>
+                    <span class="icon">{{PRODUCT_ICON}}</span>
+                    {{PRODUCT_NAME}}
+                    <span class="char-indicator {{NAME_CHAR_CLASS}}">{{NAME_CHAR_COUNT}}/60</span>
+                </h2>
+                <p class="product-description">
+                    {{PRODUCT_DESCRIPTION}}
+                    <span class="char-indicator {{DESC_CHAR_CLASS}}">{{DESC_CHAR_COUNT}}/250</span>
+                </p>
+            </div>
+
+            <!-- Features Section -->
+            <div class="features-section">
+                <h3 class="section-title">
+                    Product Features
+                    <span class="count">{{MVP_FEATURES_COUNT}} MVP</span>
+                </h3>
+                <div class="features-grid">
+                    <!-- REPEAT FOR EACH FEATURE -->
+                    <div class="feature-card">
+                        <span class="feature-badge {{FEATURE_STATUS_CLASS}}">{{FEATURE_STATUS}}</span>
+                        <div class="feature-content">
+                            <div class="feature-name">{{FEATURE_NAME}}</div>
+                            <div class="feature-meta">
+                                <span>{{FEATURE_BENEFIT}}</span>
+                                <span>{{FEATURE_TIMELINE}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END REPEAT -->
+                </div>
+            </div>
+
+            <!-- Clients Container -->
+            <div class="clients-container">
+                <h3 class="section-title">
+                    Business Models by Client
+                    <span class="count">{{CLIENTS_COUNT}} clients</span>
+                </h3>
+
+                <!-- REPEAT FOR EACH CLIENT -->
+                <div class="client-card {{EXPANDED_IF_FIRST}}">
+                    <div class="client-header" onclick="toggleClient(this)" tabindex="0" role="button" aria-expanded="{{ARIA_EXPANDED}}">
+                        <div class="client-info">
+                            <div class="client-icon {{CLIENT_ICON_CLASS}}">{{CLIENT_ICON}}</div>
+                            <div>
+                                <div class="client-name">{{CLIENT_NAME}}</div>
+                                <div class="client-type">{{CLIENT_CONTEXT}}</div>
+                            </div>
+                        </div>
+                        <div class="client-badges">
+                            <span class="acceptability-badge {{ACCEPTABILITY_CLASS}}">{{ACCEPTABILITY}}</span>
+                            <span class="coherence-badge {{COHERENCE_CLASS}}">{{COHERENCE_STATUS}}</span>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                    </div>
+
+                    <div class="client-body">
+                        <div class="requesters-section">
+                            <h4 class="section-title">Targeted Requesters</h4>
+                            <div class="requesters-grid">
+                                <!-- REPEAT FOR EACH REQUESTER -->
+                                <div class="requester-tag">
+                                    <span class="requester-dot {{REQUESTER_STATUS_CLASS}}"></span>
+                                    <span class="requester-name">{{REQUESTER_NAME}}</span>
+                                    <span class="requester-validation">{{REQUESTER_VALIDATION}}</span>
+                                </div>
+                                <!-- END REPEAT -->
+                            </div>
+                        </div>
+
+                        <div class="business-model-grid">
+                            <div class="bm-card value-prop">
+                                <div class="bm-card-header">
+                                    <span class="bm-card-title">Value Proposition</span>
+                                    <span class="char-indicator {{VP_CHAR_CLASS}}">{{VP_CHAR_COUNT}}/250</span>
+                                </div>
+                                <div class="bm-card-body">
+                                    <div class="bm-content">
+                                        {{VALUE_PROP_CONTENT}}
+                                    </div>
+                                    <div class="bm-platform-input">
+                                        <span class="label">Platform Input (250 chars)</span>
+                                        {{VALUE_PROP_PLATFORM}}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bm-card revenue">
+                                <div class="bm-card-header">
+                                    <span class="bm-card-title">Revenue Model</span>
+                                    <span class="char-indicator {{REV_CHAR_CLASS}}">{{REV_CHAR_COUNT}}/250</span>
+                                </div>
+                                <div class="bm-card-body">
+                                    <div class="bm-content">
+                                        {{REVENUE_CONTENT}}
+                                    </div>
+                                    <div class="bm-platform-input">
+                                        <span class="label">Platform Input (250 chars)</span>
+                                        {{REVENUE_PLATFORM}}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bm-card distribution">
+                                <div class="bm-card-header">
+                                    <span class="bm-card-title">Distribution Channels</span>
+                                    <span class="char-indicator {{DIST_CHAR_CLASS}}">{{DIST_CHAR_COUNT}}/250</span>
+                                </div>
+                                <div class="bm-card-body">
+                                    <div class="bm-content">
+                                        {{DISTRIBUTION_CONTENT}}
+                                    </div>
+                                    <div class="bm-platform-input">
+                                        <span class="label">Platform Input (250 chars)</span>
+                                        {{DISTRIBUTION_PLATFORM}}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bm-card cost">
+                                <div class="bm-card-header">
+                                    <span class="bm-card-title">Cost Structure</span>
+                                    <span class="char-indicator {{COST_CHAR_CLASS}}">{{COST_CHAR_COUNT}}/250</span>
+                                </div>
+                                <div class="bm-card-body">
+                                    <div class="bm-content">
+                                        {{COST_CONTENT}}
+                                    </div>
+                                    <div class="bm-platform-input">
+                                        <span class="label">Platform Input (250 chars)</span>
+                                        {{COST_PLATFORM}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END REPEAT -->
+            </div>
+        </section>
+
+        <!-- ============================================
+             NEED COVERAGE MATRIX
+             ============================================ -->
+        <section class="coverage-section">
+            <h3>Need Coverage Analysis</h3>
+            <table class="coverage-table">
+                <thead>
+                    <tr>
+                        <th>Need Statement</th>
+                        <th>Intensity</th>
+                        <th>Covered By</th>
+                        <th>Clients Served</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- REPEAT FOR EACH NEED -->
+                    <tr>
+                        <td class="need-name">{{NEED_STATEMENT}}</td>
+                        <td><span class="intensity-badge {{INTENSITY_CLASS}}">{{INTENSITY}}</span></td>
+                        <td>{{COVERED_BY}}</td>
+                        <td>{{CLIENTS_SERVED}}</td>
+                        <td>
+                            <div class="coverage-status">
+                                <span class="coverage-icon {{COVERAGE_STATUS_CLASS}}">{{COVERAGE_ICON}}</span>
+                                <span>{{COVERAGE_STATUS}}</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- END REPEAT -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- ============================================
+             COHERENCE VALIDATION
+             ============================================ -->
+        <section class="coherence-section">
+            <h3>Business Model Coherence Validation</h3>
+            <div class="coherence-grid">
+                <!-- REPEAT FOR EACH COHERENCE CHECK -->
+                <div class="coherence-check">
+                    <div class="coherence-icon {{COHERENCE_ICON_CLASS}}">{{COHERENCE_ICON}}</div>
+                    <div class="coherence-content">
+                        <h4>{{COHERENCE_RELATIONSHIP}}</h4>
+                        <p>{{COHERENCE_EXPLANATION}}</p>
+                    </div>
+                </div>
+                <!-- END REPEAT -->
+            </div>
+        </section>
+
+        <!-- ============================================
+             FOOTER
+             ============================================ -->
+        <footer class="dashboard-footer">
+            <p class="footer-text">
+                <strong>Vianeo Business Model Evaluation</strong> | Step 12: Viability Assessment<br>
+                Dashboard generated from Product-Market Fit analysis across {{CLIENTS_COUNT}} client segments with {{MVP_FEATURES_COUNT}} MVP features<br>
+                {{PROJECT_NAME}} Project | {{FIELD_DESCRIPTION}}
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        function toggleClient(header) {
+            const card = header.closest('.client-card');
+            const isExpanding = !card.classList.contains('expanded');
+
+            // Update aria-expanded
+            header.setAttribute('aria-expanded', isExpanding);
+
+            // Toggle the expanded class
+            card.classList.toggle('expanded');
+        }
+
+        // Keyboard support and initial state
+        document.addEventListener('DOMContentLoaded', function() {
+            // Expand first client by default
+            const firstClient = document.querySelector('.client-card');
+            if (firstClient) {
+                firstClient.classList.add('expanded');
+                firstClient.querySelector('.client-header').setAttribute('aria-expanded', 'true');
+            }
+
+            // Add keyboard support for all client headers
+            document.querySelectorAll('.client-header').forEach(header => {
+                header.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        toggleClient(this);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

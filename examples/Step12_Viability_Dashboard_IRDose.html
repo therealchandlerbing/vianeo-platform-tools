@@ -1300,7 +1300,7 @@ body {
 
                 <!-- Client 1: Patients receiving radiation therapy -->
                 <div class="client-card expanded">
-                    <div class="client-header" onclick="toggleClient(this)" tabindex="0" role="button" aria-expanded="true">
+                    <div class="client-header" tabindex="0" role="button" aria-expanded="true">
                         <div class="client-info">
                             <div class="client-icon research">&#128300;</div>
                             <div>
@@ -1422,7 +1422,7 @@ body {
 
                 <!-- Client 2: Patients in private hospitals -->
                 <div class="client-card">
-                    <div class="client-header" onclick="toggleClient(this)" tabindex="0" role="button" aria-expanded="false">
+                    <div class="client-header" tabindex="0" role="button" aria-expanded="false">
                         <div class="client-info">
                             <div class="client-icon patient">&#128100;</div>
                             <div>
@@ -1546,7 +1546,7 @@ body {
 
                 <!-- Client 3: Public hospital patients (SUS) -->
                 <div class="client-card">
-                    <div class="client-header" onclick="toggleClient(this)" tabindex="0" role="button" aria-expanded="false">
+                    <div class="client-header" tabindex="0" role="button" aria-expanded="false">
                         <div class="client-info">
                             <div class="client-icon institution">&#127973;</div>
                             <div>
@@ -1763,28 +1763,28 @@ body {
             <h3>Business Model Coherence Validation</h3>
             <div class="coherence-grid">
                 <div class="coherence-check">
-                    <div class="coherence-icon pass">&#10003;</div>
+                    <div class="coherence-icon pass"><span aria-hidden="true">&#10003;</span></div>
                     <div class="coherence-content">
                         <h4>Value &#8596; Features</h4>
                         <p>All 8 MVP features directly support validated clinical needs. GAGG spectrometer provides precision claims, wearable design enables home monitoring value proposition.</p>
                     </div>
                 </div>
                 <div class="coherence-check">
-                    <div class="coherence-icon pass">&#10003;</div>
+                    <div class="coherence-icon pass"><span aria-hidden="true">&#10003;</span></div>
                     <div class="coherence-content">
                         <h4>Value &#8596; Revenue</h4>
                         <p>Research pricing ($1,200-1,800 + subscription) aligns with clinical equipment budgets. Patient model appropriately routes through institutions rather than direct payment.</p>
                     </div>
                 </div>
                 <div class="coherence-check">
-                    <div class="coherence-icon pass">&#10003;</div>
+                    <div class="coherence-icon pass"><span aria-hidden="true">&#10003;</span></div>
                     <div class="coherence-content">
                         <h4>Revenue &#8596; Distribution</h4>
                         <p>Academic partnership model matches research institution purchasing patterns. Conference presence appropriate for clinical research market development.</p>
                     </div>
                 </div>
                 <div class="coherence-check">
-                    <div class="coherence-icon warn">!</div>
+                    <div class="coherence-icon warn"><span aria-hidden="true">!</span></div>
                     <div class="coherence-content">
                         <h4>Distribution &#8596; Costs (SUS)</h4>
                         <p>Public hospital (SUS) channel CAC likely underestimated. Government procurement cycles (12-24 months) and regulatory costs need validation. Recommend pilot before scaling.</p>
@@ -1815,15 +1815,19 @@ body {
             card.classList.toggle('expanded');
         }
 
-        // Keyboard support for client headers
+        // Keyboard and click support for client headers
         document.addEventListener('DOMContentLoaded', function() {
             const firstClient = document.querySelector('.client-card');
             if (firstClient) {
                 firstClient.classList.add('expanded');
+                firstClient.querySelector('.client-header').setAttribute('aria-expanded', 'true');
             }
 
-            // Add keyboard support
+            // Add click and keyboard support
             document.querySelectorAll('.client-header').forEach(header => {
+                header.addEventListener('click', function() {
+                    toggleClient(this);
+                });
                 header.addEventListener('keydown', function(e) {
                     if (e.key === 'Enter' || e.key === ' ') {
                         e.preventDefault();

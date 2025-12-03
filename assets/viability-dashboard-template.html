@@ -1305,7 +1305,7 @@ body {
 
                 <!-- REPEAT FOR EACH CLIENT -->
                 <div class="client-card {{EXPANDED_IF_FIRST}}">
-                    <div class="client-header" onclick="toggleClient(this)" tabindex="0" role="button" aria-expanded="{{ARIA_EXPANDED}}">
+                    <div class="client-header" tabindex="0" role="button" aria-expanded="{{ARIA_EXPANDED}}">
                         <div class="client-info">
                             <div class="client-icon {{CLIENT_ICON_CLASS}}">{{CLIENT_ICON}}</div>
                             <div>
@@ -1447,7 +1447,7 @@ body {
             <div class="coherence-grid">
                 <!-- REPEAT FOR EACH COHERENCE CHECK -->
                 <div class="coherence-check">
-                    <div class="coherence-icon {{COHERENCE_ICON_CLASS}}">{{COHERENCE_ICON}}</div>
+                    <div class="coherence-icon {{COHERENCE_ICON_CLASS}}"><span aria-hidden="true">{{COHERENCE_ICON}}</span></div>
                     <div class="coherence-content">
                         <h4>{{COHERENCE_RELATIONSHIP}}</h4>
                         <p>{{COHERENCE_EXPLANATION}}</p>
@@ -1490,8 +1490,11 @@ body {
                 firstClient.querySelector('.client-header').setAttribute('aria-expanded', 'true');
             }
 
-            // Add keyboard support for all client headers
+            // Add click and keyboard support for all client headers
             document.querySelectorAll('.client-header').forEach(header => {
+                header.addEventListener('click', function() {
+                    toggleClient(this);
+                });
                 header.addEventListener('keydown', function(e) {
                     if (e.key === 'Enter' || e.key === ' ') {
                         e.preventDefault();

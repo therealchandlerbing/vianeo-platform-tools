@@ -1,33 +1,75 @@
 # Step 12a: Product-Market Fit Definition - Generation Prompt
 
+**Version**: 3.0
+**Last Updated**: December 2025
+
+---
+
 ## Context
 
-You are analyzing [PROJECT NAME] to define product-market fit configurations that connect validated customer needs with specific product/service offerings.
+You are analyzing [PROJECT NAME] to define product-market fit configurations that connect validated customer needs with specific product/service offerings. This step defines the PRODUCT level—identity, features, and client-requester mappings—before business models are developed per client in Step 12b.
 
 ---
 
 ## Instructions for AI Assistant
 
-Define product-market fit configurations for each product: identity (name, description, target client), targeted requesters with validated needs, and MVP features mapped to timelines. Use only validated data from Steps 5-7 and Step 11—flag all assumptions explicitly.
+Define product-market fit configurations for each product: identity (name, description), MVP features (6-10), and mapping of clients to their nested requesters. Use only validated data from Steps 5-7, 8-9, and Step 11—flag all assumptions explicitly with [ASSUMPTION] tag.
+
+**Critical Understanding**: A single product may serve MULTIPLE clients. Each client will have their own business model in Step 12b, but this step focuses on defining the product itself and identifying which clients it serves.
+
+---
+
+## Platform Hierarchy Reminder
+
+```
+PRODUCT/SERVICE (defined in this step)
+├── Product Name (≤60 chars)
+├── Product Description (≤250 chars)
+├── Product Features (6-10 MVP from Step 11)
+│
+├── CLIENT 1 (identified from Value Network)
+│   └── Targeted Requesters (personas from Steps 5-7)
+│
+├── CLIENT 2 (different organization type)
+│   └── Targeted Requesters (different personas)
+│
+└── CLIENT 3...
+```
+
+**Key Distinction**:
+- **Clients** = Organizations from the Value Network who PAY (hospitals, facilities, enterprises)
+- **Targeted Requesters** = Individual personas WITHIN those organizations who have NEEDS
 
 ---
 
 ## Available Data
 
-### From Desirability Analysis (Steps 5-7)
+### From Ecosystem Analysis (Steps 8-9) - CLIENT IDENTIFICATION
 
-**Validated Clients**: [List client segments from value network]
+**Potential Clients**: [List client organizations from value network - these are PAYING organizations]
 
-**Requester Personas**: [List requesters with their associated clients]
+Format:
+```
+- [Client Organization Name/Type] | Acceptability: [Favorable/Neutral/Unfavorable] | Position in Value Chain: [Enabler/Product/Channel/Buyer/End User]
+```
+
+### From Desirability Analysis (Steps 5-7) - REQUESTER & NEED IDENTIFICATION
+
+**Requester Personas**: [List requesters with the client organizations they belong to]
+
+Format:
+```
+- [Requester Persona Name] | Within Client: [Organization they work for/interact with] | Role: [Decision maker/User/Influencer]
+```
 
 **Validated Needs**: [List needs with intensity ratings and interview counts]
 
 Format:
 ```
-- [Need statement] | Intensity: [Fundamental/Important/Secondary] | Satisfaction: [Not at all/Rather not/Pretty much/Totally] | Validation: [>5/<5/Not interviewed]
+- [Need statement] | Intensity: [Fundamental/Important/Secondary] | Satisfaction: [Not at all/Rather not/Pretty much/Totally] | Validation: [>5/<5/Not interviewed] | Requesters: [Which personas have this need]
 ```
 
-### From Feasibility Analysis (Step 11)
+### From Feasibility Analysis (Step 11) - FEATURE IDENTIFICATION
 
 **Validated Features**: [List features with need mappings]
 
@@ -39,8 +81,6 @@ Format:
 **Available Means**: [List resources, team capabilities, assets]
 
 **Technical Partners**: [List partners with their contributions]
-
-**Timeline Estimates**: [Feature readiness by phase]
 
 ### Project Context
 
@@ -54,369 +94,358 @@ Format:
 
 ## Your Task
 
-Define [NUMBER] product/service configuration(s) that represent viable product-market fit. For each configuration, specify all required elements following the structure below.
+Define product-market fit for [PRODUCT NAME] by:
+1. Establishing clear product identity (name, description)
+2. Identifying ALL clients this product will serve
+3. Mapping requesters to their client organizations
+4. Selecting MVP features that cover needs across all clients
+5. Validating coverage of fundamental needs for each client
 
 ---
 
-## Output Structure (For Each Product)
+## Output Structure
 
-### PRODUCT/SERVICE [NUMBER]: [Product Name]
+### PRODUCT: [Product Name]
 
-#### PRODUCT IDENTITY
+---
+
+## 1. PRODUCT IDENTITY
 
 **Product/Service Name** (60 chars max):
-[Clear, client-facing name]
+[Clear, client-facing name that any client type would understand]
 
-**Description** (250 chars max):
-[What the client understands they're buying - format: "[What it is] for [who] combining [key capabilities] without [pain point]"]
-
-**Target Client**:
-[Specific validated client segment from value network]
-
-**Character Count Verification**:
-- Name: [X]/60 characters
-- Description: [X]/250 characters
+**Character Count**: [X]/60 ✓
 
 ---
 
-#### TARGETED REQUESTERS
+**Product Description** (250 chars max):
+[What the client understands they're buying - format: what it is, for whom, key capabilities, key differentiator]
 
-**Requesters Within This Client Segment**:
-
-1. **[Requester Persona Name]**
-   - Profile: [Brief description]
-   - Key characteristics: [Behavior, context, pain points]
-   - Primary needs: [3-5 key needs this persona has]
-
-2. **[Requester Persona Name]**
-   - Profile: [Brief description]
-   - Key characteristics: [Behavior, context, pain points]
-   - Primary needs: [3-5 key needs this persona has]
-
-[Continue for 2-4 total requesters]
+**Character Count**: [X]/250 ✓
 
 ---
 
-#### PRIMARY NEEDS ADDRESSED
-
-**Needs Table**:
-
-| # | Need Statement | Intensity | Current Satisfaction | Validation | Requesters |
-|---|----------------|-----------|---------------------|------------|------------|
-| 1 | [Full need statement] | Fundamental | Not at all | >5 interviewed | [Requester 1, 2] |
-| 2 | [Full need statement] | Fundamental | Rather not | >5 interviewed | [Requester 1] |
-| 3 | [Full need statement] | Important | Rather not | >5 interviewed | [Requester 2] |
-| 4 | [Full need statement] | Important | Pretty much | <5 interviewed | [Requester 1, 2] |
-| 5 | [Full need statement] | Secondary | Pretty much | Not interviewed | [Requester 2] |
-
-[Continue for 5-10 total needs]
-
-**Summary**:
-- Total Needs Addressed: [Number]
-- Fundamental: [Count]
-- Important: [Count]
-- Secondary: [Count]
-- Validation Level: [>5 interviewed for majority/mixed/<5 for majority]
+**Product Description Formula**:
+> A [product category] with [key technology/approach] that enables [primary capability] for [target users]. [Optional: key differentiator].
 
 ---
 
-#### PRODUCT FEATURES
+## 2. CLIENTS SERVED
 
-**MVP Features (Must Have)**
+### Client Identification Table
 
-| Feature Name | Timeline | Needs Covered | Validation | MVP Rationale |
-|--------------|----------|---------------|------------|---------------|
-| [Feature 1] | Already available | [Need 1, Need 2] | >5 interviewed | [Why this is MVP-critical: covers fundamental need X with strong validation] |
-| [Feature 2] | Short term | [Need 3] | >5 interviewed | [Why this is MVP-critical] |
-| [Feature 3] | Short term | [Need 4, Need 5] | <5 interviewed | [Why this is MVP-critical despite lower validation] |
+| # | Client | Organization Type | Acceptability | Nested Requesters | Priority |
+|---|--------|------------------|---------------|-------------------|----------|
+| 1 | [Client Org 1] | [Hospital/Facility/Enterprise/etc.] | [Favorable/Neutral/Unfavorable] | [Requester A, Requester B] | [High/Med/Low] |
+| 2 | [Client Org 2] | [Type] | [Rating] | [Requester C, Requester D] | [Priority] |
+| 3 | [Client Org 3] | [Type] | [Rating] | [Requester E] | [Priority] |
+
+**Client Selection Criteria Applied**:
+- ✅ From validated Value Network (Steps 8-9)
+- ✅ Acceptable or Favorable rating preferred
+- ✅ Has nested requesters with validated needs
+- ✅ Business relationship identified (can reach them)
+
+---
+
+### Client 1: [Client Organization Name/Type]
+
+**Organization Context**:
+[Brief description: What kind of organization? What's their relationship to the problem? Why would they pay?]
+
+**Targeted Requesters Within This Client**:
+
+#### Requester: [Persona Name]
+
+**Profile**: [Brief description from Step 6]
+
+**Key Characteristics**:
+- [Behavior/attitude 1]
+- [Behavior/attitude 2]
+- [Context/pain point]
+
+**Primary Needs** (from Step 7):
+| Need Statement | Intensity | Current Satisfaction | Validation |
+|---------------|-----------|---------------------|------------|
+| [Need 1] | Fundamental | Not at all | >5 interviewed |
+| [Need 2] | Important | Rather not | >5 interviewed |
+| [Need 3] | Important | Pretty much | <5 interviewed |
+
+#### Requester: [Persona Name 2] (if applicable)
+
+[Repeat structure]
+
+**Client 1 Need Summary**:
+- Fundamental needs: [Count]
+- Important needs: [Count]
+- Validation strength: [Strong/Moderate/Weak]
+
+---
+
+### Client 2: [Client Organization Name/Type]
+
+[Repeat full structure for each client]
+
+---
+
+### Client 3: [Client Organization Name/Type]
+
+[Repeat full structure for each client]
+
+---
+
+## 3. MVP FEATURES
+
+### Feature Selection Criteria
+
+Pull from Step 11 Features-Needs Matrix. Prioritize:
+1. Features addressing FUNDAMENTAL needs (must have for any client)
+2. Features with >5 interviews validation (high confidence)
+3. Features with "Short term" or "Already available" timeline
+4. Features that serve MULTIPLE clients (efficiency)
+
+---
+
+### MVP Features Table
+
+| # | Feature Name | Needs Covered | Clients Served | Timeline | Validation | MVP Rationale |
+|---|-------------|---------------|----------------|----------|------------|---------------|
+| 1 | [Feature 1] | [Need A, Need B] | [Client 1, Client 2] | Available | >5 interviewed | [Why MVP: covers fundamental need across clients] |
+| 2 | [Feature 2] | [Need C] | [Client 1, Client 3] | Short term | >5 interviewed | [Why MVP] |
+| 3 | [Feature 3] | [Need D, Need E] | [Client 2] | Short term | <5 interviewed | [Why MVP despite lower validation] |
 
 [Continue for 6-10 MVP features]
 
-**MVP Summary**:
-- Total MVP Features: [Number] (target: 6-10)
-- Available Now: [Count]
-- Short-term: [Count]
-- Mid-term: [Count if any in MVP]
-- High Validation (>5): [Count]
-- Coverage Check: All [X] fundamental needs have at least one MVP feature ✓
+---
 
-**Additional Features (Phased - Not MVP)**
+### MVP Summary
 
-| Feature Name | Timeline | Needs Covered | Validation | Phasing Rationale |
-|--------------|----------|---------------|------------|-------------------|
-| [Feature X] | Mid term | [Need 6] | >5 interviewed | [Why phased: important not fundamental/requires additional dev time/etc.] |
-| [Feature Y] | Long term | [Need 7] | Not interviewed | [Why phased: secondary need/low validation/future enhancement] |
+**Total MVP Features**: [Number] *(target: 6-10)*
 
-[Continue for 0-5 phased features]
+**Timeline Distribution**:
+- Available now: [Count]
+- Short-term (0-6 mo): [Count]
+- Mid-term (6-18 mo): [Count if any in MVP]
+
+**Validation Strength**:
+- High validation (>5 interviews): [Count]/[Total] = [%]
+
+**Client Coverage**:
+- Features serving all clients: [Count]
+- Features serving 2+ clients: [Count]
+- Client-specific features: [Count]
 
 ---
 
-#### FEATURE SELECTION RATIONALE
+### Additional Features (Phased - Post-MVP)
 
-**MVP Decision Logic**:
-
-[2-3 paragraphs explaining:]
-
-Paragraph 1: **Core Value Focus**
-This configuration prioritizes [key need cluster - list 2-3 fundamental needs] which represents the fundamental value proposition for [client segment]. The MVP focuses on [core capabilities - list 3-4 key features] which address the highest-priority needs validated through [number] interviews: [list top 2-3 needs with evidence].
-
-Paragraph 2: **Differentiation & Validation**
-[Feature set highlights - name 2-3 specific features] were included because they enable [specific outcome] without [current pain point identified in needs], differentiating from alternatives like [competitor approach if known] which [limitation based on needs analysis]. All MVP features either cover fundamental needs or provide critical enabling capabilities (e.g., payment security enabling transactions).
-
-Paragraph 3: **Phasing Strategy**
-[Secondary features - name 2-3 phased features] are deferred to [mid/long-term] because they address [important but not fundamental/secondary] needs and require [constraint: partnerships/additional validation/extended development time]. [Any long-term features] are positioned as future enhancements since they [reason: enhance vs. enable core value/lower validation confidence/etc.].
+| Feature Name | Needs Covered | Clients | Timeline | Validation | Phasing Rationale |
+|--------------|---------------|---------|----------|------------|-------------------|
+| [Feature X] | [Need F] | [Client 2] | Mid term | >5 interviewed | [Why phased: important not fundamental] |
+| [Feature Y] | [Need G] | [Client 1] | Long term | Not interviewed | [Why phased: low validation, enhancement] |
 
 ---
 
-#### RESOURCE REQUIREMENTS
+## 4. COVERAGE VALIDATION
 
-**Means Required** (from Feasibility):
-- [Resource/capability 1 from Step 11 analysis]
-- [Resource/capability 2 from Step 11 analysis]
-- [Resource/capability 3 from Step 11 analysis]
-- [Team/asset/financial resource needed]
+### Fundamental Needs Coverage (Per Client)
 
-**Technical Partners Critical for MVP**:
-- **[Partner Name]**: [Specific contribution to solution - what capability they provide]
-- **[Partner Name]**: [Specific contribution to solution]
+#### Client 1: [Name]
 
-[If no partners needed: "No critical external partnerships required for MVP"]
+| Fundamental Need | Covered by Feature | Status |
+|-----------------|-------------------|--------|
+| [Need 1] | [Feature X] | ✓ Covered |
+| [Need 2] | [Feature Y] | ✓ Covered |
+| [Need 3] | — | ⚠️ Gap |
 
-**Resource Gaps & Mitigation**:
-- **Gap**: [Missing capability or uncertainty]
-  - **Impact**: [How this affects timeline or features]
-  - **Mitigation Strategy**: [Plan to address - Phase feature/Secure partnership/Build internally/etc.]
+**Coverage**: [X]/[Y] fundamental needs covered
 
-[If no gaps: "No significant resource gaps identified. All MVP requirements covered by available means and confirmed partnerships."]
+#### Client 2: [Name]
+
+| Fundamental Need | Covered by Feature | Status |
+|-----------------|-------------------|--------|
+| [Need 1] | [Feature X] | ✓ Covered |
+| [Need 2] | [Feature Z] | ✓ Covered |
+
+**Coverage**: [X]/[Y] fundamental needs covered
+
+[Repeat for each client]
 
 ---
 
-#### COVERAGE VALIDATION
+### Cross-Client Coverage Matrix
 
-**Need Coverage Matrix**:
+| Need | Intensity | Client 1 | Client 2 | Client 3 | Feature |
+|------|-----------|----------|----------|----------|---------|
+| [Need A] | Fundamental | ✓ | ✓ | — | Feature 1 |
+| [Need B] | Fundamental | ✓ | — | ✓ | Feature 2 |
+| [Need C] | Important | ✓ | ✓ | ✓ | Feature 3 |
+| [Need D] | Important | — | ✓ | ✓ | Feature 4 |
 
-| Need Intensity | Total Needs | Covered by MVP | Coverage % |
-|----------------|-------------|----------------|------------|
-| Fundamental | [X] | [Y] | [Y/X × 100]% |
-| Important | [X] | [Y] | [Y/X × 100]% |
-| Secondary | [X] | [Y] | [Y/X × 100]% |
+---
 
-**Quality Checks**:
+### Coverage Summary
+
+| Client | Fundamental Needs | Covered | Coverage % | Status |
+|--------|------------------|---------|------------|--------|
+| Client 1 | [X] | [Y] | [%] | [Complete/Gaps] |
+| Client 2 | [X] | [Y] | [%] | [Status] |
+| Client 3 | [X] | [Y] | [%] | [Status] |
+| **Portfolio** | [Total] | [Covered] | [%] | [Status] |
+
+**Coverage Quality Checks**:
 - [ ] All fundamental needs have at least one MVP feature ✓
 - [ ] All MVP features map to fundamental or important needs ✓
 - [ ] MVP size is 6-10 features ✓
 - [ ] >50% of MVP features have >5 interviews validation ✓
-- [ ] Timeline is realistic given available resources ✓
-- [ ] No features included without clear need mapping ✓
+- [ ] Each client has fundamental needs covered ✓
 
 **Gaps Identified**:
-[List any fundamental needs without feature coverage, or note "None - all fundamental needs covered"]
+[List any fundamental needs without feature coverage per client, or note "None - all fundamental needs covered for all clients"]
 
 ---
 
-## Decision Framework for Feature Selection
+## 5. RESOURCE REQUIREMENTS
 
-### Include in MVP if:
-- ✅ Covers "Fundamental" or "Important" need
-- ✅ Information reliability: >5 people interviewed
-- ✅ Timeline: Already available or Short term
-- ✅ Critical for core value proposition
-- ✅ Differentiates from alternatives
-- ✅ Table stakes (must-have for market entry)
+### Means Required (from Step 11)
 
-### Phase to Mid/Long-term if:
-- 🔄 Covers "Important" need BUT long timeline or <5 interviewed
-- 🔄 Covers "Secondary" need
-- 🔄 Enhancement rather than core functionality
-- 🔄 Requires partnerships not yet secured
-- 🔄 Moderate validation (3-5 interviews)
+**Development/Technical**:
+- [Resource 1 - e.g., "iOS/Android development team (2 developers on staff)"]
+- [Resource 2 - e.g., "Clinical advisory board (3 part-time advisors)"]
+- [Resource 3 - e.g., "Cloud infrastructure budget"]
 
-### Exclude entirely if:
-- ❌ Not validated in Feasibility (not in feature library)
-- ❌ No clear need mapping
-- ❌ Resource gaps without mitigation strategy
-- ❌ Long timeline + low validation + secondary need
+**Shared Across Clients**:
+- [Resources that serve all clients]
 
-### Border Cases (use judgment):
-- 🤔 **Important need + medium validation (4-5 interviews)**: Include if resources allow and addresses gap in fundamental need coverage
-- 🤔 **Fundamental need + long timeline**: Flag as critical gap, consider if timeline can be accelerated or feature simplified
-- 🤔 **High validation + secondary need**: Include if very low cost/effort and enhances offering without bloat
-- 🤔 **Competitive parity feature**: Include if table stakes (expected by market) even if not differentiating
+**Client-Specific Resources**:
+- Client 1 specific: [Resources]
+- Client 2 specific: [Resources]
 
 ---
 
-## Example Output (Condensed)
+### Technical Partners Critical for MVP
 
-```markdown
-### PRODUCT/SERVICE 1: Thinkie Cognitive Training Platform
+| Partner | Contribution | Clients Impacted | Status |
+|---------|-------------|------------------|--------|
+| [Partner 1] | [What they provide] | [All / Client 1,2 / etc.] | [Secured/High confidence/Uncertain] |
+| [Partner 2] | [Contribution] | [Clients] | [Status] |
 
-#### PRODUCT IDENTITY
-
-**Product/Service Name** (48/60 chars):
-Thinkie Cognitive Training Platform
-
-**Description** (246/250 chars):
-At-home digital cognitive training system for seniors (55-75) combining evidence-based exercises, objective performance tracking, and clinical-grade assessment without facility visits.
-
-**Target Client**:
-Senior Living Facilities
+*[If no partners needed: "No critical external partnerships required for MVP."]*
 
 ---
 
-#### TARGETED REQUESTERS
+### Resource Gaps & Mitigation
 
-1. **Active Seniors (65-75)**
-   - Profile: Independently living seniors concerned about cognitive health
-   - Key characteristics: Health-conscious, technology-accepting, value independence
-   - Primary needs: Maintain sharpness, track performance objectively, access tools without facility visits
+| Gap | Impact | Clients Affected | Mitigation Strategy |
+|-----|--------|------------------|---------------------|
+| [Gap 1] | [Timeline/feature impact] | [Which clients] | [Plan to address] |
+| [Gap 2] | [Impact] | [Clients] | [Mitigation] |
 
-2. **Adult Children/Caregivers**
-   - Profile: 45-60 year olds with aging parents, geographically distributed
-   - Key characteristics: Concerned about decline, want oversight, budget-conscious
-   - Primary needs: Monitor parent's cognitive health, access affordable solutions, scientifically validated approaches
+*[If no gaps: "No significant resource gaps identified."]*
 
 ---
 
-#### PRIMARY NEEDS ADDRESSED
+## 6. CONFIGURATION RATIONALE
 
-| # | Need Statement | Intensity | Current Satisfaction | Validation | Requesters |
-|---|----------------|-----------|---------------------|------------|------------|
-| 1 | Maintain cognitive sharpness during aging | Fundamental | Rather not | >5 interviewed | Active Seniors |
-| 2 | Track cognitive performance objectively over time | Fundamental | Not at all | >5 interviewed | Active Seniors, Caregivers |
-| 3 | Access clinical-grade tools without facility visits | Important | Rather not | >5 interviewed | Active Seniors |
-| 4 | Practice evidence-based brain training regularly | Important | Rather not | >5 interviewed | Active Seniors |
-| 5 | Identify early signs of cognitive decline | Important | Not at all | >5 interviewed | Caregivers |
+### Feature Selection Logic
 
-**Summary**: 5 needs addressed (2 Fundamental, 3 Important, 0 Secondary) | Validation: >5 interviewed for all
+[Paragraph 1: Core Value Focus - 3-4 sentences]
+Explain which fundamental need cluster this configuration prioritizes across clients. Describe which core capabilities compose the MVP and what validation evidence supports these choices. Reference specific interview counts and need intensity levels.
 
----
+[Paragraph 2: Multi-Client Efficiency - 3-4 sentences]
+Explain how the feature set serves multiple clients efficiently. Identify which features provide cross-client value versus client-specific value. Justify any client-specific features included in MVP.
 
-#### PRODUCT FEATURES
-
-**MVP Features (Must Have)**
-
-| Feature Name | Timeline | Needs Covered | Validation | MVP Rationale |
-|--------------|----------|---------------|------------|---------------|
-| Daily adaptive cognitive exercises | Already available | Need 1, 4 | >5 interviewed | Core value - enables practice and maintenance |
-| Objective performance tracking dashboard | Already available | Need 2, 5 | >5 interviewed | Fundamental need - differentiates from games |
-| Clinical assessment integration | Short term | Need 3 | >5 interviewed | Access fundamental - brings clinical rigor home |
-| Progress reports for caregivers | Short term | Need 2, 5 | <5 interviewed | Enables oversight need - two requesters |
-
-**MVP Summary**: 4 features (2 available, 2 short-term) | High validation: 3/4 features | All fundamental needs covered ✓
-
-**Additional Features (Phased - Not MVP)**
-
-| Feature Name | Timeline | Needs Covered | Validation | Phasing Rationale |
-|--------------|----------|---------------|------------|-------------------|
-| Personalized training recommendations | Mid term | Need 1, 4 | >5 interviewed | Enhancement - ML requires more data |
-| Social engagement features | Long term | Need 1 | Not interviewed | Secondary benefit - community building |
+[Paragraph 3: Phasing Strategy - 2-3 sentences]
+Explain which features are phased to mid/long-term and why (need intensity, validation levels, resource constraints). Clarify the logic for what's MVP vs. enhancement.
 
 ---
 
-#### FEATURE SELECTION RATIONALE
+## 7. NEXT STEPS
 
-This configuration prioritizes **objective measurement and clinical-grade accessibility**, addressing the gap between expensive facility-based clinical assessment (infrequent, inconvenient) and consumer brain games (not validated, no tracking). The MVP focuses on validated exercises plus tracking, the two fundamental needs with strongest evidence.
+### Business Model Development (Step 12b)
 
-The key differentiators are **objective performance tracking** (vs. subjective clinical observation) and **daily home accessibility** (vs. quarterly facility visits), both validated through 8+ senior interviews showing current dissatisfaction. Clinical assessment integration brings medical-grade tools to the home context, addressing the "access clinical-grade tools" need rated as highly important.
+For each client identified, develop a complete business model:
 
-Personalized recommendations are phased to mid-term because the ML algorithms require user data to be effective (can't launch day one). Social features are deferred as they address a secondary outcome (social engagement from cognitive training) rather than the primary need (maintain sharpness), and validation is weak (mentioned by 2/8 interviewees as "nice to have").
-
----
-
-#### RESOURCE REQUIREMENTS
-
-**Means Required**:
-- Neuroscience research partnership (validates exercise efficacy)
-- iOS/Android development team (2 developers on staff)
-- Clinical advisory board (3 part-time advisors secured)
-- Cloud infrastructure (AWS budget allocated)
-
-**Technical Partners Critical for MVP**:
-- **University Memory Clinic**: Provides clinical assessment protocols and validation studies
-- **Senior Care Association**: Distribution access to 50+ facilities for pilots
-
-**Resource Gaps & Mitigation**:
-- **Gap**: FDA clearance pathway expertise
-  - **Impact**: Regulatory uncertainty for clinical claims
-  - **Mitigation**: Engage regulatory consultant Q1, may defer "clinical assessment" claim until clearance
-```
+| Client | Business Model Priority | Key Considerations |
+|--------|------------------------|-------------------|
+| [Client 1] | [High/Med/Low] | [Value prop focus, revenue model type, distribution approach] |
+| [Client 2] | [Priority] | [Considerations] |
+| [Client 3] | [Priority] | [Considerations] |
 
 ---
 
-## Quality Standards for Output
+### Validation Needs Before Business Model
 
-### Completeness:
-- [ ] All sections filled with specific data (no [TBD] or blank fields)
-- [ ] Character limits verified and within range
-- [ ] 5-10 needs identified and classified
-- [ ] 6-10 MVP features selected with clear rationale
-- [ ] All fundamental needs have feature coverage
-- [ ] Resource requirements and gaps documented
+| Validation Needed | Client(s) | Method | Timeline |
+|------------------|-----------|--------|----------|
+| [e.g., Price sensitivity testing] | [Client 1] | [Customer interviews] | [Before Step 12b] |
+| [Validation item] | [Clients] | [Method] | [Timeline] |
 
-### Consistency:
-- [ ] Every feature maps to at least one need
-- [ ] Every fundamental need has at least one MVP feature
-- [ ] Timeline assignments realistic given resources
-- [ ] Validation levels accurately reflect evidence
-- [ ] No contradictions between sections
+---
 
-### Clarity:
-- [ ] Product description client-comprehensible
-- [ ] Features described action-orientedly
-- [ ] Rationale explains logic clearly
-- [ ] Specific not generic language throughout
-- [ ] Evidence cited explicitly
+## Quality Standards Checklist
 
-### Evidence Basis:
-- [ ] Clients from validated value network (Desirability)
-- [ ] Requesters from validated personas (Desirability)
+### Completeness
+- [ ] Product identity defined with character limits verified
+- [ ] All clients from Value Network considered
+- [ ] Each client has requesters mapped
+- [ ] 6-10 MVP features selected with rationale
+- [ ] Coverage validation completed per client
+- [ ] Resource requirements documented
+
+### Consistency
+- [ ] Clients from validated Value Network (Steps 8-9)
+- [ ] Requesters from validated personas (Steps 5-7)
 - [ ] Needs from qualification matrix (Step 7)
 - [ ] Features from feature library (Step 11)
-- [ ] Resources from means assessment (Step 11)
+- [ ] Every feature maps to at least one need
+- [ ] Every fundamental need has feature coverage
+
+### Clarity
+- [ ] Product name/description client-comprehensible
+- [ ] Client-requester relationships clear
+- [ ] Feature-need mappings explicit
+- [ ] Rationale explains logic clearly
+
+### Evidence Basis
 - [ ] Interview counts accurate
-- [ ] Assumptions flagged when made
+- [ ] Validation levels correctly assigned
+- [ ] Assumptions flagged with [ASSUMPTION] tag
+- [ ] No invented data
 
 ---
 
 ## Common Pitfalls to Avoid
 
-1. **Feature Bloat**: Including >12 features in MVP (indicates lack of focus)
-2. **Unsupported Claims**: Listing features not validated in Step 11
-3. **Need Misalignment**: Selecting features that don't map to fundamental needs
-4. **Reliability Gaps**: Building MVP on features with <5 interviews for majority
-5. **Client Confusion**: Using internal terminology in product description
-6. **Resource Wishful Thinking**: Assuming partnerships or capabilities not confirmed
-7. **Generic Rationale**: Rationale that could apply to any product ("users need features")
-8. **Timeline Optimism**: Marking everything "Short term" without resource check
+1. **Confusing Clients and Requesters**: Requesters are personas; Clients are organizations that pay
+2. **Single Client Assumption**: Most products serve multiple clients with different needs
+3. **Feature Bloat**: Including >12 features in MVP indicates lack of focus
+4. **Ignoring Client-Specific Needs**: Each client type may have unique fundamental needs
+5. **Generic Product Description**: Should be immediately clear what client is buying
+6. **Missing Coverage**: Fundamental needs without feature coverage
+7. **Unvalidated Data**: Using needs or features not from prior steps
 
 ---
 
-## Validation Before Finalizing
+## Document Metadata
 
-**Ask yourself**:
-- [ ] Would a potential client clearly understand what they're buying from the description?
-- [ ] Does the MVP cover ALL fundamental needs identified?
-- [ ] Are all MVP features achievable with available resources and timeline?
-- [ ] Is the feature set coherent and focused (not just everything possible)?
-- [ ] Have I adhered to character limits (60/250 chars)?
-- [ ] Are all claims evidence-based with validation data cited?
-- [ ] Have I flagged all assumptions and gaps explicitly?
-- [ ] Could someone build this product from this specification?
-
-If any answer is "No" or "Uncertain", revise before finalizing.
-
----
-
-## Metadata to Include
-
-**Document Footer**:
-```
----
 **Product/Market Fit Definition**
 **Project**: [Project Name]
 **Product**: [Product Name]
+**Clients Served**: [Count]
 **Version**: 1.0
 **Date**: [YYYY-MM-DD]
-**Based on**: Desirability (Steps 5-7) + Feasibility (Step 11)
-**Next Steps**: Business Model Definition (Step 12b), Financial Modeling (Step 13)
-```
+
+**Based on**:
+- Desirability (Steps 5-7): Requesters, Needs, Qualification Matrix
+- Acceptability (Steps 8-9): Value Network, Client Identification
+- Feasibility (Step 11): Features-Needs Matrix, Resources
+
+**Next Steps**:
+- Business Model Definition per Client (Step 12b)
+- Platform Entry Card (Step 12 synthesis)
+- Financial Modeling (Step 13)
+
+---
+
+**END OF PRODUCT-MARKET FIT DEFINITION**

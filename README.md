@@ -8,7 +8,7 @@
 
 **PRODUCTION READY** - Complete evaluation toolkit with 18 prompts, comprehensive reference materials, scoring frameworks, and quality checklists. This repository contains everything needed to conduct rigorous, evidence-based startup evaluations.
 
-**Recent Updates (November 2025):**
+**Recent Updates (December 2025):**
 
 - All 18 evaluation prompts complete with executable content
 - 50,000+ lines of comprehensive methodology added
@@ -17,6 +17,7 @@
 - Professional output specifications and templates integrated
 - AI assistant execution instructions added to all steps
 - Interactive HTML visualizations for Steps 7, 9, 11, and 12
+- **Step 12 v3.0**: Client-centric business models (business model per client, not per product)
 
 ---
 
@@ -120,7 +121,7 @@ This is a complete evaluation toolkit that takes you from initial startup applic
 | | 9 | Value Network Map | 45-60m | Network visualization |
 | **Phase 3: Synthesis** | 10 | Diagnostic Comment | 25-35m | Executive decision brief |
 | | 11 | Features-Needs Matrix | 30-45m | MVP scope analysis |
-| **Phase 4: Viability** | 12 | Viability Assessment | 2-4h | PMF sheets, Business models, Dashboard |
+| **Phase 4: Viability** | 12 | Viability Assessment | 2-4h | PMF sheets, Business models per client, Platform Entry Cards |
 
 **Core Steps:** Steps 0, 2, and 3 are required. Others are optional based on project needs.
 
@@ -193,10 +194,12 @@ Step 11: Features & Needs Matrix (30-45 min)
   → Complete skill package (6 files): Primary skill, Quick Reference, Data Worksheet, Implementation Guide, Template, CSS
 
 Step 12: Viability Assessment - Product-Market Fit & Business Model (2-4 hours per product)
-  → Product/Market Fit Sheets: Product identity, targeted requesters, MVP features (6-10), resource requirements
-  → Business Model Canvas: Value proposition, revenue model, distribution channel, cost structure (≤250 chars each)
-  → Coherence validation with evidence-based approach (no aspirational planning, flags assumptions explicitly)
-  → Three outputs per product: PMF Sheet (md + docx), Business Model (md + docx), Summary Dashboard (md)
+  → CRITICAL: Business models structured PER CLIENT, not per product (single product may serve multiple clients)
+  → Platform Hierarchy: Product → Client → Business Model (with nested Targeted Requesters per client)
+  → Product/Market Fit Sheets: Product identity, client-requester mapping, MVP features (6-10), coverage validation
+  → Business Model Canvas PER CLIENT: Value proposition, revenue stream, distribution channel, cost structure (≤250 chars each)
+  → Three outputs: PMF Sheet (md), Business Model Canvas per client (md), Platform-Ready Summary Card (md)
+  → Coherence validation with evidence-based approach (no aspirational planning, flags assumptions with [ASSUMPTION])
 ```
 
 ---
@@ -444,17 +447,23 @@ vianeo-platform-tools/
 
 **Focus:** Is the business model sustainable?
 
+**Critical Understanding:** Business models are structured PER CLIENT, not per product. A single product may serve multiple clients (e.g., hospitals, clinics, research institutions), each with their own tailored business model.
+
+**Key Distinction:**
+- **Clients** = Organizations from the Value Network who PAY (hospitals, facilities, enterprises)
+- **Targeted Requesters** = Individual personas WITHIN those organizations who have NEEDS (clinicians, patients, administrators)
+
 **Critical Questions:**
-- Is revenue model clearly defined?
+- Is revenue model clearly defined for each client type?
 - Has pricing been tested with customers?
 - Is there a path to profitability?
-- Are unit economics favorable?
+- Are unit economics favorable per client segment?
 
 **Evidence Required:**
-- Business model canvas complete
-- Pricing tested with 5+ customers
+- Business model canvas per client type
+- Pricing tested with 5+ customers per client segment
 - Financial projections with validated assumptions
-- Unit economics (LTV:CAC ratio)
+- Unit economics (LTV:CAC ratio) per client
 
 ---
 
@@ -741,9 +750,9 @@ Each step has a detailed prompt in `/prompts/` for consistent execution.
 
 ## Version & Attribution
 
-**Version:** 2.5 (Complete 13-Step System with Viability Assessment)
+**Version:** 3.0 (Complete 13-Step System with Client-Centric Business Models)
 **Framework:** VIANEO Business Model Evaluation Methodology
-**Last Updated:** November 2025
+**Last Updated:** December 2025
 
 ---
 

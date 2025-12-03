@@ -1,814 +1,522 @@
-# Step 12b: Business Model Definition - Generation Prompt
+# Step 12b: Business Model Definition (Per Client) - Generation Prompt
+
+**Version**: 3.0
+**Last Updated**: December 2025
+
+---
 
 ## Context
 
-You are defining the complete business model for **[PRODUCT NAME]** serving **[CLIENT SEGMENT]** as part of the Vianeo Viability assessment for **[PROJECT NAME]**.
+You are defining the complete business model for **[PRODUCT NAME]** serving **[SPECIFIC CLIENT]** as part of the Vianeo Viability assessment for **[PROJECT NAME]**.
+
+**CRITICAL**: Business models are defined PER CLIENT, not per product. A single product serving 3 clients requires 3 separate business models. Each client has different:
+- Value propositions (what matters to THEM)
+- Revenue streams (how THEY pay, their budget sources)
+- Distribution channels (how THEY discover and purchase)
+- Cost structures (what it costs to serve THEM)
 
 ---
 
 ## Instructions for AI Assistant
 
-Define the complete business model across four dimensions: (1) Value Proposition, (2) Revenue Stream, (3) Distribution Channel, and (4) Cost Structure. Ensure all four components align for coherence. Flag any unvalidated assumptions.
+Define the complete business model for **ONE specific client**. Ensure all four components (Value Proposition, Revenue Stream, Distribution Channel, Cost Structure) are tailored to THIS client's context, needs, and purchasing behavior. Repeat this process for each client the product serves.
 
 ---
 
-## Product-Market Fit Data Available
+## Platform Hierarchy Reminder
+
+```
+PRODUCT/SERVICE
+├── Product Name (defined in Step 12a)
+├── Product Description (defined in Step 12a)
+├── MVP Features (defined in Step 12a)
+│
+└── CLIENT [THIS BUSINESS MODEL]  ← You are here
+    ├── Targeted Requesters (personas within this client)
+    └── BUSINESS MODEL
+        ├── Value Proposition (≤250 chars) - Tailored to this client
+        ├── Revenue Stream (≤250 chars) - How this client pays
+        ├── Distribution Channel (≤250 chars) - How this client buys
+        └── Cost Structure (≤250 chars) - Cost to serve this client
+```
+
+---
+
+## Available Data (From Step 12a)
 
 ### Product Configuration
-**Product/Service Name**: [Name]
 
-**Description**: [250-char description]
+**Product/Service Name**: [Name from Step 12a]
 
-**Target Client**: [Client segment]
+**Product Description**: [250-char description from Step 12a]
 
-**Targeted Requesters**: [List of requester personas within client]
+**MVP Features**: [List from Step 12a - shared across all clients]
 
-**Primary Needs Addressed**: [List of fundamental and important needs with intensity]
+### This Client's Context
 
-**MVP Features**: [List of core features that compose this product]
+**Client Name/Type**: [Specific client from Step 12a client list]
 
-**Additional Features (Phased)**: [List of non-MVP features]
+**Organization Type**: [Hospital/Facility/Enterprise/Research Institution/etc.]
 
-### Resources & Partnerships
-**Available Means**: [Resources/capabilities from Feasibility]
+**Acceptability Rating**: [Favorable/Neutral/Unfavorable - from Steps 8-9]
 
-**Technical Partners**: [Partner organizations and their roles]
+**Targeted Requesters Within This Client**:
+- [Requester 1]: [Brief profile from Step 12a]
+- [Requester 2]: [Brief profile]
 
-**Resource Gaps**: [Any identified gaps and mitigation strategies]
+**Primary Needs of These Requesters** (from Step 7):
+- [Need 1]: [Intensity] | [Current Satisfaction] | [Validation]
+- [Need 2]: [Intensity] | [Satisfaction] | [Validation]
+
+### Resources & Partnerships (from Step 11/12a)
+
+**Available Means**: [Resources/capabilities relevant to serving this client]
+
+**Technical Partners**: [Partner organizations relevant to this client]
+
+**Client-Specific Resources**: [Any unique resources needed for this client type]
 
 ---
 
 ## Your Task
 
-Define the complete business model for this product-client combination across four critical dimensions:
-
-1. **Value Proposition** - Why clients choose this offering
-2. **Revenue Stream** - How money is earned
-3. **Distribution Channel** - How clients discover and buy
-4. **Cost Structure** - What must be spent
-
-All four components must align for business model coherence.
+Define the complete business model for serving **[CLIENT NAME]** specifically. Consider:
+- What value proposition resonates with THIS client's priorities?
+- How does THIS client typically pay for solutions? (procurement, budget cycles, decision process)
+- How does THIS client discover and purchase products? (conferences, sales teams, procurement portals)
+- What does it cost to acquire and serve THIS client type?
 
 ---
 
 ## Output Structure
 
-### BUSINESS MODEL: [Product Name] for [Client Segment]
-
----
-
-## 1. VALUE PROPOSITION
-
-**Purpose**: Articulate why clients choose this offering over alternatives. The compelling argument that makes them buy.
-
-### Core Positioning Statement
-
-**Format**: One sentence that combines who, what, and key benefit
-
-**Template Options**:
-- "For [client type], [product] delivers [specific outcome] without [current pain point]"
-- "[Product] enables [client type] to [achieve outcome] that [alternative] cannot provide"
-- "[Client type] can now [achieve benefit] through [product] at [key advantage] vs. [alternative]"
-
-**Example**:
-"For seniors 55-75 who want to maintain cognitive health, Thinkie is a home training platform that delivers clinical-grade assessment at 1/5 the cost of facility-based testing"
-
-**Your Core Statement**:
-[Write one-sentence positioning that incorporates the product, target client, key benefit, and differentiation]
-
----
-
-### Competitive Advantages
-
-**Requirement**: List 2-4 specific advantages that differentiate this offering from alternatives
-
-**For Each Advantage**:
-- State the advantage clearly
-- Tie directly to a validated need (from PMF definition)
-- Provide evidence supporting the advantage
-- Explain why alternatives fail to deliver this
-
-**Advantage Format**:
-```
-**[Advantage Title]**: [Description]
-- Addresses: [Specific fundamental or important need from PMF]
-- Evidence: [Validation data - interviews, satisfaction gaps, etc.]
-- Why Better: [How this is superior to alternatives]
-```
-
-**Example**:
-```
-**Objective Performance Tracking**: Quantitative cognitive performance metrics vs. subjective clinical observations
-- Addresses: "Track cognitive performance objectively over time" (Fundamental, Currently "Not at all satisfied")
-- Evidence: 8/8 seniors interviewed expressed frustration with subjective assessments ("doctor just asks how I feel")
-- Why Better: Traditional clinical assessment relies on self-reported symptoms; consumer games don't track against clinical baselines; this provides quantified, baseline-referenced tracking
-```
-
-**Your Competitive Advantages**:
-
-1. **[Advantage 1 Title]**: [Description]
-   - Addresses: [Need from PMF]
-   - Evidence: [Validation data]
-   - Why Better: [Comparison to alternatives]
-
-2. **[Advantage 2 Title]**: [Description]
-   - Addresses: [Need from PMF]
-   - Evidence: [Validation data]
-   - Why Better: [Comparison to alternatives]
-
-3. **[Advantage 3 Title]**: [Description]
-   - Addresses: [Need from PMF]
-   - Evidence: [Validation data]
-   - Why Better: [Comparison to alternatives]
-
-[4. Optional fourth advantage if warranted]
-
----
-
-### Client Benefits by Requester Type
-
-**Requirement**: For each requester persona, articulate specific, measurable outcomes they achieve
-
-**Benefit Format**:
-```
-**For [Requester Type]**:
-- Primary outcome: [Specific measurable result]
-- Supporting outcomes: [2-3 additional benefits]
-- Value delivered: [How MVP features enable these outcomes]
-```
-
-**Example**:
-```
-**For Active Seniors (65-75)**:
-- Primary outcome: Maintain cognitive sharpness with measurable evidence (track performance over time)
-- Supporting outcomes:
-  - Train at home without facility visits (convenience + independence)
-  - Build confidence through objective improvement data (motivation + adherence)
-  - Identify early decline signals for proactive intervention (health security)
-- Value delivered: Daily adaptive exercises (Feature 1) provide training; tracking dashboard (Feature 2) quantifies progress; clinical integration (Feature 3) validates approach
-```
-
-**Your Client Benefits**:
-
-**For [Requester Type 1]**:
-- Primary outcome: [Specific measurable result]
-- Supporting outcomes:
-  - [Benefit 1]
-  - [Benefit 2]
-  - [Benefit 3]
-- Value delivered: [How MVP features enable this]
-
-**For [Requester Type 2]**:
-- Primary outcome: [Specific measurable result]
-- Supporting outcomes:
-  - [Benefit 1]
-  - [Benefit 2]
-- Value delivered: [How MVP features enable this]
-
-[Continue for all requester types]
-
----
-
-### Platform Input (250 chars)
-
-**Requirement**: Condense the full value proposition into ≤250 characters for Vianeo platform
-
-**Quality Standards**:
-- Captures core positioning
-- Includes top 1-2 competitive advantages
-- Uses client language
-- Specific not generic
-- Immediately comprehensible
-
-**Crafting Process**:
-1. Start with core statement
-2. Add most compelling advantage
-3. Include one concrete benefit or comparison
-4. Edit ruthlessly to fit limit
-
-**Example** (243/250 chars):
-"Clinical-grade cognitive training at home for seniors 55-75. Daily evidence-based exercises with objective tracking, replacing costly facility visits. Enables early decline detection at 1/5 traditional assessment cost."
-
-**Your Platform Input** ([X]/250 chars):
-"[Write concise value proposition within 250 character limit]"
-
-**Character Count Verification**: [Count and confirm ≤250]
-
----
-
-## 2. REVENUE STREAM
-
-**Purpose**: Specify how money is earned from this offering. The mechanism by which the business generates income.
-
-### Revenue Model Description
-
-**Requirement**: Clear explanation of monetization approach in plain language
-
-**Address**:
-- What is being charged for? (product, service, access, transaction, etc.)
-- Who pays? (end user, organization, third party, etc.)
-- When do they pay? (upfront, usage-based, recurring, etc.)
-
-**Revenue Model Types** (choose and specify):
-- **One-Time**: Per-unit sales, project-based, setup fees
-- **Recurring**: Subscription (monthly/annual), retainer, license
-- **Usage-Based**: Pay per use, consumption-based, metered
-- **Transaction**: Commission (% or fixed per transaction)
-- **Mixed**: Combination (e.g., one-time + recurring, base + variable)
-
-**Your Revenue Model**:
-[Write 2-3 sentences explaining how money is earned from this offering]
-
----
-
-### Pricing Approach & Structure
-
-**Pricing Approach**: [Per unit | Subscription | Commission | License | Usage-based | Project-based | Mixed]
-
-**Revenue Type**: [One-time | Recurring | Mixed]
-
-**Specific Mechanisms**:
-
-**Format**:
-```
-1. [Primary mechanism with concrete pricing]
-   - Example: "$49/month per user subscription"
-   - Rationale: [Why this pricing - ties to value delivered, market comparables, willingness to pay evidence]
-
-2. [Secondary mechanism if applicable]
-   - Example: "$99 one-time setup fee"
-   - Rationale: [Why this component]
-```
-
-**Pricing Considerations**:
-- **Need Intensity**: Fundamental needs support higher pricing
-- **Satisfaction Gap**: Larger gaps (currently "not at all" satisfied) indicate willingness to pay
-- **Client Type**: B2C typically lower price points than B2B
-- **Alternatives**: What do existing solutions cost?
-- **Value Delivery**: Magnitude of benefit relative to cost
-
-**Your Specific Mechanisms**:
-
-1. **[Primary Revenue Mechanism]**:
-   - Pricing Example: [Specific price with units]
-   - Rationale: [Why this pricing approach]
-   - Tied to: [Which need or value element]
-
-2. **[Secondary Mechanism if applicable]**:
-   - Pricing Example: [Specific price]
-   - Rationale: [Why included]
-
-[Add more if mixed model]
-
----
-
-### Revenue Dependencies & Constraints
-
-**Document**:
-- Partner revenue shares (if intermediaries take percentage)
-- Payment timing (when money is collected vs. when value delivered)
-- Minimum commitments (contracts, minimum volumes, etc.)
-- Seasonality or usage patterns affecting revenue
-- Churn assumptions or contract lengths
-
-**Format**:
-```
-- [Dependency 1]: [Description and implication]
-- [Constraint 1]: [Description and how it affects revenue]
-```
-
-**Example**:
-```
-- Payment timing: Monthly subscription charged upfront, but facility contracts invoiced quarterly
-- Minimum commitment: Facility B2B requires 6-month minimum contract (revenue certainty but limits flexibility)
-- Partner share: If distributed through senior care platforms, 15% revenue share reduces net revenue
-- Churn assumption: Individual B2C estimated 30% annual churn; facility B2B estimated 10% (longer sales cycle but stickier)
-```
-
-**Your Dependencies/Constraints**:
-- [List all relevant revenue dependencies and constraints]
-
----
-
-### Platform Input (250 chars)
-
-**Example** (246/250 chars):
-"Tiered subscriptions: $49/month individual, $29/resident/month for facilities (50+ minimum). One-time $99 clinical reports. Recurring revenue with annual discount option. Facility contracts with quarterly invoicing."
-
-**Your Platform Input** ([X]/250 chars):
-"[Concise revenue stream description within 250 characters]"
-
-**Character Count Verification**: [Confirm ≤250]
-
----
-
-## 3. DISTRIBUTION CHANNEL
-
-**Purpose**: Define how customers discover the offering and where/how they purchase it. Two dimensions: awareness and transaction.
-
-### Discovery/Awareness Channels
-
-**Requirement**: List specific channels through which clients become aware of the offering
-
-**Channel Categories**:
-- **Digital**: Web platform, mobile app, search (SEO), social media, content marketing, online advertising
-- **Traditional**: Print, radio, TV, trade shows, conferences, exhibitions
-- **Referral**: Word-of-mouth, customer referrals, partner referrals, advocacy organizations
-- **Direct**: Sales team outreach, business development, networking, email campaigns
-- **Organic**: PR, media coverage, thought leadership, community engagement
-
-**Prioritization**:
-- Primary channels (3-4 main awareness sources)
-- Supporting channels (2-3 secondary sources)
-
-**Your Discovery Channels**:
-
-**Primary Channels**:
-1. **[Channel 1]**: [How it works, why effective for this client, expected reach]
-2. **[Channel 2]**: [How it works, why effective, expected reach]
-3. **[Channel 3]**: [How it works, why effective, expected reach]
-
-**Supporting Channels**:
-- [Channel 4]: [Role in awareness strategy]
-- [Channel 5]: [Role in awareness strategy]
-
----
-
-### Purchase/Sales Channels
-
-**Requirement**: Specify where and how the product is actually purchased/transacted
-
-**Channel Options**:
-- **Direct Web**: Own website, self-serve purchase
-- **Direct Sales**: Sales team, account executives
-- **Marketplace**: Platform listing (Shopify, AWS Marketplace, etc.)
-- **Retail**: Physical store, chain, distributor
-- **Reseller**: Indirect through partners, VARs, system integrators
-- **Hybrid**: Combination of above
-
-**Your Purchase Channel Strategy**:
-
-**Primary Purchase Channel**: [Choose one primary]
-- **Channel Type**: [Direct web | Sales team | Marketplace | Retail | Partner/Reseller]
-- **Transaction Process**: [How client purchases - self-serve flow | sales engagement | contract negotiation | etc.]
-- **Why This Channel**: [How it matches client buying behavior and product complexity]
-
-**Supporting Purchase Channels** (if applicable):
-- [Additional channel]: [When/why used]
-
----
-
-### Intermediary Strategy
-
-**Decision**: Does this product go direct to client or through intermediaries?
-
-**If Direct**:
-```
-**Intermediary Strategy**: Direct to customer (no intermediaries)
-
-**Rationale**: [Why direct makes sense - margin preservation, client relationship control, product complexity, market stage, etc.]
-```
-
-**If Intermediaries Involved**:
-```
-**Intermediary Strategy**: Distribution through [types of intermediaries]
-
-**Intermediaries**:
-1. **[Intermediary Type 1]**: [Role, value add, economics/revenue share]
-2. **[Intermediary Type 2]**: [Role, value add, economics]
-
-**Rationale**: [Why intermediaries - faster market access, client preference, existing relationships, geographic reach, etc.]
-```
-
-**Your Intermediary Strategy**:
-[Choose Direct or specify intermediaries]
-
----
-
-### Geographic Considerations
-
-**Address**:
-- Any regional variations in channel strategy?
-- Phased rollout by geography?
-- Localization requirements?
-- Different channels for different markets?
-
-**Format** (if applicable):
-```
-**Geographic Strategy**:
-- Phase 1: [Region/cities] via [channel approach]
-- Phase 2: [Expansion markets] via [channel approach]
-- Regional variations: [Any differences by market]
-```
-
-**Your Geographic Strategy**:
-[Describe if relevant, otherwise note "No geographic variations in initial channel strategy"]
-
----
-
-### Platform Input (250 chars)
-
-**Example** (249/250 chars):
-"Direct web platform (airbnb.com) for discovery and booking. Primary awareness through organic search, word-of-mouth, and social media. Self-serve booking experience. No intermediaries. Geographic focus: US major cities initially."
-
-**Your Platform Input** ([X]/250 chars):
-"[Concise distribution channel description within 250 characters]"
-
-**Character Count Verification**: [Confirm ≤250]
-
----
-
-## 4. COST STRUCTURE
-
-**Purpose**: List major cost categories without detailed quantification. Focus is on what must be spent to develop, produce, market, and deliver the offering.
-
-### Development Costs
-
-**Requirement**: Major cost items related to building the product/solution
-
-**Categories**:
-- Product/platform development
-- Technology infrastructure
-- R&D and innovation
-- Testing and validation
-- Intellectual property protection
-- Regulatory compliance development
-
-**Your Development Costs**:
-- [Major development cost item 1]
-- [Major development cost item 2]
-- [Major development cost item 3]
-[Continue as needed]
-
----
-
-### Production/Operations Costs
-
-**Requirement**: Major cost items related to delivering and operating the solution
-
-**Categories**:
-- Manufacturing or service delivery
-- Inventory and materials
-- Subcontracting and vendors
-- Quality control
-- Logistics and fulfillment
-- Support and maintenance
-
-**Your Operations Costs**:
-- [Major operations cost item 1]
-- [Major operations cost item 2]
-- [Major operations cost item 3]
-[Continue as needed]
-
----
-
-### Marketing/Sales Costs
-
-**Requirement**: Major cost items related to customer acquisition and sales
-
-**Categories**:
-- Customer acquisition (CAC components)
-- Marketing campaigns (digital, traditional)
-- Sales team compensation and expenses
-- Brand development
-- Partnership development
-- Events and conferences
-
-**Your Marketing/Sales Costs**:
-- [Major marketing/sales cost item 1]
-- [Major marketing/sales cost item 2]
-- [Major marketing/sales cost item 3]
-[Continue as needed]
-
----
-
-### Human Resources Costs
-
-**Requirement**: Major cost items related to team and people
-
-**Categories**:
-- Core team salaries and wages
-- Benefits and insurance
-- Training and development
-- Recruitment
-- Contractors and consultants
-- Part-time and fractional resources
-
-**Your HR Costs**:
-- [Major HR cost item 1: e.g., "Core team: 3 founders + 2 developers"]
-- [Major HR cost item 2: e.g., "Part-time customer support contractors"]
-- [Major HR cost item 3]
-[Continue as needed]
-
----
-
-### General/Administrative Costs (if significant)
-
-**Categories**:
-- Office and facilities
-- Legal and compliance
-- Accounting and finance
-- Insurance
-- Utilities and infrastructure
-
-**Your G&A Costs** (if material):
-- [List if significant, otherwise note "Minimal - absorbed in core costs"]
-
----
-
-### Fixed vs. Variable Classification
-
-**Requirement**: Separate costs that don't scale with volume from those that do
-
-**Fixed Costs** (don't change with customer count or volume):
-- [Cost item 1]
-- [Cost item 2]
-- [Cost item 3]
-
-**Variable Costs** (scale with customers, usage, transactions):
-- [Cost item 1]
-- [Cost item 2]
-- [Cost item 3]
-
-**Rationale for Classification**:
-[Brief explanation of why certain major costs are fixed vs. variable]
-
----
-
-### Cost Drivers
-
-**Requirement**: Identify what causes costs to increase
-
-**Common Drivers**:
-- Customer count (more customers → more support, hosting, etc.)
-- Transaction volume (more transactions → more processing fees, fulfillment)
-- Feature complexity (more features → more development, maintenance)
-- Geographic expansion (new markets → localization, local sales, compliance)
-- Regulatory requirements (certifications, audits, legal)
-
-**Your Cost Drivers**:
-1. **[Driver 1]**: [How it affects costs - which categories increase]
-2. **[Driver 2]**: [How it affects costs]
-3. **[Driver 3]**: [How it affects costs]
-
----
-
-### Cost Structure Insights
-
-**Business Model Type Implications**:
-- **Software/SaaS**: High fixed (development), low variable (hosting, support) → Good scaling
-- **Marketplace**: Moderate fixed (platform), low variable (transactions) → Network effects reduce CAC over time
-- **Hardware + Software**: High fixed (R&D, tooling) + high variable (manufacturing) → Volume-dependent margins
-- **Services**: Low fixed, high variable (mostly labor) → Linear scaling
-
-**Your Cost Structure Pattern**: [Identify which pattern this follows]
-
-**Scaling Implications**: [How do costs scale as business grows - linearly, sub-linearly, step-function?]
-
----
-
-### Platform Input (250 chars)
-
-**Example** (249/250 chars):
-"Platform and application development. Cloud infrastructure (scales with usage). Customer support team (scales with bookings). Marketing: SEO, content, PR. Core team: 3 founders + part-time support/development contractors initially."
-
-**Your Platform Input** ([X]/250 chars):
-"[Concise cost structure summary within 250 characters]"
-
-**Character Count Verification**: [Confirm ≤250]
-
----
-
-## 5. BUSINESS MODEL COHERENCE VALIDATION
-
-**Purpose**: Verify all four components align logically with no internal contradictions
-
-### Alignment Checks
-
-**Test Each Pairing**:
-
-#### Value Proposition ↔ Features
-- [ ] **Check**: Can the MVP features actually deliver on value proposition claims?
-- [ ] **Validation**: [Confirm or note any misalignment]
-
-#### Value Proposition ↔ Revenue
-- [ ] **Check**: Does pricing reflect the value delivered? (Fundamental needs should support premium pricing)
-- [ ] **Validation**: [Confirm or note if under/overpriced]
-
-#### Revenue ↔ Distribution
-- [ ] **Check**: Does distribution channel match payment model complexity? (High-value sales need high-touch channels)
-- [ ] **Validation**: [Confirm or note any mismatch]
-
-#### Distribution ↔ Costs
-- [ ] **Check**: Are customer acquisition costs (CAC) included in cost structure for chosen channels?
-- [ ] **Validation**: [Confirm or note if CAC missing]
-
-#### Costs ↔ Revenue
-- [ ] **Check**: Can revenue model support cost structure at scale? (Margin potential exists?)
-- [ ] **Validation**: [Confirm or note sustainability concerns]
-
----
-
-### Red Flags to Identify
-
-**Check for these common contradictions**:
-- ⚠️ Premium value proposition + self-serve low-touch channel (mismatch in perceived value vs. purchase experience)
-- ⚠️ High CAC channel + low-margin revenue model (unsustainable economics)
-- ⚠️ Enterprise value proposition + consumer pricing (under-priced)
-- ⚠️ Complex product + no customer support in costs (unrealistic)
-- ⚠️ Geographic distribution + no local partner costs (incomplete)
-- ⚠️ Recurring revenue claims + no mention of retention/churn costs (optimistic)
-
-**Your Red Flag Assessment**:
-[List any identified red flags OR confirm "No red flags - business model is internally coherent"]
-
----
-
-### Coherence Summary
-
-**Overall Assessment**:
-- [ ] **Coherent**: All four components align with no contradictions
-- [ ] **Minor Issues**: [Specify issues and how to resolve]
-- [ ] **Major Issues**: [Specify issues - may need business model revision]
-
-**Narrative Summary** (2-3 sentences):
-[Explain overall coherence, call out strongest alignment, note any concerns]
-
-**Example**:
-"Business model is coherent with strong alignment between value proposition (clinical-grade home training) and MVP features (validated exercises + tracking). Revenue model (subscription) matches recurring value delivery (ongoing training and monitoring). Distribution (direct web for B2C, sales team for B2B facilities) appropriately matches price points ($49 self-serve vs. $29/resident requiring contract negotiation). Cost structure includes variable support and hosting costs that scale with users. Primary sustainability question is whether $49 individual pricing supports CAC given need for education (seniors are not high digital-literacy segment), but facility B2B channel provides higher-margin pathway."
-
-**Your Coherence Summary**:
-[Write 2-3 sentence assessment of business model coherence]
-
----
-
-## Final Output Format
-
-```markdown
-# BUSINESS MODEL: [Product Name] for [Client Segment]
+# BUSINESS MODEL: [Product Name] for [Client Name/Type]
 
 **Project**: [Project Name]
+**Product**: [Product Name]
+**Client**: [Client Name/Type]
 **Date**: [YYYY-MM-DD]
 **Version**: 1.0
 
 ---
 
-## VALUE PROPOSITION
+## Client Context
 
-### Core Message
-[One-sentence positioning]
+**Organization Type**: [What kind of organization]
 
-### Competitive Advantages
-1. **[Title]**: [Description] - Addresses [Need] - Evidence: [Data]
-2. **[Title]**: [Description] - Addresses [Need] - Evidence: [Data]
-3. **[Title]**: [Description] - Addresses [Need] - Evidence: [Data]
+**Why They Pay**: [Their motivation - operational efficiency, patient outcomes, regulatory compliance, competitive advantage, etc.]
 
-### Client Benefits
-**For [Requester 1]**: [Primary outcome + supporting outcomes]
-**For [Requester 2]**: [Primary outcome + supporting outcomes]
+**Decision Process**: [Who decides, budget source, procurement requirements, typical timeline]
 
-**Platform Input (250 chars)**: "[Concise value prop]"
+**Targeted Requesters**:
+- [Requester 1]: [Role in decision - decision maker, user, influencer]
+- [Requester 2]: [Role]
 
 ---
 
-## REVENUE STREAM
+## 1. VALUE PROPOSITION
 
-### Model Description
-[2-3 sentences explaining monetization]
+**Purpose**: Articulate why THIS client chooses this offering. What matters to THEM specifically?
+
+### Value Proposition Formula
+
+```
+For [THIS CLIENT TYPE] who [THEIR SPECIFIC PROBLEM/NEED],
+[PRODUCT NAME] is a [PRODUCT CATEGORY] that [KEY VALUE FOR THIS CLIENT]
+[without/enabling/reducing] [PAIN POINT THIS CLIENT FACES].
+```
+
+### Needs Addressed (for this client's requesters)
+
+| Need | Intensity | Requester | Current Satisfaction |
+|------|-----------|-----------|---------------------|
+| [Need 1] | Fundamental | [Requester A] | Not at all |
+| [Need 2] | Important | [Requester A, B] | Rather not |
+
+### Competitive Advantages (relevant to THIS client)
+
+**Advantage 1**: [Title]
+- **What**: [Description of advantage]
+- **Why It Matters to This Client**: [Specific relevance to their context]
+- **Evidence**: [Validation data]
+
+**Advantage 2**: [Title]
+- **What**: [Description]
+- **Why It Matters to This Client**: [Relevance]
+- **Evidence**: [Data]
+
+[Add 1-2 more advantages as relevant]
+
+### Client Benefits by Requester
+
+**For [Requester 1 within this client]**:
+- Primary outcome: [Specific measurable result]
+- Supporting outcomes: [List 2-3]
+- Value delivered by: [Which MVP features enable this]
+
+**For [Requester 2 within this client]**:
+- Primary outcome: [Result]
+- Supporting outcomes: [List]
+- Value delivered by: [Features]
+
+### Platform Input (250 chars max)
+
+```
+[Value proposition tailored to THIS CLIENT - use the formula]
+```
+
+**Character Count**: [X]/250 ✓
+
+**Quality Check**:
+- [ ] Specific to THIS client type (not generic) ✓
+- [ ] Uses language this client understands ✓
+- [ ] Addresses their specific needs/problems ✓
+- [ ] Differentiates from their current alternatives ✓
+
+---
+
+## 2. REVENUE STREAM
+
+**Purpose**: How does THIS client pay? What's their purchasing context?
+
+### Client Payment Context
+
+**Who Holds the Budget**: [Department, role, or entity]
+
+**Budget Type**: [Operating budget, capital expenditure, grant funding, reimbursement, etc.]
+
+**Decision Timeline**: [Annual cycle, project-based, as-needed, etc.]
+
+**Procurement Process**: [Direct purchase, RFP, committee approval, etc.]
+
+### Revenue Model for This Client
+
+**Model Type**: [Subscription | Purchase | License | Per-procedure | Commission | Usage-based | Mixed]
+
+**Revenue Type**: [One-time | Recurring | Mixed]
+
+**Who Pays**: [End user / Organization / Third party / Government]
+
+**Payment Timing**: [Upfront / Monthly / Quarterly / Annual / Per-use]
 
 ### Pricing Structure
-**Approach**: [Type]
-**Revenue Type**: [One-time/Recurring/Mixed]
 
-**Mechanisms**:
-1. [Primary mechanism with pricing example]
-2. [Secondary mechanism if applicable]
+**Mechanism 1**: [Primary revenue mechanism]
+- **Pricing Example**: [Specific price - e.g., "$X/month per user" or "$Y per procedure"]
+- **Rationale**: [Why this pricing for this client type]
+- **Tied to**: [Which value element or need]
 
-### Dependencies
-- [List dependencies and constraints]
+**Mechanism 2** (if applicable): [Secondary mechanism]
+- **Pricing Example**: [Price]
+- **Rationale**: [Why]
 
-**Platform Input (250 chars)**: "[Concise revenue stream]"
+### Revenue Dependencies for This Client
+
+- **Payment Timing**: [When collected vs. when value delivered]
+- **Minimum Commitments**: [Contract length, volume minimums]
+- **Intermediary Shares**: [If any partners take a cut for this client channel]
+- **Churn Risk**: [Expected retention pattern for this client type]
+
+### Platform Input (250 chars max)
+
+```
+[Revenue stream description specific to THIS CLIENT - who pays, how, when, pricing examples]
+```
+
+**Character Count**: [X]/250 ✓
+
+**Quality Check**:
+- [ ] Matches how this client actually pays ✓
+- [ ] Pricing appropriate for this client's budget context ✓
+- [ ] Concrete examples (not vague) ✓
+- [ ] Dependencies noted ✓
 
 ---
 
-## DISTRIBUTION CHANNEL
+## 3. DISTRIBUTION CHANNEL
 
-### Discovery Channels
-**Primary**: [3-4 main channels]
-**Supporting**: [2-3 secondary channels]
+**Purpose**: How does THIS client discover, evaluate, and purchase solutions?
 
-### Purchase Channels
-**Primary**: [Main purchase channel with process]
-**Supporting**: [If applicable]
+### This Client's Buying Behavior
 
-### Intermediary Strategy
-[Direct or list intermediaries with rationale]
+**Discovery Sources**: [Where they learn about new solutions - conferences, peer recommendations, publications, sales outreach, etc.]
 
-### Geographic Strategy
-[If relevant]
+**Evaluation Process**: [How they assess options - demos, pilots, references, RFP scoring, etc.]
 
-**Platform Input (250 chars)**: "[Concise distribution]"
+**Purchase Path**: [How they actually buy - direct, through procurement, via group purchasing, etc.]
+
+**Typical Timeline**: [From awareness to purchase - weeks, months, quarters]
+
+### Distribution Strategy for This Client
+
+#### Discovery/Awareness Channels
+
+**Primary Channels** (3-4):
+1. **[Channel]**: [How it works for this client] | Expected effectiveness: [High/Med/Low]
+2. **[Channel]**: [Approach] | Effectiveness: [Level]
+3. **[Channel]**: [Approach] | Effectiveness: [Level]
+
+**Supporting Channels**:
+- [Channel]: [Role]
+- [Channel]: [Role]
+
+#### Purchase Channel
+
+**Primary**: [Direct web | Sales team | Marketplace | Partner/Reseller | Procurement portal]
+
+**Transaction Process**: [Step-by-step how this client purchases]
+
+**Why This Channel**: [How it matches this client's buying behavior]
+
+#### Intermediary Strategy
+
+**Approach**: [Direct to client] OR [Through intermediaries]
+
+If intermediaries:
+- **[Intermediary type]**: Role: [What they do] | Economics: [Revenue share]
+
+**Rationale**: [Why direct or intermediary for this client type]
+
+#### Delivery Method
+
+**How They Receive**: [Digital delivery, physical installation, onboarding process, etc.]
+
+**Support Model**: [Training, ongoing support, account management]
+
+### Platform Input (250 chars max)
+
+```
+[Distribution channel description for THIS CLIENT - discovery, purchase path, delivery]
+```
+
+**Character Count**: [X]/250 ✓
+
+**Quality Check**:
+- [ ] Matches how this client actually buys ✓
+- [ ] Channels are accessible to us ✓
+- [ ] Realistic CAC implied ✓
+- [ ] Support model included ✓
 
 ---
 
-## COST STRUCTURE
+## 4. COST STRUCTURE
 
-### Major Categories
-**Development**: [Key items]
-**Operations**: [Key items]
-**Marketing/Sales**: [Key items]
-**HR**: [Key items]
+**Purpose**: What does it cost to acquire and serve THIS client type specifically?
 
-### Fixed vs. Variable
-**Fixed**: [Items]
-**Variable**: [Items]
+### Client-Specific Cost Considerations
+
+**Acquisition Complexity**: [Low/Med/High] - [Why - e.g., "High: requires enterprise sales cycle with multiple demos"]
+
+**Service Complexity**: [Low/Med/High] - [Why - e.g., "Med: requires initial training but then self-serve"]
+
+**Support Intensity**: [Low/Med/High] - [Why - e.g., "High: regulatory environment requires dedicated support"]
+
+### Cost Categories for This Client
+
+#### Customer Acquisition Costs (CAC)
+
+- [Cost item 1]: [e.g., "Sales team time: 40 hours per client close"]
+- [Cost item 2]: [e.g., "Trade show presence: $5K per relevant conference"]
+- [Cost item 3]: [e.g., "Pilot/demo costs: $2K per pilot"]
+
+**Estimated CAC**: [Range or estimate for this client type]
+
+#### Delivery Costs
+
+- [Cost item]: [e.g., "Onboarding and training: 8 hours per facility"]
+- [Cost item]: [e.g., "Implementation support: 20 hours first month"]
+
+#### Ongoing Service Costs (per client)
+
+- [Cost item]: [e.g., "Customer success management: 2 hours/month"]
+- [Cost item]: [e.g., "Technical support: 4 hours/month average"]
+- [Cost item]: [e.g., "Account management: 1 hour/month"]
+
+### Fixed vs Variable Split (for this client type)
+
+**Fixed Costs** (don't scale with this client count):
+- [Item]: [Why fixed]
+- [Item]: [Why fixed]
+
+**Variable Costs** (scale with each additional client of this type):
+- [Item]: [Why variable]
+- [Item]: [Why variable]
 
 ### Cost Drivers
-1. [Driver 1 and impact]
-2. [Driver 2 and impact]
 
-**Platform Input (250 chars)**: "[Concise costs]"
+**Driver 1**: [e.g., "Client size"] → Impact: [How it affects costs]
+
+**Driver 2**: [e.g., "Support requirements"] → Impact: [Effect]
+
+### Margin Potential
+
+**Revenue per Client** (typical): [Estimate based on pricing]
+
+**Cost to Serve** (typical): [Estimate based on costs above]
+
+**Gross Margin Potential**: [High/Med/Low] - [Rough estimate %]
+
+### Platform Input (250 chars max)
+
+```
+[Cost structure for serving THIS CLIENT - major categories, fixed vs variable, key drivers]
+```
+
+**Character Count**: [X]/250 ✓
+
+**Quality Check**:
+- [ ] CAC realistic for this client type ✓
+- [ ] Service costs reflect delivery model ✓
+- [ ] Fixed/variable split correct ✓
+- [ ] Margin potential assessed ✓
 
 ---
 
-## COHERENCE VALIDATION
+## 5. BUSINESS MODEL COHERENCE CHECK
+
+**Purpose**: Verify all four components align for THIS client's business model.
 
 ### Alignment Checks
-- [ ] Value → Features: [Status]
-- [ ] Value → Revenue: [Status]
-- [ ] Revenue → Distribution: [Status]
-- [ ] Distribution → Costs: [Status]
-- [ ] Costs → Revenue: [Status]
 
-### Red Flags
-[None OR list concerns]
+| Alignment | Question | Status | Notes |
+|-----------|----------|--------|-------|
+| Value ↔ Features | Can MVP features deliver this value prop? | ✓/⚠️ | [Assessment] |
+| Value ↔ Revenue | Does pricing reflect value delivered? | ✓/⚠️ | [Assessment] |
+| Revenue ↔ Distribution | Does channel support payment model? | ✓/⚠️ | [Assessment] |
+| Distribution ↔ Costs | Is CAC included in cost structure? | ✓/⚠️ | [Assessment] |
+| Costs ↔ Revenue | Can revenue support costs at scale? | ✓/⚠️ | [Assessment] |
 
-### Overall Assessment
-[Coherent/Minor Issues/Major Issues + 2-3 sentence summary]
+### Red Flag Assessment
+
+**Check for these contradictions**:
+- ⚠️ Premium value prop + self-serve channel → Mismatch?
+- ⚠️ High-touch sales + low price point → Unsustainable CAC?
+- ⚠️ Enterprise client + consumer pricing → Underpriced?
+- ⚠️ Complex onboarding + no support costs → Missing costs?
+
+**Red Flags for This Client**: [List any identified OR "None - coherent"]
+
+### Coherence Summary
+
+**Overall Assessment**: [Coherent | Minor Issues | Major Issues]
+
+**Narrative** (2-3 sentences):
+[Explain overall coherence of this client's business model. Note strongest alignment points and any concerns.]
 
 ---
 
-**Document Metadata**
-**Based on**: Product-Market Fit Definition (Step 12a)
-**Next Steps**: Summary Dashboard (Step 12c), Financial Modeling (Step 13)
-```
+## 6. COMPARISON TO OTHER CLIENTS (if applicable)
+
+### How This Business Model Differs
+
+| Component | This Client | Client 2 | Client 3 |
+|-----------|-------------|----------|----------|
+| Value Prop Focus | [Key theme] | [Theme] | [Theme] |
+| Revenue Model | [Type] | [Type] | [Type] |
+| Primary Channel | [Channel] | [Channel] | [Channel] |
+| CAC Level | [High/Med/Low] | [Level] | [Level] |
+| Margin Potential | [Level] | [Level] | [Level] |
+
+**Strategic Implications**: [Why different business models? Which client is priority?]
+
+---
+
+## 7. NEXT STEPS
+
+### Validation Needs
+
+| What to Validate | Method | Timeline | Owner |
+|-----------------|--------|----------|-------|
+| [e.g., Pricing acceptance] | [Customer interviews] | [Before launch] | [Name] |
+| [e.g., Channel effectiveness] | [Pilot campaign] | [Timeline] | [Name] |
+
+### Risks for This Client
+
+| Risk | Likelihood | Impact | Mitigation |
+|------|------------|--------|------------|
+| [e.g., Long sales cycle] | [High/Med/Low] | [Impact] | [Strategy] |
+| [e.g., Budget constraints] | [Level] | [Impact] | [Strategy] |
 
 ---
 
 ## Quality Standards Checklist
 
-Before finalizing, verify:
-
 ### Completeness
-- [ ] All four business model components fully defined
+- [ ] All four business model components defined
 - [ ] All platform inputs ≤250 characters
-- [ ] Concrete pricing examples provided (not "TBD")
-- [ ] Specific channels named (not "marketing")
-- [ ] Major cost categories identified
-- [ ] Fixed/variable split explained
+- [ ] Client context clearly established
+- [ ] Concrete pricing examples provided
+- [ ] Cost categories identified with drivers
+
+### Client-Specificity
+- [ ] Value prop tailored to THIS client's priorities
+- [ ] Revenue model matches THIS client's payment patterns
+- [ ] Distribution matches THIS client's buying behavior
+- [ ] Costs reflect serving THIS client type
+- [ ] Not a generic business model copy/pasted
 
 ### Consistency
-- [ ] Value prop tied to validated needs from PMF
-- [ ] Features can deliver on value claims
-- [ ] Pricing reflects value intensity
-- [ ] Distribution matches client buying behavior
-- [ ] Costs include all activities implied by model
-- [ ] No contradictions between components
-
-### Clarity
-- [ ] Client could understand value prop in one reading
-- [ ] Revenue model has concrete examples
-- [ ] Distribution is actionable not vague
-- [ ] Costs are specific not generic
-- [ ] No jargon or internal terminology
+- [ ] Value prop tied to validated needs from Step 12a
+- [ ] Features can deliver value claims
+- [ ] Pricing appropriate for client's budget context
+- [ ] Distribution channels accessible
+- [ ] Costs account for implied activities
 
 ### Evidence Basis
-- [ ] Competitive advantages cite validation data
+- [ ] Advantages cite validation data
 - [ ] Pricing informed by need intensity/satisfaction
 - [ ] Distribution based on client behavior research
 - [ ] Cost estimates grounded in resource assessment
-- [ ] Assumptions flagged explicitly
-
-### Commercial Viability
-- [ ] Revenue model can scale
-- [ ] Margin potential exists (revenue > costs at scale)
-- [ ] CAC appropriate for pricing
-- [ ] Business model coherent
-- [ ] Path to sustainability visible
+- [ ] Assumptions flagged with [ASSUMPTION] tag
 
 ---
 
 ## Common Mistakes to Avoid
 
-1. **Vague Value Prop**: "Best-in-class solution" without specifics
-2. **Undefined Revenue**: "We'll figure out pricing later"
-3. **Unrealistic Channels**: Assuming viral growth without acquisition plan
-4. **Incomplete Costs**: Missing support, compliance, or sales costs
-5. **Character Limit Violations**: Writing paragraphs instead of concise inputs
-6. **Generic Language**: Could apply to any business ("deliver value to customers")
-7. **No Evidence**: Claims without validation data citations
-8. **Incoherent Model**: Premium value + budget pricing, or high CAC + low margins
+1. **Generic Business Model**: Same value prop for every client → Must be tailored
+2. **Copy-Paste Revenue**: "Subscription" without considering how this client actually pays
+3. **Ignoring Client Context**: Enterprise client given consumer-style self-serve model
+4. **Missing CAC**: Distribution costs not reflected in cost structure
+5. **Optimistic Margins**: Revenue model doesn't support cost to serve
+6. **Character Violations**: Platform inputs exceeding 250 chars
 
 ---
 
-**IMPORTANT**: This business model must align with the Product-Market Fit definition (Step 12a). Refer back to PMF document throughout to ensure consistency in client, needs, features, and strategy.
+## Document Metadata
+
+**Business Model Definition**
+**Project**: [Project Name]
+**Product**: [Product Name]
+**Client**: [Client Name/Type]
+**Version**: 1.0
+**Date**: [YYYY-MM-DD]
+
+**Based On**:
+- Product-Market Fit Definition (Step 12a)
+- Desirability Analysis: Steps 5-7
+- Ecosystem Analysis: Steps 8-9
+- Feasibility Analysis: Step 11
+
+**Feeds Into**:
+- Platform Entry Card (Step 12 synthesis)
+- Financial Modeling: Step 13
+- Go-to-Market Strategy
+- Committee Presentation
+
+---
+
+**END OF BUSINESS MODEL DEFINITION FOR [CLIENT NAME]**
+
+---
+
+## Repeat for Each Client
+
+**Important**: Create a separate Business Model Definition for EACH client the product serves. The same product may have very different business models depending on the client.
+
+**Example**:
+- **Product**: IRDose Wearable Dosimetry System
+- **Client 1**: Research Institutions → Hardware purchase + annual platform subscription
+- **Client 2**: Private Clinics → Lease + per-patient service fee
+- **Client 3**: Public Hospitals (SUS) → Government reimbursement model per procedure
+
+Each requires its own complete business model document using this template.

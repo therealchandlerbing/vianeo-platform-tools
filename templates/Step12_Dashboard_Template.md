@@ -3,267 +3,216 @@
 **Project**: [Project Name]
 **Date**: [YYYY-MM-DD]
 **Products Evaluated**: [Number]
+**Total Clients Served**: [Number across all products]
 **Assessment Phase**: Viability (Step 12 - Business Model Evaluation)
 
 ---
 
 ## Executive Summary
 
-[2-3 sentences summarizing the viability assessment scope, number of products defined, and overall viability status]
+[2-3 sentences summarizing the viability assessment scope, number of products/clients, and overall viability status]
 
 ---
 
-## Product Portfolio Overview
+## Platform Hierarchy Overview
 
-### Product Configurations
-
-| Product Name | Target Client | Requesters | MVP Features | Revenue Model | Status |
-|-------------|--------------|------------|--------------|---------------|---------|
-| [Product 1] | [Client segment] | [Count] | [Count] | [Type - e.g., Subscription] | [Ready/Needs work/Blocked] |
-| [Product 2] | [Client segment] | [Count] | [Count] | [Type] | [Status] |
-| [Product 3] | [Client segment] | [Count] | [Count] | [Type] | [Status] |
-
-**Portfolio Summary**:
-- Total products defined: [Number]
-- Total client segments served: [Number]
-- Total MVP features across portfolio: [Number unique features]
-- Primary revenue models: [List unique models]
-
----
-
-## Strategic Positioning Matrix
-
-### Product-Client Fit
-
-| Product | Primary Value Prop | Client Segment | Competitive Position | Market Entry Strategy |
-|---------|-------------------|----------------|---------------------|----------------------|
-| [Product 1] | [Core positioning in 5-7 words] | [Client] | [Strong/Moderate/Emerging] | [Direct/Partnership/Hybrid] |
-| [Product 2] | [Core positioning] | [Client] | [Position] | [Strategy] |
-| [Product 3] | [Core positioning] | [Client] | [Position] | [Strategy] |
+```
+PROJECT: [Project Name]
+│
+├── PRODUCT 1: [Product Name]
+│   ├── MVP Features: [Count]
+│   ├── CLIENT 1A: [Client Type] → Business Model A
+│   ├── CLIENT 1B: [Client Type] → Business Model B
+│   └── CLIENT 1C: [Client Type] → Business Model C
+│
+├── PRODUCT 2: [Product Name]
+│   ├── MVP Features: [Count]
+│   ├── CLIENT 2A: [Client Type] → Business Model A
+│   └── CLIENT 2B: [Client Type] → Business Model B
+│
+└── PRODUCT 3: [Product Name]
+    ├── MVP Features: [Count]
+    └── CLIENT 3A: [Client Type] → Business Model A
+```
 
 ---
 
-## Need Coverage Analysis
+## Product-Client Matrix
 
-### Fundamental Needs Addressed Across Portfolio
-
-Table showing which products address which fundamental needs:
-
-| # | Fundamental Need | Intensity | Product 1 | Product 2 | Product 3 | Coverage Status |
-|---|-----------------|-----------|-----------|-----------|-----------|-----------------|
-| 1 | [Need statement] | Fundamental | ✓ MVP | ✓ Phased | — | Covered |
-| 2 | [Need statement] | Fundamental | ✓ MVP | ✓ MVP | ✓ MVP | Strong |
-| 3 | [Need statement] | Fundamental | — | — | ✓ MVP | Single product |
-| 4 | [Need statement] | Fundamental | ✓ Phased | — | — | Partial |
-
-**Coverage Metrics**:
-- Total fundamental needs identified: [X]
-- Covered by at least one product MVP: [Y] ([Y/X]%)
-- Covered by multiple products: [Z]
-- **Gaps**: [List any fundamental needs not addressed OR "None - all fundamental needs covered"]
+| Product | Client 1 | Client 2 | Client 3 | Total Clients |
+|---------|----------|----------|----------|---------------|
+| [Product 1] | [Client Type A] | [Client Type B] | [Client Type C] | 3 |
+| [Product 2] | [Client Type D] | [Client Type E] | — | 2 |
+| [Product 3] | [Client Type F] | — | — | 1 |
+| **Total** | | | | **6** |
 
 ---
 
-### Important Needs Coverage
+## Product Configurations Summary
 
-| # | Important Need | Product 1 | Product 2 | Product 3 | Coverage |
-|---|---------------|-----------|-----------|-----------|----------|
-| 1 | [Need statement] | ✓ MVP | ✓ MVP | — | Multiple |
-| 2 | [Need statement] | ✓ Phased | — | ✓ MVP | Partial |
-| 3 | [Need statement] | — | ✓ MVP | ✓ Phased | Moderate |
+### Product 1: [Product Name]
 
-**Important Needs Summary**:
-- Total important needs: [X]
-- Covered by portfolio: [Y] ([%])
-- Strategic coverage assessment: [Strong/Adequate/Gaps exist]
+**Product Description**: [250-char description]
 
----
+**MVP Features**: [Count] features
 
-## Feature Comparison Matrix
+**Clients Served**: [Count] client types
 
-### MVP Features Across Products
+| Client | Value Prop Focus | Revenue Model | Primary Channel | Priority |
+|--------|-----------------|---------------|-----------------|----------|
+| [Client 1A] | [Theme] | [Type] | [Channel] | [High/Med/Low] |
+| [Client 1B] | [Theme] | [Type] | [Channel] | [Priority] |
+| [Client 1C] | [Theme] | [Type] | [Channel] | [Priority] |
 
-Table showing feature reuse and product-specific features:
-
-| Feature Name | Product 1 | Product 2 | Product 3 | Validation | Timeline |
-|--------------|-----------|-----------|-----------|------------|----------|
-| [Shared feature 1] | ✓ MVP | ✓ MVP | — | >5 interviewed | Available |
-| [Shared feature 2] | ✓ MVP | ✓ Phased | ✓ MVP | >5 interviewed | Short term |
-| [Product 1 unique] | ✓ MVP | — | — | <5 interviewed | Available |
-| [Product 2 unique] | — | ✓ MVP | — | >5 interviewed | Short term |
-| [Product 3 unique] | — | — | ✓ MVP | >5 interviewed | Available |
-
-**Feature Portfolio Metrics**:
-- Total unique features across all products: [Count]
-- Features used in multiple products (shared): [Count]
-- Product-specific features: [Count]
-- MVP features with >5 interviews: [Count]/[Total] = [%]
-
-**Feature Development Efficiency**:
-- [X]% of features are reused across products (development leverage)
-- [Y] features require shared infrastructure (platform benefits)
-- [Z] product-specific features justify separate configurations
+**Status**: [Ready/Needs work/Blocked]
 
 ---
 
-## Business Model Comparison
+### Product 2: [Product Name]
 
-### Revenue Models
-
-| Product | Pricing Approach | Revenue Type | Primary Mechanism | Target Annual Revenue |
-|---------|-----------------|--------------|-------------------|----------------------|
-| [Product 1] | [Subscription] | Recurring | [e.g., $49/month per user] | [e.g., $500K at 850 users] |
-| [Product 2] | [Transaction] | Recurring | [e.g., 10% commission] | [e.g., $300K on $3M GMV] |
-| [Product 3] | [License] | One-time + Support | [e.g., $5K + $1K annual] | [e.g., $200K from 40 clients] |
-
-**Revenue Model Assessment**:
-- Primary revenue type: [Recurring | One-time | Mixed]
-- Model diversity: [All similar | Complementary mix | Varied]
-- Coherence: [Models align strategically | Independent | Potential conflicts]
+[Repeat structure]
 
 ---
 
-### Distribution Strategies
+### Product 3: [Product Name]
 
-| Product | Primary Discovery | Primary Purchase | Intermediaries | CAC Estimate |
-|---------|------------------|------------------|----------------|--------------|
-| [Product 1] | [SEO, content] | Direct web | None (Direct) | [Low/Med/High] |
-| [Product 2] | [Sales team] | Direct sales | Partners (15%) | [Low/Med/High] |
-| [Product 3] | [Referrals] | Marketplace | Platform fees | [Low/Med/High] |
+[Repeat structure]
 
-**Distribution Assessment**:
-- **Shared channels**: [List any channels used by multiple products]
-- **Channel conflicts**: [Any competition or conflict | None identified]
-- **Resource efficiency**: [High leverage | Moderate | Each product requires dedicated resources]
+---
+
+## Business Model Comparison Across Clients
+
+### Revenue Models by Client Type
+
+| Client Type | Product | Revenue Model | Pricing Example | Revenue Type |
+|-------------|---------|---------------|-----------------|--------------|
+| [Client 1A] | [Product 1] | [Subscription] | [$X/month] | Recurring |
+| [Client 1B] | [Product 1] | [Per-procedure] | [$Y/procedure] | Per-use |
+| [Client 2A] | [Product 2] | [License] | [$Z/year] | Annual |
+
+**Revenue Model Distribution**:
+- Recurring: [Count] clients
+- One-time: [Count] clients
+- Per-use: [Count] clients
+
+---
+
+### Distribution Channels by Client Type
+
+| Client Type | Product | Primary Discovery | Primary Purchase | Intermediaries |
+|-------------|---------|-------------------|------------------|----------------|
+| [Client 1A] | [Product 1] | [Conferences] | [Direct sales] | No |
+| [Client 1B] | [Product 1] | [Referrals] | [Procurement portal] | Yes (15%) |
+| [Client 2A] | [Product 2] | [SEO/Content] | [Self-serve web] | No |
+
+**Channel Patterns**:
+- Direct sales: [Count] clients
+- Self-serve: [Count] clients
+- Partner channels: [Count] clients
 
 ---
 
 ### Cost Structure Patterns
 
-| Product | Fixed Costs | Variable Costs | Primary Cost Driver | Margin Potential |
-|---------|-------------|----------------|---------------------|------------------|
-| [Product 1] | [High/Med/Low] - [Main items] | [High/Med/Low] - [Main items] | [Customer count] | [High/Med/Low] |
-| [Product 2] | [Level] - [Items] | [Level] - [Items] | [Transaction volume] | [Potential] |
-| [Product 3] | [Level] - [Items] | [Level] - [Items] | [Geographic expansion] | [Potential] |
+| Client Type | Product | CAC Level | Service Complexity | Margin Potential |
+|-------------|---------|-----------|-------------------|------------------|
+| [Client 1A] | [Product 1] | High | Med | High |
+| [Client 1B] | [Product 1] | Med | High | Med |
+| [Client 2A] | [Product 2] | Low | Low | High |
 
-**Cost Structure Insights**:
-- **Shared costs**: [Development platform | Core team | Infrastructure] (portfolio efficiency)
-- **Product-specific costs**: [Sales for P2 | Content for P1 | Partnerships for P3]
-- **Scaling efficiency**: [Platform scales well | Linear scaling | Volume-dependent]
+---
+
+## Need Coverage Analysis
+
+### Fundamental Needs Across Products & Clients
+
+| Fundamental Need | P1-C1A | P1-C1B | P1-C1C | P2-C2A | P2-C2B | Coverage |
+|-----------------|--------|--------|--------|--------|--------|----------|
+| [Need 1] | ✓ | ✓ | — | — | — | Partial |
+| [Need 2] | ✓ | ✓ | ✓ | — | — | Product 1 |
+| [Need 3] | — | — | — | ✓ | ✓ | Product 2 |
+| [Need 4] | ✓ | — | ✓ | ✓ | — | Multiple |
+
+**Coverage Summary**:
+- Total fundamental needs identified: [X]
+- Covered by at least one product-client combination: [Y] ([%])
+- Covered by multiple: [Z]
+- **Gaps**: [List or "None"]
+
+---
+
+## Feature Efficiency Analysis
+
+### Feature Reuse Across Clients
+
+| Feature | Product | Clients Using | Validation | Timeline |
+|---------|---------|---------------|------------|----------|
+| [Feature 1] | [Product 1] | [All 3 clients] | >5 interviewed | Available |
+| [Feature 2] | [Product 1] | [Client 1A, 1B] | >5 interviewed | Short term |
+| [Feature 3] | [Product 1] | [Client 1C only] | <5 interviewed | Short term |
+
+**Efficiency Metrics**:
+- Features serving all clients of a product: [Count]
+- Features serving 2+ clients: [Count]
+- Client-specific features: [Count]
+- Feature reuse rate: [%]
+
+---
+
+## Business Model Coherence Summary
+
+### Coherence by Client
+
+| Product | Client | Value-Features | Value-Revenue | Rev-Distribution | Dist-Costs | Costs-Revenue | Overall |
+|---------|--------|---------------|---------------|------------------|------------|---------------|---------|
+| P1 | Client 1A | ✓ | ✓ | ✓ | ✓ | ✓ | Coherent |
+| P1 | Client 1B | ✓ | ✓ | ⚠️ | ✓ | ✓ | Minor issues |
+| P1 | Client 1C | ✓ | ⚠️ | ✓ | ✓ | ⚠️ | Minor issues |
+| P2 | Client 2A | ✓ | ✓ | ✓ | ✓ | ✓ | Coherent |
+
+**Overall Portfolio Coherence**: [All coherent | Mostly coherent | Significant concerns]
+
+**Issues to Address**:
+- [Issue 1]: [Which client, what concern]
+- [Issue 2]: [Client, concern]
 
 ---
 
 ## Resource Requirements Summary
 
-### Shared Resources (Cross-Product)
+### Shared Resources (Cross-Product, Cross-Client)
 
-**Development & Technology**:
-- [Resource 1 used by multiple products - e.g., "Core platform architecture"]
-- [Resource 2 - e.g., "Mobile app development team (serves Product 1 & 2)"]
-- [Resource 3 - e.g., "Cloud infrastructure"]
-
-**Human Resources**:
-- [Shared team - e.g., "Founders + 2 core developers"]
-- [Shared capability - e.g., "Customer support team (handles all products)"]
+**Development/Technology**:
+- [Resource shared across all]
 
 **Partnerships**:
-- [Shared partnership - e.g., "Payment processing (all products)"]
-- [Shared partnership - e.g., "University research partnership (credibility for all)"]
+- [Partner shared across products/clients]
 
-**Efficiency Insight**: [X]% of resources are shared across products (capital efficiency benefit)
+### Client-Specific Resources
 
----
-
-### Product-Specific Resources
-
-#### Product 1: [Product Name]
-
-**Unique Means**:
-- [Resource specific to Product 1]
-- [Resource specific to Product 1]
-
-**Unique Partnerships**:
-- [Partner specific to Product 1 - e.g., "Senior care association for B2B distribution"]
-
----
-
-#### Product 2: [Product Name]
-
-**Unique Means**:
-- [Resource specific to Product 2]
-
-**Unique Partnerships**:
-- [Partner specific to Product 2]
-
----
-
-#### Product 3: [Product Name]
-
-**Unique Means**:
-- [Resource specific to Product 3]
-
-**Unique Partnerships**:
-- [Partner specific to Product 3]
-
----
-
-### Critical Partnerships
-
-Dependencies that affect multiple products or are high-risk:
-
-| Partner | Role/Contribution | Products Affected | Status | Risk Level |
-|---------|-------------------|-------------------|---------|------------|
-| [Partner 1] | [What they provide] | [Product 1, 2] | [Secured/High confidence/Uncertain] | [High/Med/Low] |
-| [Partner 2] | [Contribution] | [Product 3] | [Status] | [Risk] |
-
-**Partnership Assessment**:
-- **Secured**: [Count] partnerships confirmed
-- **High confidence**: [Count] partnerships in discussion
-- **Uncertain**: [Count] partnerships assumed but not validated
-- **Critical path**: [Partner name] must be secured for [Product X] viability
-
----
+| Client Type | Unique Resources Required |
+|-------------|--------------------------|
+| [Client 1A] | [Resources specific to this client] |
+| [Client 1B] | [Resources] |
 
 ### Resource Gaps
 
-Portfolio-level gaps affecting viability:
-
-| Gap | Impact | Products Affected | Mitigation Strategy | Priority |
-|-----|--------|-------------------|---------------------|----------|
-| [Gap 1 - e.g., "24/7 support capacity"] | [Cannot deliver on promise] | [Product 1, 2] | [Phase to "responsive support" initially] | [High/Med/Low] |
-| [Gap 2 - e.g., "Regulatory clearance"] | [Limits clinical claims] | [Product 1] | [Engage consultant Q1, soft launch without claims] | [Priority] |
-
-**Gap Mitigation Status**: [[X]/[Total] gaps have mitigation strategies in place]
+| Gap | Products Affected | Clients Affected | Mitigation |
+|-----|-------------------|------------------|------------|
+| [Gap] | [Products] | [Clients] | [Strategy] |
 
 ---
 
-## Validation Status Portfolio View
+## Validation Status
 
-### Information Reliability by Product
+### Information Reliability by Product-Client
 
-| Product | MVP Features | >5 Interviewed | <5 Interviewed | Not Interviewed | Reliability Rating |
-|---------|--------------|----------------|----------------|-----------------|-------------------|
-| Product 1 | [Count] | [X] features ([%]) | [Y] features | [Z] features | [Strong/Moderate/Weak] |
-| Product 2 | [Count] | [X] features ([%]) | [Y] features | [Z] features | [Rating] |
-| Product 3 | [Count] | [X] features ([%]) | [Y] features | [Z] features | [Rating] |
+| Product | Client | MVP Features | >5 Validated | <5 Validated | Not Validated | Strength |
+|---------|--------|--------------|--------------|--------------|---------------|----------|
+| P1 | Client 1A | [Count] | [X] | [Y] | [Z] | [Strong/Moderate/Weak] |
+| P1 | Client 1B | [Count] | [X] | [Y] | [Z] | [Rating] |
 
 **Overall Portfolio Reliability**: [Strong | Moderate | Weak]
-
-**Assessment**: [1-2 sentences on overall validation strength and any concerns]
-
----
-
-### Business Model Coherence by Product
-
-| Product | Value-Features | Value-Revenue | Revenue-Distribution | Distribution-Costs | Costs-Revenue | Overall |
-|---------|---------------|---------------|---------------------|-------------------|---------------|---------|
-| Product 1 | ✓ Aligned | ✓ Aligned | ✓ Aligned | ⚠️ Minor gap | ✓ Aligned | Coherent |
-| Product 2 | ✓ Aligned | ✓ Aligned | ✓ Aligned | ✓ Aligned | ⚠️ Minor gap | Minor issues |
-| Product 3 | ✓ Aligned | ⚠️ Gap | ✓ Aligned | ✓ Aligned | ✓ Aligned | Minor issues |
-
-**Portfolio Business Model Health**: [All coherent | Mostly coherent with minor issues | Significant concerns]
-
-**Issues to Address**: [List any business model incoherence or concerns]
 
 ---
 
@@ -271,264 +220,149 @@ Portfolio-level gaps affecting viability:
 
 ### Strengths (Portfolio-Level)
 
-1. **[Strength 1 - tied to data]**
-   - Evidence: [Specific validation data]
-   - Impact: [Why this matters for viability]
-
-2. **[Strength 2]**
-   - Evidence: [Data]
-   - Impact: [Implication]
-
-3. **[Strength 3]**
-   - Evidence: [Data]
-   - Impact: [Implication]
-
----
+1. **[Strength 1]**: [Evidence and impact]
+2. **[Strength 2]**: [Evidence and impact]
+3. **[Strength 3]**: [Evidence and impact]
 
 ### Opportunities
 
-1. **[Opportunity 1]**
-   - Description: [What the opportunity is]
-   - Products affected: [Which products benefit]
-   - Potential impact: [Revenue/margin/market share implications]
-
-2. **[Opportunity 2]**
-   - Description: [Opportunity]
-   - Products affected: [Products]
-   - Potential impact: [Impact]
-
----
+1. **[Opportunity 1]**: [Description, products/clients affected, potential impact]
+2. **[Opportunity 2]**: [Description, affected, impact]
 
 ### Concerns & Risks
 
-#### Concern 1: [Title]
-
-**Description**: [What the concern is]
-
-**Products Affected**: [Which products]
-
-**Impact**: [High/Medium/Low] - [Why this matters]
-
-**Mitigation**: [Strategy to address]
-
-**Status**: [Mitigated/In progress/Not yet addressed]
+| Concern | Products/Clients | Impact | Mitigation | Status |
+|---------|-----------------|--------|------------|--------|
+| [Concern 1] | [Affected] | [High/Med/Low] | [Strategy] | [Mitigated/In progress/Not addressed] |
+| [Concern 2] | [Affected] | [Impact] | [Strategy] | [Status] |
 
 ---
 
-#### Concern 2: [Title]
+## Strategic Recommendations
 
-**Description**: [Concern]
+### Recommendation 1: [Action]
 
-**Products Affected**: [Products]
-
-**Impact**: [Level] - [Why]
-
-**Mitigation**: [Strategy]
-
-**Status**: [Status]
-
----
-
-[Continue for 3-5 total concerns]
-
----
-
-### Strategic Recommendations
-
-#### Recommendation 1: [Action]
-
-**Rationale**: [Why this is recommended]
-
-**Products Impacted**: [Which products]
-
+**Rationale**: [Why recommended]
+**Products/Clients Impacted**: [List]
 **Priority**: [High/Medium/Low]
-
-**Timeframe**: [Immediate/Short-term/Long-term]
-
-**Owner**: [Who should lead this]
-
----
-
-#### Recommendation 2: [Action]
-
-**Rationale**: [Why]
-
-**Products Impacted**: [Products]
-
-**Priority**: [Level]
-
-**Timeframe**: [When]
-
 **Owner**: [Who]
 
----
+### Recommendation 2: [Action]
 
-[Continue for 3-5 recommendations]
+[Repeat structure]
 
 ---
 
 ## Prioritization Guidance
 
-### Product Launch Sequencing
+### Client Prioritization by Product
 
-**Recommended Launch Order**:
+**Product 1: [Name]**
+1. **[Client 1A]**: [Why highest priority - validation, margin, strategic fit]
+2. **[Client 1B]**: [Why second]
+3. **[Client 1C]**: [Why third]
 
-**Phase 1**: [Product name]
-- **Rationale**: [Why launch first - e.g., strongest validation, simplest to build, fastest to revenue]
-- **Timeline**: [Timeframe]
-- **Success Criteria**: [What defines successful launch]
+**Product 2: [Name]**
+1. **[Client 2A]**: [Why priority]
+2. **[Client 2B]**: [Why second]
 
-**Phase 2**: [Product name]
-- **Rationale**: [Why second - e.g., builds on Phase 1 learnings, requires Phase 1 infrastructure]
-- **Timeline**: [Timeframe]
-- **Dependencies**: [What must be in place from Phase 1]
+### Launch Sequencing
 
-**Phase 3**: [Product name]
-- **Rationale**: [Why third - e.g., most complex, requires market maturity, optional enhancement]
-- **Timeline**: [Timeframe]
-- **Dependencies**: [Prerequisites]
+**Phase 1**: [Product X] for [Client Y]
+- **Rationale**: [Why first]
+- **Success Criteria**: [What defines success]
 
-**Alternative Consideration**: [Any rationale for different sequencing]
+**Phase 2**: [Product/Client expansion]
+- **Rationale**: [Why next]
+- **Dependencies**: [What must happen first]
 
 ---
 
-### Resource Allocation Priorities
+## Platform Entry Cards Summary
 
-**Development Resources**:
-1. [Priority 1 - e.g., "Core platform features (shared by all products)"] - [% allocation]
-2. [Priority 2 - e.g., "Product 1 MVP features"] - [% allocation]
-3. [Priority 3] - [% allocation]
+### Product 1: [Name]
 
-**Marketing/Sales Resources**:
-1. [Priority 1 - e.g., "Product 1 customer acquisition"] - [% allocation]
-2. [Priority 2] - [% allocation]
+**Product Level**:
+- Name: [60 chars max]
+- Description: [250 chars max]
 
-**Partnership Development**:
-1. [Priority 1 - e.g., "Secure Partner X (critical for Product 1)"] - Timeline: [Date]
-2. [Priority 2] - Timeline: [Date]
+**Client 1A**: [Type]
+- Value Prop: [250 chars]
+- Revenue: [250 chars]
+- Distribution: [250 chars]
+- Cost: [250 chars]
+
+**Client 1B**: [Type]
+[Repeat]
+
+**Client 1C**: [Type]
+[Repeat]
+
+---
+
+### Product 2: [Name]
+
+[Repeat structure]
 
 ---
 
 ## Next Steps
 
-### Immediate Actions (This Sprint)
+### Immediate Actions
 
-| Action | Owner | Due Date | Products Affected | Success Criteria |
-|--------|-------|----------|-------------------|------------------|
-| [Action 1 - e.g., "Validate $49 pricing with 10 customers"] | [Name] | [Date] | [Product 1] | [Criteria] |
-| [Action 2] | [Name] | [Date] | [Products] | [Criteria] |
-| [Action 3] | [Name] | [Date] | [Products] | [Criteria] |
-
----
+| Action | Owner | Due | Products/Clients | Success Criteria |
+|--------|-------|-----|------------------|------------------|
+| [Action 1] | [Name] | [Date] | [Affected] | [Criteria] |
+| [Action 2] | [Name] | [Date] | [Affected] | [Criteria] |
 
 ### Short-Term Priorities (1-3 Months)
 
-| Priority | Description | Owner | Target Date | Success Metrics |
-|----------|-------------|-------|-------------|-----------------|
-| 1 | [Priority action 1] | [Name] | [Date] | [Metric] |
-| 2 | [Priority action 2] | [Name] | [Date] | [Metric] |
-| 3 | [Priority action 3] | [Name] | [Date] | [Metric] |
-
----
-
-### Long-Term Considerations (3-12 Months)
-
-1. **[Consideration 1]**
-   - Description: [What to consider]
-   - Timing: [When to address]
-   - Dependencies: [What must happen first]
-
-2. **[Consideration 2]**
-   - Description: [What to consider]
-   - Timing: [When]
-   - Dependencies: [Prerequisites]
-
----
-
-## Gaps & Assumptions Log
-
-### Information Gaps
-
-| Gap | Products Affected | Impact on Viability | Validation Plan | Target Date |
-|-----|-------------------|---------------------|-----------------|-------------|
-| [Gap 1 - e.g., "Actual willingness to pay for Product 1"] | [Product 1] | [High - pricing unvalidated] | [Price testing with 20 prospects] | [Date] |
-| [Gap 2] | [Products] | [Impact level] | [Plan] | [Date] |
-
----
-
-### Key Assumptions
-
-| Assumption | Products Affected | Risk if Wrong | Validation Approach |
-|------------|-------------------|---------------|---------------------|
-| [Assumption 1 - e.g., "Seniors will adopt digital solution"] | [Product 1] | [High - entire model fails] | [Pilot with 50 users, track adoption rate] |
-| [Assumption 2] | [Products] | [Risk level] | [Validation] |
-
----
-
-## Financial Modeling Prerequisites
-
-**Ready for Financial Modeling**: [Yes/No/Partial]
-
-**Prerequisites Status**:
-- [ ] Revenue models defined with concrete mechanisms ✓
-- [ ] Cost categories identified with fixed/variable split ✓
-- [ ] Distribution CAC assumptions documented ✓
-- [ ] Pricing validated or ranges established ✓
-- [ ] Churn/retention assumptions noted ✓
-- [ ] Timeline for market entry estimated ✓
-
-**Inputs for Financial Model**:
-- Revenue streams: [List with mechanisms]
-- Cost drivers: [List with scaling assumptions]
-- Customer acquisition: [CAC estimates or ranges]
-- Retention: [Churn assumptions]
-- Pricing: [Validated prices or ranges to model]
+| Priority | Description | Owner | Target Date | Metrics |
+|----------|-------------|-------|-------------|---------|
+| 1 | [Action] | [Name] | [Date] | [Metric] |
+| 2 | [Action] | [Name] | [Date] | [Metric] |
 
 ---
 
 ## Viability Score Indicators
 
-*Preliminary assessment - formal scoring in overall Vianeo evaluation*
+### Product-Client Level Viability
 
-### Product-Level Viability Indicators
-
-| Product | PMF Strength | Business Model Coherence | Resource Readiness | Validation Quality | Preliminary Rating |
-|---------|--------------|-------------------------|-------------------|-------------------|-------------------|
-| Product 1 | [Strong/Moderate/Weak] | [Coherent/Minor issues/Major issues] | [Ready/Gaps noted/Significant gaps] | [Strong/Moderate/Weak] | [4-5 Strong / 3-3.5 Moderate / 1-2.5 Weak] |
-| Product 2 | [Rating] | [Status] | [Status] | [Quality] | [Rating] |
-| Product 3 | [Rating] | [Status] | [Status] | [Quality] | [Rating] |
+| Product | Client | PMF Strength | BM Coherence | Resources | Validation | Rating |
+|---------|--------|--------------|--------------|-----------|------------|--------|
+| P1 | C1A | [Strong/Mod/Weak] | [Coherent/Issues] | [Ready/Gaps] | [Strong/Mod/Weak] | [4-5/3-4/1-3] |
+| P1 | C1B | [Rating] | [Status] | [Status] | [Rating] | [Score] |
 
 ### Overall Portfolio Viability
 
-**Viability Dimension (20% of Vianeo Score)**:
+**Viability Dimension (20% of Vianeo Score)**
 
 **Preliminary Assessment**: [4.0-5.0 Strong | 3.0-3.9 Moderate | 1.0-2.9 Weak]
 
 **Rationale** (2-3 sentences):
-[Explain overall viability assessment based on business model coherence, commercial sustainability, value proposition strength, market access feasibility, and MVP viability]
+[Overall viability assessment based on business model coherence, commercial sustainability, value proposition strength, market access feasibility across all products and clients]
 
 ---
 
 ## Document Metadata
 
 **Based On**:
-- Product/Market Fit Definitions: [List products]
-- Business Model Canvases: [List products]
+- Product-Market Fit Definitions (Step 12a): [List products]
+- Business Model Canvases (Step 12b): [List product-client combinations]
 - Desirability Analysis: Steps 5-7
 - Feasibility Analysis: Step 11
 - Ecosystem Analysis: Steps 8-9
 
 **Feeds Into**:
-- Financial Modeling: Step 13 (Revenue projections, Cost models, P&L, Cash flow)
-- Go-to-Market Strategy: Distribution execution, Launch planning
-- Product Development Roadmap: MVP prioritization, Feature phasing
-- Investment Decision: Committee evaluation, Funding recommendations
+- Financial Modeling: Step 13
+- Go-to-Market Strategy
+- Product Development Roadmap
+- Investment Decision
 
 **Document Status**: [Draft | Review | Final]
 
 **Prepared By**: [Name]
 **Reviewed By**: [Name if applicable]
-**Approved By**: [Name if applicable]
 **Date**: [YYYY-MM-DD]
 **Version**: 1.0
 
